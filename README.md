@@ -76,15 +76,9 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
 
 - ## Home
     <img src="./wireframe-readme/home-wireframe.png" alt="Home" width="350px">
-    ---
-    ---
 - ## Detalle de producto
     <img src="./wireframe-readme/producto-wireframe.png" alt="Producto" width="350px">
-    ---
-    ---
 - ## Carrito de comrpas
     <img src="./wireframe-readme/carrito-compras-wireframe.png" alt="Carrito" width="350px">
-    ---
-    ---
 - ## Formulario de registro
     <img src="./wireframe-readme/formulario-registro-wireframe.png" alt="Formulario" width="350px">
