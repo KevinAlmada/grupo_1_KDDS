@@ -73,8 +73,8 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
 <br/>
 <br/>
 
-# Wireframes
-
+# Wireframes 
+(estos son los wireframes desktop , los otros se encuentran en la carpeta PDF WIREFRAME)
 - ## Home
     <img src="./wireframe-readme/home-wireframe.png" alt="Home" width="350px">
 - ## Detalle de producto
