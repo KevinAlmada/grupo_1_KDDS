@@ -21,7 +21,7 @@ Creemos que la mejor forma de tener una oferta que se adecue al publico de la pa
 </p>
 
 <p>
-Busca en nuestra tienda las mejores gafas para proteger tu vista del sol, también para completar un outfit elegante o praticar tu deporte favorito.”
+Busca en nuestra tienda las mejores gafas para proteger tu vista del sol, también para completar un outfit elegante o praticar tu deporte favorito...”
 </p>
 
 <p>
