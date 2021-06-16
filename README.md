@@ -49,6 +49,10 @@ En nuestro equipo de desarrollo compuesto por kevin(almada), Dario (Mamani), Dar
 - ## Dario Quispe:
     En proceso de formarme en programador Backend, estudiando/cursando una tecnicatura en sistemas informáticos y cursando gracias a la Fundación Formar la carrera de FullStack Developer, con ganas y ansias de seguir progresando en el ámbito de TI me considero una persona con dedicación, perseverancia y autodidacta cuando la ocasión lo amerite.
 
+- ## Stella Medina:
+
+
+
 <br/>
 <br/>
 <br/>
@@ -59,7 +63,7 @@ En nuestro equipo de desarrollo compuesto por kevin(almada), Dario (Mamani), Dar
 2. https://web.tiffanygafas.com.ar
 3. https://www.workingglass.com.ar
 4. https://www.oakley.com
-5. https:///www.optikum.com.ar
+5. https://www.optikum.com.ar
 
 Las páginas que utilizamos en nuestro proyecto son referentes y puntos clave del mercado de venta de lentes y gafas tanto nacional como internacionalmente, tienen diseños de productos icónicos y reconocibles a simple vista, tomamos de cada una de ellas distintos estilos de las partes que componen sus sitios web,  asi como algunas aplicaciones que usan para facilitar, ya sea, la compra de sus productos, el envio, o la posibilidad de elegir estilos para cada persona, y algunas estrategias de marketing y de expansión de los usuarios registrados que reciben sus ofertas por e-mail.
 Tomando como referencia las partes que nos parecieron más interesantes de cada uno de los sitios las adaptamos a una paleta de colores propia y a un logo distintivo y claramente referido a la temática.
@@ -71,7 +75,9 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
 # Wireframe
 
 - ## Home
+    <img src="home-wireframe.png" alt="Home" width="300px">
 - ## Detalle de producto
+    <img src="home-wireframe.png" alt="JuveYell" width="300px">
 - ## Carrito de comrpas
 - ## Formulario de registro
-- ## Formulario de carga de producto
+- ## Formulario de carga de productos
