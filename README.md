@@ -50,6 +50,7 @@ En nuestro equipo de desarrollo compuesto por Kevin (Almada), Dario (Mamani), Da
     En proceso de formarme en programador Backend, estudiando/cursando una tecnicatura en sistemas informáticos y cursando gracias a la Fundación Formar la carrera de FullStack Developer, con ganas y ansias de seguir progresando en el ámbito de TI me considero una persona con dedicación, perseverancia y autodidacta cuando la ocasión lo amerite.
 
 - ## Stella Medina:
+    Hola, me llamo Stella Medina, tengo 21 años y soy de Buenos Aires. Siempre estuve enfocada en el mundo informático por el lado de Hardware, hoy en día soy estudiante en Fundación Formar y Digital House, gracias a su oportunidad estoy aprendiendo nuevas formas de utilizar la tecnología para poder evolucionar y mejorar mi creatividad como programadora Full Stack.
 
 
 
