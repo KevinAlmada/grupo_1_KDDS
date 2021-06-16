@@ -14,10 +14,10 @@ Creemos que la mejor forma de tener una oferta que se adecue al publico de la pa
 
 ---
 
-# NOMBRE DEL PROYECTO “KDDS 'PARA VERTE MEJOR'” : MARKETPLACE DE GAFAS DE SOL MARCA
+# NOMBRE DEL PROYECTO “KDDS 'PARA VERTE MEJOR'” : MARKETPLACE DE GAFAS DE SOL
 
 <p>
-“Tu estilo sos vos! Encontrá Anteojos y Accesorios Anteojos de Sol en KDDS.com.ar te damos las mejores opciones y consejos para elegir los lentes y los accesorios para que estés siempre a la moda en cualquier época del año.
+“Tu estilo sos vos! Encontrá accesorios y anteojos de sol en KDDS.com.ar te damos las mejores opciones y consejos para elegir los lentes y los accesorios para que estés siempre a la moda en cualquier época del año.
 </p>
 
 <p>
@@ -25,11 +25,11 @@ Busca en nuestra tienda las mejores gafas para proteger tu vista del sol, tambi�
 </p>
 
 <p>
-Desde el equipo de desarrollo web les damos la bienvenida a nuestro sitio en el que nos enfocamos brindar una experiencia clara y sencilla para el uso de esta web en cualquier dispositivo, la diseñamos, maquetamos y programamos íntegramente entre los 4 miembros del equipo.
+Desde el equipo de desarrollo web les damos la bienvenida a nuestro sitio en el que nos enfocamos en brindar una experiencia clara y sencilla para el uso de esta web en cualquier dispositivo, la diseñamos, maquetamos y programamos íntegramente entre los 4 miembros del equipo.
 </p>
 
 <p>
-En nuestro equipo de desarrollo compuesto por kevin(almada), Dario (Mamani), Dario(Quispe) y Stella(Medina), siendo estudiantes aun de programación ,nos enorgullecemos del resultado, y esperamos que todo el trabajo aportado por cada uno sea de su agrado, por supuesto que sea funcional, y nos permita mostrarles nuestra capacidad en todo lo que hemos aprendido y asegurarles que nuestras ganas de seguir aprendiendo y desarrollando son gigantes y permanentes.
+En nuestro equipo de desarrollo compuesto por Kevin (Almada), Dario (Mamani), Dario (Quispe) y Stella (Medina), siendo estudiantes aun de programación ,nos enorgullecemos del resultado, y esperamos que todo el trabajo aportado por cada uno sea de su agrado, por supuesto que sea funcional, y nos permita mostrarles nuestra capacidad en todo lo que hemos aprendido y asegurarles que nuestras ganas de seguir aprendiendo y desarrollando son gigantes y permanentes.
 </p>
 
 <br/>
@@ -72,7 +72,7 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
 <br/>
 <br/>
 
-# Wireframe
+# Wireframes
 
 - ## Home
     <img src="./wireframe-readme/home-wireframe.png" alt="Home" width="350px">
