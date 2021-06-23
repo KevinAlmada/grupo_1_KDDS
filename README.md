@@ -89,3 +89,6 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
     <img src="./design/Group 18logos.png" alt="Logo y paleta de colores" width="350px">
 - ## Paleta de colores
     <img src="./design/Group 19colors.png" alt="Paleta de colores" width="350px">
+
+# Tipografia
+- ## Roboto
