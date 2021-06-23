@@ -83,3 +83,9 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
     <img src="./wireframe-readme/carrito-compras-wireframe.png" alt="Carrito" width="350px">
 - ## Formulario de registro
     <img src="./wireframe-readme/formulario-registro-wireframe.png" alt="Formulario" width="350px">
+
+# Logo y paleta de colores 
+- ## Logo
+    <img src="./design/Group 18logos.png" alt="Logo y paleta de colores" width="350px">
+- ## Paleta de colores
+    <img src="./design/Group 19colors.png" alt="Paleta de colores" width="350px">
