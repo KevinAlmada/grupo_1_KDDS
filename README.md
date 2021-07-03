@@ -14,10 +14,10 @@ Creemos que la mejor forma de tener una oferta que se adecue al publico de la pa
 
 ---
 
-# NOMBRE DEL PROYECTO “KDDS 'PARA VERTE MEJOR'” : MARKETPLACE DE GAFAS DE SOL MARCA
+# NOMBRE DEL PROYECTO “KDDS 'PARA VERTE MEJOR'” : MARKETPLACE DE GAFAS DE SOL
 
 <p>
-“Tu estilo sos vos! Encontrá Anteojos y Accesorios Anteojos de Sol en KDDS.com.ar te damos las mejores opciones y consejos para elegir los lentes y los accesorios para que estés siempre a la moda en cualquier época del año.
+“Tu estilo sos vos! Encontrá accesorios y anteojos de sol en KDDS.com.ar te damos las mejores opciones y consejos para elegir los lentes y los accesorios para que estés siempre a la moda en cualquier época del año.
 </p>
 
 <p>
@@ -25,11 +25,11 @@ Busca en nuestra tienda las mejores gafas para proteger tu vista del sol, tambi�
 </p>
 
 <p>
-Desde el equipo de desarrollo web les damos la bienvenida a nuestro sitio en el que nos enfocamos brindar una experiencia clara y sencilla para el uso de esta web en cualquier dispositivo, la diseñamos, maquetamos y programamos íntegramente entre los 4 miembros del equipo.
+Desde el equipo de desarrollo web les damos la bienvenida a nuestro sitio en el que nos enfocamos en brindar una experiencia clara y sencilla para el uso de esta web en cualquier dispositivo, la diseñamos, maquetamos y programamos íntegramente entre los 4 miembros del equipo.
 </p>
 
 <p>
-En nuestro equipo de desarrollo compuesto por kevin(almada), Dario (Mamani), Dario(Quispe) y Stella(Medina), siendo estudiantes aun de programación ,nos enorgullecemos del resultado, y esperamos que todo el trabajo aportado por cada uno sea de su agrado, por supuesto que sea funcional, y nos permita mostrarles nuestra capacidad en todo lo que hemos aprendido y asegurarles que nuestras ganas de seguir aprendiendo y desarrollando son gigantes y permanentes.
+En nuestro equipo de desarrollo compuesto por Kevin (Almada), Dario (Mamani), Dario (Quispe) y Stella (Medina), siendo estudiantes aun de programación ,nos enorgullecemos del resultado, y esperamos que todo el trabajo aportado por cada uno sea de su agrado, por supuesto que sea funcional, y nos permita mostrarles nuestra capacidad en todo lo que hemos aprendido y asegurarles que nuestras ganas de seguir aprendiendo y desarrollando son gigantes y permanentes.
 </p>
 
 <br/>
@@ -49,6 +49,11 @@ En nuestro equipo de desarrollo compuesto por kevin(almada), Dario (Mamani), Dar
 - ## Dario Quispe:
     En proceso de formarme en programador Backend, estudiando/cursando una tecnicatura en sistemas informáticos y cursando gracias a la Fundación Formar la carrera de FullStack Developer, con ganas y ansias de seguir progresando en el ámbito de TI me considero una persona con dedicación, perseverancia y autodidacta cuando la ocasión lo amerite.
 
+- ## Stella Medina:
+    Hola, me llamo Stella Medina, tengo 21 años y soy de Buenos Aires. Siempre estuve enfocada en el mundo informático por el lado de Hardware, hoy en día soy estudiante en Fundación Formar y Digital House, gracias a su oportunidad estoy aprendiendo nuevas formas de utilizar la tecnología para poder evolucionar y mejorar mi creatividad como programadora Full Stack.
+
+
+
 <br/>
 <br/>
 <br/>
@@ -59,7 +64,7 @@ En nuestro equipo de desarrollo compuesto por kevin(almada), Dario (Mamani), Dar
 2. https://web.tiffanygafas.com.ar
 3. https://www.workingglass.com.ar
 4. https://www.oakley.com
-5. https:///www.optikum.com.ar
+5. https://www.optikum.com.ar
 
 Las páginas que utilizamos en nuestro proyecto son referentes y puntos clave del mercado de venta de lentes y gafas tanto nacional como internacionalmente, tienen diseños de productos icónicos y reconocibles a simple vista, tomamos de cada una de ellas distintos estilos de las partes que componen sus sitios web,  asi como algunas aplicaciones que usan para facilitar, ya sea, la compra de sus productos, el envio, o la posibilidad de elegir estilos para cada persona, y algunas estrategias de marketing y de expansión de los usuarios registrados que reciben sus ofertas por e-mail.
 Tomando como referencia las partes que nos parecieron más interesantes de cada uno de los sitios las adaptamos a una paleta de colores propia y a un logo distintivo y claramente referido a la temática.
@@ -68,10 +73,22 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
 <br/>
 <br/>
 
-# Wireframe
-
+# Wireframes 
+(estos son los wireframes desktop , los otros se encuentran en la carpeta PDF WIREFRAME)
 - ## Home
+    <img src="./wireframe-readme/home-wireframe.png" alt="Home" width="350px">
 - ## Detalle de producto
+    <img src="./wireframe-readme/producto-wireframe.png" alt="Producto" width="350px">
 - ## Carrito de comrpas
+    <img src="./wireframe-readme/carrito-compras-wireframe.png" alt="Carrito" width="350px">
 - ## Formulario de registro
-- ## Formulario de carga de producto
+    <img src="./wireframe-readme/formulario-registro-wireframe.png" alt="Formulario" width="350px">
+
+# Logo y paleta de colores 
+- ## Logo
+    <img src="./design/Group 18logos.png" alt="Logo y paleta de colores" width="350px">
+- ## Paleta de colores
+    <img src="./design/Group 19colors.png" alt="Paleta de colores" width="350px">
+
+# Tipografia
+- ## Roboto
