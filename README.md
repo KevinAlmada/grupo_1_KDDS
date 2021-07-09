@@ -76,19 +76,19 @@ Tomando como referencia las partes que nos parecieron más interesantes de cada 
 # Wireframes 
 (estos son los wireframes desktop , los otros se encuentran en la carpeta PDF WIREFRAME)
 - ## Home
-    <img src="./wireframe-readme/home-wireframe.png" alt="Home" width="350px">
+    <img src="./wireframes/wireframe-readme/home-wireframe.png" alt="Home" width="350px">
 - ## Detalle de producto
-    <img src="./wireframe-readme/producto-wireframe.png" alt="Producto" width="350px">
+    <img src="./wireframes/wireframe-readme/producto-wireframe.png" alt="Producto" width="350px">
 - ## Carrito de comrpas
-    <img src="./wireframe-readme/carrito-compras-wireframe.png" alt="Carrito" width="350px">
+    <img src="./wireframes/wireframe-readme/carrito-compras-wireframe.png" alt="Carrito" width="350px">
 - ## Formulario de registro
-    <img src="./wireframe-readme/formulario-registro-wireframe.png" alt="Formulario" width="350px">
+    <img src="./wireframes/wireframe-readme/formulario-registro-wireframe.png" alt="Formulario" width="350px">
 
 # Logo y paleta de colores 
 - ## Logo
-    <img src="./design/Group 18logos.png" alt="Logo y paleta de colores" width="350px">
+    <img src="./wireframes/design/Group 18logos.png" alt="Logo y paleta de colores" width="350px">
 - ## Paleta de colores
-    <img src="./design/Group 19colors.png" alt="Paleta de colores" width="350px">
+    <img src="./wireframes/design/Group 19colors.png" alt="Paleta de colores" width="350px">
 
 # Tipografia
 - ## Roboto

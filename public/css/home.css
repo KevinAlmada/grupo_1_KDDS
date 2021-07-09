@@ -1,13 +1,13 @@
-:root{
-    --colorAzul: #0E1626;
-    --colorNaranjaOscuro: #F24405;
-    --colorNaranjaClaro: #F27D52;    
-}
+
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+iframe {
+  width: 100%;
 }
 
 .portada-container {
@@ -28,22 +28,24 @@
     width: 150px;
 }
 
+.portada-container .logo {
+    width: 100%;
+    display: none;
+}
+
+.portada-container .logo img {
+    height: 51px;
+    width: 116px;
+    margin-left: 120px;
+}
+
 .main-container {
-    margin-top: 20%;
+    margin-top: 40%;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
 }
 
-.main-container .logo {
-    width: 100%;
-}
-
-.main-container .logo img {
-    height: 51px;
-    width: 116px;
-    margin-left: 120px;
-}
 
 .main-container .card {
     display: flex;
