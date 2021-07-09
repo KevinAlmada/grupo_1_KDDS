@@ -5,47 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KDDS Store</title>
+    <link rel="stylesheet" href="../public/css/home/index.css">
+    <script src="../public/js/index.js"></script>
 </head>
 <body>
     <header>
         HEADER
     </header>
-    <section>
-        CARRUSSEL
+    <section class="portada-container">
+        <img src="../public/img/portada.jpg" alt="logo"> 
+        <img src="../public/img/KDDS.svg" alt="kdds">
     </section>
-    <section>
-        <div>
-           <img src="" alt="logo"> 
+    <section class="main-container">
+        <div class="logo">
+           <img src="../public/img/logo.svg" alt="logo"> 
         </div>
         <article class="card">
-            <img src="#" alt="card-img">
+            <img src="../public/img/anteojosAzul.png" alt="card-img">
             <h4>Nombre del producto</h4>
-            <h4>Precio</h4>
+            <h4>Precio($0.00)</h4>
+            <button>Ver mas</button>
         </article>
         <article class="card">
-            <img src="#" alt="card-img">
+            <img src="../public/img/anteojosAmarillo.png" alt="card-img">
             <h4>Nombre del producto</h4>
-            <h4>Precio</h4>
+            <h4>Precio($0.00)</h4>
+            <button>Ver mas</button>
         </article>
         <article class="card">
-            <img src="#" alt="card-img">
+            <img src="../public/img/anteojosAzul.png" alt="card-img">
             <h4>Nombre del producto</h4>
-            <h4>Precio</h4>
+            <h4>Precio($0.00)</h4>
+            <button>Ver mas</button>
         </article>
         <article class="card">
-            <img src="#" alt="card-img">
+            <img src="../public/img/anteojosAzul.png" alt="card-img">
             <h4>Nombre del producto</h4>
-            <h4>Precio</h4>
-        </article>
-        <article class="card-relacionado">
-            <img src="#" alt="card-img">
-            <h4>Nombre del producto</h4>
-            <h4>Precio</h4>
+            <h4>Precio($0.00)</h4>
+            <button>Ver mas</button>
         </article>
     </section>
-    <section>
-        BANNER
+    <section class="slider-container">
+        <article class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="../public/img/prod-rel.png" style="width: 100%">
+            <div class="text">Caption Text</div>
+        </article>
+        <article class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="../public/img/prod-rel.png" style="width: 100%">
+            <div class="text">Caption one</div>
+        </article>
+        <article class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="../public/img/prod-rel.png" style="width: 100%">
+            <div class="text">Caption two</div>
+        </article>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
     </section>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
     <footer>
         FOOTER
     </footer>

@@ -4,3 +4,168 @@
     --colorNaranjaClaro: #F27D52;    
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.portada-container {
+    position: relative;
+}
+
+.portada-container img:nth-child(1) {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.portada-container img:nth-child(2) {
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 70px;
+    width: 150px;
+}
+
+.main-container {
+    margin-top: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.main-container .logo {
+    width: 100%;
+}
+
+.main-container .logo img {
+    height: 51px;
+    width: 116px;
+    margin-left: 120px;
+}
+
+.main-container .card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 350px;
+    margin: 0px 24px;
+    border: 1px solid var(--colorNaranjaClaro);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-container .card img {
+  width: 282px;
+  height: 262px;
+}
+
+.main-container .card h4 {
+    align-self: center;
+}
+
+.main-container .card button {
+  width: 60%;
+  align-self: center;
+  background-color: white;
+  border: 0.7px solid var(--colorNaranjaClaro);
+  border-radius: 5px;
+}
+
+.main-container .card button:hover {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--colorNaranjaClaro);
+  cursor: pointer;
+}
+
+.slider-container {
+    max-width: 360px;
+    position: relative;
+    height: 316px;
+    display: flex;
+}
+
+.slider-container .mySlides {
+    align-self: flex-end;
+    position: absolute;
+    display: none;
+}
+
+.slider-container .mySlides img {
+    right: 0;
+    top: -2;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
