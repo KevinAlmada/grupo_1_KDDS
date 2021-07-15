@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-}
 
 .section-1-container {
     max-width: 100vm;
@@ -44,7 +38,6 @@
 .product-block {
     height: 100vh;
     width: 100vw;
-    font-family: 'Playfair Display', serif;
 }
 
 .product-block .flip .flip-img {
