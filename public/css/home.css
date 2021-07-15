@@ -114,6 +114,12 @@
     height: 50vh;
 }
 
+.section-3-container .box-top .slider:nth-child(2),
+.section-3-container .box-top .slider:nth-child(3),
+.section-3-container .box-top .slider:nth-child(4) {
+    display: none;
+}
+
 .section-3-container .product-box-top {
     width: 100%;
     height: 50vh;
@@ -126,7 +132,7 @@
 .section-3-container .product-box-top img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     align-self: center;
     grid-column: 4 / 9;
     grid-row: 2 / 8;
@@ -162,6 +168,20 @@
     border-radius: 5px;
 }
 
+.section-3-container .box-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50vh;
+}
+
+.section-3-container .box-bottom .slider-bottom:nth-child(2),
+.section-3-container .box-bottom .slider-bottom:nth-child(3),
+.section-3-container .box-bottom .slider-bottom:nth-child(4) {
+    display: none;
+}
+
 .section-3-container .product-box-botton {
     width: 100%;
     height: 50vh;
@@ -175,7 +195,7 @@
 .section-3-container .product-box-botton img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     align-self: center;
     grid-column: 4 / 9;
     grid-row: 2 / 8;
@@ -346,7 +366,7 @@
     }
 
     .product-block .flip-text .name-block h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .product-block .flip-text .cuotas p {
@@ -357,10 +377,31 @@
 
     .section-3-container .box-top .slider {
         width: 50%;
+        display: block;
     }
 
+    .section-3-container .box-top .slider .product-box-top a {
+        display: none;
+    }
     .section-3-container .box-top .slider:nth-child(2) {
         width: 50%;
         display: block;
+    }
+
+    .section-3-container .box-bottom .slider-bottom {
+        width: 50%;
+    }
+
+    .section-3-container .box-bottom .slider-bottom:nth-child(2){
+        width: 50%;
+        display: block;
+    }
+
+    .section-3-container .box-bottom .slider-bottom img {
+        object-fit: contain;
+    }
+
+    .section-3-container .box-bottom .slider-bottom a {
+        display: none;
     }
 }
