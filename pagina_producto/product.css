@@ -115,7 +115,14 @@ a.postal{
     border: 1px black solid;
     margin: 10px;
     padding: 15px;
-    text-align: justify;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.description_title{
+    text-transform: uppercase;
+    margin-top: 25px;
+
 }
 .lentes_modelo{
     width: fit-content;
@@ -137,10 +144,11 @@ a.postal{
 /* slider */
 .container{
     margin: auto;
-    background-color: var(--colorAzul);
+    background: linear-gradient(359deg, rgb(0 0 0 / 0%), #f27d52);
     width: 90%;
+    max-width: 377px;
     padding: 20px;
-    /* border: solid 1px var(--colorNaranjaOscuro);*/
+    
     border-radius: 5px;
      
   }
@@ -215,11 +223,16 @@ a.postal{
   
  /*  MEDIA QUERIES */
  @media (min-width:576px){
-    main{
+    body{ 
+        background: linear-gradient(grey, var(--colorAzul));
+     }
     
+     
+    main{
+        background-color: white;
         margin: 0 auto;
         border-radius: 5px;
-        width: 80%;
+        width: 90%;
     
     
     }
@@ -231,11 +244,41 @@ a.postal{
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    /* .lentes_modelo{
-        width: 100%;
-        
-        
-    } */
+    .card-content {
+        display: flex;
+        /* gap: 10px; */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .card-type img{     
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 3px;
+        box-shadow: 10px 10px 10px gray;    
+    }
+    .card2{
+        display: none;
+    }
+    .btnmore{
+        width: 150px;
+        background-color: var(--colorAzul);
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 8px;
+        margin: 0 auto;
+        margin-top: 25px;
+        transition: all .8s;
+        cursor: pointer;
+    }
+    .btnmore:hover{
+        background-color: var(--colorNaranjaOscuro);
+    }
     .description_title{
         margin-top: 40px;
     }
@@ -246,20 +289,24 @@ a.postal{
         margin-bottom: 50px;
     }
     .container{ /*slider*/
-        margin:  0 auto;
+        /* margin:  0 auto;
         margin-bottom: 20px;
-        width: 60%;
+        width: 60% */
+        display: none;
         
       }
  }
 
  @media (min-width:768px){
-     body{ 
-        background: linear-gradient(grey, var(--colorAzul));
-     }
+     
      main{
-         background-color: white;
+        width: 80%;
      }
+     main.detalle-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .banner{
             width: 80%;
             margin: 0 auto;
@@ -280,41 +327,14 @@ a.postal{
         flex-direction: column;
 
     }
-    /* a.postal{
+    .card2{
         display: block;
-    } */
+    }
     
     .container{ /*slider*/
        display: none;
       }
-    .card-content {
-        display: flex;
-        /* gap: 10px; */
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .card-type img{     
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 3px;    
-    }
-    .btnmore{
-        width: 150px;
-        background-color: var(--colorAzul);
-        text-align: center;
-        border-radius: 5px;
-        color: white;
-        font-size: 1em;
-        text-transform: uppercase;
-        padding: 8px;
-        margin: 0 auto;
-        transition: all .8s;
-        cursor: pointer;
-    }
-    .btnmore:hover{
-        background-color: var(--colorNaranjaOscuro);
-    }
+    
+    
+    
 }
