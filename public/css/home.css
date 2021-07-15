@@ -5,10 +5,6 @@
     font-family: 'Playfair Display', serif;
 }
 
-header iframe {
-    width: 100%;
-}
-
 .section-1-container {
     max-width: 100vm;
     max-height: 100vh;
