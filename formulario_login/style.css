@@ -14,22 +14,7 @@ body{
 }
 
 /* HEADER */
-/* header{
-    width: 100%;
-    height: 160px;
-    background: #E8E8E8;
-    margin-bottom: 15px;
-} */
 
-
-/* FOOTER */
-/* footer{
-    width: 100%;
-    height: 258px;
-    background-color: var(--colorAzul) ;
-    bottom: 0;
-    margin-top: 15px;
-} */
 /* FORMULARIO */
 .container-form{
     height: fit-content;
@@ -71,6 +56,17 @@ form{
     color: var(--colorAzul);
     border: #F24405 solid 1px;
 }
+.remember-container{
+    text-align: center;
+}
+.container-form input.remember{
+    width: 10px;
+}
+.container-form label.remember{
+    display: inline;
+    font-size: .8em;
+    padding: 6px;
+}
 .container-form p{
     text-align: center; 
 }
@@ -80,6 +76,13 @@ form{
     align-items: center;
     margin-top: 15px;
 }
+.container-form .register p{
+    font-size: 14px;
+}
+.container-form .recuperar p{
+    font-size: 10px;
+    margin-top:  5px;
+}
 .container-form .register a{
     margin-left: 5px;
     color: var(--colorNaranjaOscuro);
@@ -87,7 +90,6 @@ form{
 }
 .boton-enviar{
     display: flex;
-    /* width: 75%; */
     justify-content: center;
 }
 .boton-enviar .enviar{
@@ -166,6 +168,7 @@ form{
         flex-direction: column;
         
     }
+    
     .container-form .firma{
         
         margin-top: 10px;
