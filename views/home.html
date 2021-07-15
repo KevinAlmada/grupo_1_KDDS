@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KDDS Store</title>
+    <title>KDD</title>
     <link rel="stylesheet" href="../public/css/index.css">
-    <script src="../public/js/index.js"></script>
+    <script src="../public/js/index.js" defer></script>
 </head>
 <body>
     <header>
         <iframe src="./header2.html"></iframe>
     </header>
     <div class="menu-lateral">
-        <input type="checkbox" class="checkbox" id="check">
+        input type="checkbox" class="checkbox" id="check">
         <label class ="menu" for="check">|||</label>
         <div class="left-panel">
             <ul>
@@ -34,67 +34,191 @@
             </ul>
         </div>
     </div>
-    <section class="portada-container">
-        <img src="../public/img/portada.jpg" alt="logo"> 
-        <img src="../public/img/KDDS.svg" alt="kdds">
-        <div class="logo">
-           <img src="../public/img/logo.svg" alt="logo"> 
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 1 ------------------------------------------------------->
+    <section class="section-1-container">
+        <div class="fondo-container">
+            <div class="frente-container">
+                <img src="../public/images/section-1/logo.svg">
+                <div class="text-box">
+                    <p style="text-align: center;">Lo mas esperado: </p>
+                    <div class="link-container">
+                        <a href="#" style="color: antiquewhite;">SHOP SUNGLASSES</a>
+                        <a href="#" style="color: antiquewhite;">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="main-container">
-        <article class="card">
-            <img src="../public/img/anteojosAzul.png" alt="card-img">
-            <h4>Nombre del producto</h4>
-            <h4>Precio($0.00)</h4>
-            <button>Ver mas</button>
-        </article>
-        <article class="card">
-            <img src="../public/img/anteojosAmarillo.png" alt="card-img">
-            <h4>Nombre del producto</h4>
-            <h4>Precio($0.00)</h4>
-            <button>Ver mas</button>
-        </article>
-        <article class="card">
-            <img src="../public/img/anteojosAzul.png" alt="card-img">
-            <h4>Nombre del producto</h4>
-            <h4>Precio($0.00)</h4>
-            <button>Ver mas</button>
-        </article>
-        <article class="card">
-            <img src="../public/img/anteojosAzul.png" alt="card-img">
-            <h4>Nombre del producto</h4>
-            <h4>Precio($0.00)</h4>
-            <button>Ver mas</button>
-        </article>
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 2 ------------------------------------------------------->
+    <section class="product-block">
+        <div class="flip">
+            <div class="flip-img">
+                <img src="../public/images/section-2/lentes.png" > 
+            </div>
+            <div class="flip-text">
+                <div class="flip-title">
+                    <p>KDDS</p>
+                </div>
+                <div class="name-block">
+                    <h1>
+                    Linda Farrow
+                        LF1810
+                    </h1>
+                </div>
+                <div class="cuotas">
+                    <p>12 cuotas sin intereses</p>
+                </div>
+                <button>
+                    <a href="#"> Comprar ahora </a>
+                </button>
+                <div class="like-block">
+                    <p>s2</p>
+                    <p>Wishlist</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="slider-container">
-        <article class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="../public/img/prod-rel.png" style="width: 100%">
-            <div class="text">Caption Text</div>
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 3 ------------------------------------------------------->
+    <section class="section-3-container">
+        <div class="slider">
+        <article class="product-box-top fade">
+            <img src="../public/images/section-3/lentes-1.jpg">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="text-box">
+                <h3>Nombre del producto</h3>
+                <h3>$4000</h3>
+                <p>19 cuotas sin interes de $600</p>
+                <button>Comprar</button>
+            </div>
         </article>
-        <article class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="../public/img/prod-rel.png" style="width: 100%">
-            <div class="text">Caption one</div>
+        </div>
+        <div class="slider" style="display: none;">
+        <article class="product-box-top fade">
+            <img src="../public/images/section-3/lentes-2.jpg">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="text-box">
+                <h3>Nombre del producto</h3>
+                <h3>$4000</h3>
+                <p>19 cuotas sin interes de $600</p>
+                <button>Comprar</button>
+            </div>
         </article>
-        <article class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="../public/img/prod-rel.png" style="width: 100%">
-            <div class="text">Caption two</div>
+        </div>
+        <div class="slider" style="display: none;">
+        <article class="product-box-top fade">
+            <img src="../public/images/section-3/lentes-3.jpg">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="text-box">
+                <h3>Nombre del producto</h3>
+                <h3>$4000</h3>
+                <p>19 cuotas sin interes de $600</p>
+                <button>Comprar</button>
+            </div>
         </article>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+        </div>
+        <div class="slider" style="display: none;">
+        <article class="product-box-top fade">
+            <img src="../public/images/section-3/lentes-4.jpg">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="text-box">
+                <h3>Nombre del producto</h3>
+                <h3>$4000</h3>
+                <p>19 cuotas sin interes de $600</p>
+                <button>Comprar</button>
+            </div>
+        </article>
+        </div>
+        <!---------------------------------------------------------->
+        <!---------------------------------------------------------->
+        <hr>
+        <div class="slider-bottom">
+            <article class="product-box-botton fade">
+                <img src="../public/images/section-3/bottom/lentes-1.jpg">
+                <a class="prev" >&#10094;</a>
+                <a class="next" >&#10095;</a>
+                <div class="text-box">
+                <div class="text-box">
+                    <h3>Nombre del producto</h3>
+                    <h3>$4000</h3>
+                    <p>19 cuotas sin interes de $600</p>
+                    <button>Comprar</button>
+                </div>
+            </article>
+        </div>
+        <div class="slider-bottom">
+            <article class="product-box-botton fade">
+                <img src="../public/images/section-3/bottom/lentes-2.jpg">
+                <a class="prev" >&#10094;</a>
+                <a class="next" >&#10095;</a>
+                <div class="text-box">
+                <div class="text-box">
+                    <h3>Nombre del producto</h3>
+                    <h3>$4000</h3>
+                    <p>19 cuotas sin interes de $600</p>
+                    <button>Comprar</button>
+                </div>
+            </article>
+        </div>
+        <div class="slider-bottom">
+            <article class="product-box-botton fade">
+                <img src="../public/images/section-3/bottom/lentes-3.jpg">
+                <a class="prev" >&#10094;</a>
+                <a class="next" >&#10095;</a>
+                <div class="text-box">
+                <div class="text-box">
+                    <h3>Nombre del producto</h3>
+                    <h3>$4000</h3>
+                    <p>19 cuotas sin interes de $600</p>
+                    <button>Comprar</button>
+                </div>
+            </article>
+        </div>
+        <div class="slider-bottom">
+            <article class="product-box-botton fade">
+                <img src="../public/images/section-3/bottom/lentes-4.jpg">
+                <a class="prev" >&#10094;</a>
+                <a class="next" >&#10095;</a>
+                <div class="text-box">
+                <div class="text-box">
+                    <h3>Nombre del producto</h3>
+                    <h3>$4000</h3>
+                    <p>19 cuotas sin interes de $600</p>
+                    <button>Comprar</button>
+                </div>
+            </article>
+        </div>
     </section>
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 4 ------------------------------------------------------->
+    <section class="section-4-container">
+        <div class="container-top">
+            <h1>OFERTAS DEL MES</h1>
+            <div class="img-box-top">
+                <img src="../public/images/section-4/promo-1.jpg" >
+                <img src="../public/images/section-4/publi-2.jpg" >
+            </div>
+        </div>
+        <div class="container-bottom">
+            <h1>ALGO VA ACA</h1>
+            <div class="img-box-bottom">
+                <img src="../public/images/section-4/gafas.jpg" >
+                <img src="../public/images/section-4/Captura-newsletter.PNG" >
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------------------------------->
+    <!------- FOOTER ----------------------------------------------->
     <footer>
-        FOOTER
+
     </footer>
 </body>
 </html>
