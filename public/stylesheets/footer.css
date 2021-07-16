@@ -8,17 +8,24 @@ footer{
     display: grid;
     grid-template-rows: repeat(3,150px);
     justify-content: center;
-    padding-bottom: 50px;
+    padding: 50px;
 }
 footer ul{
     list-style: none;
+    
+}
+footer ul li{
+    padding: 2px;
+}
+footer ul li:hover{
+    text-decoration: underline;
 }
 footer div{
     border-bottom: white 1px solid;
     display: grid;
     grid-template-rows: repeat(2,20px);
     gap: 10px;
-    justify-content:flex-start ;
+    justify-content: flex-start ;
     padding-top: 20%;   
 }
 footer div:nth-last-child(1){
@@ -37,7 +44,15 @@ footer .social-media ul{
 }
 footer .social-media ul a i{
     font-size: 35px;
+   
 }
+
+footer .social-media ul a i:hover{
+    color: rgba(252, 118, 70, 0.986);
+   
+}
+
+
 @media screen and (min-width:768px) {
     footer{
         grid-template-rows: repeat(1,100%);
@@ -50,6 +65,7 @@ footer .social-media ul a i{
         grid-template-rows: repeat(2,20px);
         padding-bottom: 90px; 
         height: 100%;
+        justify-content: center;
     }
     footer div:nth-last-child(1){
         border-right: none
