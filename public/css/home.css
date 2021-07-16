@@ -344,13 +344,8 @@
 
 /* MEADIA QUERIES */
 
-@media (min-width:576px){
-    .product-block .flip-text {
-        font-size: 1.5rem;
-    }
-}
 
-@media (min-width:768px){
+@media (min-width:576px){
     .product-block {
         height: 60vh;
     }
@@ -362,7 +357,12 @@
     .product-block .flip-text {
         border: 2px solid rgba(255, 68, 0, 0.842);
         padding: 2rem;
+        font-size: 1.5rem;
         margin-right: 3rem;
+    }
+
+    .product-block .flip-text .name-block {
+        padding: 0;
     }
 
     .product-block .flip-text .name-block h1 {
@@ -403,5 +403,81 @@
 
     .section-3-container .box-bottom .slider-bottom a {
         display: none;
+    }
+}
+
+
+@media (min-width:699px){
+    .product-block .flip .flip-text {
+        padding-top: 4rem;
+    }
+
+    .product-block .sep-box {
+        margin: 60px 0 0 0;
+    }
+
+    .section-3-container .box-top .slider {
+        width: 30%;
+        display: block;
+    }
+
+    .section-3-container .box-top .slider:nth-child(2) {
+        width: 38%;
+    }
+
+    .section-3-container .box-top .slider:nth-child(3) {
+        display: block;
+    }
+
+
+    .section-3-container .box-bottom .slider-bottom {
+        width: 30%;
+        display: block;
+    }
+
+    .section-3-container .box-bottom .slider-bottom:nth-child(2) {
+        width: 38%;
+    }
+
+    .section-3-container .box-bottom .slider-bottom:nth-child(3) {
+        width: 30%;
+        display: block;
+    }
+}
+
+
+@media (min-width:1024px){
+    .section-3-container .box-top .slider {
+        width: 25%;
+    }
+    
+    .section-3-container .box-top .slider:nth-child(2) {
+        width: 25%;
+    }
+
+    .section-3-container .box-top .slider:nth-child(3) {
+        width: 25%;
+    }
+
+    .section-3-container .box-top .slider:nth-child(4) {
+        width: 25%;
+        display: block;
+    }
+
+    .section-3-container .box-bottom .slider-bottom {
+        width: 25%;
+    }
+
+    .section-3-container .box-bottom .slider-bottom:nth-child(2) {
+        width: 25%;
+    }
+
+    .section-3-container .box-bottom .slider-bottom:nth-child(3) {
+        width: 25%;
+    }
+
+    .section-3-container .box-bottom .slider-bottom:nth-child(4) {
+        width: 25%;
+        display: block;
     }
 }
