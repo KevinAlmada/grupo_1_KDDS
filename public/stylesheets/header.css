@@ -4,7 +4,7 @@
 .menu{
     width: 2.2rem;
     height: 2.7rem;
-    background: #171010;
+    background-color: var(--colorAzul);
     border-radius: 0.5rem;
     position: absolute;
     top:-48.5vh;
@@ -26,7 +26,7 @@
  .left-panel{
     width: 80%;
     height: 100vh;
-    background: linear-gradient(#2B2B2B,#171010,#2B2B2B);
+    background-color: var(--colorAzul);
     position: absolute;
     top: -50vh;
     left: -80%;
@@ -93,7 +93,12 @@
 
 /* header */
 header{
-    background-color: white;
+    background: rgb(154,186,250);
+    background: linear-gradient(180deg, rgba(154,186,250,1) 7%, rgba(255,255,255,0.02) 100%);
+}
+header a{
+    text-decoration: none;
+    color: black;
 }
 .container-header{
     display: flex;
