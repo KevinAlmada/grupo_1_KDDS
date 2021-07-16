@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:  Roboto, sans-serif;
+}
+:root{
+    --colorAzul: #0E1626;
+    --colorNaranjaOscuro: #F24405;
+    --colorNaranjaClaro: #F27D52;
+    --colorCeleste: #569E92;
+    --colorCelesteFondo: #BFDDDF;    
+}
+
+
+
+/* STILOS DARIOM */
+/* MAIN */
+main{
+    
+    margin: 15px;
+    border-radius: 5px;
+    /* border: solid 1px var(--colorNaranjaOscuro); */
+    padding-bottom: 20px;
+
+}
+
+.banner img{
+    width: 100%;
+
+}
+.product_img{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+/* imagen principal */
+.product_img .element1{
+
+    
+    margin: 20px 5px 20px 5px;
+    padding: 50px 10px;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+
+}
+.product_img .element1:hover{
+    border: solid 1px var(--colorNaranjaOscuro);
+}
+/* imagenes de muestra */
+.product_img .lentes_muestra{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.product_img .lentes_muestra img{
+    width: 30%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    margin: 25px 5px ;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: white;
+}
+.product_img .lentes_muestra img:hover{
+    border: solid 1px var(--colorNaranjaOscuro);
+}
+/* Detalles del producto */
+.product_name{
+    text-align: center;
+}
+.price{
+    text-align: center;
+}
+.description_title{
+    text-align: center;
+}
+.description{
+    text-align: center;
+}
+.boton_comprar{
+    background-color: var(--colorAzul);
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all .8s;
+    cursor: pointer;
+}
+.boton_comprar:hover{
+    background-color: #F24405;
+}
+.redes-compartir{
+    
+    display: flex;
+    justify-content: center;
+}
+a.postal{
+   background-color: #0E1626;
+   text-align: center;
+   margin: 0 auto;
+   display: none;
+   width: fit-content;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 11px;
+   padding: 5px;
+   
+}
+.description{
+    border: 1px black solid;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.description_title{
+    text-transform: uppercase;
+    margin-top: 25px;
+
+}
+.lentes_modelo{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lentes_modelo img{
+    width: 96%;
+    align-self: center;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .5);
+    border-radius: 3px;
+}
+/* cards */
+.card-content{
+    display: none;
+}
+
+/* slider */
+.container{
+    margin: auto;
+    background: linear-gradient(359deg, rgb(0 0 0 / 0%), #f27d52);
+    width: 90%;
+    max-width: 377px;
+    padding: 20px;
+    
+    border-radius: 5px;
+     
+  }
+  
+  ul, li {
+      padding: 0px;
+      margin: 0;
+      list-style: none;
+  }
+  
+  ul.slider{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    
+  }
+  
+  ul.slider li {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      width: inherit;
+      height: inherit;
+      transition: opacity .8s;
+      background:#fff;
+      
+  }
+
+
+  ul.slider li img{
+    width: 100%;
+    height: 300px;
+    object-fit:contain;
+    
+  }
+  
+  ul.slider li:first-child {
+      opacity: 1; /*Mostramos el primer <li>*/
+      
+  }
+  
+  ul.slider li:target {
+      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+  }
+  
+  .menu-slide{
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .menu-slide li{
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .menu-slide li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--colorNaranjaClaro);
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 100%;
+  }
+  .menu-slide li a:hover{
+      background-color: white;
+      border: solid 2px var(--colorNaranjaOscuro);
+  }
+  
+ /*  MEDIA QUERIES */
+ @media (min-width:576px){
+    body{ 
+        background: linear-gradient(grey, var(--colorAzul));
+     }
+    
+     
+    main{
+        background-color: white;
+        margin: 0 auto;
+        border-radius: 5px;
+        width: 90%;
+    
+    
+    }
+
+    
+      .boton_comprar{
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .card-content {
+        display: flex;
+        /* gap: 10px; */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .card-type img{     
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 3px;
+        box-shadow: 10px 10px 10px gray;    
+    }
+    .card2{
+        display: none;
+    }
+    .btnmore{
+        width: 150px;
+        background-color: var(--colorAzul);
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 8px;
+        margin: 0 auto;
+        margin-top: 25px;
+        transition: all .8s;
+        cursor: pointer;
+    }
+    .btnmore:hover{
+        background-color: var(--colorNaranjaOscuro);
+    }
+    .description_title{
+        margin-top: 40px;
+    }
+    .description{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .container{ /*slider*/
+        /* margin:  0 auto;
+        margin-bottom: 20px;
+        width: 60% */
+        display: none;
+        
+      }
+ }
+
+ @media (min-width:768px){
+     
+     main{
+        width: 80%;
+     }
+     main.detalle-producto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+            width: 80%;
+            margin: 0 auto;
+        }
+    .product_img .element1{
+            width: 60%;
+            margin: 0 auto;
+        
+        
+    }
+    
+    .product_img .lentes_muestra img{
+        max-width: 16%;
+    
+    }
+    .detalle-productop{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .card2{
+        display: block;
+    }
+    
+    .container{ /*slider*/
+       display: none;
+      }
+    
+    
+    
+}
