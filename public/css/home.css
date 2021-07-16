@@ -365,8 +365,12 @@
         padding: 0;
     }
 
+    .product-block .flip-text button a {
+        font-size: 1.3rem;
+    }
+
     .product-block .flip-text .name-block h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .product-block .flip-text .cuotas p {
@@ -447,6 +451,10 @@
 
 
 @media (min-width:1024px){
+    .product-block .flip .flip-text {
+        padding-top: 5rem;
+    }
+
     .section-3-container .box-top .slider {
         width: 25%;
     }
