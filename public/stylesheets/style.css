@@ -3,5 +3,13 @@
 @import url("cart.css");
 @import url("home.css");
 *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: roboto , sans-serif;
+}
+:root {
+    --colorAzul: #0E1626;
+    --colorNaranjaOscuro: #F24405;
+    --colorNaranjaClaro: #F27D52; 
 }

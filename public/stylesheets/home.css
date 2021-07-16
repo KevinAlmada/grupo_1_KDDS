@@ -25,7 +25,7 @@
     top: 1rem;
     left: 30%;
     right: 30%;
-    border: 1px solid slateblue;
+    border: 1px solid var(--colorAzul);
 }
 
 
@@ -62,23 +62,23 @@
 }
 
 .product-block .flip-text .flip-title {
-    color: rgba(255, 68, 0, 0.842);
+    color: var(--colorNaranjaClaro);
     text-decoration: underline;
 }
 
 .product-block .flip-text .name-block {
-    color:rgb(107, 39, 218);
+    color:var(--colorAzul);
     font-size: 2rem;
     padding-top: 1.5rem;
 }
 
 .product-block .flip-text .cuotas {
     padding-bottom: 0.5rem;
-    color: rgb(235, 144, 111);
+    color: var(--colorNaranjaClaro);
 }
 
 .product-block .flip-text button {
-    background-color: rgb(60, 60, 170);
+    background-color: var(--colorAzul);
     gap: 4rem;
     border: none;
     border-radius: 5px;
@@ -156,14 +156,14 @@
 }
 
 .section-3-container .product-box-top .text-box p {
-    color: rgba(255, 68, 0, 0.842);
+    color: var(--colorNaranjaClaro);
 }
 
 .section-3-container .product-box-top .text-box button {
     padding: 0.25rem 2rem;
     margin-top: 1.2rem;
     color: white;
-    background-color: rgb(60, 60, 170);
+    background-color: var(--colorAzul);
     border: none;
     border-radius: 5px;
 }
@@ -220,14 +220,14 @@
 }
 
 .section-3-container .product-box-botton .text-box p {
-    color: rgba(255, 68, 0, 0.842);
+    color: var(--colorNaranjaClaro);
 }
 
 .section-3-container .product-box-botton .text-box button {
     padding: 0.25rem 2rem;
     margin-top: 1.2rem;
     color: white;
-    background-color: rgb(60, 60, 170);
+    background-color: var(--colorAzul);
     border: none;
     border-radius: 5px;
 }
@@ -277,7 +277,7 @@
 }
 
 .section-4-container .container-top h1 {
-    color: rgba(255, 68, 0, 0.842);
+    color: var(--colorNaranjaClaro);
     grid-row: 1/2;
     grid-column: 2/10;
 }
@@ -315,7 +315,7 @@
 }
 
 .section-4-container .container-bottom h1 {
-    color: rgba(255, 68, 0, 0.842);
+    color: var(--colorNaranjaClaro);
     grid-row: 1/2;
     grid-column: 2/10;
 }
@@ -355,7 +355,7 @@
         flex-direction: row;
     }
     .product-block .flip-text {
-        border: 2px solid rgba(255, 68, 0, 0.842);
+        border: 2px solid var(--colorNaranjaClaro);
         padding: 2rem;
         font-size: 1.5rem;
         margin-right: 3rem;
