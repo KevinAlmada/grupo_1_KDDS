@@ -104,7 +104,7 @@ header a{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px black solid ;
+    /* border-bottom: 1px black solid ; */
     padding: 15px; ;
 }
 .container-header-logo h1{
