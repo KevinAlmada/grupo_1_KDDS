@@ -382,26 +382,36 @@
     grid-column: 1/10;
 }
 
+/* NEWSLETTER */
+
 .newsletter{
+    max-width: 1400px;
+    width: 100vw;
     background-image: url("/images/home/portada.jpg");
+    background-size: cover;
     height: 200px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
-    font-family: roboto , sans-serif;
-    width: 100vh;
+    grid-template-rows: 1r 1fr 2fr;
     margin: 0 auto;
-    display: none;
+    gap: 20px;
 }
 
-.newsletter p,
-.newsletter form{
-    margin: 0 auto;
-}
 .newsletter .news-title{
-    margin-top: 10px ;
-    font-size: 50px;
+    justify-self: center;
+    font-size: 1.5rem;
+    align-self: flex-end;
 }
+
+.newsletter .news-info {
+    text-align: center;
+}
+
+.newsletter .news-input {
+    justify-self: center;
+    justify-content: space-around;
+}
+
 .newsletter .news-input input{
     border: none;
     height: 25px;
@@ -412,10 +422,10 @@
 }
 
 .newsletter .news-input input:hover{
-    border-color: #F24405 ;
+    border-color: var(--colorNaranjaClaro) ;
 }
 .newsletter .news-input button{
-    background-color: #0E1626;
+    background-color: var(--colorAzul);
     border: none;
     width: 120px;
     height: 30px;
@@ -432,7 +442,7 @@
     transform: scale(1);
 }
 .newsletter .news-input button:hover{
-    background-color: #F24405;
+    background-color: var(--colorNaranjaClaro);
     transform: scale(1.1);
 }
 
@@ -470,6 +480,14 @@
 
     .product-block .flip-text .cuotas p {
         font-size: 0.9rem;
+    }
+
+    .newsletter .news-input {
+        flex-direction: row;
+    }
+
+    .newsletter .news-input input {
+        margin-right: 2rem;
     }
 
     /* SECTOR 3*/
@@ -556,6 +574,10 @@
     .section-3-container .box-bottom .slider-bottom:nth-child(3) {
         width: 30%;
         display: block;
+    }
+
+    .newsletter .news-input input {
+        width: 15rem;
     }
 }
 
