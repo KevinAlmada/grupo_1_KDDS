@@ -299,7 +299,7 @@ a.postal{
 
  @media (min-width:768px){
      
-     main{
+     main.detalle-producto{
         width: 80%;
      }
      main.detalle-producto{
