@@ -3,12 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #BFDDDF;
+body.cart-body{
+    background-color: var(--colorCelesteFondo);
 }
-main{
+main.cart-main{
     width: 80vw;
     margin: 10vw;
+    background-color: var(--colorCelesteFondo);
 }
 .cart-products h2{
     font-family: "Bauhaus 93";
