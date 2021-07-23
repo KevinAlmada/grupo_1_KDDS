@@ -102,7 +102,7 @@
 /* Section 3 */
 
 .section-3-container {
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     max-width: 1400px;
     margin: 0 auto;
@@ -307,6 +307,7 @@
     width: 100vw;
     margin-top: 40px;
     max-width: 1400px;
+    margin: 0 auto;
 }
 
 .section-4-container .container-top {
@@ -599,7 +600,7 @@
     }
 
     .section-3-container .box-top .slider:nth-child(2) {
-        width: 34%;
+        width: 30%;
     }
 
     .section-3-container .box-top .slider:nth-child(3) {
@@ -616,7 +617,7 @@
     }
 
     .section-3-container .box-bottom .slider-bottom:nth-child(2) {
-        width: 34%;
+        width: 30%;
     }
 
     .section-3-container .box-bottom .slider-bottom:nth-child(3) {
@@ -626,6 +627,39 @@
 
     .newsletter .news-input input {
         width: 15rem;
+    }
+
+    
+    /* SECTOR 4 */
+    .section-4-container {
+        height: 150vh;
+    }
+
+    .section-4-container .container-top img:nth-child(2) {
+        height: 12rem;
+    }
+
+    .section-4-container .container-top img:nth-child(3) {
+        height: 12rem;
+        width: 39rem;
+    }
+
+    .section-4-container .container-bottom {
+        height: 80vh;
+    }
+
+    .section-4-container .container-bottom h1 {
+        grid-row: 2;
+    }
+
+    .section-4-container .container-bottom img:nth-child(2) {
+        height: 12rem;
+    }
+
+    .section-4-container .container-bottom .box-pagos {
+        margin: 0;
+        height: 12rem;
+        width: 87%;
     }
 }
 
@@ -681,24 +715,50 @@
     /* SECTOR 4 */
 
     .section-4-container {
-        height: 100vh;
+        height: 80vh;
     }
 
     .section-4-container .container-top {
-        height: 50vh;
+        height: 40vh;
+    }
+
+    .section-4-container .container-top h1 {
+        grid-row: 4;
     }
 
     .section-4-container .container-top img:nth-child(2) {
         justify-self: baseline;
         grid-column: 1 / 11;
-        grid-row: 5;
+        grid-row: 8;
         width: 53%;
+        height: 90%;
     }
 
     .section-4-container .container-top img:nth-child(3) {
         justify-self: self-end;
         width: 55%;
-        grid-row: 5;
+        grid-row: 8;
         grid-column: 1/11;
+        height: 90%;
+    }
+
+    .section-4-container .container-bottom {
+        height: 50vh;
+    }
+
+    .section-4-container .container-bottom img:nth-child(2) {
+        justify-self: baseline;
+        grid-row: 5;
+        height: 89%;
+        width: 64%;
+        grid-column: 1/9;
+    }
+
+    .section-4-container .container-bottom .box-pagos {
+        justify-self:  center;
+        grid-row: 5;
+        width: 90%;
+        height: 90%;
+        grid-column: 6/11;
     }
 }
