@@ -8,7 +8,7 @@ body.cart-body{
 }
 main.cart-main{
     width: 80vw;
-    margin: 10vw;
+    margin: 0 auto;
     background-color: var(--colorCelesteFondo);
 }
 .cart-products h2{
@@ -95,7 +95,7 @@ main.cart-main{
 }
 .total-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     margin-top: 30px;
     background-color: white;
