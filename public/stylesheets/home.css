@@ -1,4 +1,4 @@
-main.home{
+main .home{
     width: 100%;
 }
 .section-1-container {
@@ -385,7 +385,7 @@ main.home{
     grid-column: 1/10;
 }
 
-.newsletter{
+/* .newsletter{
     background-image: url("/images/home/portada.jpg");
     height: 200px;
     display: grid;
@@ -437,7 +437,7 @@ main.home{
 .newsletter .news-input button:hover{
     background-color: #F24405;
     transform: scale(1.1);
-}
+} */
 
 
 /* MEADIA QUERIES */

@@ -5,7 +5,7 @@
     --colorCeleste: #569E92;
     --colorCelesteFondo: #BFDDDF;    
 }
-body{
+.body-register{
     
     margin: 0;
     padding: 0;
@@ -82,7 +82,7 @@ form{
     background-color: var(--colorNaranjaOscuro);
     transition: .5s;
     width: 225px;
-    height: 50px;
+    
 }
 .container-form .login{
     display: flex;
@@ -125,7 +125,7 @@ form{
 /*desktop*/
 @media (min-width: 768px) {
 
-    body{
+    .body-register{
         background-color: var(--colorCelesteFondo)
         
     }

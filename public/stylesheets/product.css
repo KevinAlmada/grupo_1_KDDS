@@ -15,326 +15,312 @@
 
 
 /* STILOS DARIOM */
-/* MAIN */
-main{
-    
-    /* margin: 15px; */
-    border-radius: 5px;
-    /* border: solid 1px var(--colorNaranjaOscuro); */
-    padding-bottom: 20px;
-
-}
 
 .banner img{
     width: 100%;
+}
+
+/* MAIN */
+
+.main {
+    border: solid 1px var(--colorAzul);
+    width: 90%;
+    margin: 0 auto;
 
 }
-.product_img{
-    
-    display: flex;
-    flex-direction: column;
-    
-}
-/* imagen principal */
-.product_img .element1{
-
-    
-    margin: 20px 5px 20px 5px;
-    padding: 50px 10px;
-    border-radius: 3px;
-    background-color: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
-
-}
-.product_img .element1:hover{
-    border: solid 1px var(--colorNaranjaOscuro);
-}
-/* imagenes de muestra */
-.product_img .lentes_muestra{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}
-.product_img .lentes_muestra img{
-    width: 30%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
-    margin: 25px 5px ;
-    padding: 5px;
-    border-radius: 3px;
-    background-color: white;
-}
-.product_img .lentes_muestra img:hover{
-    border: solid 1px var(--colorNaranjaOscuro);
-}
-/* Detalles del producto */
-.product_name{
-    text-align: center;
-}
-.price{
-    text-align: center;
-}
-.description_title{
-    text-align: center;
-}
-.description{
-    text-align: center;
-}
-.boton_comprar{
-    background-color: var(--colorAzul);
-    margin: 20px;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: all .8s;
-    cursor: pointer;
-}
-.boton_comprar:hover{
-    background-color: #F24405;
-}
-.redes-compartir{
-    
-    display: flex;
-    justify-content: center;
-}
-a.postal{
-   background-color: #0E1626;
-   text-align: center;
-   margin: 0 auto;
-   display: none;
-   width: fit-content;
-   text-transform: uppercase;
-   text-decoration: none;
-   font-size: 11px;
-   padding: 5px;
-   
-}
-.description{
-    border: 1px black solid;
-    margin: 10px;
-    padding: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    
-}
-.description_title{
-    text-transform: uppercase;
-    margin-top: 25px;
-
-}
-.lentes_modelo{
-    width: fit-content;
+.container-product{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 10px;
 }
-.lentes_modelo img{
-    width: 96%;
-    align-self: center;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .5);
-    border-radius: 3px;
-}
-/* cards */
-.card-content{
-    display: none;
-}
-
-/* slider */
-.container{
-    margin: auto;
-    background: linear-gradient(359deg, rgb(0 0 0 / 0%), #f27d52);
-    width: 90%;
-    max-width: 377px;
-    padding: 20px;
-    
-    border-radius: 5px;
-     
-  }
-  
-  ul, li {
-      padding: 0px;
-      margin: 0;
-      list-style: none;
-  }
-  
-  ul.slider{
-    position: relative;
+.container-product img{
     width: 100%;
-    height: 300px;
-    
-  }
-  
-  ul.slider li {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      opacity: 0;
-      width: inherit;
-      height: inherit;
-      transition: opacity .8s;
-      background:#fff;
-      
-  }
-
-
-  ul.slider li img{
-    width: 100%;
-    height: 300px;
-    object-fit:contain;
-    
-  }
-  
-  ul.slider li:first-child {
-      opacity: 1; /*Mostramos el primer <li>*/
-      
-  }
-  
-  ul.slider li:target {
-      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-  }
-  
-  .menu-slide{
+    box-shadow: #0E1626 0px 10px 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+}
+.container-product .product-name{
     text-align: center;
-    margin: 20px;
-  }
-  
-  .menu-slide li{
-    display: inline-block;
+}
+.container-product .precio{
     text-align: center;
-  }
-  
-  .menu-slide li a{
-    display: inline-block;
+    margin-top: 10px;
+
+}
+.container-product .btn-comprar{
+    background-color: var(--colorAzul);
+    text-align: center;
     color: white;
-    text-decoration: none;
-    background-color: var(--colorNaranjaClaro);
-    padding: 10px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 100%;
-  }
-  .menu-slide li a:hover{
-      background-color: white;
-      border: solid 2px var(--colorNaranjaOscuro);
-  }
-  
- /*  MEDIA QUERIES */
- @media (min-width:576px){
-    .body-product{ 
-        background: linear-gradient(grey, var(--colorAzul));
-     }
+    padding: 20px;
+    margin: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: all .8s;
+}
+.container-product .btn-comprar:hover{
+    background-color: #F24405;
+    cursor: pointer;
+}
+.container-product .description{
+    padding: 15px;
+    text-align: justify;
+
+}
+/* Tu estilo */
+.contenedor-estilos{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+}
+.contenedor-estilos .social{
+    display: flex;
+    list-style: none;
+    color: var(--colorAzul);
+}
+.social li{
+    margin: 5px;
+    
+}
+.social li:hover{
+    margin: 5px;
+    cursor: pointer;
+    color: var(--colorNaranjaOscuro);
+}
+
+.contenedor-estilos div img{
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    padding: 25px;
+}
+.contenedor-estilos div img:hover{
+    filter: blur(5px);
+}
+/* fin tu estilo */
+.reco{
+    margin-top: 50px;;
+    text-align: center;
+    border-bottom: #0E1626 1px dashed;
+    padding-bottom: 20px;
+    padding: 20px;
+    font-size: 1em;
+}
+
+/* cards */
+.main .card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.card-container article{
+    margin-bottom: 47px;
+    margin-top: 50px;
+    border-bottom: #0E1626 1px solid;
+    padding-top: 10px;
+
+}
+.main .card-container img{
+    width: 250px;
+    box-shadow: #0E1626 0px 10px 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    border: solid 1px var(--colorNaranjaOscuro);
+}
+.card-container .product-name{
+    text-align: center;
+}
+.card-container .precio{
+    text-align: center;
+    margin-top: 10px;
+
+}
+.card-container .btn-comprar{
+    background-color: var(--colorAzul);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: all .8s;
+    
+}
+.card-container .btn-comprar:hover{
+    background-color: #F24405;
+    cursor: pointer;
+
+}
+
+/* newsletter */
+.newsletter{
+    background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
      
+}
+.newsletter p{
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+.newsletter form{
+    margin: 0 auto;
+    width: 85%;
+    
+}
+.newsletter .news-title{
+    margin-top: 10px ;
+    font-size: 1.5em;
+}
+.newsletter .news-input input{
+    
+    height: 25px;
+    border: 1px solid var(--colorNaranjaOscuro);
+    padding: 15px;
+    border-radius: 5px ;
+    transition: border .5s;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.newsletter .news-input input:hover{
+    border-color: #F24405 ;
+}
+.newsletter .news-input button{
+    display: flex;
+    background-color: #0E1626;
+    border: none;
+    width: 120px;
+    height: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all .5s;
+    margin:0 auto ; 
+    transform: scale(1);
+}
+
+.newsletter .news-input button:hover{
+    background-color: #F24405;
+    transform: scale(1.1);
+}
+/* fin newsletter */
+
+
+@media (min-width:576px){
+    .body-product{
+        background: linear-gradient(var(--colorCeleste) , var(--colorAzul));
+    }
     main{
         background-color: white;
-        margin: 0 auto;
         border-radius: 5px;
-        width: 90%;
-    
-    
-    }
-
-    
-      .boton_comprar{
-        width: 200px;
-        margin: 0 auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .card-content {
-        display: flex;
-        /* gap: 10px; */
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .card-type img{     
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 3px;
-        box-shadow: 10px 10px 10px gray;    
-    }
-    .card2{
-        display: none;
-    }
-    .btnmore{
-        width: 150px;
-        background-color: var(--colorAzul);
-        text-align: center;
-        border-radius: 5px;
-        color: white;
-        font-size: 1em;
-        text-transform: uppercase;
-        padding: 8px;
-        margin: 0 auto;
-        margin-top: 25px;
-        transition: all .8s;
-        cursor: pointer;
-    }
-    .btnmore:hover{
-        background-color: var(--colorNaranjaOscuro);
-    }
-    .description_title{
-        margin-top: 40px;
-    }
-    .description{
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 20px;
-        margin-bottom: 50px;
-    }
-    .container{ /*slider*/
-        /* margin:  0 auto;
-        margin-bottom: 20px;
-        width: 60% */
-        display: none;
+        padding-top: 25px;
         
-      }
- }
+    }
+    
+    .main .container-product img{
+        width: 400px;
+    }
+    .main .container-product .btn-comprar{
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 10px;
+        
+    }
+    .social li{
+        font-size: 2em;
+        
+    }
+    .newsletter form {
+        margin: 0 auto;
+        width: 54%;
+    }
+    
+}
+/* medias queryes */
 
  @media (min-width:768px){
      
-     main.detalle-producto{
-        width: 80%;
-     }
-     main.detalle-producto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .banner{
-            width: 80%;
-            margin: 0 auto;
-        }
-    .product_img .element1{
-            width: 60%;
-            margin: 0 auto;
-        
-        
+    .container-product{
+        align-items: flex-start;
+        flex-direction: row;
     }
     
-    .product_img .lentes_muestra img{
-        max-width: 16%;
+    
+    .product-info{
+        width: 40%;
+        
+    }
+    .main .card-container{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .container-product .product-name{
+        margin-top: 50px;
+    }    
+    .container-product .btn-comprar{
+        width: fit-content;
+        margin-left: 40%;
+        padding: 10px;
+        margin-top: 50px;
+    }
+    .main .card-container img{
+        padding: 10px;
+        height: 200px;
+    }
+    .card-container article{
+        margin: 15px;
+        margin-bottom: 30px;
+    }
+    .container-product .description{
+        margin-left: 10%;
     
     }
-    .detalle-productop{
+    .newsletter .news-input{
         display: flex;
-        flex-direction: column;
 
     }
-    .card2{
-        display: block;
+    .newsletter .news-input input{
+        width: 50vw;
     }
-    
-    .container{ /*slider*/
-       display: none;
-      }
-    
-    
-    
+    .container-product .description {
+        margin-left: 0;
+    }
+        
+}
+
+@media (min-width:999px){
+    .newsletter .news-input{
+        flex-direction: column;
+        
+    }
+    .newsletter form {
+        width: auto;
+    }
+}
+
+@media (min-width: 1200px){
+    .newsletter .news-input input {
+        width: 30vw;
+    }
 }
