@@ -15,9 +15,6 @@ Este sprint fue bastante laborioso , tuvimos que llevar nuestras habilidades de 
 - Dedicarle tiempo a tareas que no son primordiales.
 ### Dejar de hacer:
 - No sentimos que hagamos algo de mas.
-router.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, ".././views/login.html"))
-});
-router.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, ".././views/register.html"))
-});
+
+** Tablero de trelo
+- https://trello.com/b/tjwo2pym/trabajo-grupo-1

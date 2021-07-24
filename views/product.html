@@ -18,108 +18,146 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93" rel="stylesheet" type="text/css"/>
     <script src="/javascripts/home/index.js" defer></script>
+    <script src="/javascripts/burger.js" defer></script>
     <!-- fin head kev -->
 
     <title>Pagina Producto</title>
 </head>
 <body class="body-product">
     <header>
+        <div class="menu-lateral" id="menuLateral"> 
+            <div class="left-panel" id="panelMenuLateral">
+                <ul>
+                    <li class="side-bar-logo"><a href=""><h1>KDDS</h1></a></li>
+                    <li>
+                        <div class="search-bar">
+                            <form action="">
+                                <input type="search" name="" id="">
+                                <button class="search-ico">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                        </form>
+                        </div>
+                    </li>   
+                    <li>
+                        <div class="header-mobile-drop-title" id="header-mobile-drop-title"onclick="headerDropDown()">
+                            <h4>Productos</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
+                            <a href="#"><li>Anteojos de sol</li></a>
+                            <a href="#"><li>Anteojos de lectura</li></a>
+                            <a href="#"><li>Anteojos de facha</li></a>
+                        </ul>
+                    </li>
+                    <a href=""><li>Iniciar sesion</li></a>
+                    <a href=""><li>Registrate</li></a>
+                </ul>
+            </div>
+        </div>
         <div class="container-header">
+            <div id="burger" onclick="burger()"><i class="fas fa-bars" id="hamburguesa"></i><i class="fas fa-times" id="cruz" ></i></div>
             <div class="container-header-logo">
-                <a href="http://localhost:3000/"><h1>KDDS</h1></a>
+                <a href="#"><h1>KDDS</h1></a>
+            </div>
+            <div class="search-bar-desktop">
+                <input type="search" name="" id="">
+                <button class="search-ico">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
             <div class="header-cart-bag">
-                    <a href="http://localhost:3000/login" class="header_user">
+                    <a class="header_user" href="#">
                         <i class="far fa-user"></i>
                     </a>
-                    <a href="http://localhost:3000/cart" class="header_cart">
+                    <a class="header_cart" href="#">
                         <i class="fas fa-shopping-bag"></i>
                     </a>
             </div>
         </div>
-    </header>
-    <div class="menu-lateral">
-        <input type="checkbox" class="checkbox" id="check">
-        <label class ="menu" for="check"><i class="fas fa-bars"></i></label>
-        <div class="left-panel">
-            <ul>
-                <li class="side-bar-logo"><a href=""><h1>KDDS</h1></a></li>
-                <li>
-                    <div class="search-bar">
-                        <form action="">
-                            <input type="search" name="" id="">
-                            <button class="search-ico">
-                                <i class="fas fa-search"></i>
-                            </button>
-                    </form>
-                    </div>
-                </li>   
-                <a href=""><li>Productos</li></a>
-                <a href=""><li>Iniciar sesion</li></a>
-                <a href=""><li>Registrate</li></a>
-            </ul>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <a href="#"><li>Lentes de sol</li></a>
+                    <a href="#"><li>Lentes de vista</li></a>
+                    <a href="#"><li>Ofertas</li></a>
+                    <a href="#"><li>Contacto</li></a>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
 
     <div class="banner">
         <img src="/images/productos/banner.jpg" alt="Bienvenido">
+        
+        
     </div>
-
-    <main class="detalle_producto">
-        <section class="product_img">
-            <img class="element1" src="/images/productos/klipartz.com (1).png" alt="lentes de sol " >
-            <div class="lentes_muestra">
-                <img class="element2" src="/images/productos/klipartz.com (2).png" alt="lente" >
-            <img class="element3" src="/images/productos/klipartz.com (3).png" alt="lente 3" >
-            <img class="element4" src="/images/productos/klipartz.com.png" alt="lente 4" >
-            </div>
-
+    <main class="main">
+        <section class="container-product">
+            <article class="product-img"><img src="/images/productos/lente1.jpg" alt="LenteSolNegro"></article>
+        
+            <article class="product-info">
+                <h2 class="product-name">Nombre del Producto</h2>
+                <h3 class="precio">Precio. $15.000</h3>
+                <p class="btn-comprar">Comprar</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque commodi earum aliquam placeat? Soluta aliquid obcaecati a cupiditate provident saepe nostrum, temporibus expedita, consequatur perspiciatis dolores, modi perferendis illo accusamus.</p>
+            </article>
         </section>
-        <h2 class="product_name">Nombre del producto</h2>
-        <h4 class="price">$15.000
-        </h4>
-
-        <div class="boton_comprar">
-            <p>Comprar</p>
-        </div>
-       
-        <a class="postal" href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank">consulta tu codigo postal</a>
-        <div class="lentes_modelo" >
-            <img  src="/images/productos/gafasamarillas.jpg" alt="modelo-lentes-amariilo">
-        </div>
-        <h3 class="description_title">Descripcion</h3>
-        <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officia itaque, cum nihil qui porro nisi nulla ad quas illo corrupti impedit sit sed necessitatibus quo, recusandae ea velit nesciunt.
-        </p>
-       <!-- SLIDER -->
-    <div class="container">
-        <ul class="slider">
-            <li id="slide1"><img src="/images/productos/klipartz.com (1).png" alt=""></li>
-            <li id="slide2"><img src="/images/productos/klipartz.com (3).png" alt=""></li>
-            <li id="slide3"><img src="/images/productos/klipartz.com.png" alt=""></li>
-        </ul>
-        <ul class="menu-slide">
-            <li><a href="#slide1"></i></a></li>
-            <li><a href="#slide2"></a></li>
-            <li><a href="#slide3"></a></li>
-        </ul>
-    </div>
-
-    <!-- CARDS -->
-    <section class="card-content">
-        <article class="card-type">
-            <img src="/images/productos/card1.jpg" alt="">
-            <h3 class="btnmore"> Ver Más</h3>
-        </article>
-        <article class="card-type card2">
-            <img src="/images/productos/card2.jpg" alt="">
-            <h3 class="btnmore"> Ver Más</h3>
-        </article>
-        <article class="card-type">
-            <img src="/images/productos/card3.jpg" alt="">
-            <h3 class="btnmore"> Ver Más</h3>
-        </article>
-    </section>
+        <section class="estilo-container">
+            
+            <article class="contenedor-estilos">
+                <div>
+                    <img src="/images/productos/Gafas-de-sol-pareja1.jpg" alt="">
+                    
+                </div>
+                <h2 class="estilo-titulo">Compartí tu estilo</h2>
+                <ul class="social">
+                    <li><i class="fab fa-facebook-square"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fas fa-share-alt"></i></li>
+                </ul>
+            </article>
+        </section>
+        <h2 class="reco">Productos Recomendados</h2>
+        <section class="card-container">
+            <article class="card1">
+                <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
+                <h2 class="product-name">Nombre del Producto</h2>
+                <h3 class="precio">Precio. $15.000</h3>
+                <p class="btn-comprar">Ver más</p>
+            </article>
+            <article class="card2">
+                <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
+                <h2 class="product-name">Nombre del Producto</h2>
+                <h3 class="precio">Precio. $15.000</h3>
+                <p class="btn-comprar">Ver más</p>
+            </article>
+            <article class="card3">
+                <img src="/images/productos/lente4.jpg" alt="LenteSolNegro">
+                <h2 class="product-name">Nombre del Producto</h2>
+                <h3 class="precio">Precio. $15.000</h3>
+                <p class="btn-comprar">Ver más</p>
+            </article>
+            <article class="card4">
+                <img src="/images/productos/lente5.jpg" alt="LenteSolNegro">
+                <h2 class="product-name">Nombre del Producto</h2>
+                <h3 class="precio">Precio. $15.000</h3>
+                <p class="btn-comprar">Ver más</p>
+            </article>
+            
+        </section>
+        <section class="newsletter-container">
+            <div class="newsletter">
+                <p class="news-title">¡Unite a nuestro newsletter!</p>
+                <p class="news-ifo">Suscribite a nuestro newsletter y conocé todas nuestras novedades, lanzamientos y promos.</p>
+                <form action="" class="news-input">
+                    <!-- <input type="text" placeholder="Nombre y Apellido..."> -->
+                    <input type="text" placeholder="Email...">
+                    <button type="submit">SUSCRIBIR</button>
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="info">

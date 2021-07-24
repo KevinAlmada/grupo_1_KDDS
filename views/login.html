@@ -18,30 +18,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93" rel="stylesheet" type="text/css"/>
     <script src="/javascripts/home/index.js" defer></script>
+    <script src="/javascripts/burger.js" defer></script>
     <!-- fin head kev -->
     <title>Login</title>
 </head>
-<body>
-    
-        <header>
-            <div class="container-header">
-                <div class="container-header-logo">
-                    <a href="http://localhost:3000/"><h1>KDDS</h1></a>
-                </div>
-                <div class="header-cart-bag">
-                        <a href="http://localhost:3000/login" class="header_user">
-                            <i class="far fa-user"></i>
-                        </a>
-                        <a href="http://localhost:3000/cart" class="header_cart">
-                            <i class="fas fa-shopping-bag"></i>
-                        </a>
-                </div>
-            </div>
-        </header>
-        <div class="menu-lateral">
-            <input type="checkbox" class="checkbox" id="check">
-            <label class ="menu" for="check"><i class="fas fa-bars"></i></label>
-            <div class="left-panel">
+<body class="body-login">
+    <header>
+        <div class="menu-lateral" id="menuLateral"> 
+            <div class="left-panel" id="panelMenuLateral">
                 <ul>
                     <li class="side-bar-logo"><a href=""><h1>KDDS</h1></a></li>
                     <li>
@@ -54,13 +38,53 @@
                         </form>
                         </div>
                     </li>   
-                    <a href=""><li>Productos</li></a>
+                    <li>
+                        <div class="header-mobile-drop-title" id="header-mobile-drop-title"onclick="headerDropDown()">
+                            <h4>Productos</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
+                            <a href="#"><li>Anteojos de sol</li></a>
+                            <a href="#"><li>Anteojos de lectura</li></a>
+                            <a href="#"><li>Anteojos de facha</li></a>
+                        </ul>
+                    </li>
                     <a href=""><li>Iniciar sesion</li></a>
                     <a href=""><li>Registrate</li></a>
                 </ul>
             </div>
         </div>
-    
+        <div class="container-header">
+            <div id="burger" onclick="burger()"><i class="fas fa-bars" id="hamburguesa"></i><i class="fas fa-times" id="cruz" ></i></div>
+            <div class="container-header-logo">
+                <a href="#"><h1>KDDS</h1></a>
+            </div>
+            <div class="search-bar-desktop">
+                <input type="search" name="" id="">
+                <button class="search-ico">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="header-cart-bag">
+                    <a class="header_user" href="#">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a class="header_cart" href="#">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <nav>
+                <ul>
+                    <a href="#"><li>Lentes de sol</li></a>
+                    <a href="#"><li>Lentes de vista</li></a>
+                    <a href="#"><li>Ofertas</li></a>
+                    <a href="#"><li>Contacto</li></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <main>
         <div class="container-form">
             <h2 class="form-title">Bienvenido</h2>

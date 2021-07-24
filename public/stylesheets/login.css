@@ -105,17 +105,15 @@ form{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    padding: 5px;
+    margin: 50px;
 }
-.boton-enviar .enviar:hover{
-    background-color: var(--colorNaranjaOscuro);
-    transition: .5s;
-    width: 225px;
-    height: 50px;
-}
+
 .container-form .firma{
     display: flex;
     margin-top: 5px;
     justify-content: center;
+    padding-bottom: 25px;
 }
 .container-form .firma .fas{
     color: var(--colorNaranjaOscuro);
@@ -142,7 +140,7 @@ form{
 /*desktop*/
 @media (min-width: 768px) {
 
-    body{
+    .body-login{
         background-color: #BFDDDF
         
     }
