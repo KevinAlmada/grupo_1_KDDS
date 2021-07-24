@@ -120,7 +120,7 @@ main.cart-main{
     }
 }
 @media screen and (min-width:1024px){
-    main{
+    main.cart-main{
         width: 60vw;
         margin: 5vw 20vw ;
     }
