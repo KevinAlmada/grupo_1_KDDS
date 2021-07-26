@@ -1,0 +1,142 @@
+/* Section 2 */
+
+.product-block {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-block .flip {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.product-block .flip .flip-img {
+    width: 100vw;
+    height: 40vh;
+}
+
+.product-block .flip .flip-img img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+.product-block .flip-text {
+    width: 100vw;
+    height: 40vh;
+    text-align: center;
+}
+
+.product-block .flip-text .flip-title {
+    color: var(--colorNaranjaClaro);
+    text-decoration: underline;
+}
+
+.product-block .flip-text .name-block {
+    color:var(--colorAzul);
+    font-size: 2rem;
+    padding-top: 1.5rem;
+}
+
+.product-block .flip-text .cuotas {
+    padding-bottom: 0.5rem;
+    color: var(--colorNaranjaClaro);
+}
+
+.product-block .flip-text button {
+    background-color: var(--colorAzul);
+    gap: 4rem;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.product-block .flip-text button a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+}
+
+.product-block .sep-box {
+    padding: 0.5rem;
+    color: white;
+    background-color: var(--colorAzul);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:576px){
+
+    .product-block {
+        height: 83vh;
+    }
+
+    .product-block .flip {
+        flex-direction: row;
+        height: 65vh;
+        align-items: center;
+    }
+
+    .product-block .flip-img {
+        height: 60vh;
+    }
+
+    .product-block .flip-text {
+        border: 2px solid var(--colorNaranjaClaro);
+        padding: 2rem;
+        font-size: 1.5rem;
+        margin-right: 3rem;
+        height: 40vh;
+    }
+
+    .product-block .flip-text .name-block {
+        padding: 0;
+    }
+
+    .product-block .flip-text button a {
+        font-size: 1.3rem;
+    }
+
+    .product-block .flip-text .name-block h1 {
+        font-size: 2rem;
+    }
+
+    .product-block .flip-text .cuotas p {
+        font-size: 0.9rem;
+    }
+
+    .newsletter .news-input {
+        flex-direction: row;
+    }
+
+    .newsletter .news-input input {
+        margin-right: 2rem;
+    }
+}
+
+@media (min-width:699px){
+
+    .product-block {
+        height: 70vh;
+    }
+
+    .product-block .flip .flip-text {
+        padding-top: 3rem;
+    }
+
+    .product-block .sep-box {
+        margin: 35px 0 0 0;
+    }
+}
+
+@media (min-width:1024px){
+
+    .product-block .flip .flip-text {
+        padding-top: 3rem;
+    }
+}
