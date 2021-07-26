@@ -1,12 +1,14 @@
 /* SECTOR 1 */
 
-main .home{
+.home{
     width: 100%;
+    padding-top: 65px;
 }
+
 .section-1-container {
     max-width: 1400px;
     max-height: 100vh;
-    width: 100vm;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
     position: relative;
@@ -15,9 +17,10 @@ main .home{
 
 .section-1-container .fondo-container {
     width: 100%;
-    height: 91%;
+    height: 100%;
     position: relative;
 }
+
 .section-1-container .fondo-container img {
     height: 100%;
     width: 100%;

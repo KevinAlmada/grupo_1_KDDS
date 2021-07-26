@@ -72,13 +72,9 @@
 
 @media (min-width:576px){
 
-    .product-block {
-        height: 83vh;
-    }
-
     .product-block .flip {
         flex-direction: row;
-        height: 65vh;
+        height: 80vh;
         align-items: center;
     }
 
@@ -91,7 +87,7 @@
         padding: 2rem;
         font-size: 1.5rem;
         margin-right: 3rem;
-        height: 40vh;
+        height: 60vh;
     }
 
     .product-block .flip-text .name-block {
@@ -121,16 +117,8 @@
 
 @media (min-width:699px){
 
-    .product-block {
-        height: 70vh;
-    }
-
     .product-block .flip .flip-text {
         padding-top: 3rem;
-    }
-
-    .product-block .sep-box {
-        margin: 35px 0 0 0;
     }
 }
 
