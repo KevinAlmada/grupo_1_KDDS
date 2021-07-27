@@ -5,11 +5,12 @@
     margin-top: 40px;
     max-width: 1400px;
     margin: 0 auto;
+    height: 1000px;
 }
 
 .section-4-container .container-top {
     width: 100%;
-    height: 50vh;
+    height: 500px; /*50vh*/
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -94,6 +95,7 @@
 
     .section-4-container .container-top h1{
         grid-row: 1;
+        align-self: center;
     }
 
     .section-4-container .container-top img:nth-child(2) {
