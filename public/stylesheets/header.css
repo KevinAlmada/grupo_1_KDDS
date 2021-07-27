@@ -128,7 +128,8 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px black solid ;
-    height:70px;
+    height: 80px;
+    padding: 40px;
 }
 .search-bar-desktop{
     display: none;

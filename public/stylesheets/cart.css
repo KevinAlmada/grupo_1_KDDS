@@ -118,10 +118,17 @@ main.cart-main{
         border-radius: 20px;
         width: 130px;
     }
+    .buy-button .buy{
+        width: 50%;
+    }
+    
 }
 @media screen and (min-width:1024px){
     main.cart-main{
         width: 60vw;
         margin: 5vw 20vw ;
+    }
+    .buy-button .buy{
+        width: 25%;
     }
 }
