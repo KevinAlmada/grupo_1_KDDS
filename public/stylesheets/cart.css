@@ -47,6 +47,7 @@ main.cart-main{
     padding: 6px;
     border-radius: 50%;
     transition: all .5s;
+    cursor: pointer;
 }
 .discard-button i{
     color: white;
@@ -87,11 +88,11 @@ main.cart-main{
     align-items: center;
     border-radius: 5px;
     transition: all .5s;
-    margin:0 auto ;
+    margin:0 auto 20px auto  ;
 }
 .buy-button .buy:hover{
     background-color: #F24405;
-    width: 100%;
+    transform: scale(1.1);
 }
 .total-container{
     display: flex;
