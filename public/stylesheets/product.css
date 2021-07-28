@@ -98,9 +98,53 @@
     max-width: 800px;
     padding: 25px;
 }
-.contenedor-estilos div img:hover{
+/* Stilo owb */
+.container-owb {
+    position: relative;
+   margin: 0 auto;
+    width: 90%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container-owb:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container-owb:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: var(--colorNaranjaOscuro);
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    cursor: pointer;
+  }
+/* Fin Estilo owb  */
+
+/* .contenedor-estilos div img:hover{
     filter: blur(5px);
-}
+} */
 /* fin tu estilo */
 .reco{
     margin-top: 50px;;
@@ -119,21 +163,30 @@
     flex-direction: column;
     margin-top: 50px;
     flex-wrap: wrap;
+    background-color: #d5dada;
 }
 .card-container article{
     margin-bottom: 47px;
     margin-top: 50px;
-    border-bottom: #0E1626 1px solid;
+    border: #828383 1px solid;
     padding-top: 10px;
-
+    background-color: #f8fafc;
+}
+.card-container article:hover{
+    box-shadow: #0E1626 0px 10px 10px;
 }
 .main .card-container img{
     width: 250px;
-    box-shadow: #0E1626 0px 10px 10px;
-    margin-bottom: 25px;
+    /* box-shadow: #0E1626 0px 10px 10px; */
+   /*  margin-bottom: 25px; */
     padding: 15px;
     border-radius: 5px;
-    border: solid 1px var(--colorNaranjaOscuro);
+    background-color: #f8fafc;
+    /* border: solid 1px var(--colorNaranjaOscuro); */
+}
+.product_info_card{
+    background-color: #f8fafc;
+    padding: 10px 0 ;
 }
 .card-container .product-name{
     text-align: center;

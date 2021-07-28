@@ -11,9 +11,13 @@
     padding: 0;
     font-family:'Roboto', sans-serif;
     box-sizing: border-box;
-    /* background-color: var(--colorNaranjaClaro); */
+    background-color: var(--colorNaranjaClaro);
 }
-
+.register-main{
+    padding-top: 65px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
 /* FORMULARIO */
 .container-form{
     height: fit-content;
@@ -121,6 +125,10 @@ form{
         display: inline;
         border-radius: 0 0 5px 5px;
     }
+    .register-main{
+        background-color: var(--colorCelesteFondo);
+        margin-top: 30px;
+    }
 }
 /*desktop*/
 @media (min-width: 768px) {
@@ -161,7 +169,9 @@ form{
         border-radius: 0 0 10px 10px;
         
     }
-    
+    .register-main{
+        margin-top: 40px;
+    }
     
     
 }
