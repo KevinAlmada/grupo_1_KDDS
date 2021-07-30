@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %> 
+<body class="body-register">
+    
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %> 
+    
+    <!-- FIN DE HEADER -->
+    
+    <main class="register-main">
+        <div class="container-form">
+            <h2 class="form-title">registrate</h2>
+
+            <form action="" method="POST">
+                <p class="element">
+                    <label for="nombre" >Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu Nombre">
+                </p>
+                <p class="element">
+                    <label for="apellido" >Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingresá tu Apellido">
+                </p>
+                <p class="element">
+                    <label for="email" >E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="usuario@email.com">
+                </p>
+                <p class="element">
+                    <label for="password" >Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="ingresa al menos 8 caracteres">
+                </p>
+
+            </form>
+            <div class="boton-enviar">
+                <button class="enviar">
+                    Crea Tu cuenta
+                </button>
+            </div>
+            <div class="login">
+                ¿Ya tenes cuenta?  <a href="#">Ingresá</a>
+            </div>
+            <div class="firma">
+                <h6>Hecho con <i class="fas fa-heart"></i> por <span class="firma-marca">KDDS</span></h6>
+            </div>
+            
+            <img class="lentes-registro" src="/images/login/lentes_registro.jpg" alt="Bienvenido">
+        </div>
+
+    </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    
+    <!-- FIN DE FOOTER -->    
+    
+</body>
+</html>

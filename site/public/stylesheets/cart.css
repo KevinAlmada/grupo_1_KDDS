@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body.cart-body{
+    background-color: var(--colorCelesteFondo);
+}
+main.cart-main{
+    width: 80vw;
+    margin: 0 auto;
+    background-color: var(--colorCelesteFondo);
+}
+.cart-products h2{
+    font-family: "Bauhaus 93";
+}
+.cart-product{
+    box-shadow: 5px 10px 5px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 5px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 6px;
+    position: relative;
+    margin-top: 30px;
+    align-items: center;
+}
+.cart-product figure{
+    width: fit-content;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.cart-product figure img{
+    border-radius: 20px;
+    width: 100px;
+}
+.quantity-container select{
+    border: black 1px solid;
+}
+.discard-button{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    border: none;
+    background-color: gray;
+    padding: 6px;
+    border-radius: 50%;
+    transition: all .5s;
+    cursor: pointer;
+}
+.discard-button i{
+    color: white;
+    font-size: 20px;
+}
+.discard-button:hover{
+    transform: scale(1.5);
+    background-color: red;
+}
+.container-info-quantity{
+    display: grid;
+    row-gap: 30px;
+}
+.cart-prod-info{
+    display: grid;
+    row-gap: 30px;
+    font-size: 15px;
+}
+.prod-info{
+    padding-top: 10px;
+}
+.buy-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px ;
+}
+.buy-button .buy{
+    background-color: #0E1626;
+    border: none;
+    width: 90%;
+    height: 45px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all .5s;
+    margin:0 auto 20px auto  ;
+}
+.buy-button .buy:hover{
+    background-color: #F24405;
+    transform: scale(1.1);
+}
+.total-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 30px;
+    background-color: white;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.total-container span{
+    font-size: 30px;
+    font-family: "Bauhaus 93";
+}
+@media screen and (min-width:576px) {
+    .cart-prod-info{
+        grid-template-rows: 1fr;
+        grid-template-columns: 2fr 1fr; 
+        align-items: center; 
+        font-size: 18px;
+    }
+    .cart-product figure img{
+        border-radius: 20px;
+        width: 130px;
+    }
+    .buy-button .buy{
+        width: 50%;
+    }
+    
+}
+@media screen and (min-width:1024px){
+    main.cart-main{
+        width: 60vw;
+        margin: 5vw 20vw ;
+    }
+    .buy-button .buy{
+        width: 25%;
+    }
+}

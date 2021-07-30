@@ -1,0 +1,49 @@
+/* SECTOR 1 */
+
+.home{
+    width: 100%;
+    padding-top: 65px;
+}
+
+.banner-home img{
+width: 100%;
+}
+.section-1-container {
+    max-width: 1400px;
+    max-height: 100vh;
+    width: 100vw;
+    /* height: 100vh; */
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.section-1-container .fondo-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-1-container .fondo-container img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+.section-1-container .fondo-container .logo {
+    position: absolute;
+    top: 1rem;
+    left: 30%;
+    right: 30%;
+    border: 1px solid var(--colorAzul);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:576px){
+
+    .home {
+        padding-top: 69px;
+    }
+}
