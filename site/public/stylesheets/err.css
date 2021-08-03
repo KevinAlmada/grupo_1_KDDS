@@ -1,0 +1,41 @@
+.err-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+}
+
+.err-container img {
+    width: 250px;
+}
+
+.err-container h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.err-container p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    width: 300px;
+}
+
+.err-container p a {
+    color: orange;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (min-width: 500px){
+    .err-container img {
+        width: 350px;
+    }
+    .err-container p{
+        width: 500px;
+    }
+}

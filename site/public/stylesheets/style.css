@@ -5,7 +5,7 @@
 @import url("login.css");
 @import url("register.css");
 @import url("product.css");
-
+@import url("err.css");
 
 *{
     padding: 0;
