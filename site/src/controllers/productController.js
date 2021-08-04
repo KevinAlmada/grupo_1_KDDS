@@ -1,5 +1,4 @@
-/* db */
-
+const product = require('../dataBase/db')
 
 module.exports = {
     index:(req,res)=>{

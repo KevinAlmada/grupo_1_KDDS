@@ -1,135 +1,142 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body.cart-body{
-    background-color: var(--colorCelesteFondo);
+body.cart-body {
+  background-color: var(--colorCelesteFondo);
 }
-main.cart-main{
-    width: 80vw;
-    margin: 0 auto;
-    background-color: var(--colorCelesteFondo);
+main.cart-main {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: var(--colorCelesteFondo);
 }
-.cart-products h2{
-    font-family: "Bauhaus 93";
+.cart-products h2 {
+  font-family: "Bauhaus 93";
 }
-.cart-product{
-    box-shadow: 5px 10px 5px 1px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    border-radius: 5px;
-    height: 200px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 6px;
-    position: relative;
-    margin-top: 30px;
-    align-items: center;
+
+.cart {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
 }
-.cart-product figure{
-    width: fit-content;
-    border-radius: 20px;
-    margin: 0 auto;
+.cart-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: solid 1px black;
+  padding: 10px;
 }
-.cart-product figure img{
-    border-radius: 20px;
-    width: 100px;
+
+.cart-product img {
+  border-radius: 20px;
+  width: 150px;
 }
-.quantity-container select{
-    border: black 1px solid;
+
+.cart-prod-info {
+  display: grid;
+  row-gap: 30px;
+  font-size: 15px;
 }
-.discard-button{
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    border: none;
-    background-color: gray;
-    padding: 6px;
-    border-radius: 50%;
-    transition: all .5s;
-    cursor: pointer;
+.prod-info {
+  padding-top: 10px;
 }
-.discard-button i{
-    color: white;
-    font-size: 20px;
+
+.prod-info .name {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
-.discard-button:hover{
-    transform: scale(1.5);
-    background-color: red;
+
+.prod-modificar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.container-info-quantity{
-    display: grid;
-    row-gap: 30px;
+
+.prod-modificar p {
+  cursor: pointer;
+  margin-right: 10px;
+  color: red;
+  font-size: 16px;
 }
-.cart-prod-info{
-    display: grid;
-    row-gap: 30px;
-    font-size: 15px;
+
+.prod-modificar a {
+  text-decoration: none;
+  color: rgb(53, 32, 248);
+  font-size: 16px;
 }
-.prod-info{
-    padding-top: 10px;
+
+.prod-modificar i {
+  cursor: pointer;
+  margin-right: 5px;
 }
-.buy-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px ;
+
+.quantity-container {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-.buy-button .buy{
-    background-color: #0E1626;
-    border: none;
-    width: 90%;
-    height: 45px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    transition: all .5s;
-    margin:0 auto 20px auto  ;
+
+.product-price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-.buy-button .buy:hover{
-    background-color: #F24405;
-    transform: scale(1.1);
+
+.total-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
 }
-.total-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin-top: 30px;
-    background-color: white;
-    height: 50px;
-    border-radius: 5px;
-    box-shadow: 5px 10px 5px 1px rgba(0, 0, 0, 0.2);
+.total-container span {
+  font-size: 26px;
+  font-family: "Bauhaus 93";
+  margin-right: 50px;
 }
-.total-container span{
-    font-size: 30px;
-    font-family: "Bauhaus 93";
+
+.buy-button {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
 }
-@media screen and (min-width:576px) {
-    .cart-prod-info{
-        grid-template-rows: 1fr;
-        grid-template-columns: 2fr 1fr; 
-        align-items: center; 
-        font-size: 18px;
-    }
-    .cart-product figure img{
-        border-radius: 20px;
-        width: 130px;
-    }
-    .buy-button .buy{
-        width: 50%;
-    }
-    
+.buy-button .buy {
+  cursor: pointer;
+  color: white;
+  background-color: #0e1626;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
 }
-@media screen and (min-width:1024px){
-    main.cart-main{
-        width: 60vw;
-        margin: 5vw 20vw ;
-    }
-    .buy-button .buy{
-        width: 25%;
-    }
+.buy-button .buy:hover {
+  color: #0e1626;
+  font-weight: 700;
+  background-color: #f24405;
+  transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+  .cart {
+    padding: 20px 50px;
+  }
+  .cart-product {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .prod-modificar {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  main.cart-main {
+    margin-top: 90px;
+  }
 }
