@@ -5,19 +5,19 @@ let menuLateral = document.getElementById("menuLateral")
 let panelMenuLateral = document.getElementById("panelMenuLateral")
 
 function burger (){
-    if( menuLateral.style.opacity == "0" && menuLateral.style.left == "-70%"){
         menuLateral.style.opacity = 1
         menuLateral.style.left = "0%"
         iconCross.style.color = "white"
         iconCross.style.display = "block"
         iconBurger.style.display = "none"
-    }else{
+}        
+
+function closeBurger (){
         menuLateral.style.opacity = "0"
         menuLateral.style.left = "-70%"
         menuLateral.style.transition = "all 0.8s"
         iconCross.style.display = "none"
         iconBurger.style.display = "block"
-    }
 }
 
 let productDrop = document.getElementById("header-mobile-drop-title")
