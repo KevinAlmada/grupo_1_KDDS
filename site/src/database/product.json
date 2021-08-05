@@ -1,0 +1,49 @@
+[{
+    "id": "1",
+    "name": "Gregory",
+    "category": "sol",
+    "description": "Hecho a mano a partir de capas de acetato de diseño personalizado en colores exclusivos que dan como resultado el patrón único de cada montura individual.",
+    "img": ["anteojo-sol1.jpg","anteojo-sol1-2.jpg","anteojo-sol1-3.jpg"],
+    "discount": 15,
+    "price": 8200
+  },{
+    "id": "2",
+    "name": "Oliver",
+    "category": "sol",
+    "description": "Diseñadas como gafas unisex, la estética es audaz e impone presencia .",
+    "img": ["anteojo-sol2.jpg","anteojo-sol2-2.jpg","anteojo-sol2-3.jpg"],
+    "discount": 10,
+    "price": 9800
+  },{
+    "id": "3",
+    "name": "Finley",
+    "category": "sol",
+    "description": "Diseño icónico de inspiración vintage con detalles refinados, ideal para el tocador elegante o el profesional.",
+    "img": ["anteojo-sol3.jpg","anteojo-sol3-2.jpg","anteojo-sol3-3.jpg"],
+    "discount": 10,
+    "price": 9000
+  },{
+    "id": "4",
+    "name": "Benedict",
+    "category": "sol",
+    "description": "Anteojos con estilo aviador clásico y sofisticado diseñado para halagar la mayoría de los rostros",
+    "img": ["anteojo-sol4.jpg","anteojo-sol4-2.jpg","anteojo-sol4-3.jpg"],
+    "discount": 20,
+    "price": 8900
+  },{
+    "id": "5",
+    "name": "Lachman",
+    "category": "sol",
+    "description": "Este diseño unisex de uso universal presenta ángulos fuertes a lo largo de la línea superior que le dan al marco un aspecto distintivo.",
+    "img": ["anteojo-sol5.jpg","anteojo-sol5-2.jpg","anteojo-sol5-3.jpg"],
+    "discount": 15,
+    "price": 8700
+  },{
+    "id": "6",
+    "name": "Fairmont",
+    "category": "sol",
+    "description": "Hecho a mano con acetato fino en una forma P3 modificada y presenta detalles de inspiración vintage.",
+    "img": ["anteojo-sol6.jpg","anteojo-sol6-2.jpg","anteojo-sol6-3.jpg"],
+    "discount": 15,
+    "price": 8700
+  }]

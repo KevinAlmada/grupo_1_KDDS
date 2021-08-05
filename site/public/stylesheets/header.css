@@ -19,6 +19,7 @@
     right: 10%;
     top: 3%;
     font-size: 1.7rem;
+    cursor: pointer;
 }
 .menu-lateral{
     left: -70%;
