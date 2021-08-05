@@ -46,4 +46,36 @@
     "img": ["anteojo-sol6.jpg","anteojo-sol6-2.jpg","anteojo-sol6-3.jpg"],
     "discount": 15,
     "price": 8700
+  },{
+    "id": "7",
+    "name": "Sheldrake",
+    "category": "lectura",
+    "description": "Inspirado por Andy Warhol, este marco icónico tiene un diseño intelectual y audaz que ofrece un estilo atemporal",
+   "img": ["anteojo-lectura7.jpg","anteojo-lectura7-2.jpg","anteojo-lectura7-3.jpg"],
+    "discount": 10,
+    "price": 8000
+  },{
+    "id": "8",
+    "name": "Emerson",
+    "category": "lectura",
+    "description": "Un diseño icónico, el emerson es un KDDS clásico. Con un diseño distintivo inspirado en la forma de un lente clásico",
+   "img": ["anteojo-lectura8.jpg","anteojo-lectura8-2.jpg","anteojo-lectura8-3.jpg"],
+    "discount": 10,
+    "price": 8200
+  },{
+    "id": "9",
+    "name": "OP-506",
+    "category": "lectura",
+    "description": "Un diseño original de KDDS, el OP-506 es una combinación de metal y acetato, que proporciona comodidad y durabilidad para un uso diario.",
+   "img": ["anteojo-lectura9.jpg","anteojo-lectura9-2.jpg","anteojo-lectura9-3.jpg"],
+    "discount": 10,
+    "price": 8300
+  },{
+    "id": "10",
+    "name": "OP-505",
+    "category": "lectura",
+    "description": "Un diseño original de KDDS, el OP-505 es una combinación de metal y acetato, que proporciona comodidad y durabilidad para un uso diario.",
+   "img": ["anteojo-lectura10.jpg","anteojo-lectura10-2.jpg","anteojo-lectura10-3.jpg"],
+    "discount": 10,
+    "price": 8200
   }]
