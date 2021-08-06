@@ -4,7 +4,8 @@ var path = require('path')
 var controller = require('../controllers/productController')
 /* GET home page. */
 
-router.get('/', controller.index);
-router.get('/cart', controller.cart);
+router.get('/productDetail', controller.productDetail);
+router.get('/', controller.products);
+
 
 module.exports = router;
