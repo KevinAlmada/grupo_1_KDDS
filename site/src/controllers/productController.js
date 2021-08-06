@@ -2,14 +2,14 @@
 
 
 module.exports = {
-    index:(req,res)=>{
+    productDetail:(req,res)=>{
         res.render('product',{
             title : "Productos-KDDS"
         })
     },
-    cart:(req,res)=>{
-        res.render('cart',{
-            title : "tu Carrito - KDDS"
+    products:(req,res)=>{
+        res.render('searchResults',{
+            title : ""
         })
     }
 }
