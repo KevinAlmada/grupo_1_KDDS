@@ -1,17 +1,17 @@
-<% for(let i = 1; i <= 1; i++) { %>
-<div class="slider">
-    <article class="product-box-top fade">
-            <img src="/images/home/section-3/lentes-<%-i%>.jpg">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <div class="text-box">
-                <h3>Patrick Silver</h3>
-                <h3>$6.499<%-i%></h3>
-                <p>6 cuotas sin interes de $1.083</p>
-                <button >
-                    <a href="#"> Comprar </a>
-                </button>
-            </div>
-        </article>
-    </div>
-<%}%>
+<div class="slider-container">
+    <a class="prev-slider" onclick="subtract(-1)">&#10094;</a>
+    <% for(let i = 1; i <= 4; i++) { %>
+        <div class="card-container">
+            <article class="card fade">
+                <a href="#">
+                    <img src="/images/home/section-3/lentes-<%-i%>.jpg">
+                    <div class="text-box">
+                        <h3>Patrick Silver</h3>
+                        <h3>$6.499<%-i%></h3>
+                    </div>
+                </a>    
+            </article>
+        </div>
+    <%}%>
+    <a class="next-slider" onclick="plus(1)">&#10095;</a>
+</div>

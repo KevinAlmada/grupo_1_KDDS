@@ -20,17 +20,22 @@ function closeBurger (){
         iconBurger.style.display = "block"
 }
 
-let productDrop = document.getElementById("header-mobile-drop-title")
+let chevron = document.getElementById("chevron")
 let productTypes = document.getElementById("header-mobile-products-drop");
 
 
 function headerDropDown(){
-    if(productTypes.style.display == "none" ){
+    (productTypes.style.display == "none")?abrir():cerrar()
+
+    function abrir(){
         productTypes.style.display = "flex"
         productTypes.style.opacity = "1"
-    }else{
+        chevron.style.transform = "rotate(90deg)"
+    }
+    function cerrar(){
         productTypes.style.display = "none"
         productTypes.style.opacity = "0"
         productTypes.style.transition = "all 0.8s"
+        chevron.style.transform = "rotate(0deg)"
     }
 }

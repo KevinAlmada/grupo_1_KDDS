@@ -173,13 +173,13 @@
         justify-self: baseline;
         grid-column: 1 / 11;
         grid-row: 2;
-        width: 53%;
+        width: 51%;
         height: 90%;
     }
 
     .section-4-container .container-top img:nth-child(3) {
         justify-self: self-end;
-        width: 55%;
+        width: 51%;
         grid-row: 2;
         grid-column: 1/11;
         height: 90%;
