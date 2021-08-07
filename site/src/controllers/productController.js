@@ -1,4 +1,4 @@
-/* db */
+let db = require('../database/productDb')
 
 
 module.exports = {
@@ -9,7 +9,8 @@ module.exports = {
     },
     products:(req,res)=>{
         res.render('searchResults',{
-            title : ""
+            title : "Productos",
+            db
         })
     }
 }

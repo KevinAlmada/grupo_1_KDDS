@@ -9,88 +9,16 @@
     <h1 class="seachTitle" >Resultados de su busqueda</h1>
     <main class="searchResultsMain">
         <section class="card-container">
-            <article class="cardsearch">
-                <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente4.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente5.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente4.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente5.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="cardsearch">
-                <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            
-            
+            <% db.forEach(producto => { %>
+                <article class="cardsearch">
+                    <img src="/images/product/<%- producto.img[0] %> " alt="LenteSolNegro">
+                    <div class="product_info_card">
+                        <h2 class="product-name"><%- producto.name %> </h2>
+                        <h3 class="precio">Precio $<%- producto.price %> </h3>
+                        <p class="btn-comprar">Ver más</p>
+                    </div>
+                </article>
+            <% }) %>
         </section>
         <div class="newsletter">
             <p class="news-title">¡Unite a nuestro newsletter!</p>
