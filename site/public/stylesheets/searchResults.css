@@ -5,6 +5,14 @@
 
 
 }
+.searchResultsMain{
+    margin-top: 15px;
+}
+.seachTitle{
+    margin-top: 150px;
+    font-size: 1rem;
+    text-align: center;
+}
 /* cards */
 .card-container{
     display: flex;
@@ -62,9 +70,97 @@
     cursor: pointer;
 
 }
+
+.cardsearch{
+    width: 300px;
+}
+.cardsearch img{
+    width: 100%;
+}
+/* newsletter */
+.newsletter{
+    background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+     
+}
+.newsletter p{
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+.newsletter form{
+    margin: 0 auto;
+    width: 85%;
+    
+}
+.newsletter .news-title{
+    margin-top: 10px ;
+    font-size: 1.5em;
+}
+.newsletter .news-input input{
+    
+    height: 25px;
+    border: 1px solid var(--colorNaranjaOscuro);
+    padding: 15px;
+    border-radius: 5px ;
+    transition: border .5s;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.newsletter .news-input input:hover{
+    border-color: #F24405 ;
+}
+.newsletter .news-input button{
+    display: flex;
+    background-color: #0E1626;
+    border: none;
+    width: 120px;
+    height: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all .5s;
+    margin:0 auto ; 
+    transform: scale(1);
+}
+
+.newsletter .news-input button:hover{
+    background-color: #F24405;
+    transform: scale(1.1);
+}
+/* fin newsletter */
+
+
 @media (min-width:576px){
     .card-container{
         flex-direction: row;
         justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .cardsearch{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .searchResultsMain{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .newsletter form {
+        margin: 0 auto;
+        width: 54%;
     }
 }

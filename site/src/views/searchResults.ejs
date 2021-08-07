@@ -2,10 +2,14 @@
 <html lang="en">
     <%- include('partials/head.ejs') %> 
 <body>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %> 
+    
+    <!-- FIN DE HEADER -->
     <h1 class="seachTitle" >Resultados de su busqueda</h1>
     <main class="searchResultsMain">
         <section class="card-container">
-            <article class="card1">
+            <article class="cardsearch">
                 <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -13,7 +17,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card2">
+            <article class="cardsearch">
                 <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -21,7 +25,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card3">
+            <article class="cardsearch">
                 <img src="/images/productos/lente4.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -29,7 +33,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card4">
+            <article class="cardsearch">
                 <img src="/images/productos/lente5.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -37,7 +41,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card1">
+            <article class="cardsearch">
                 <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -45,7 +49,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card2">
+            <article class="cardsearch">
                 <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -53,7 +57,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card3">
+            <article class="cardsearch">
                 <img src="/images/productos/lente4.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -61,7 +65,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card4">
+            <article class="cardsearch">
                 <img src="/images/productos/lente5.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -69,7 +73,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card1">
+            <article class="cardsearch">
                 <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -77,7 +81,7 @@
                     <p class="btn-comprar">Ver más</p>
                 </div>
             </article>
-            <article class="card2">
+            <article class="cardsearch">
                 <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
                 <div class="product_info_card">
                     <h2 class="product-name">Nombre del Producto</h2>
@@ -88,6 +92,19 @@
             
             
         </section>
+        <div class="newsletter">
+            <p class="news-title">¡Unite a nuestro newsletter!</p>
+            <p class="news-info">Suscribite a nuestro newsletter y conocé todas nuestras novedades lanzamientos & promos</p>
+            <form action="" class="news-input">
+                <input type="text" placeholder=" Email...">
+                <button type="submit">SUSCRIBIR</button>
+            </form>
+        </div>
     </main>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    
+    <!-- FIN DE FOOTER -->
 </body>
 </html>
