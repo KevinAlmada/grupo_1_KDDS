@@ -16,12 +16,18 @@
     grid-template-rows: repeat(3,1fr);
 }
 
-.section-4-container .container-top h1 {
-    color: var(--colorNaranjaClaro);
-    justify-self: center;
+.section-4-container .container-top .box-title {
+    height: 100px;
+    background-color: var(--colorAzul);
     grid-row: 1;
-    grid-column: 2/10;
     align-self: center;
+    grid-column: 1/11;
+}
+
+.section-4-container .container-top .box-title h1 {
+    color: white;
+    padding-top: 2rem;
+    text-align: center;
 }
 
 .section-4-container .container-top img:nth-child(2) {

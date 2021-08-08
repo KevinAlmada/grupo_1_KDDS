@@ -1,8 +1,6 @@
-<div class="slider-container">
-    <a class="prev-slider" onclick="subtract(-1)">&#10094;</a>
-    <% for(let i = 1; i <= 4; i++) { %>
-        <div class="card-container">
-            <article class="card fade">
+<div class="slider-container  data-flickity-options='{ "wrapAround": true }'">
+    <% for(let i = 1; i <= 9; i++) { %>
+            <article class="card carousel-cell">
                 <a href="#">
                     <img src="/images/home/section-3/lentes-<%-i%>.jpg">
                     <div class="text-box">
@@ -11,7 +9,5 @@
                     </div>
                 </a>    
             </article>
-        </div>
     <%}%>
-    <a class="next-slider" onclick="plus(1)">&#10095;</a>
 </div>

@@ -4,37 +4,33 @@
     grid-row: 3;
     grid-column: 1/11;
     display: none; 
-    justify-content: space-evenly;
 }
 
-.slider-container .prev-slider, .slider-container .next-slider {
-    align-self: center;
-    color: var(--colorAzul);
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.slider-container .card-container .card {
-    display: block;
+.slider-container .card {
     border: 1px solid var(--colorNaranjaClaro);
     background-color: white;
     transform: scale(1);
     transition: all .5s;
-    height: 100%;
     text-align: center;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.slider-container .card-container .card a {
+.slider-container .card a {
     text-decoration: none;
+    color: black;
 }
 
-.slider-container .card-container .card a img {
+.slider-container .card a img {
     height: 200px;
-    width: 200px;
+    width: 100%;
 }
 
 @media (min-width:1024px){
     .slider-container{
-        display: flex;
+        display: block;
     }
 }
