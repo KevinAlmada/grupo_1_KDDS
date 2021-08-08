@@ -1,13 +1,13 @@
 <div class="slider-container  data-flickity-options='{ "wrapAround": true }'">
-    <% for(let i = 1; i <= 9; i++) { %>
-            <article class="card carousel-cell">
-                <a href="#">
-                    <img src="/images/home/section-3/lentes-<%-i%>.jpg">
-                    <div class="text-box">
-                        <h3>Patrick Silver</h3>
-                        <h3>$6.499<%-i%></h3>
-                    </div>
-                </a>    
-            </article>
-    <%}%>
+    <% db.forEach(product => { %>
+        <article class="card carousel-cell">
+            <a href="#">
+                <img src="/images/home/section-3/lentes-1.jpg">
+                <div class="text-box">
+                    <h3><%- product.name %></h3>
+                    <h3>$<%- product.price %></h3>
+                </div>
+            </a>    
+        </article>
+    <%})%> 
 </div>
