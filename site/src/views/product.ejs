@@ -14,13 +14,13 @@
     </div>
     <main class="main">
         <section class="container-product">
-            <article class="product-img"><img src="/images/productos/lente1.jpg" alt="LenteSolNegro"></article>
+            <article class="product-img"><img src="/images/product/<%= db.img[0] %> " alt=`anteojos de <%= db.category %> ` ></article>
         
             <article class="product-info">
-                <h2 class="product-name">Nombre del Producto</h2>
-                <h3 class="precio">Precio. $15.000</h3>
+                <h2 class="product-name"><%= db.name %></h2>
+                <h3 class="precio">Precio. $<%= db.price %></h3>
                 <p class="btn-comprar">Comprar</p>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque commodi earum aliquam placeat? Soluta aliquid obcaecati a cupiditate provident saepe nostrum, temporibus expedita, consequatur perspiciatis dolores, modi perferendis illo accusamus.</p>
+                <p class="description"><%= db.description %></p>
             </article>
         </section>
         <section class="estilo-container">
@@ -41,46 +41,24 @@
             <div class="container-owb">
                 <img src="/images/productos/gafaspareja3.jpg" alt="Avatar" class="image" style="width:100%">
                 <div class="middle">
-                  <div class="text">Ver Más Modelos</div>
+                  <div class="text"><a href="/products/<%= db.category %> ">Ver Más Modelos</a></div>
                 </div>
               </div>    
 
         </section>
         <h2 class="reco">Productos Recomendados</h2>
         <section class="card-container">
-            <article class="card1">
-                <img src="/images/productos/lente2.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="card2">
-                <img src="/images/productos/lente 3.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="card3">
-                <img src="/images/productos/lente4.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            <article class="card4">
-                <img src="/images/productos/lente5.jpg" alt="LenteSolNegro">
-                <div class="product_info_card">
-                    <h2 class="product-name">Nombre del Producto</h2>
-                    <h3 class="precio">Precio. $15.000</h3>
-                    <p class="btn-comprar">Ver más</p>
-                </div>
-            </article>
-            
+            <% productsSim.forEach(product => { %>
+                <article class="card1">
+                    <img src="/images/product/<%- product.img[0] %> " alt="Lentes de <%- product.category %> ">
+                    <div class="product_info_card">
+                        <h2 class="product-name"><%- product.name %></h2>
+                        <h3 class="precio">Precio. $<%- product.price %></h3>
+                        <p class="btn-comprar">Ver más</p>
+                    </div>
+                </article>
+            <% }) %>
+             
         </section>
         <section class="newsletter-container">
             <div class="newsletter">
