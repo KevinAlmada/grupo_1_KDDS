@@ -1,81 +1,108 @@
-[{
+[
+  {
     "id": "1",
     "name": "Gregory",
     "category": "sol",
     "description": "Hecho a mano a partir de capas de acetato de diseño personalizado en colores exclusivos que dan como resultado el patrón único de cada montura individual.",
-    "img": ["anteojo-sol1.jpg","anteojo-sol1-2.jpg","anteojo-sol1-3.jpg"],
+    "img": ["anteojo-sol1.jpg", "anteojo-sol1-2.jpg", "anteojo-sol1-3.jpg"],
     "discount": 15,
     "price": 8200
-  },{
+  },
+  {
     "id": "2",
     "name": "Oliver",
     "category": "sol",
     "description": "Diseñadas como gafas unisex, la estética es audaz e impone presencia .",
-    "img": ["anteojo-sol2.jpg","anteojo-sol2-2.jpg","anteojo-sol2-3.jpg"],
+    "img": ["anteojo-sol2.jpg", "anteojo-sol2-2.jpg", "anteojo-sol2-3.jpg"],
     "discount": 10,
     "price": 9800
-  },{
+  },
+  {
     "id": "3",
     "name": "Finley",
     "category": "sol",
     "description": "Diseño icónico de inspiración vintage con detalles refinados, ideal para el tocador elegante o el profesional.",
-    "img": ["anteojo-sol3.jpg","anteojo-sol3-2.jpg","anteojo-sol3-3.jpg"],
+    "img": ["anteojo-sol3.jpg", "anteojo-sol3-2.jpg", "anteojo-sol3-3.jpg"],
     "discount": 10,
     "price": 9000
-  },{
+  },
+  {
     "id": "4",
     "name": "Benedict",
     "category": "sol",
     "description": "Anteojos con estilo aviador clásico y sofisticado diseñado para halagar la mayoría de los rostros",
-    "img": ["anteojo-sol4.jpg","anteojo-sol4-2.jpg","anteojo-sol4-3.jpg"],
+    "img": ["anteojo-sol4.jpg", "anteojo-sol4-2.jpg", "anteojo-sol4-3.jpg"],
     "discount": 20,
     "price": 8900
-  },{
+  },
+  {
     "id": "5",
     "name": "Lachman",
     "category": "sol",
     "description": "Este diseño unisex de uso universal presenta ángulos fuertes a lo largo de la línea superior que le dan al marco un aspecto distintivo.",
-    "img": ["anteojo-sol5.jpg","anteojo-sol5-2.jpg","anteojo-sol5-3.jpg"],
+    "img": ["anteojo-sol5.jpg", "anteojo-sol5-2.jpg", "anteojo-sol5-3.jpg"],
     "discount": 15,
     "price": 8700
-  },{
+  },
+  {
     "id": "6",
     "name": "Fairmont",
     "category": "sol",
     "description": "Hecho a mano con acetato fino en una forma P3 modificada y presenta detalles de inspiración vintage.",
-    "img": ["anteojo-sol6.jpg","anteojo-sol6-2.jpg","anteojo-sol6-3.jpg"],
+    "img": ["anteojo-sol6.jpg", "anteojo-sol6-2.jpg", "anteojo-sol6-3.jpg"],
     "discount": 15,
     "price": 8700
-  },{
+  },
+  {
     "id": "7",
     "name": "Sheldrake",
     "category": "lectura",
     "description": "Inspirado por Andy Warhol, este marco icónico tiene un diseño intelectual y audaz que ofrece un estilo atemporal",
-   "img": ["anteojo-lectura7.jpg","anteojo-lectura7-2.jpg","anteojo-lectura7-3.jpg"],
+    "img": [
+      "anteojo-lectura7.jpg",
+      "anteojo-lectura7-2.jpg",
+      "anteojo-lectura7-3.jpg"
+    ],
     "discount": 10,
     "price": 8000
-  },{
+  },
+  {
     "id": "8",
     "name": "Emerson",
     "category": "lectura",
     "description": "Un diseño icónico, el emerson es un KDDS clásico. Con un diseño distintivo inspirado en la forma de un lente clásico",
-   "img": ["anteojo-lectura8.jpg","anteojo-lectura8-2.jpg","anteojo-lectura8-3.jpg"],
+    "img": [
+      "anteojo-lectura8.jpg",
+      "anteojo-lectura8-2.jpg",
+      "anteojo-lectura8-3.jpg"
+    ],
     "discount": 10,
     "price": 8200
-  },{
+  },
+  {
     "id": "9",
     "name": "OP-506",
     "category": "lectura",
     "description": "Un diseño original de KDDS, el OP-506 es una combinación de metal y acetato, que proporciona comodidad y durabilidad para un uso diario.",
-   "img": ["anteojo-lectura9.jpg","anteojo-lectura9-2.jpg","anteojo-lectura9-3.jpg"],
+    "img": [
+      "anteojo-lectura9.jpg",
+      "anteojo-lectura9-2.jpg",
+      "anteojo-lectura9-3.jpg"
+    ],
     "discount": 10,
     "price": 8300
-  },{
+  },
+  {
     "id": "10",
     "name": "OP-505",
     "category": "lectura",
     "description": "Un diseño original de KDDS, el OP-505 es una combinación de metal y acetato, que proporciona comodidad y durabilidad para un uso diario.",
-   "img": ["anteojo-lectura10.jpg","anteojo-lectura10-2.jpg","anteojo-lectura10-3.jpg"],
+    "img": [
+      "anteojo-lectura10.jpg",
+      "anteojo-lectura10-2.jpg",
+      "anteojo-lectura10-3.jpg"
+    ],
     "discount": 10,
     "price": 8200
-  }]
+  }
+]

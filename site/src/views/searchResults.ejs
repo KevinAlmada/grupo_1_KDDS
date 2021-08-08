@@ -5,8 +5,9 @@
     <!-- HEADER -->
     <%- include('partials/header.ejs') %> 
     
-    <!-- FIN DE HEADER -->
+    <!-- TITLE -->
     <h1 class="seachTitle" >Resultados de su busqueda</h1>
+    <!-- CARD -->
     <main class="searchResultsMain">
         <section class="card-container">
             <% db.forEach(producto => { %>
@@ -15,24 +16,19 @@
                     <div class="product_info_card">
                         <h2 class="product-name"><%- producto.name %> </h2>
                         <h3 class="precio">Precio $<%- producto.price %> </h3>
-                        <p class="btn-comprar">Ver más</p>
+                        <div class="btns-container">
+                            <button class="btn">Ver más</button>
+                            <button id="addToCart" class="btn">Agregar al carrito</button>
+                        </div>
                     </div>
                 </article>
             <% }) %>
         </section>
-        <div class="newsletter">
-            <p class="news-title">¡Unite a nuestro newsletter!</p>
-            <p class="news-info">Suscribite a nuestro newsletter y conocé todas nuestras novedades lanzamientos & promos</p>
-            <form action="" class="news-input">
-                <input type="text" placeholder=" Email...">
-                <button type="submit">SUSCRIBIR</button>
-            </form>
-        </div>
+    <!-- NEWSLETTER -->
+    <%- include('partials/newsletter.ejs') %> 
     </main>
-
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %> 
-    
     <!-- FIN DE FOOTER -->
 </body>
 </html>
