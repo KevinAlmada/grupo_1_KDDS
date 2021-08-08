@@ -29,16 +29,17 @@
     border: #828383 1px solid;
     padding-top: 10px;
     background-color: #f8fafc;
+    transition: all 400ms;
 }
 
 .card-container article:hover{
-    box-shadow: #0E1626 0px 10px 10px;
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px black;
 }
 
 .main .card-container img{
-    width: 250px;
+    width: 200px;
     padding: 15px;
-    border-radius: 5px;
     background-color: #f8fafc;
 }
 
