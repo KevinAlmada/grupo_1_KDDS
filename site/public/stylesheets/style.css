@@ -5,7 +5,12 @@
 @import url("login.css");
 @import url("register.css");
 @import url("product.css");
+<<<<<<< HEAD
 @import url("err.css");
+=======
+@import url("newproduct.css");
+@import url("searchResults.css");
+>>>>>>> 03dba9b63c0cab42195a50572744259623ac9f61
 
 *{
     padding: 0;

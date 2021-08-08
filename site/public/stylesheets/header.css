@@ -16,8 +16,10 @@
 #cruz{
     position: absolute;
     display: none;
-    right: 35%;
-    top: 10%;
+    right: 10%;
+    top: 3%;
+    font-size: 1.7rem;
+    cursor: pointer;
 }
 .menu-lateral{
     left: -70%;

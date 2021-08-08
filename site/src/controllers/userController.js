@@ -11,5 +11,10 @@ module.exports = {
         res.render('register',{
             title : "Register - KDDS"
         })
+    },
+    cart:(req,res)=>{
+        res.render('cart',{
+            title : "tu Carrito - KDDS"
+        })
     }
 }
