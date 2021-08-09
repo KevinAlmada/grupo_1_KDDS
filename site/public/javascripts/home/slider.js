@@ -16,4 +16,5 @@ var elemento = document.querySelector('.carousel-container');
 var newFlkty = new Flickity( elemento, {
   cellAlign: 'center',
   contain: true,
+  autoPlay: true
 });

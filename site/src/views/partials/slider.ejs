@@ -1,7 +1,7 @@
 <div class="slider-container ">
     <% db.forEach(product => { %>
         <article class="card carousel-cell">
-            <a href="/products/productDetail">
+            <a href="/products/productDetail/<%- product.id %>">
                 <img src="/images/product/<%- product.img[0] %>">
                 <div class="text-box">
                     <h3><%- product.name %></h3>
