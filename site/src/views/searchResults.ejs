@@ -15,7 +15,7 @@
                     <div class="product_info_card">
                         <h2 class="product-name"><%- producto.name %> </h2>
                         <h3 class="precio">Precio $<%- producto.price %> </h3>
-                        <p class="btn-comprar">Ver más</p>
+                        <a href="/products/productDetail/<%- producto.id %> "><p class="btn-comprar">Ver más</p></a>
                     </div>
                 </article>
             <% }) %>
