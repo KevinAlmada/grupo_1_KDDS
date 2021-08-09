@@ -3,11 +3,12 @@
 <%- include('partials/head.ejs') %> 
 <body>
     <!-- HEADER -->
+    
     <%- include('partials/header.ejs') %> 
     
     <!-- FIN DE HEADER -->
     <main class="home">
-        <!------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
     <!-------------- Sector 1 ------------------------------------------------------->
     <section class="section-1-container">
         <div class="fondo-container">
@@ -38,7 +39,7 @@
                     <p>12 cuotas sin intereses</p>
                 </div>
                 <button>
-                    <a href="#"> Comprar ahora </a>
+                    <a href="/products/productDetail"> Comprar ahora </a>
                 </button>
             </div>
         </div>
@@ -50,131 +51,24 @@
     <!------------------------------------------------------------------------------->
     <!-------------- Sector 3 ------------------------------------------------------->
     <section class="section-3-container">
-        <div class="box-top">
-            <div class="slider">
-            <article class="product-box-top fade">
-                <img src="/images/home/section-3/lentes-1.jpg">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div class="text-box">
-                    <h3>Patrick Silver</h3>
-                    <h3>$6.499</h3>
-                    <p>6 cuotas sin interes de $1.083</p>
-                    <button>Comprar</button>
-                </div>
-            </article>
-            </div>
-            <div class="slider">
-            <article class="product-box-top fade">
-                <img src="/images/home/section-3/lentes-2.jpg">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div class="text-box">
-                    <h3>Patrick Silver</h3>
-                    <h3>$6.499</h3>
-                    <p>6 cuotas sin interes de $1.083</p>
-                    <button>Comprar</button>
-                </div>
-            </article>
-            </div>
-            <div class="slider">
-            <article class="product-box-top fade">
-                <img src="/images/home/section-3/lentes-3.jpg">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div class="text-box">
-                    <h3>Patrick Silver</h3>
-                    <h3>$6.499</h3>
-                    <p>6 cuotas sin interes de $1.083</p>
-                    <button>Comprar</button>
-                </div>
-            </article>
-            </div>
-            <div class="slider">
-            <article class="product-box-top fade">
-                <img src="/images/home/section-3/lentes-4.jpg">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <div class="text-box">
-                    <h3>Patrick Silver</h3>
-                    <h3>$6.499</h3>
-                    <p>6 cuotas sin interes de $1.083</p>
-                    <button>Comprar</button>
-                </div>
-            </article>
-            </div>
-        </div>
-        <!---------------------------------------------------------->
-        <!---------------------------------------------------------->
-        <div class="box-bottom">
-            <div class="slider-bottom">
-                <article class="product-box-botton fade">
-                    <img src="/images/home/section-3/bottom/lentes-1.jpg">
-                    <a class="prev" >&#10094;</a>
-                    <a class="next" >&#10095;</a>
-                    <div class="text-box">
-                    <div class="text-box">
-                        <h3>Gregory Peck</h3>
-                        <h3>$3.899</h3>
-                        <p>6 cuotas sin interes de $650</p>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-            </div>
-            <div class="slider-bottom">
-                <article class="product-box-botton fade">
-                    <img src="/images/home/section-3/bottom/lentes-2.jpg">
-                    <a class="prev" >&#10094;</a>
-                    <a class="next" >&#10095;</a>
-                    <div class="text-box">
-                    <div class="text-box">
-                        <h3>Gregory Peck</h3>
-                        <h3>$3.899</h3>
-                        <p>6 cuotas sin interes de $650</p>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-            </div>
-            <div class="slider-bottom">
-                <article class="product-box-botton fade">
-                    <img src="/images/home/section-3/bottom/lentes-3.jpg">
-                    <a class="prev" >&#10094;</a>
-                    <a class="next" >&#10095;</a>
-                    <div class="text-box">
-                    <div class="text-box">
-                        <h3>Gregory Peck</h3>
-                        <h3>$3.899</h3>
-                        <p>6 cuotas sin interes de $650</p>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-            </div>
-            <div class="slider-bottom">
-                <article class="product-box-botton fade">
-                    <img src="/images/home/section-3/bottom/lentes-4.jpg">
-                    <a class="prev" >&#10094;</a>
-                    <a class="next" >&#10095;</a>
-                    <div class="text-box">
-                    <div class="text-box">
-                        <h3>Gregory Peck</h3>
-                        <h3>$3.899</h3>
-                        <p>6 cuotas sin interes de $650</p>
-                        <button>Comprar</button>
-                    </div>
-                </article>
-            </div>
+            <%- include('partials/cards.ejs') %>
     </section>
 
     <!------------------------------------------------------------------------------->
     <!-------------- Sector 4 ------------------------------------------------------->
     <section class="section-4-container">
         <div class="container-top">
-            <h1>OFERTAS DEL MES</h1>
+            <div class="box-title">
+                <h1>OFERTAS DEL MES</h1>
+            </div>
             <img src="/images/home/section-4/promo-1.jpg" >
             <img src="/images/home/section-4/publi-2.jpg" >
+            <%- include('./partials/slider')%>
         </div>
         <div class="container-bottom">
-            <h1>BENEFICIOS EXCLUSIVOS!</h1>
+            <div class="box-title">
+                <h1>BENEFICIOS EXCLUSIVOS!</h1>
+            </div>
             <img src="/images/home/section-4/gafas.jpg" >
             <div class="box-pagos">
                 <span>Aceptamos los siguientes medios de pago</span>
@@ -184,6 +78,7 @@
                 <i class="fab fa-cc-visa"></i>
                 <i class="fas fa-money-bill-wave"></i>
             </div>
+            <%- include('./partials/carousel') %>
         </div>
     </section>
 
@@ -196,12 +91,10 @@
         </form>
     </div>
 
-    <!-------------------------------------------------------------->
-    <!------- FOOTER ----------------------------------------------->
     </main>
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %> 
-    
     <!-- FIN DE FOOTER -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+<div class="slider-container ">
+    <% db.forEach(product => { %>
+        <article class="card carousel-cell">
+            <a href="/products/productDetail">
+                <img src="/images/product/<%- product.img[0] %>">
+                <div class="text-box">
+                    <h3><%- product.name %></h3>
+                    <h3>$<%- product.price %></h3>
+                </div>
+            </a>    
+        </article>
+    <%})%> 
+</div>

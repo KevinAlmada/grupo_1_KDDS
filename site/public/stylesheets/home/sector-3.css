@@ -1,10 +1,10 @@
 /* Section 3 */
 
 .section-3-container {
-    height: 110vh;
+    /* height: 110vh; */
     width: 100vw;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 .section-3-container .box-top {
@@ -21,22 +21,32 @@
     display: block;
     border: 1px solid var(--colorNaranjaClaro);
     background-color: white;
+    transform: scale(1);
+    transition: all .5s;
+}
+
+.section-3-container .box-top .slider:hover{
+    box-shadow: #0E1626 0px 5px 5px;
+    transform: scale(1.1);
 }
 
 .section-3-container .box-top .slider:nth-child(2){
     display: none;
     border: 1px solid var(--colorNaranjaClaro);
     background-color: white;
+    transition: all .5s;
 }
 .section-3-container .box-top .slider:nth-child(3){
     display: none;
     background-color: white;
     border: 1px solid var(--colorNaranjaClaro);
+    transition: all .5s;
 }
 .section-3-container .box-top .slider:nth-child(4) {
     display: none;
     border: 1px solid var(--colorNaranjaClaro);
     background-color: white;
+    transition: all .5s;
 }
 
 .section-3-container .product-box-top {
@@ -85,6 +95,14 @@
     background-color: var(--colorAzul);
     border: none;
     border-radius: 5px;
+    transition: all .5s;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.section-3-container .product-box-top .text-box button:hover {
+    background-color: var(--colorNaranjaOscuro);
+    transform: scale(1.1);    
 }
 
 .section-3-container .box-bottom {
@@ -101,24 +119,35 @@
     display: block;
     background-color: white;
     border: 1px solid var(--colorNaranjaClaro);
+    transform: scale(1);
+    transition: all .5s;
+}
+
+
+.section-3-container .box-bottom .slider-bottom:hover{
+    box-shadow: #0E1626 0px 5px 5px;
+    transform: scale(1.1);
 }
 
 .section-3-container .box-bottom .slider-bottom:nth-child(2){
     display: none;
     background-color: white;
     border: 1px solid var(--colorNaranjaClaro);
+    transition: all .5s;
 }
 
 .section-3-container .box-bottom .slider-bottom:nth-child(3){
     display: none;
     background-color: white;
     border: 1px solid var(--colorNaranjaClaro);
+    transition: all .5s;
 }
 
 .section-3-container .box-bottom .slider-bottom:nth-child(4) {
     display: none;
     background-color: white;
     border: 1px solid var(--colorNaranjaClaro);
+    transition: all .5s;
 }
 
 .section-3-container .product-box-botton {
@@ -169,6 +198,14 @@
     background-color: var(--colorAzul);
     border: none;
     border-radius: 5px;
+    transition: all .5s;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.section-3-container .product-box-botton .text-box button:hover {
+    background-color: var(--colorNaranjaOscuro);
+    transform: scale(1.1);
 }
 
 .prev, .next {

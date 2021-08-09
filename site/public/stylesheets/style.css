@@ -7,6 +7,9 @@
 @import url("product.css");
 @import url("newproduct.css");
 @import url("searchResults.css");
+@import url("slider.css");
+@import url("carousel.css");
+
 
 *{
     padding: 0;
