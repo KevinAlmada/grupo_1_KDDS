@@ -3,14 +3,16 @@
         <div class="slider">
             <article class="product-box-top fade">
                 <img src="/images/home/section-3/<%- product.img[0] %>">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+                <span class="next" onclick="plusSlides(1)">&#10095;</span>
                 <div class="text-box">
                     <h3><%- product.name %></h3>
                     <h3>$<%- product.price %></h3>
                     <p>6 cuotas sin interes de $<%- (product.price / 6).toFixed(2) %></p>
                     <button class="btn-comprar">
-                        <a href="products/productDetail/1"> Comprar </a>
+                        <div class="btn-a">
+                            <a href="products/productDetail/1" > Comprar </a>
+                        </div>
                     </button>
                 </div>
             </article>
@@ -22,8 +24,8 @@
         <div class="slider-bottom">
             <article class="product-box-botton fade">
                 <img src="/images/home/section-3/<%- productDown.img[0] %>">
-                <a class="prev" >&#10094;</a>
-                <a class="next" >&#10095;</a>
+                <span class="prev" >&#10094;</span>
+                <span class="next" >&#10095;</span>
                 <div class="text-box">
                     <h3><%- productDown.name %></h3>
                     <h3>$<%- productDown.price %></h3>
