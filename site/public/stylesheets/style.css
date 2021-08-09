@@ -8,19 +8,18 @@
 @import url("err.css");
 @import url("newproduct.css");
 @import url("searchResults.css");
+@import url("newsletter.css");
 @import url("slider.css");
 @import url("carousel.css");
-@import url("newsletter.css");
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: roboto , sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
 }
 :root {
-    --colorAzul: #0E1626;
-    --colorNaranjaOscuro: #F24405;
-    --colorNaranjaClaro: #F27D52; 
+  --colorAzul: #0e1626;
+  --colorNaranjaOscuro: #f24405;
+  --colorNaranjaClaro: #f27d52;
 }
