@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %> 
+<body>
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %> 
+    
+    <!-- TITLE -->
+    <h1 class="seachTitle" >Resultados de su busqueda</h1>
+    <!-- CARD -->
+    <main class="searchResultsMain">
+        <section class="card-container">
+            <% db.forEach(producto => { %>
+                <article class="cardsearch">
+                    <img class="card-img" src="/images/product/<%- producto.img[0] %> " alt="LenteSolNegro">
+                    <div class="product_info_card">
+                        <h2 class="product-name"><%- producto.name %> </h2>
+                        <h3 class="precio">Precio $<%- producto.price %> </h3>
+                        <a href="/products/productDetail/<%- producto.id %> "><p class="btn-comprar">Ver más</p></a>
+                    </div>
+                </article>
+            <% }) %>
+        </section>
+    <!-- NEWSLETTER -->
+    <%- include('partials/newsletter.ejs') %> 
+    </main>
+    <!-- SCRIPT -->
+    <%- include('partials/script.ejs') %> 
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    <!-- FIN DE FOOTER -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div class="box-top">
+    <% for(let product of cardUp) { %>
+        <div class="slider">
+            <article class="product-box-top fade">
+                <img src="/images/product/<%- product.img[0] %>">
+                <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+                <span class="next" onclick="plusSlides(1)">&#10095;</span>
+                <div class="text-box">
+                    <h3><%- product.name %></h3>
+                    <h3>$<%- product.price %></h3>
+                    <p>6 cuotas sin interes de $<%- (product.price / 6).toFixed(2) %></p>
+                    <button class="btn-comprar">
+                        <div class="btn-a">
+                            <a href="products/productDetail/<%- product.id %>" > Comprar </a>
+                        </div>
+                    </button>
+                </div>
+            </article>
+        </div>
+    <%}%>
+</div>
+<div class="box-bottom">
+    <% for(let productDown of cardDown) {%>
+        <div class="slider-bottom">
+            <article class="product-box-botton fade">
+                <img src="/images/product/<%- productDown.img[0] %>">
+                <span class="prev" >&#10094;</span>
+                <span class="next" >&#10095;</span>
+                <div class="text-box">
+                    <h3><%- productDown.name %></h3>
+                    <h3>$<%- productDown.price %></h3>
+                    <p>6 cuotas sin interes de $<%- (productDown.price / 6).toFixed(2) %></p>
+                    <button>
+                       <a href="/products/productDetail/<%- productDown.id %>"> Comprar </a>
+                    </button>
+                </div>
+            </article>
+        </div>
+    <%}%>
+</div>

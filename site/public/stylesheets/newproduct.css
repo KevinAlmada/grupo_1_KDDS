@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding:0;
+    text-transform: uppercase;
+}
+:root{
+    --colorAzul: #0E1626;
+    --colorNaranjaOscuro: #F24405;
+    --colorNaranjaClaro: #F27D52;
+    --colorCeleste: #569E92;
+    --colorCelesteFondo: #BFDDDF;    
+}
+.body-main-newProduct{
+    background: linear-gradient(to bottom, rgba(6,58,150,0.65) 0%,rgba(0,0,0,0) 100%);
+
+}
+.main-newProduct{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.newp-title{
+    font-size: 1.5em;
+    padding: 25px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+
+.newp-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.form-container-np form label{
+    display: block;
+    padding-top: 15px;
+    margin-bottom: 10px;
+    
+}
+.form-container-np form select{
+    display: block;
+    
+}
+.form-container-np form input{
+   width: 100%; 
+   height: 30px;
+   
+    
+}
+.form-container-np .descripcion-nwep{
+    height: 50px;
+}
+.btn-newp{
+    background-color: var(--colorAzul);
+    padding: 15px;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}

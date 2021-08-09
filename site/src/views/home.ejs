@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %> 
+<body>
+    <!-- HEADER -->
+    
+    <%- include('partials/header.ejs') %> 
+    
+    <!-- FIN DE HEADER -->
+    <main class="home">
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 1 ------------------------------------------------------->
+    <section class="section-1-container">
+        <div class="fondo-container">
+            <img class="banner-home" src="/images/productos/homebanner2021.jpg" >
+            <div class="logo">
+                <img src="/images/home/section-1/KDDS.svg" >
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 2 ------------------------------------------------------->
+    <section class="product-block">
+        <div class="flip">
+            <div class="flip-img">
+                <img src="/images/product/lentes-sol-5A.png" > 
+            </div>
+            <div class="flip-text">
+                <div class="flip-title">
+                    <p>KDDS</p>
+                </div>
+                <div class="name-block">
+                    <h1>
+                    Linda Farrow
+                        LF1810
+                    </h1>
+                </div>
+                <div class="cuotas">
+                    <p>12 cuotas sin intereses</p>
+                </div>
+                <button>
+                    <a href="/products/productDetail/19"> Comprar ahora </a>
+                </button>
+            </div>
+        </div>
+        <div class="sep-box">
+            <p>TODOS LOS DIAS HASTA 12 CUOTAS SIN INTERES </p>
+            <p>TARJETAS VISA Y MASTERCARD</p>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 3 ------------------------------------------------------->
+    <section class="section-3-container">
+            <%- include('partials/cards.ejs') %>
+    </section>
+
+    <!------------------------------------------------------------------------------->
+    <!-------------- Sector 4 ------------------------------------------------------->
+    <section class="section-4-container">
+        <div class="container-top">
+            <div class="box-title">
+                <h1>OFERTAS DEL MES</h1>
+            </div>
+            <img src="/images/home/section-4/promo-1.jpg" >
+            <img src="/images/home/section-4/publi-2.jpg" >
+            <%- include('./partials/slider')%>
+        </div>
+        <div class="container-bottom">
+            <div class="box-title">
+                <h1>BENEFICIOS EXCLUSIVOS!</h1>
+            </div>
+            <img src="/images/home/section-4/gafas.jpg" >
+            <div class="box-pagos">
+                <span>Aceptamos los siguientes medios de pago</span>
+                <i class="fab fa-bitcoin"></i>
+                <i class="far fa-credit-card"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <%- include('./partials/carousel') %>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <%- include('partials/newsletter.ejs') %> 
+
+    
+    <%- include('partials/script.ejs') %> 
+
+    </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    <!-- FIN DE FOOTER -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+</html>

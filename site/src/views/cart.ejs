@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head.ejs') %>
+  <body class="cart-body">
+    <!-- HEADER -->
+    <%- include('partials/header.ejs') %>
+    <!-- FIN DE HEADER -->
+    <main class="cart-main">
+      <div class="cart-products">
+        <h2>Tu carrito</h2>
+        <div class="cart">
+          <%for(let i = 1; i <= 2; i++) {%>
+          <div class="cart-product">
+            <img
+              src="/images/prod_cart/d_lian_c4_perfil.jpg"
+              alt="imagen del producto"
+            />
+            <div class="prod-info">
+              <p class="name"><strong>NOMBRE PRODUCTO</strong></p>
+              <div class="prod-modificar">
+                <p><i class="far fa-trash-alt"></i>Eliminar</p>
+                <a href="#"> <i class="fas fa-plus"></i>Productos</a>
+              </div>
+            </div>
+            <div class="quantity-container">
+              <label for="quantity"
+                >Cantidad
+                <select
+                  name="quantity"
+                  id="quantity"
+                  style="font-size: 16px; cursor: pointer">
+                  <option value="1" selected>1</option>
+                  <%for(let i = 2; i <= 10; i++) {%>
+                  <option value="2"><%- i %></option>
+                  <% } %>
+                </select>
+              </label>
+            </div>
+            <p class="product-price">PRECIO $0000</p>
+          </div>
+          <% } %>
+          <div class="total-container">
+            <span>TOTAL: $0000</span>
+          </div>
+          <div class="buy-button">
+            <button class="buy">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %>
+    <!-- FIN DE FOOTER -->
+  </body>
+</html>

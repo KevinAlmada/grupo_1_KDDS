@@ -1,0 +1,22 @@
+.carousel-container {
+  height: 100%;
+  width: 100%;
+  grid-row: 2;
+  grid-column: 1/11;
+  display: none;
+}
+
+.carousel-container .slide-carousel {
+  width: 1400px;
+  height: 250px;
+}
+
+.carousel-container img {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .carousel-container {
+    display: block;
+  }
+}
