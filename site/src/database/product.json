@@ -142,4 +142,12 @@
     "img":["lentes-vista-4A.jpg","lentes-vista-4B.jpg","lentes-vista-4C.jpg"],
     "discount": 15,
     "price": 6330
+  },{
+    "id":19,
+    "name":"Linda Farrow",
+    "category": "sol",
+    "description":"Las Linda Farrow son gafas de sol de lujo para mujer y hombre, anteojos de sol de diseño cuadrado de marca, estilo Retro, iron UV400, 2021",
+    "img":["lentes.png"],
+    "discount": 10,
+    "price": 9550
   }]
