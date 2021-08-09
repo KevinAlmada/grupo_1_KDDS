@@ -21,8 +21,8 @@ module.exports = {
     },
     products:(req,res)=>{
         res.render('searchResults',{
-            title : "Productos",
-            db
+            title : "Productos", 
+            db,
         })
     },
     category:(req,res)=>{

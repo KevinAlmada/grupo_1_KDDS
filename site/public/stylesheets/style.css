@@ -5,11 +5,16 @@
 @import url("login.css");
 @import url("register.css");
 @import url("product.css");
+@import url("err.css");
 @import url("newproduct.css");
 @import url("searchResults.css");
+<<<<<<< HEAD
 @import url("slider.css");
 @import url("carousel.css");
 
+=======
+@import url("newsletter.css");
+>>>>>>> 50946af0ad1f66c723f4179cb067174864197b94
 
 *{
     padding: 0;

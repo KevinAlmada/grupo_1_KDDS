@@ -2,18 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-
 }
+
 .searchResultsMain{
     margin-top: 15px;
 }
+
 .seachTitle{
     margin-top: 150px;
-    font-size: 1rem;
+    font-size: 1.8rem;
     text-align: center;
 }
-/* cards */
+
 .card-container{
     display: flex;
     justify-content: center;
@@ -29,19 +29,20 @@
     border: #828383 1px solid;
     padding-top: 10px;
     background-color: #f8fafc;
+    transition: all 400ms;
 }
+
 .card-container article:hover{
-    box-shadow: #0E1626 0px 10px 10px;
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px black;
 }
+
 .main .card-container img{
-    width: 250px;
-    /* box-shadow: #0E1626 0px 10px 10px; */
-   /*  margin-bottom: 25px; */
+    width: 200px;
     padding: 15px;
-    border-radius: 5px;
     background-color: #f8fafc;
-    /* border: solid 1px var(--colorNaranjaOscuro); */
 }
+
 .product_info_card{
     background-color: #f8fafc;
     padding: 10px 0 ;
@@ -49,99 +50,43 @@
 .card-container .product-name{
     text-align: center;
 }
+
 .card-container .precio{
     text-align: center;
     margin-top: 10px;
-
 }
-.card-container .btn-comprar{
+
+.card-container .btns-container{
+    margin: 15px 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-container .btn{
     background-color: var(--colorAzul);
     text-align: center;
     color: white;
-    padding: 15px;
-    margin: 10px;
+    padding: 8px 10px;
+    width: 200px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     border-radius: 10px;
-    transition: all .8s;
-    
+    transition: all .3s;
 }
-.card-container .btn-comprar:hover{
+
+.card-container .btn:hover{
     background-color: #F24405;
     cursor: pointer;
-
 }
 
 .cardsearch{
     width: 300px;
 }
+
 .cardsearch img{
     width: 100%;
 }
-/* newsletter */
-.newsletter{
-    background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-     
-}
-.newsletter p{
-    text-align: center;
-    margin: 10px;
-    color: white;
-}
-.newsletter form{
-    margin: 0 auto;
-    width: 85%;
-    
-}
-.newsletter .news-title{
-    margin-top: 10px ;
-    font-size: 1.5em;
-}
-.newsletter .news-input input{
-    
-    height: 25px;
-    border: 1px solid var(--colorNaranjaOscuro);
-    padding: 15px;
-    border-radius: 5px ;
-    transition: border .5s;
-    outline: none;
-    width: 100%;
-    margin-bottom: 10px;
-}
-.newsletter .news-input input:hover{
-    border-color: #F24405 ;
-}
-.newsletter .news-input button{
-    display: flex;
-    background-color: #0E1626;
-    border: none;
-    width: 120px;
-    height: 30px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    transition: all .5s;
-    margin:0 auto ; 
-    transform: scale(1);
-}
-
-.newsletter .news-input button:hover{
-    background-color: #F24405;
-    transform: scale(1.1);
-}
-/* fin newsletter */
-
 
 @media (min-width:576px){
     .card-container{
@@ -158,9 +103,5 @@
     .searchResultsMain{
         margin-left: 10%;
         margin-right: 10%;
-    }
-    .newsletter form {
-        margin: 0 auto;
-        width: 54%;
     }
 }
