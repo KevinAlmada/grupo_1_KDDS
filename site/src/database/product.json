@@ -79,7 +79,7 @@
     "discount": 10,
     "price": 8200
   },{
-    "id":11,
+    "id":"11",
     "name":"Katleen",
     "category":"sol",
     "description": "Si hablamos acerca de las tendencias, este artículo tiene todo lo que espera para esta termporada de invierno.",
@@ -87,7 +87,7 @@
     "discount": 10,
     "price": 5750
   },{
-    "id":12,
+    "id":"12",
     "name":"Angers",
     "category":"sol",
     "description": "La elegante curvatura y el estilo de ojos de gato están saturados de andrógino, el grunge de los 90 se une a la clase de los 60. El artículo ANGERS es atemporal y sin género.",
@@ -95,7 +95,7 @@
     "discount": 20,
     "price": 7050
   },{
-    "id":13,
+    "id":"13",
     "name":"Raven",
     "category":"sol",
     "description": "El RAVEN es un marco superior plano grande que no te puedes perder. Para él o ella, este será el escenario ideal para todas las necesidades de su vida.",
@@ -103,7 +103,7 @@
     "discount": 20,
     "price": 9450
   },{
-    "id":14,
+    "id":"14",
     "name":"Yester",
     "category":"sol",
     "description": "Una mezcla de pasion y creatividad",
@@ -111,7 +111,7 @@
     "discount": 20,
     "price": 9200
   },{
-    "id":15,
+    "id":"15",
     "name":"Ronnie",
     "category":"lectura",
     "description": "Una forma clásica que no pasa de moda y es funcional y la tendencia.",
@@ -119,7 +119,7 @@
     "discount": 10,
     "price": 5230
   },{
-    "id":16,
+    "id":"16",
     "name":"Netaglio",
     "category":"lectura",
     "description": "ELEGANTE EN FORMA Y MATERIAL, ÚNICO Y SOFISTICADO",
@@ -127,7 +127,7 @@
     "discount": 15,
     "price": 6000
   },{
-    "id":17,
+    "id":"17",
     "name":"Patrick",
     "category":"lectura",
     "description": "CLÁSICO, MODERNO, FUNCIONAL Y SIN GÉNERO ",
@@ -135,7 +135,7 @@
     "discount": 10,
     "price": 5300
   },{
-    "id":18,
+    "id":"18",
     "name":"Demand",
     "category":"lectura",
     "description": "Una nueva forma de utilizar la mirada, CON estilo y sofisticación.",
@@ -143,11 +143,11 @@
     "discount": 15,
     "price": 6330
   },{
-    "id":19,
+    "id":"19",
     "name":"Linda Farrow",
     "category": "sol",
     "description":"Las Linda Farrow son gafas de sol de lujo para mujer y hombre, anteojos de sol de diseño cuadrado de marca, estilo Retro, iron UV400, 2021",
-    "img":["lentes.png"],
+    "img":["lentes-sol-5A.png"],
     "discount": 10,
     "price": 9550
   }]

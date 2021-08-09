@@ -7,11 +7,11 @@ module.exports = {
         const cardDown = [];
         
         for(let i = 0; i < 4; i++){
-            let aleatorio = Math.floor((Math.random() * (14-11))+11);; 
+            let aleatorio = Math.floor((Math.random() * (19-1))+1);; 
             cardUp.push(db[aleatorio]);
         }
         for(let i = 0; i < 4; i++){
-            let aleatorio = Math.floor((Math.random() * (18-14))+14);; 
+            let aleatorio = Math.floor((Math.random() * (19-1))+1);; 
             cardDown.push(db[aleatorio]);
         }
 
