@@ -46,5 +46,26 @@ module.exports = {
         }else{
             res.render('error')
         }
+    },
+    busqueda:(req,res)=>{
+        let busqueda = req.query.buscador.trim().toLowerCase()
+        let coincidencias = []
+        let filtradoBuscador = db.forEach(prod => {
+            let description = prod.description.toLowerCase().split(" ")
+
+            description.forEach(palabra => {
+                    if (palabra == busqueda && !coincidencias.includes(prod)) {
+                        coincidencias.push(prod)
+                    }
+            }) 
+        })
+        
+        if (coincidencias.length > 0) {
+            res.render('searchResults',
+            {db : coincidencias,
+            title : `resultado de busqueda de ${busqueda}`})
+        }else{
+            res.render('error', {title : `El producto ${busqueda} no existe`} )
+        } 
     }
 }

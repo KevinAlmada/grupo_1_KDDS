@@ -6,9 +6,9 @@
                 <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
                 <li>
                     <div class="search-bar">
-                        <form action="">
-                            <input type="search" name="" id="">
-                            <button class="search-ico">
+                        <form action="/products/search" method="GET">
+                            <input type="search" name="buscador" id="buscador">
+                            <button class="search-ico" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
                     </form>
@@ -38,12 +38,12 @@
         <div class="container-header-logo">
             <a href="/"><h1>KDDS</h1></a>
         </div>
-        <div class="search-bar-desktop">
-            <input type="search" name="" id="search">
-            <button class="search-ico">
+        <form class="search-bar-desktop" action="/products/search" method="GET">
+            <input type="search" name="buscador" id="search">
+            <button class="search-ico" type="submit">
                 <i class="fas fa-search"></i>
             </button>
-        </div>
+        </form>
         <div class="header-cart-bag">
                 <a class="header_user" href="/users/login">
                     <i class="far fa-user"></i>

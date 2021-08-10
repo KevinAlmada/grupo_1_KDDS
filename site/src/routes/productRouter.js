@@ -5,6 +5,7 @@ var controller = require('../controllers/productController')
 /* GET home page. */
 
 router.get('/productDetail/:id', controller.productDetail);
+router.get('/search', controller.busqueda);
 router.get('/', controller.products);
 router.get('/ofertas', controller.ofertas);
 router.get('/:category', controller.category);
