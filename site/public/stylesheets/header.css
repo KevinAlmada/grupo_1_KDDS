@@ -256,6 +256,8 @@ main{
     .container-header{
        /*  justify-content: space-evenly; */
         border-bottom: none ;
+        MAX-WIDTH: 1600PX;
+    MARGIN: 0 AUTO;
     }
     .nav-bar{
         display: block;

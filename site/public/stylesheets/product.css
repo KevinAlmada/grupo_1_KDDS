@@ -228,6 +228,8 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
+    MAX-WIDTH: 1533PX;
+    MARGIN: 0 AUTO;
      
 }
 .newsletter p{
