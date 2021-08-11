@@ -18,6 +18,7 @@
 
 .banner img{
     width: 100%;
+    margin-top: 80px;
 }
 
 /* MAIN */
@@ -167,7 +168,7 @@
     flex-direction: column;
     margin-top: 50px;
     flex-wrap: wrap;
-    background-color: #d5dada;
+    background-color: #fff;
 }
 .card-container article{
     margin-bottom: 47px;

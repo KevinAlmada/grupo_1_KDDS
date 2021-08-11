@@ -132,11 +132,12 @@ header{
     border-bottom: 1px black solid ;
     height: 80px;
     padding: 40px;
+    opacity: .8;
 }
 .search-bar-desktop{
     display: none;
     position: relative;
-    flex-grow: 0.3;
+    flex-grow: 0.5;
 }
 .search-bar-desktop input{
     width: 100%;
@@ -253,7 +254,7 @@ main{
         display: flex;
     }
     .container-header{
-        justify-content: space-evenly;
+       /*  justify-content: space-evenly; */
         border-bottom: none ;
     }
     .nav-bar{

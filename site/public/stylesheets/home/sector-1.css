@@ -7,6 +7,7 @@
 
 .banner-home img{
 width: 100%;
+
 }
 .section-1-container {
     max-width: 1400px;
@@ -29,13 +30,14 @@ width: 100%;
     width: 100%;
     position: relative;
     object-fit: cover;
+    margin-top: 15px;
 }
 
 .section-1-container .fondo-container .logo {
     position: absolute;
     top: 1rem;
-    left: 30%;
-    right: 30%;
+    left: 35%;
+    right: 31%;
     /* border: 1px solid var(--colorAzul); */
 }
 

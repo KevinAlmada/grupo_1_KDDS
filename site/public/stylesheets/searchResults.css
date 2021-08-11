@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.banner-searchResults{
+    display: none;
+}
 
 .searchResultsMain{
     margin-top: 15px;
@@ -21,14 +24,14 @@
     flex-direction: column;
     margin-top: 50px;
     flex-wrap: wrap;
-    background-color: #d5dada;
+    background-color: #fff;
 }
 .card-container article{
     margin-bottom: 47px;
     margin-top: 50px;
-    border: #828383 1px solid;
+    border: #f24405 1px solid;
     padding-top: 10px;
-    background-color: #f8fafc;
+    background-color: white;
     transition: all 400ms;
 }
 
@@ -40,11 +43,11 @@
 .main .card-container img{
     /* width: 200px; */
     padding: 15px;
-    background-color: #f8fafc;
+    background-color: white;
 }
 
 .product_info_card{
-    background-color: #f8fafc;
+    background-color: white;
     padding: 10px 0 ;
 }
 .card-container .product-name{
@@ -103,5 +106,17 @@
     .searchResultsMain{
         margin-left: 10%;
         margin-right: 10%;
+    }
+}
+
+
+@media (min-width:576px){
+    .banner-searchResults{
+        display: block;
+        width: 100%;
+    }
+    .banner-searchResults img{
+        width: 100%;
+        margin-top: 80px;
     }
 }
