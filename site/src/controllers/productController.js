@@ -1,11 +1,11 @@
-let db = require('../database/productDb')
+let {productdb,userdb} = require('../database/productDb')
 
 
 module.exports = {
     productDetail:(req,res)=>{
         let idProd = req.params.id
-        let product = db.find(producto => producto.id === idProd)
-        let productsSim = db.filter(producto => producto.category === product.category)
+        let product = productdb.find(producto => producto.id === idProd)
+        let productsSim = productdb.filter(producto => producto.category === product.category)
         productsSim.splice(0,2)
         if (product) {
             res.render('product',{
@@ -22,12 +22,12 @@ module.exports = {
     products:(req,res)=>{
         res.render('searchResults',{
             title : "Productos", 
-            db,
+            db : productdb
         })
     },
     category:(req,res)=>{
         let categoria = req.params.category
-        let filtrado = db.filter(producto=>producto.category == categoria)
+        let filtrado = productdb.filter(producto=>producto.category == categoria)
         if (filtrado) {
             res.render('searchResults',
             {db : filtrado,
@@ -38,7 +38,7 @@ module.exports = {
             })
         }
     },ofertas:(req,res)=>{
-        let productsOfert = db.filter(producto => producto.discount >= 10)
+        let productsOfert = productdb.filter(producto => producto.discount >= 10)
         if(productsOfert){
             res.render('searchResults',
             {db : productsOfert,
@@ -50,7 +50,7 @@ module.exports = {
     busqueda:(req,res)=>{
         let busqueda = req.query.buscador.trim().toLowerCase()
         let coincidencias = []
-        let filtradoBuscador = db.forEach(prod => {
+        let filtradoBuscador = productdb.forEach(prod => {
             let description = prod.description.toLowerCase().split(" ")
 
             description.forEach(palabra => {

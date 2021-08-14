@@ -9,7 +9,7 @@
         </div>
         <section class="newp-container">
             <div class="form-container-np">
-                <form action="">
+                <form action="/admin/addProduct" method="POST">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre">
                     <label  for="descripcion">Desripción</label>
@@ -21,16 +21,13 @@
                     <input type="text" name="precio" id="precio">
                     <label for="categorias">Categorias</label>
                     <select name="categorias" id="categorias" >
-                        <option value="hombre">HOMBRE</option>
-                        <option value="mujer">MUJER</option>
-                        <option value="niño">NIÑO</option>
+                        <option value="sol">Sol</option>
                         <option value="lectura">Lectura</option>
 
                     </select>
                     <button class="btn-newp" type="submit">Crear Producto</button>
                 </form>
             </div>
-            
         </section>
     </main>
 </body>
