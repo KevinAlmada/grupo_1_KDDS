@@ -34,10 +34,14 @@ module.exports = {
             name:nombre,
             category:categorias,
             description:descripcion,
-            img:["default-image.png"],
+            img:[],
             price:precio
         }
-
+        if (req.file) {
+            newproduct.img[0] = `${req.file.filename}`
+        }else{
+            newproduct.img[0] = "default-image.png"
+        }
         productdb.push(newproduct)
 
         WriteProducJSON(productdb)

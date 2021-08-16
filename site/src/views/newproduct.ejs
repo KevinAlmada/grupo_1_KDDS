@@ -9,14 +9,14 @@
         </div>
         <section class="newp-container">
             <div class="form-container-np">
-                <form action="/admin/addProduct" method="POST">
+                <form action="/admin/addProduct" method="POST" enctype="multipart/form-data">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre">
                     <label  for="descripcion">Desripción</label>
                     <textarea name="descripcion" id="descripcion" cols="35" rows="10"></textarea>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagen" id="imagen">
+                    <input type="file" name="imagenProducto" id="imagen">
                     <label for="precio">Precio</label>
                     <input type="text" name="precio" id="precio">
                     <label for="categorias">Categorias</label>
