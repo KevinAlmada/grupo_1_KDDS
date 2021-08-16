@@ -18,7 +18,7 @@ module.exports = {
         let lastId = 1;
 
 		productdb.forEach(product => {
-			if(product.id > +lastId){
+			if(product.id > lastId){
 				lastId = product.id
 			}
 		});
@@ -30,7 +30,7 @@ module.exports = {
         categorias} = req.body
         
         let newproduct = {
-            id : `${+lastId + 1}` ,
+            id : lastId + 1 ,
             name:nombre,
             category:categorias,
             description:descripcion,

@@ -4,9 +4,8 @@ let {productdb,userdb} = require('../database/productDb')
 module.exports = {
     productDetail:(req,res)=>{
         let idProd = req.params.id
-        let product = productdb.find(producto => producto.id === idProd)
+        let product = productdb.find(producto => producto.id === +idProd)
         let productsSim = productdb.filter(producto => producto.category === product.category)
-        productsSim.splice(0,2)
         if (product) {
             res.render('product',{
                 db:product,
@@ -17,7 +16,7 @@ module.exports = {
             res.render('error',{
                 title:`${idProd}no existe`
             })
-        }
+        } 
     },
     products:(req,res)=>{
         res.render('searchResults',{
