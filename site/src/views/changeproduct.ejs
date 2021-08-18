@@ -9,30 +9,29 @@
         </div>
         <section class="newp-container">
             <div class="form-container-np">
-                <form action="">
+                <form action="/admin/changeProduct/<%= productoAModificar.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre">
+                    <input type="text" name="nombre" value="<%= productoAModificar.name %> ">
                     <label  for="descripcion">Desripción</label>
-                    <textarea name="descripcion" id="descripcion" cols="35" rows="10"></textarea>
+                    <textarea name="descripcion" id="descripcion" cols="35" rows="10" ><%= productoAModificar.description %></textarea>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagen" id="">
+                    <input type="file" name="imagenProducto" id="" value="<%= productoAModificar.img[0] %> ">
                     <label for="precio">Precio</label>
-                    <input type="text" name="precio" id="precio">
+                    <input type="text" name="precio" id="precio" value="<%= productoAModificar.price %> ">
                     <label for="discount">Descuento</label>
-                    <input type="text" name="discount" id="discount">
+                    <input type="text" name="discount" id="discount" value="<%= productoAModificar.discount %> ">
                     <label for="categorias">Categorias</label>
-                    <select name="categorias" id="" >
-                        <option value="hombre">HOMBRE</option>
-                        <option value="mujer">MUJER</option>
-                        <option value="niño">NIÑO</option>
+                    <select name="categorias" id="categorias" >
+                        <option value="sol">Sol</option>
                         <option value="lectura">Lectura</option>
 
                     </select>
-                    <button class="btn-newp" type="submit">Crear Producto</button>
-                    <form action="" method="post">
-                        <button class="delete-product" type="submit">Eliminar Producto</button>
-                    </form>
+                    <button class="btn-newp" type="submit">editar Producto</button>
+                    
+                </form>
+                <form action="/admin/deleteProduct/<%= productoAModificar.id %>?_method=DELETE" method="POST">
+                    <button class="delete-product" type="submit">Eliminar Producto</button>
                 </form>
             </div>
             

@@ -124,11 +124,11 @@
 
     .searchResultsMain{
         MAX-WIDTH: 1333PX;
-    DISPLAY: FLEX;
-    FLEX-DIRECTION: column;
-    JUSTIFY-CONTENT: center;
-    ALIGN-ITEMS: center;
-    MARGIN: 0 AUTO;
+        DISPLAY: FLEX;
+        FLEX-DIRECTION: column;
+        JUSTIFY-CONTENT: center;
+        ALIGN-ITEMS: center;
+        MARGIN: 0 AUTO;
 
     }
 }

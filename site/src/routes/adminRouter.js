@@ -4,6 +4,8 @@ const controller = require('../controllers/adminController')
 const multer = require('multer');
 const  path  = require('path');
 
+/* Multer */
+
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
         cb(null , path.join(__dirname,'../../public/images/product'))
@@ -21,7 +23,11 @@ router.get('/addProduct', controller.agregarProducto);
 router.post('/addProduct',uploadFile.single('imagenProducto'), controller.guardarProducto);
 
 /* Editar */
-router.get('/changeProduct', controller.modificarProducto);
+router.get('/changeProduct/:id', controller.modificarProducto);
+router.put('/changeProduct/:id',uploadFile.single('imagenProducto'), controller.editarProducto);
+/* Delete */
+router.delete('/deleteProduct/:id', controller.eliminarProducto);
+
 
 
 
