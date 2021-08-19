@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body.cart-body {
+  background-color: var(--colorCelesteFondo);
+}
+main.cart-main {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: var(--colorCelesteFondo);
+}
+.cart-products h2 {
+  font-family: "Bauhaus 93";
+}
+
+.cart {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+}
+.cart-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: solid 1px black;
+  padding: 10px;
+}
+
+.cart-product img {
+  border-radius: 20px;
+  width: 150px;
+}
+
+.cart-prod-info {
+  display: grid;
+  row-gap: 30px;
+  font-size: 15px;
+}
+.prod-info {
+  padding-top: 10px;
+}
+
+.prod-info .name {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.prod-modificar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.prod-modificar p {
+  cursor: pointer;
+  margin-right: 10px;
+  color: red;
+  font-size: 16px;
+}
+
+.prod-modificar a {
+  text-decoration: none;
+  color: rgb(53, 32, 248);
+  font-size: 16px;
+}
+
+.prod-modificar i {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.quantity-container {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.total-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+.total-container span {
+  font-size: 26px;
+  font-family: "Bauhaus 93";
+  margin-right: 50px;
+}
+
+.buy-button {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+.buy-button .buy {
+  cursor: pointer;
+  color: white;
+  background-color: #0e1626;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+}
+.buy-button .buy:hover {
+  color: #0e1626;
+  font-weight: 700;
+  background-color: #f24405;
+  transform: scale(1.05);
+}
+
+@media (min-width: 1024px) {
+  .cart {
+    padding: 20px 50px;
+  }
+  .cart-product {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .prod-modificar {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  main.cart-main {
+    margin-top: 90px;
+  }
+}

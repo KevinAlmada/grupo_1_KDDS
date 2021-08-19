@@ -1,0 +1,28 @@
+@import url("footer.css");
+@import url("header.css");
+@import url("cart.css");
+@import url("./home/home.css");
+@import url("login.css");
+@import url("register.css");
+@import url("product.css");
+@import url("err.css");
+@import url("newproduct.css");
+@import url("searchResults.css");
+@import url("newsletter.css");
+@import url("slider.css");
+@import url("carousel.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+}
+:root {
+  --colorAzul: #0e1626;
+  --colorNaranjaOscuro: #f24405;
+  --colorNaranjaClaro: #f27d52;
+}
+a{
+  text-decoration: none;
+}

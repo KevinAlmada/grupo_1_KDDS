@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head.ejs') %> 
+<body class="body-main-newProduct">
+    <main class="main-newProduct">
+        <div class="titulo-newp">
+            
+            <h1 class="newp-title">Creación de Producto</h1>
+        </div>
+        <section class="newp-container">
+            <div class="form-container-np">
+                <form action="/admin/addProduct" method="POST" enctype="multipart/form-data">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+                    <label  for="descripcion">Desripción</label>
+                    <textarea name="descripcion" id="descripcion" cols="35" rows="10"></textarea>
+                    
+                    <label for="imagen">Imagen</label>
+                    <input type="file" name="imagenProducto" id="imagen" multiple>
+                    <label for="precio">Precio</label>
+                    <input type="number" name="precio" id="precio">
+                    <label for="discount">Descuento</label>
+                    <input type="number" name="discount" id="discount">
+                    <label for="categorias">Categorias</label>
+                    <select name="categorias" id="categorias" >
+                        <option value="sol">Sol</option>
+                        <option value="lectura">Lectura</option>
+
+                    </select>
+                    <button class="btn-newp" type="submit">Crear Producto</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

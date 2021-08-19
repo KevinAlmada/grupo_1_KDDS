@@ -1,0 +1,102 @@
+.section-3-container {
+  width: 100%;
+}
+
+.section-3-container .container-products .box {
+  position: relative;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 0fr);
+  padding: 20px;
+}
+
+.section-3-container .box article {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 5px rgb(255, 94, 0);
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 240px;
+}
+.section-3-container .box article:hover {
+  transition: all 300ms ease;
+  box-shadow: 0px 0px 15px rgba(148, 55, 1, 0.637);
+}
+
+.section-3-container .box article figure {
+  width: 90%;
+  max-height: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.section-3-container .box article figure img {
+  width: 100%;
+  height: inherit;
+}
+
+.section-3-container .box article h3 {
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+.section-3-container .box article p {
+  text-align: center;
+  margin: 5px;
+  width: 180px;
+}
+
+.section-3-container .box article .container-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.section-3-container .box article .container-btn button {
+  margin-bottom: 5px;
+  padding: 5px 0px;
+  background-color: var(--colorAzul);
+  border: none;
+  width: 85%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section-3-container .box article .container-btn button:hover {
+  transition: all 300ms ease;
+  background-color: rgb(214, 141, 6);
+  transform: scale(1.01);
+}
+
+.section-3-container .box article .container-btn button a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.section-3-container .container-products .box .prev,
+.section-3-container .container-products .box .next {
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0px 20px;
+}
+
+.section-3-container .container-products .next {
+  right: 0;
+}
+
+@media (min-width: 1024px) {
+  .section-3-container .container-products .box .prev,
+  .section-3-container .container-products .box .next {
+    display: none;
+  }
+}

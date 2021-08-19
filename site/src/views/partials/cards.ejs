@@ -1,0 +1,28 @@
+<div class="container-products">
+  <div class="box">
+    <% for(let product of cardUp) { %>
+    <article class="slider">
+      <a href="products/productDetail/<%- product.id %>">
+        <figure>
+          <img src="/images/product/<%- product.img[0] %>" />
+        </figure>
+      </a>
+      <h3><%- product.name %></h3>
+      <h3>$<%- product.price-product.price/100*product.discount %>  <del>$<%- product.price %></h3>
+      <p>6 cuotas sin interes de $<%- (product.price / 6).toFixed(2) %></p>
+      <div class="container-btn">
+        <button>
+          <a href="products/productDetail/<%- product.id %>">Ver detalles</a>
+        </button>
+        <button>
+          <a href="products/productDetail/<%- product.id %>"
+            >Agregar al carrito</a
+          >
+        </button>
+      </div>
+    </article>
+    <%}%>
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</div>
