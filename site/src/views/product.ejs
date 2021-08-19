@@ -15,12 +15,15 @@
     <main class="main">
         <section class="container-product">
             <article class="product-img"><img src="/images/product/<%= db.img[0] %> " alt=`anteojos de <%= db.category %> ` ></article>
+            <form action="/admin/deleteProduct/<%= db.id %>?_method=DELETE" method="POST">
+                <button class="delete-product" type="submit">Eliminar Producto</button>
+            </form>
         
             <article class="product-info">
                 <h2 class="product-name"><%= db.name %></h2>
                 <h3 class="precio">Precio. $<%= db.price %></h3>
                 <p class="btn-comprar">Comprar</p>
-                <a href="/admin/changeProduct/<%= db.id %> "> Eliminar</a>
+                <a href="/admin/changeProduct/<%= db.id %> "> editar</a>
                 <p class="description"><%= db.description %></p>
             </article>
         </section>

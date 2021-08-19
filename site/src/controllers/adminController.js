@@ -27,21 +27,27 @@ module.exports = {
         let {nombre,
         descripcion,
         precio,
-        categorias} = req.body
+        categorias,
+        discount} = req.body
         
+        let imagenesProd = []
+        if (req.files.length > 0) {
+            req.files.forEach(imagen =>{
+                imagenesProd.push(imagen.filename)
+            })
+        }else{
+            imagenesProd.push("default-image.png")
+        }
         let newproduct = {
             id : lastId + 1 ,
             name:nombre,
             category:categorias,
             description:descripcion,
-            img:[],
-            price:precio
+            img:imagenesProd,
+            discount: +discount,
+            price: +precio
         }
-        if (req.file) {
-            newproduct.img[0] = `${req.file.filename}`
-        }else{
-            newproduct.img[0] = "default-image.png"
-        }
+        
         productdb.push(newproduct)
 
         WriteProductJSON(productdb)

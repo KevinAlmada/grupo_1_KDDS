@@ -16,11 +16,11 @@
                     <textarea name="descripcion" id="descripcion" cols="35" rows="10" ><%= productoAModificar.description %></textarea>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" id="" value="<%= productoAModificar.img[0] %> ">
+                    <input type="file" name="imagenProducto" id="" multiple value="<%= productoAModificar.imagenProducto%>">
                     <label for="precio">Precio</label>
-                    <input type="text" name="precio" id="precio" value="<%= productoAModificar.price %> ">
+                    <input type="number" name="precio" id="precio" value=<%= `${productoAModificar.price}` %> >
                     <label for="discount">Descuento</label>
-                    <input type="text" name="discount" id="discount" value="<%= productoAModificar.discount %> ">
+                    <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> ">
                     <label for="categorias">Categorias</label>
                     <select name="categorias" id="categorias" >
                         <option value="sol">Sol</option>
