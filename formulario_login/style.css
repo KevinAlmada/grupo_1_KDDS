@@ -185,3 +185,28 @@ form{
     }
     
 }
+
+
+
+/* animacion */
+
+@keyframes latido {
+    0% {
+        font-size: 0.67em;
+    }
+    25%{
+        font-size: 1em;
+    }
+    50%{
+        font-size: 0.67em
+    }
+    100% {
+        
+        font-size: 1em;
+    }
+}
+
+.container-form .firma .fas {
+    animation: infinite latido 2000ms alternate;
+    
+}
