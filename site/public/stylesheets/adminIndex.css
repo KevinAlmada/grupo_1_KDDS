@@ -1,0 +1,68 @@
+:root{
+    --colorAzul: #0E1626;
+    --colorNaranjaOscuro: #F24405;
+    --colorNaranjaClaro: #F27D52;
+    --colorCeleste: #569E92;
+    --colorCelesteFondo: #BFDDDF;    
+}
+.logoAdmin{
+    width: 100px;
+}
+
+.navAdmin{
+    display: flex; 
+    background-color: #0E1626;
+    color: white;
+    
+    align-items: center;
+}
+.navAdmin ul{
+    display: table;
+    float: right;
+}
+.navAdmin ul li{
+    float: left;
+    display: inline;
+    margin: 25px ;
+}
+.adminP-table{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.tablerow-admin td{
+    padding: 5px;
+    width: 17%;
+    text-align: center;
+    background-color: var(--colorCelesteFondo);
+}
+
+.fa-trash{
+    padding: 5px;
+    margin: 2px;
+    font-size: 1.2em;
+}
+.delete-product{
+    border: none;
+}
+.delete-product:hover{
+    background-color: #F24405;
+    color: white;
+    cursor: pointer;
+}
+/* .fa-trash:hover{
+    background-color: #F24405;
+    color: white;
+} */
+.admin-section{
+    margin-bottom: 25px;
+}
+.btn-newp{
+    background-color: var(--colorAzul);
+    color: white;
+    padding: 15px;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+.btn-newp:hover{
+    background-color: #F27D52;
+}

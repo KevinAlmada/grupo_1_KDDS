@@ -9,11 +9,17 @@ const WriteUserJSON = (data) =>{
 }
 
 module.exports = {
-    adminIndex:(req,res)=>{
+    adminLogin:(req,res)=>{
         res.render('adminLogin',{
             title : "Login Admin"
         })
     },
+    adminIndex:(req,res)=>{
+        res.render('adminIndex',{
+            title:"Admin Index",
+            productdb 
+        })
+    }, 
 
 
     agregarProducto:(req,res)=>{
@@ -103,7 +109,7 @@ module.exports = {
         )
         WriteProductJSON(productdb);
 
-        res.redirect('/')
+        res.redirect('/admin/index')
     }
 
 }
