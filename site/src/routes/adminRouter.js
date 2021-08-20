@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require('../controllers/adminController')
 const uploadFile = require('../middlewares/uploadFiles')
 /* GET home page. */
+router.get('/', controller.adminIndex);
 
 /* Agregar producto */
 router.get('/addProduct', controller.agregarProducto);

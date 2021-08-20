@@ -9,6 +9,13 @@ const WriteUserJSON = (data) =>{
 }
 
 module.exports = {
+    adminIndex:(req,res)=>{
+        res.render('adminLogin',{
+            title : "Login Admin"
+        })
+    },
+
+
     agregarProducto:(req,res)=>{
         res.render('newproduct',{
             title : "KDDS"
