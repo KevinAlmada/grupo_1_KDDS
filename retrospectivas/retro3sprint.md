@@ -10,7 +10,6 @@ El primer sprint de "BackEnd" se podria decir , estuvo interesante porque pudimo
 - Buena comunicacion.
 - Resolucion de problemas.
 - Compañerismo.
-
 ### Hacer mas:
 - Organizar trello.
 - Ordenar mejor las tareas de cada uno.
