@@ -20,6 +20,11 @@ module.exports = {
             cardUp,
             cardDown,
         })
+    },
+    aboutUs: (req,res)=>{
+        res.render('about',{
+            title: "Sobre Nosotros"
+        })
     }
 }
 

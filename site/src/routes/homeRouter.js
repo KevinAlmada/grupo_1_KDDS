@@ -5,7 +5,7 @@ var controller = require('../controllers/homeController')
 
 router.get('/', controller.index);
 
-
+router.get('/about', controller.aboutUs);
 
 module.exports = router;
 

@@ -1,0 +1,129 @@
+:root{
+    --colorAzul: #0E1626;
+    --colorNaranjaOscuro: #F24405;
+    --colorNaranjaClaro: #F27D52;
+    --colorCeleste: #569E92;    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Stilos */
+.about-body{
+    background-color: var(--colorCeleste);
+}
+
+.about-main{
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.about-title{
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+}
+.about-container img{
+    width: 100%;
+}
+
+.about-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px;
+    text-align: center;
+}
+.about-data p{
+    margin: 5px;
+}
+.about-redes-title{
+    text-align: center;
+    margin-top: 25px;
+}
+.about-social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-around;
+    font-size: 2em;
+}
+
+.about-social i:hover{
+    cursor: pointer;
+    color: var(--colorNaranjaOscuro);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes latido {
+    0% {
+        font-size: 0.67em;
+    }
+    25%{
+        font-size: 1em;
+    }
+    50%{
+        font-size: 0.67em
+    }
+    100% {
+        
+        font-size: 1em;
+    }
+}
+.firma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.firma .fas {
+    animation: infinite latido 2000ms alternate;
+   text-align: center;
+
+}
