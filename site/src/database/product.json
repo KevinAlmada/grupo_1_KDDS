@@ -14,16 +14,14 @@
     },
     {
         "id": 2,
-        "name": "Oliver",
-        "category": "sol",
+        "name": "Oliver KEVIN",
         "description": "Diseñadas como gafas unisex, la estética es audaz e impone presencia . Anteojos de sol - Oliver",
         "img": [
-            "anteojo-sol2.jpg",
+            "anteojo-sol2-1.jpg",
             "anteojo-sol2-2.jpg",
             "anteojo-sol2-3.jpg"
         ],
-        "discount": 10,
-        "price": 9800
+        "price": "9800"
     },
     {
         "id": 3,

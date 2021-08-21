@@ -68,13 +68,18 @@ module.exports = {
 
     editarProducto:(req,res)=>{
         let { nombre,precio,descripcion,descuento,categoria } = req.body;
-
+        let imgProd = []
+        if (req.files) {
+            
+            req.files.forEach(img =>{imgProd.push(img.filename)})
+        }
+        
         productdb.forEach(producto => {
             if(producto.id === +req.params.id){
                 producto.name = nombre,
                 producto.price = precio,
                 producto.description = descripcion,
-                producto.img[0] = req.file.filename,
+                producto.img = imgProd.length > 0? imgProd : producto.img,
                 producto.discount = descuento,
                 producto.category = categoria
             }
