@@ -9,6 +9,7 @@
     background-color: var(--colorCelesteFondo);
 }
 
+
 .main-loginAdmin{
     width: 90%;
     max-width: 800px;
@@ -56,6 +57,7 @@
     margin: 10px;
     border: none;
     border-bottom: none;
+    text-align: center;
 }
 .btnIngresar:hover{
     background-color: var(--colorNaranjaOscuro);

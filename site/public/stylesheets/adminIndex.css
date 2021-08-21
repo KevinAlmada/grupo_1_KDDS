@@ -49,6 +49,17 @@
     color: white;
     cursor: pointer;
 }
+.fa-user-edit{
+    color: var(--colorAzul);
+    /* border: solid .5px var(--colorNaranjaOscuro); */
+    padding: 10px;
+    background-color: white;
+}
+.fa-user-edit:hover{
+    
+    background-color: #0279E8;
+}
+
 /* .fa-trash:hover{
     background-color: #F24405;
     color: white;
@@ -66,3 +77,4 @@
 .btn-newp:hover{
     background-color: #F27D52;
 }
+
