@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override')
-
+var session = require('express-session')
 /* ENROUTADORES */
 var homeRouter = require('./routes/homeRouter');
 var usersRouter = require('./routes/usersRouter');
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'))
-
+app.use(session({secret:"KDDS TOP SECRET", resave: false, saveUninitialized: true }));
 /* RUTAS PRINCIPALES */
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
