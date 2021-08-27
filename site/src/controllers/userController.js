@@ -13,6 +13,48 @@ module.exports = {
             title : "Login - KDDS"
         })
     },
+
+    processLogin:(req,res)=>{
+        let errors = validationResult(req)
+
+        if(errors.isEmpty()){
+            userdb.forEach(user => {
+                if(user.email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, user.password)){
+                        req.session.user = {
+                            id: user.id,
+                            userName: user.name + " " + user.last_name,
+                            email: user.email,
+                            /* avatar: user.avatar, */
+                            rol: user.rol
+                        }
+                        res.render('about',{
+                            title: "kdds",
+                            usuario: req.session.user
+                        })
+                    } 
+                }
+            })
+
+            if(req.session.user == undefined){
+                res.render('login', {
+                    title : "Login - KDDS",
+                    /* categories, */
+                    errorMsg: "Credenciales inválidas"
+                })
+            }
+        }else{
+            res.render('login', {
+                /* categories, */
+                title : "Login - KDDS",
+                errors: errors.mapped()
+            })
+        }        
+
+    },
+
+
+
     register:(req,res)=>{
         res.render('register',{
             title : "Register - KDDS"
@@ -51,6 +93,12 @@ module.exports = {
                 old:req.body
             }) 
         }
+    },
+    /* User profile */
+    profile: (req, res) =>{
+        res.render('userProfile', {
+            title : "tu perfil - KDDS"
+        })
     },
     cart:(req,res)=>{
         res.render('cart',{
