@@ -10,18 +10,21 @@ module.exports = {
             res.render('product',{
                 db:product,
                 title:product.name,
-                productsSim
+                productsSim,
+                usuario:req.session.user?req.session.user:""
             })
         }else{
             res.render('error',{
-                title:`${idProd}no existe`
+                title:`${idProd}no existe`,
+                usuario:req.session.user?req.session.user:""
             })
         } 
     },
     products:(req,res)=>{
         res.render('searchResults',{
             title : "Productos", 
-            db : productdb
+            db : productdb,
+            usuario:req.session.user?req.session.user:""
         })
     },
     category:(req,res)=>{
@@ -30,10 +33,12 @@ module.exports = {
         if (filtrado) {
             res.render('searchResults',
             {db : filtrado,
-            title :`Anteojos de ${categoria}`})
+            title :`Anteojos de ${categoria}`,
+            usuario:req.session.user?req.session.user:""})
         }else{
             res.render('error',{
-                title:`${categoria}no existe`
+                title:`${categoria}no existe`,
+                usuario:req.session.user?req.session.user:""
             })
         }
     },ofertas:(req,res)=>{
@@ -41,9 +46,11 @@ module.exports = {
         if(productsOfert){
             res.render('searchResults',
             {db : productsOfert,
-            title :"ofertas"})
+            title :"ofertas",
+            usuario:req.session.user?req.session.user:""})
         }else{
-            res.render('error')
+            res.render('error',
+            {usuario:req.session.user?req.session.user:""})
         }
     },
     busqueda:(req,res)=>{
@@ -62,9 +69,11 @@ module.exports = {
         if (coincidencias.length > 0) {
             res.render('searchResults',
             {db : coincidencias,
-            title : `resultado de busqueda de ${busqueda}`})
+            title : `resultado de busqueda de ${busqueda}`,
+            usuario:req.session.user?req.session.user:""})
         }else{
-            res.render('error', {title : `El producto ${busqueda} no existe`} )
+            res.render('error', {title : `El producto ${busqueda} no existe`,
+            usuario:req.session.user?req.session.user:""} )
         } 
     }
 }

@@ -17,8 +17,8 @@
         <div class="userProfile-container">
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos personales</h3>
-                <p class="userProfile_item">Nombre: NOMBRE DE USUARIO</p>
-                <p class="userProfile_item">Email: EMAIL DE USUARIO</p>
+                <p class="userProfile_item">Nombre: <%= usuario.first_name + " " + usuario.last_name %> </p>
+                <p class="userProfile_item">Email: <%= usuario.email %> </p>
                 <p class="userProfile_item">Teléfono: TELÉFONO DE USUARIO</p>
             </div>
             <div class="userProfile_box">
@@ -29,6 +29,7 @@
                 <p class="userProfile_item">Localidad: </p>
             </div>
             <a href="#" class="btn-ad btn-ad-primary">EDITAR DATOS</a>
+            <a href="/users/logout" class="btn-ad btn-ad-primary">CERRAR SESION</a>
         </div>
     </main>
 </body>
