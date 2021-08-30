@@ -45,9 +45,15 @@
             </button>
         </form>
         <div class="header-cart-bag">
+            <% if (usuario != "") { %>
+                <a class="header_user" href="/users/profile">
+                    <i class="far fa-user"></i>
+                </a>
+            <% }else{ %>
                 <a class="header_user" href="/users/login">
                     <i class="far fa-user"></i>
                 </a>
+            <% } %>
                 <a class="header_cart" href="/users/cart">
                     <i class="fas fa-shopping-bag"></i>
                 </a>

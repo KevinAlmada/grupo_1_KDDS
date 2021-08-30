@@ -13,7 +13,7 @@ router.post('/login',loginValidation, controller.processLogin);
 
 router.get('/register', controller.register);
 router.post('/register',registerValidation, controller.processRegister);
-
+router.get('/logout', controller.logout)
 
 router.get('/cart',controller.cart);
 

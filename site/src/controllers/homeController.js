@@ -19,11 +19,13 @@ module.exports = {
             db:productdb,
             cardUp,
             cardDown,
+            usuario:req.session.user?req.session.user:""
         })
     },
     aboutUs: (req,res)=>{
         res.render('about',{
-            title: "Sobre Nosotros"
+            title: "Sobre Nosotros",
+            usuario:req.session.user?req.session.user:""
         })
     }
 }
