@@ -109,7 +109,8 @@
   .image {
     opacity: 1;
     display: block;
-    width: 100%;
+    width: 58%;
+    margin: 0 auto;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -377,6 +378,9 @@
     .newsletter form {
         width: auto;
     }
+    .container-product{
+        margin: 15% 10% 15% 10%;
+    }
 }
 
 @media (min-width: 1200px){
@@ -384,3 +388,5 @@
         width: 30vw;
     }
 }
+
+
