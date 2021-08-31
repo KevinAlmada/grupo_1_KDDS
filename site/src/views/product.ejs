@@ -9,17 +9,19 @@
 
     <div class="banner">
         <img src="/images/productos/homebanner2021.jpg" alt="Bienvenido">
-        
-        
     </div>
+
+
     <main class="main">
         <section class="container-product">
             <article class="product-img"><img src="/images/product/<%= db.img[0] %> " alt=`anteojos de <%= db.category %> ` ></article>
+            
         
             <article class="product-info">
                 <h2 class="product-name"><%= db.name %></h2>
                 <h3 class="precio">Precio. $<%= db.price %></h3>
                 <p class="btn-comprar">Comprar</p>
+                
                 <p class="description"><%= db.description %></p>
             </article>
         </section>
@@ -60,6 +62,8 @@
             <% }) %>
              
         </section>
+
+
         <section class="newsletter-container">
             <div class="newsletter">
                 <p class="news-title">¡Unite a nuestro newsletter!</p>
@@ -72,6 +76,10 @@
             </div>
         </section>
     </main>
+
+
+
+    
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %> 
     

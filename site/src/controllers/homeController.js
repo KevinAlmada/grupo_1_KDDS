@@ -1,6 +1,5 @@
 /* db */
-const db = require('../database/productDb');
-
+let {productdb,userdb} = require('../database/productDb')
 module.exports = {
     index:(req,res)=>{
         const cardUp = [];
@@ -8,18 +7,25 @@ module.exports = {
         
         for(let i = 0; i < 4; i++){
             let aleatorio = Math.floor((Math.random() * (19-1))+1);; 
-            cardUp.push(db[aleatorio]);
+            cardUp.push(productdb[aleatorio]);
         }
         for(let i = 0; i < 4; i++){
             let aleatorio = Math.floor((Math.random() * (19-1))+1);; 
-            cardDown.push(db[aleatorio]);
+            cardDown.push(productdb[aleatorio]);
         }
 
         res.render('home',{
             title : "KDDS",
-            db,
+            db:productdb,
             cardUp,
             cardDown,
+            usuario:req.session.user?req.session.user:""
+        })
+    },
+    aboutUs: (req,res)=>{
+        res.render('about',{
+            title: "Sobre Nosotros",
+            usuario:req.session.user?req.session.user:""
         })
     }
 }

@@ -4,35 +4,36 @@
 <body>
     <!-- HEADER -->
     <%- include('partials/header.ejs') %> 
-    
-    <!-- FIN DE HEADER -->
+    <div class="banner-searchResults">
+        <img src="/images/productos/BANNERSEARCHRESOULTS.jpg" alt="">
+    </div>
+    <!-- TITLE -->
     <h1 class="seachTitle" >Resultados de su busqueda</h1>
+    <!-- CARD -->
     <main class="searchResultsMain">
         <section class="card-container">
             <% db.forEach(producto => { %>
                 <article class="cardsearch">
-                    <img src="/images/product/<%- producto.img[0] %> " alt="LenteSolNegro">
+                    <img class="card-img" src="/images/product/<%- producto.img[0] %> " alt="LenteSolNegro">
                     <div class="product_info_card">
                         <h2 class="product-name"><%- producto.name %> </h2>
-                        <h3 class="precio">Precio $<%- producto.price %> </h3>
-                        <p class="btn-comprar">Ver más</p>
+                        <div class="pricesCards">
+                            <h3 class="precio"> $<%- producto.price-producto.price/100*producto.discount %></h3>
+                        <del class="precio"> $<%- producto.price %> </del>
+                        </div >
+                        <a href="/products/productDetail/<%- producto.id %> "><p class="btn-comprar">Ver más</p></a>
+                        <a href="/products/productDetail/<%- producto.id %> "><p class="btn-comprar">Agregar al carrito</p></a>
                     </div>
                 </article>
             <% }) %>
         </section>
-        <div class="newsletter">
-            <p class="news-title">¡Unite a nuestro newsletter!</p>
-            <p class="news-info">Suscribite a nuestro newsletter y conocé todas nuestras novedades lanzamientos & promos</p>
-            <form action="" class="news-input">
-                <input type="text" placeholder=" Email...">
-                <button type="submit">SUSCRIBIR</button>
-            </form>
-        </div>
+    <!-- NEWSLETTER -->
+    <%- include('partials/newsletter.ejs') %> 
     </main>
-
+    <!-- SCRIPT -->
+    <%- include('partials/script.ejs') %> 
     <!-- FOOTER -->
     <%- include('partials/footer.ejs') %> 
-    
     <!-- FIN DE FOOTER -->
 </body>
 </html>

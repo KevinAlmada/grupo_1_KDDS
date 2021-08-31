@@ -1,10 +1,21 @@
-var express = require('express');
-var router = express.Router();
-var controller = require('../controllers/adminController')
+const express = require('express');
+const router = express.Router();
+const controller = require('../controllers/adminController')
+const uploadFile = require('../middlewares/uploadFiles')
 /* GET home page. */
+router.get('/', controller.adminLogin);
+router.get('/index', controller.adminIndex);
 
+/* Agregar producto */
 router.get('/addProduct', controller.agregarProducto);
-router.get('/changeProduct', controller.modificarProducto);
+router.post('/addProduct',uploadFile.array('imagenProducto'), controller.guardarProducto);
+
+/* Editar */
+router.get('/changeProduct/:id', controller.modificarProducto);
+router.put('/changeProduct/:id',uploadFile.array('imagenProducto'), controller.editarProducto);
+/* Delete */
+router.delete('/deleteProduct/:id', controller.eliminarProducto);
+
 
 
 

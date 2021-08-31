@@ -1,0 +1,65 @@
+:root{
+    --colorAzul: #0E1626;
+    --colorNaranjaOscuro: #F24405;
+    --colorNaranjaClaro: #F27D52;
+    --colorCeleste: #569E92;
+    --colorCelesteFondo: #BFDDDF;    
+}
+.bodyAdmin{
+    background-color: var(--colorCelesteFondo);
+}
+
+
+.main-loginAdmin{
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.logoAdmin{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.admintittle{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.loginAdmin-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+
+
+.formAdmin input{
+    border: none;
+    border-bottom: 1px solid var(--colorAzul) ;
+    padding: 3px;
+    margin: 3px;
+    font-style: bold;
+}
+.btnIngresar{
+    background-color: var(--colorAzul);
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-bottom: none;
+    text-align: center;
+}
+.btnIngresar:hover{
+    background-color: var(--colorNaranjaOscuro);
+    cursor: pointer;
+}

@@ -1,3 +1,7 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<%- include('partials/head.ejs') %> <%- include('partials/header.ejs') %>
+<section class="err-container">
+  <img src="../../images/error/sorprendido.png" alt="sorprendido" />
+  <h1>Esta página no existe</h1>
+  <p>Comprueba la URL o vuelve a la página de inicio de KDDS</p>
+  <a href="/">Volver al Inicio</a>
+</section>

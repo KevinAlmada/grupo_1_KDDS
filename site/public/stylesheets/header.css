@@ -132,11 +132,13 @@ header{
     border-bottom: 1px black solid ;
     height: 80px;
     padding: 40px;
+    opacity: .8;
 }
 .search-bar-desktop{
     display: none;
     position: relative;
-    flex-grow: 0.3;
+    flex-grow: 0.5;
+    /* padding: 10px; */
 }
 .search-bar-desktop input{
     width: 100%;
@@ -146,6 +148,7 @@ header{
     outline-style: none;
     position: relative;
     bottom: 5px;
+    padding: 12px;
 }
 .search-bar-desktop input:focus{
     border : var(--colorNaranjaOscuro) solid 2px ;
@@ -156,6 +159,9 @@ header{
     right: 9px;
     top: 0px;
     background-color: transparent;
+    font-size: 1em;
+    cursor: pointer;
+
 }
 .search-bar-desktop button :hover{
     color: var(--colorNaranjaOscuro);
@@ -253,8 +259,10 @@ main{
         display: flex;
     }
     .container-header{
-        justify-content: space-evenly;
+       /*  justify-content: space-evenly; */
         border-bottom: none ;
+        MAX-WIDTH: 1600PX;
+    MARGIN: 0 AUTO;
     }
     .nav-bar{
         display: block;

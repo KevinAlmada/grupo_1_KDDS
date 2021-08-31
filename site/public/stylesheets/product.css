@@ -18,6 +18,7 @@
 
 .banner img{
     width: 100%;
+    margin-top: 80px;
 }
 
 /* MAIN */
@@ -140,6 +141,10 @@
     padding: 16px 32px;
     cursor: pointer;
   }
+  .text a{
+      text-decoration: none;
+      color: white;
+  }
 /* Fin Estilo owb  */
 
 /* .contenedor-estilos div img:hover{
@@ -163,7 +168,7 @@
     flex-direction: column;
     margin-top: 50px;
     flex-wrap: wrap;
-    background-color: #d5dada;
+    background-color: #fff;
 }
 .card-container article{
     margin-bottom: 47px;
@@ -223,6 +228,8 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
+    MAX-WIDTH: 1533PX;
+    MARGIN: 0 AUTO;
      
 }
 .newsletter p{

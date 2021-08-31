@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding:0;
-    text-transform: uppercase;
 }
 :root{
     --colorAzul: #0E1626;
@@ -11,7 +10,7 @@
     --colorCelesteFondo: #BFDDDF;    
 }
 .body-main-newProduct{
-    background: linear-gradient(to bottom, rgba(6,58,150,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(6,58,150,0.65) 0%,rgba(0,0,0,0) 100%) no-repeat;
 
 }
 .main-newProduct{
@@ -36,8 +35,11 @@
     justify-content: center;
     align-items: center;
     padding: 12px;
+    margin-bottom: 90%;
 }
-
+.form-container-np{
+    margin-bottom: 25px;
+}
 .form-container-np form label{
     display: block;
     padding-top: 15px;
@@ -64,4 +66,26 @@
     color: white;
     margin-top: 15px;
     cursor: pointer;
+    transition: all 1s;
+}
+.btn-newp:hover{
+    background-color: #07F251;
+}
+
+.delete-product{
+    background-color: var(--colorCeleste);
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    transition: all 1s;
+
+}
+.delete-product:hover{
+    background-color: rgb(245, 0, 42);
+}
+
+.fa-trash,.fa-user-edit{
+    margin-left: 10px;
 }

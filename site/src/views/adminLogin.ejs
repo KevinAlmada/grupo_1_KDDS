@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head.ejs') %> 
+    <link rel="stylesheet" href="/stylesheets/loginAdmin.css">
+<body class="bodyAdmin">
+    
+    <main class="main-loginAdmin">
+        
+        <img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo">
+        <h1 class="admintittle">Bienvenido Administrador</h1>
+        <div class="loginAdmin-container">
+            <form class="formAdmin" action="">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" placeholder="Ingresá Tu usuario">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="" placeholder="Ingresa tu Contraseña">
+                <a class="btnIngresar" href="/admin/index">Ingresar</a>
+            </form>
+            
+        </div>
+    </main>
+</body>
+</html>

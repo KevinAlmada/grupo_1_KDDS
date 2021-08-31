@@ -57,6 +57,8 @@ footer .social-media ul a i:hover{
     footer{
         grid-template-rows: repeat(1,100%);
         grid-template-columns: repeat(3,1fr);
+        MAX-WIDTH: 1533PX;
+        MARGIN: 0 AUTO;
     }
     footer div{
         border-bottom: none;

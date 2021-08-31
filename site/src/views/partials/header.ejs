@@ -6,9 +6,9 @@
                 <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
                 <li>
                     <div class="search-bar">
-                        <form action="">
-                            <input type="search" name="" id="">
-                            <button class="search-ico">
+                        <form action="/products/search" method="GET">
+                            <input type="search" name="buscador" id="buscador">
+                            <button class="search-ico" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
                     </form>
@@ -38,16 +38,22 @@
         <div class="container-header-logo">
             <a href="/"><h1>KDDS</h1></a>
         </div>
-        <div class="search-bar-desktop">
-            <input type="search" name="" id="">
-            <button class="search-ico">
+        <form class="search-bar-desktop" action="/products/search" method="GET">
+            <input type="search" name="buscador" id="search">
+            <button class="search-ico" type="submit">
                 <i class="fas fa-search"></i>
             </button>
-        </div>
+        </form>
         <div class="header-cart-bag">
+            <% if (usuario != "") { %>
+                <a class="header_user" href="/users/profile">
+                    <i class="far fa-user"></i>
+                </a>
+            <% }else{ %>
                 <a class="header_user" href="/users/login">
                     <i class="far fa-user"></i>
                 </a>
+            <% } %>
                 <a class="header_cart" href="/users/cart">
                     <i class="fas fa-shopping-bag"></i>
                 </a>
@@ -59,7 +65,7 @@
                 <a href="/products/sol"><li>Lentes de sol</li></a>
                 <a href="/products/lectura"><li>Lentes de vista</li></a>
                 <a href="/products/ofertas"><li>Ofertas</li></a>
-                <a href="/products"><li>Contacto</li></a>
+                <a href="/about"><li>Nosotros</li></a>
             </ul>
         </nav>
     </div>
