@@ -9,12 +9,15 @@
         <img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo">
         <h1 class="admintittle">Bienvenido Administrador</h1>
         <div class="loginAdmin-container">
-            <form class="formAdmin" action="">
-                <label for="usuario">Usuario</label>
-                <input type="text" name="usuario" placeholder="Ingresá Tu usuario">
+            <form class="formAdmin" action="/admin/login" method="POST">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Ingresá Tu email">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="" placeholder="Ingresa tu Contraseña">
-                <a class="btnIngresar" href="/admin/index">Ingresar</a>
+                <% if (locals.errors) { %>
+                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i>Credenciales invalidas </small>
+                <% } %>
+                <button type="submit" class="btnIngresar">INGRESAR</button>
             </form>
             
         </div>

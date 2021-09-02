@@ -3,11 +3,14 @@ const router = express.Router();
 const controller = require('../controllers/adminController')
 const uploadFile = require('../middlewares/uploadFiles')
 const userAdminCheck = require('../middlewares/userAdminCheck');
+const loginAdminValidator = require('../middlewares/loginAdminValidation');
 
 /* GET home page. */
-router.get('/', controller.adminLogin);
-router.get('/index', userAdminCheck, controller.adminIndex);
+router.get('/login', controller.adminLogin);
+router.post('/login',loginAdminValidator, controller.adminLoginProcess);
 
+
+router.get('/index', userAdminCheck, controller.adminIndex);
 /* Agregar producto */
 router.get('/addProduct', userAdminCheck, controller.agregarProducto);
 router.post('/addProduct',uploadFile.array('imagenProducto'), controller.guardarProducto);
