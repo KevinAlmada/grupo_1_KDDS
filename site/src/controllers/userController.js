@@ -33,8 +33,15 @@ module.exports = {
                         if (req.body.remember) {
                             res.cookie('cookieKDDS',req.session.user,{maxAge : 1000*60*5})
                         }
-                    } 
                         res.redirect("/")
+                    }else{
+                        res.render('login', {
+                            title : "Login - KDDS",
+                            errors: errors.mapped(),
+                            usuario:req.session.user?req.session.user:""
+                        })
+                    }
+                        
                 }
             })
 

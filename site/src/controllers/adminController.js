@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const {validationResult}=require('express-validator')
+const bcrypt = require('bcryptjs')
 let {productdb,userdb} = require('../database/productDb')
 const WriteProductJSON = (data) =>{
     fs.writeFileSync(path.join(__dirname,'../database/product.json'),JSON.stringify(data),'utf-8')
@@ -13,6 +15,35 @@ module.exports = {
         res.render('adminLogin',{
             title : "Login Admin"
         })
+    },
+    adminLoginProcess:(req,res)=>{
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            userdb.forEach(user => {
+                if(user.email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, user.password)){
+                        
+                        req.session.user = {
+                            id: user.id,
+                            first_name: user.first_name,
+                            last_name: user.last_name,
+                            email: user.email,
+                            rol:user.rol
+                        }
+                        if (req.body.remember) {
+                            res.cookie('cookieKDDS',req.session.user,{maxAge : 1000*60*5})
+                        }
+                        res.redirect("/admin/index")
+                    }
+                        
+                }
+            })
+        }else{
+            res.render('adminLogin',{
+                title : "Login Admin",
+                errors:errors.mapped()
+            })
+        }
     },
     adminIndex:(req,res)=>{
         res.render('adminIndex',{
