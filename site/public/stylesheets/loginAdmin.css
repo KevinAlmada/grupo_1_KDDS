@@ -40,7 +40,9 @@
     padding: 20px;
 }
 
-
+.formAdmin{
+    width: 250px;
+}
 
 .formAdmin input{
     border: none;

@@ -12,8 +12,14 @@
             <form class="formAdmin" action="/admin/login" method="POST">
                 <label for="email">Email</label>
                 <input type="email" name="email" placeholder="Ingresá Tu email">
+                <% if (locals.errors && errors.email) { %>
+                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.email.msg %> </small>
+                   <% } %>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="" placeholder="Ingresa tu Contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.password.msg %> </small>
+                   <% } %>
                 <% if (locals.errors) { %>
                     <small class="text-danger"><i class="fas fa-exclamation-circle"></i>Credenciales invalidas </small>
                 <% } %>

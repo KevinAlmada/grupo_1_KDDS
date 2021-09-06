@@ -38,6 +38,7 @@ module.exports = {
                         res.render('login', {
                             title : "Login - KDDS",
                             errors: errors.mapped(),
+                            errorMsg: "Credenciales inválidas",
                             usuario:req.session.user?req.session.user:""
                         })
                     }

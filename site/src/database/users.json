@@ -102,5 +102,13 @@
         "email": "mail3@mail.com",
         "password": "$2a$10$2TD7MIx.QoTBNPQFFtnV9uKBkOJfCUWK5qzNOl9S/Nf1GNs.6lS92",
         "rol": "ADMIN"
+    },
+    {
+        "id": 14,
+        "first_name": "Ruben Dario",
+        "last_name": "Mamani Duarte",
+        "email": "dario_2.0@hotmail.com",
+        "password": "$2a$10$Wsrr39Y0jzPQ/XWDQ7k2mO4vflDSHoIeMCkSXcKbAgZH965KK/gEu",
+        "rol": "ADMIN"
     }
 ]
