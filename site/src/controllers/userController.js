@@ -116,6 +116,12 @@ module.exports = {
             usuario:req.session.user?req.session.user:""
         })
     },
+    editProfile:(req,res)=>{
+        res.render('userProfileEdit',{
+            title : "Edita tu perfil - KDDS",
+            usuario:req.session.user?req.session.user:""
+        })        
+    },
     cart:(req,res)=>{
         res.render('cart',{
             title : "tu Carrito - KDDS",

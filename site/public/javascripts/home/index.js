@@ -44,7 +44,10 @@ setTimeout(startSlidesBottom, 3000);
 
 
 
-
+/* loader darioM */
+window.addEventListener("load",function(){
+    document.getElementById("loader").classList.toggle("loader2")
+})
 
 
 

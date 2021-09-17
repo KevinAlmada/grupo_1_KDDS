@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %> 
+    
+</head>
+<body class="profile-body">
+    <!-- HEADER -->
+    
+    <%- include('partials/header.ejs') %> 
+    
+    <!-- FIN DE HEADER -->
+    <main class="userProfileEdit">
+        <div class="avatar">
+            <img src="/images/perfil/avatardefault.png" alt="">
+        </div>
+        <div class="userProfileEdit-container">
+            <div class="userProfileEdit_box">
+                <form action="">
+                    <label for="name">Nombre</label>
+                    <input type="text">
+                    <label for="apellido">Apellido</label>
+                    <input type="text">
+                    <label for="email">E-mail</label>
+                    <input type="email">
+                    <label for="telefono">Teléfono</label>
+                    <input type="number">
+                    <label for="direccion">Direccion</label>
+                    <input type="text">
+                    <label for="codigo">Codigo Postal</label>
+                    <input type="text">
+                    <label for="provincia">Provincia</label>
+                    <input type="text">
+                    <label for="Localidad">Localidad</label>
+                    <input type="text">
+                </form>
+            </div>
+            <a href="#" class="btn-ad btn-ad-primary">EDITAR DATOS</a>
+            <a href="/users/logout" class="btn-ad btn-ad-primary">CERRAR SESION</a>
+        </div>
+    </main>
+</body>
+</html>

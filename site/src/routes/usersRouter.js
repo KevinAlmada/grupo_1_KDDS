@@ -17,4 +17,7 @@ router.get('/logout', controller.logout)
 
 router.get('/cart',controller.cart);
 
+router.get('/useredit',controller.editProfile);
+router.put('/useredit',controller.editProfile);
+
 module.exports = router;
