@@ -2,12 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult}=require('express-validator')
 const bcrypt = require('bcryptjs')
-let {productdb,userdb} = require('../database/productDb')
+let {productdb,userdb} = require('../data/productDb')
 const WriteProductJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../database/product.json'),JSON.stringify(data),'utf-8')
+    fs.writeFileSync(path.join(__dirname,'../data/product.json'),JSON.stringify(data),'utf-8')
 }
 const WriteUserJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../database/user.json'),JSON.stringify(data),'utf-8')
+    fs.writeFileSync(path.join(__dirname,'../data/user.json'),JSON.stringify(data),'utf-8')
 }
 
 module.exports = {

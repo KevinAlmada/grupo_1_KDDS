@@ -1,5 +1,5 @@
 /* db */
-let {productdb,userdb} = require('../database/productDb')
+let {productdb,userdb} = require('../data/productDb')
 module.exports = {
     index:(req,res)=>{
         const cardUp = [];
