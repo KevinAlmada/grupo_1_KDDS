@@ -1,8 +1,14 @@
 /* db */
+const db = require('../database/models')
+
 let {productdb,userdb} = require('../data/productDb')
 module.exports = {
     index:(req,res)=>{
-        const cardUp = [];
+        db.Users.findAll()
+            .then(results => {
+                res.send(results)
+            })
+        /* const cardUp = [];
         const cardDown = [];
         
         for(let i = 0; i < 4; i++){
@@ -20,7 +26,7 @@ module.exports = {
             cardUp,
             cardDown,
             usuario:req.session.user?req.session.user:""
-        })
+        }) */
     },
     aboutUs: (req,res)=>{
         res.render('about',{
