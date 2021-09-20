@@ -2,12 +2,15 @@
 const db = require('../database/models')
 
 let {productdb,userdb} = require('../data/productDb')
+const Category = require('../database/models/Category')
 module.exports = {
     index:(req,res)=>{
-        db.Users.findAll()
-            .then(results => {
-                res.send(results)
-            })
+        db.Products.findAll({
+            include:[{association:"category",
+            where:{name:"lectura"}
+    }]
+        })
+        .then(result=> res.send(result))
         /* const cardUp = [];
         const cardDown = [];
         
