@@ -1,13 +1,9 @@
-const {userdb}=require('../data/productDb')
+
 const {validationResult}=require('express-validator')
 const bcrypt = require('bcryptjs')
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
-const { rejects } = require('assert');
-const WriteUserJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(data),'utf-8')
-}
 
 module.exports = {
     login:(req,res)=>{
@@ -22,7 +18,7 @@ module.exports = {
         if(errors.isEmpty()){
             db.Users.findOne({where:{email:req.body.email}})
                 .then(user => {
-                    if(bcrypt.compareSync(req.body.password, user.password)){
+                    if(user && bcrypt.compareSync(req.body.password, user.password)){
                         req.session.user = {
                             id: user.id,
                             first_name: user.first_name,

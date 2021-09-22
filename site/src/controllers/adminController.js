@@ -3,13 +3,6 @@ const path = require('path');
 const db = require('../database/models')
 const {validationResult}=require('express-validator')
 const bcrypt = require('bcryptjs')
-let {userdb} = require('../data/productDb');
-const WriteProductJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../data/product.json'),JSON.stringify(data),'utf-8')
-}
-const WriteUserJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../data/user.json'),JSON.stringify(data),'utf-8')
-}
 
 module.exports = {
     adminLogin:(req,res)=>{
