@@ -1,5 +1,5 @@
 const {check,body} = require('express-validator')
-const {userdb} =require('../database/productDb')
+const {userdb} =require('../data/productDb')
 module.exports =[
     check('nombre')
     .notEmpty().withMessage("Debes llenar el campo nombre"),

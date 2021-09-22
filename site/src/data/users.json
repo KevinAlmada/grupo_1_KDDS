@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "first_name": "Friedrich",
+        "last_name": "Garbott",
+        "email": "fgarbott0@sciencedaily.com",
+        "password": "Oasjs7",
+        "rol": "USER"
+    },
+    {
+        "id": 2,
+        "first_name": "Jazmin",
+        "last_name": "Sainer",
+        "email": "jsainer1@imgur.com",
+        "password": "XQF2A6",
+        "rol": "USER"
+    },
+    {
+        "id": 3,
+        "first_name": "Claire",
+        "last_name": "Pridie",
+        "email": "cpridie2@theguardian.com",
+        "password": "ntU3o5",
+        "rol": "USER"
+    },
+    {
+        "id": 4,
+        "first_name": "Marv",
+        "last_name": "Sutterfield",
+        "email": "msutterfield3@google.co.uk",
+        "password": "7kN6NTyq23O9",
+        "rol": "USER"
+    },
+    {
+        "id": 5,
+        "first_name": "Margret",
+        "last_name": "Marchbank",
+        "email": "mmarchbank4@wp.com",
+        "password": "2UHsrCHb",
+        "rol": "USER"
+    },
+    {
+        "id": 6,
+        "first_name": "Deni",
+        "last_name": "Krauze",
+        "email": "dkrauze5@smugmug.com",
+        "password": "DWPC1pNHgr",
+        "rol": "USER"
+    },
+    {
+        "id": 7,
+        "first_name": "Gabi",
+        "last_name": "Shattock",
+        "email": "gshattock6@dailymotion.com",
+        "password": "BZUHpdNkP",
+        "rol": "USER"
+    },
+    {
+        "id": 8,
+        "first_name": "Chere",
+        "last_name": "Ensley",
+        "email": "censley7@imageshack.us",
+        "password": "rdtSyVPO",
+        "rol": "USER"
+    },
+    {
+        "id": 9,
+        "first_name": "Persis",
+        "last_name": "Galletley",
+        "email": "pgalletley8@ow.ly",
+        "password": "X7Iq7B",
+        "rol": "USER"
+    },
+    {
+        "id": 10,
+        "first_name": "Sharla",
+        "last_name": "Whetland",
+        "email": "swhetland9@amazon.co.jp",
+        "password": "piqLIvqZ08FJ",
+        "rol": "USER"
+    },
+    {
+        "id": 11,
+        "first_name": "Kevin",
+        "last_name": "Prueba",
+        "email": "dj_kevin789@hotmail.com",
+        "password": "$2a$10$ATr9Zq1YDRb51Q6gRpxpVumjcewSfmYQZbGzo/G81pDpZX1cXuCbG",
+        "rol": "USER"
+    },
+    {
+        "id": 12,
+        "first_name": "DARIO",
+        "last_name": "MAMANI",
+        "email": "dariomamani48@gmail.com",
+        "password": "$2a$10$QKnQh1n7rX5O69BPLg1PKONSChMzXfBFGsfvCvvGv1e9Nplq9wDOS",
+        "rol": "USER"
+    },
+    {
+        "id": 13,
+        "first_name": "Kevin",
+        "last_name": "Almada",
+        "email": "mail3@mail.com",
+        "password": "$2a$10$2TD7MIx.QoTBNPQFFtnV9uKBkOJfCUWK5qzNOl9S/Nf1GNs.6lS92",
+        "rol": "ADMIN"
+    },
+    {
+        "id": 14,
+        "first_name": "Ruben Dario",
+        "last_name": "Mamani Duarte",
+        "email": "dario_2.0@hotmail.com",
+        "password": "$2a$10$Wsrr39Y0jzPQ/XWDQ7k2mO4vflDSHoIeMCkSXcKbAgZH965KK/gEu",
+        "rol": "ADMIN"
+    }
+]
