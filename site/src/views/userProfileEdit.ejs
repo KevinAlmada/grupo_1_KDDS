@@ -10,12 +10,12 @@
     <%- include('partials/header.ejs') %> 
     
     <!-- FIN DE HEADER -->
-    <main class="userProfileEdit">
+    <main class="userProfile">
         <div class="avatar">
             <img src="/images/perfil/avatardefault.png" alt="">
         </div>
-        <div class="userProfileEdit-container">
-            <div class="userProfileEdit_box">
+        <div class="userProfile-container">
+            <div class="userProfile_box">
                 <form action="">
                     <label for="name">Nombre</label>
                     <input type="text">
@@ -34,9 +34,12 @@
                     <label for="Localidad">Localidad</label>
                     <input type="text">
                 </form>
+                <div>
+                    <a  href="/users/useredit" class="editprof">EDITAR DATOS</a>
+                    <a href="/users/logout" class="editprof">CERRAR SESION</a>
+                </div>
             </div>
-            <a href="#" class="btn-ad btn-ad-primary">EDITAR DATOS</a>
-            <a href="/users/logout" class="btn-ad btn-ad-primary">CERRAR SESION</a>
+            
         </div>
     </main>
 </body>

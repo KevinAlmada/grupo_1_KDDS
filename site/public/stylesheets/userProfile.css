@@ -1,4 +1,8 @@
+.profile-body{
+    background-color: #BFDDDF;
+}
 .userProfile {
+    
     font-family: var(--font_poppins);
     color: var(--primary);
     margin: 0 auto 0;
@@ -57,4 +61,9 @@
     .userProfile_box {
         width: 47%;
     }
+}
+
+
+.userProfile_box input{
+    padding: 7px;
 }
