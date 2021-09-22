@@ -16,23 +16,22 @@
         </div>
         <div class="userProfile-container">
             <div class="userProfile_box">
-                <form action="">
+                <form action="/users/useredit/?_method=PUT" method="POST">
                     <label for="name">Nombre</label>
-                    <input type="text">
+                    <input type="text" value="<%= usuario.first_name %>" name="first_name">
                     <label for="apellido">Apellido</label>
-                    <input type="text">
-                    <label for="email">E-mail</label>
-                    <input type="email">
+                    <input type="text" value="<%= usuario.last_name %>" name="last_name">
                     <label for="telefono">Teléfono</label>
-                    <input type="number">
+                    <input type="tel" name="telefono" >
                     <label for="direccion">Direccion</label>
-                    <input type="text">
+                    <input type="text" name="direccion" value="<%= usuario.direction %>">
                     <label for="codigo">Codigo Postal</label>
-                    <input type="text">
+                    <input type="text" name="codigo" value="<%= usuario.cp %>">
                     <label for="provincia">Provincia</label>
-                    <input type="text">
-                    <label for="Localidad">Localidad</label>
-                    <input type="text">
+                    <input type="text" name="provincia" value="<%= usuario.province %>">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" name="localidad" value="<%= usuario.location%>">
+                    <button type="submit">EDITAR</button>
                 </form>
                 <div>
                     <a  href="/users/useredit" class="editprof">EDITAR DATOS</a>
