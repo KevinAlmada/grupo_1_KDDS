@@ -5,13 +5,13 @@ let {productdb,userdb} = require('../data/productDb')
 const Category = require('../database/models/Category')
 module.exports = {
     index:(req,res)=>{
-        db.Products.findAll({
+        /* db.Products.findAll({
             include:[{association:"category",
             where:{name:"lectura"}
     }]
         })
-        .then(result=> res.send(result))
-        /* const cardUp = [];
+        .then(result=> res.send(result)) */
+        const cardUp = [];
         const cardDown = [];
         
         for(let i = 0; i < 4; i++){
@@ -29,7 +29,7 @@ module.exports = {
             cardUp,
             cardDown,
             usuario:req.session.user?req.session.user:""
-        }) */
+        }) 
     },
     aboutUs: (req,res)=>{
         res.render('about',{
