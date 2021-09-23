@@ -6,8 +6,8 @@ const userAdminCheck = require('../middlewares/userAdminCheck');
 const loginAdminValidator = require('../middlewares/loginAdminValidation');
 
 /* GET home page. */
-router.get('/login', controller.adminLogin);
-router.post('/login',loginAdminValidator, controller.adminLoginProcess);
+router.get('/', controller.adminLogin);
+router.post('/',loginAdminValidator, controller.adminLoginProcess);
 
 
 router.get('/index', userAdminCheck, controller.adminIndex);

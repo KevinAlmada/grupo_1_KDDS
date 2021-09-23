@@ -1,5 +1,5 @@
 const { check, body } = require('express-validator');
-const {userdb} =require('../data/productDb')
+const db = require('../database/models')
 module.exports = [
     check('email')
     .isEmail()
@@ -9,11 +9,16 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes escribir tu contraseña'),
     body('email').custom(value => {
-        let user = userdb.find(usuario => usuario.email == value)
-        if (user && user.rol == "ADMIN") {
-            return true
-        }else{
-            return false
-        }
+        let user = db.Users.findOne({where:{email:value}})
+        .then(()=>{
+            if (user && user.rol == 1) {
+                return true
+            }else{
+                return false
+            }
+        })
+        .catch(err => console.log(err))
+
+        return user
     }).withMessage("aca esta el error")
 ]

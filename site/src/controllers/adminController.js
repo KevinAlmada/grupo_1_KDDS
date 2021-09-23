@@ -1,14 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models')
 const {validationResult}=require('express-validator')
 const bcrypt = require('bcryptjs')
-let {productdb,userdb} = require('../data/productDb')
-const WriteProductJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../data/product.json'),JSON.stringify(data),'utf-8')
-}
-const WriteUserJSON = (data) =>{
-    fs.writeFileSync(path.join(__dirname,'../data/user.json'),JSON.stringify(data),'utf-8')
-}
 
 module.exports = {
     adminLogin:(req,res)=>{
@@ -19,10 +13,9 @@ module.exports = {
     adminLoginProcess:(req,res)=>{
         let errors = validationResult(req)
         if (errors.isEmpty()) {
-            userdb.forEach(user => {
-                if(user.email == req.body.email){
+            db.Users.findOne({where:{email:req.body.email}})
+                .then(user => {
                     if(bcrypt.compareSync(req.body.password, user.password)){
-                        
                         req.session.user = {
                             id: user.id,
                             first_name: user.first_name,
@@ -35,10 +28,9 @@ module.exports = {
                         }
                         res.redirect("/admin/index")
                     }
-                        
-                }
-            })
+                })
         }else{
+            
             res.render('adminLogin',{
                 title : "Login Admin",
                 errors:errors.mapped()
@@ -46,10 +38,16 @@ module.exports = {
         }
     },
     adminIndex:(req,res)=>{
-        res.render('adminIndex',{
-            title:"Admin Index",
-            productdb 
+        db.Products.findAll({
+            include:[{association:"category"}]
         })
+            .then(productdb => {
+                res.render('adminIndex',{
+                    title:"Admin Index",
+                    productdb 
+                })
+            })
+        
     }, 
 
 
@@ -59,47 +57,29 @@ module.exports = {
         })
     },
     guardarProducto:(req,res)=>{
-        let lastId = 1;
-
-		productdb.forEach(product => {
-			if(product.id > lastId){
-				lastId = product.id
-			}
-		});
-
-
-        let {nombre,
-        descripcion,
-        precio,
-        categorias,
-        discount} = req.body
-        
-        let imagenesProd = []
-        if (req.files.length > 0) {
-            req.files.forEach(imagen =>{
-                imagenesProd.push(imagen.filename)
-            })
-        }else{
-            imagenesProd.push("default-image.png")
-        }
-        let newproduct = {
-            id : lastId + 1 ,
+        const {nombre,descripcion,precio,discount,categorias} = req.body
+        db.Products.create({
             name:nombre,
-            category:categorias,
             description:descripcion,
-            img:imagenesProd,
-            discount: +discount,
-            price: +precio
-        }
-        
-        productdb.push(newproduct)
-
-        WriteProductJSON(productdb)
-
-        res.redirect(`/products/${newproduct.category}`)
-    },
+            images:`['default-image.png']`,
+            discount:discount,
+            price:precio,
+            categoryId:categorias
+        })
+            .then(()=> res.redirect("/admin/index"))
+            .catch(err => console.log(err))
+            },
     modificarProducto:(req,res)=>{
-         let productoAModificar = productdb.find(producto=>{
+        db.Products.findByPk(+req.params.id)
+            .then(productoAModificar => {
+                res.render('changeproduct',{
+                    title : "KDDS",
+                    productoAModificar
+                })
+            })
+            .catch(err => console.log(err))
+
+         /* let productoAModificar = productdb.find(producto=>{
            return producto.id === +req.params.id;
 
         })
@@ -107,45 +87,36 @@ module.exports = {
             title : "KDDS",
             productoAModificar
         })
-        
+         */
     },
 
     editarProducto:(req,res)=>{
-        let { nombre,precio,descripcion,descuento,categoria } = req.body;
+        let { nombre,precio,descripcion,discount,categorias } = req.body;
         let imgProd = []
         if (req.files) {
 
             req.files.forEach(img =>{imgProd.push(img.filename)})
         }
 
-        productdb.forEach(producto => {
-            if(producto.id === +req.params.id){
-                producto.name = nombre,
-                producto.price = precio,
-                producto.description = descripcion,
-                producto.img = imgProd.length > 0? imgProd : producto.img,
-                producto.discount = descuento,
-                producto.category = categoria
-            }
+        db.Products.update({
+            name:nombre,
+            description:descripcion,
+            images:`['default-image.png']`,
+            discount:discount,
+            price:precio,
+            categoryId:categorias
+        },{
+            where:{id:+req.params.id}
         })
-
-        WriteProductJSON(productdb);
-
-        res.redirect(`/products/productDetail/${req.params.id}`)
+            .then(()=> res.redirect("/admin/index"))
+            .catch(err => console.log(err))
+        
     },
     
     eliminarProducto:(req,res)=>{
-        productdb.forEach( producto =>{
-            if(producto.id === +req.params.id){
-                
-                productdb.splice(productdb.indexOf(producto),1)
-            }
-        }
-        
-        )
-        WriteProductJSON(productdb);
-
-        res.redirect('/admin/index')
+        db.Products.destroy({where:{id:+req.params.id}})
+            .then(()=> res.redirect("/admin/index"))
+            .catch(err => console.log(err))
     }
 
 }
