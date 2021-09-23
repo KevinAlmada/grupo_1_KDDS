@@ -70,7 +70,7 @@ module.exports = {
                 last_name : apellido,
                 email:email,
                 password:bcrypt.hashSync(pass1,10),
-                rol:"USER"
+                rol:0
             })
                 .then(() => {
                     res.redirect('/users/login')
