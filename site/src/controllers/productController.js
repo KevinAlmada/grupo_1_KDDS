@@ -1,6 +1,4 @@
 let {productdb,userdb} = require('../data/productDb')
-
-
 module.exports = {
     productDetail:(req,res)=>{
         let idProd = req.params.id

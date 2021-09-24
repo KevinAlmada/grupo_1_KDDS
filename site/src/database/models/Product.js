@@ -15,10 +15,6 @@ module.exports = (sequelize,dataTypes) => {
             type:dataTypes.TEXT,
             allowNull:false
         },
-        images:{
-            type:dataTypes.STRING(300),
-            allowNull:false
-        },
         discount:{
             type:dataTypes.INTEGER(11),
             allowNull:false
@@ -50,7 +46,10 @@ module.exports = (sequelize,dataTypes) => {
                 as:"category",
                 foreignKey:"categoryId"
             })
-
+            Product.hasMany(models.ProductImages,{
+                as:"productImages",
+                foreignKey:"productId"
+            })
         }
 
     return Product
