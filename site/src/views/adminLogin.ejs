@@ -9,7 +9,7 @@
         <img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo">
         <h1 class="admintittle">Bienvenido Administrador</h1>
         <div class="loginAdmin-container">
-            <form class="formAdmin" action="/admin/login" method="POST">
+            <form class="formAdmin" action="/admin" method="POST">
                 <label for="email">Email</label>
                 <input type="email" name="email" placeholder="Ingresá Tu email">
                 <% if (locals.errors && errors.email) { %>

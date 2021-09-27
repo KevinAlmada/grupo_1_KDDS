@@ -28,7 +28,7 @@ module.exports = {
                         }
                         res.redirect("/admin/index")
                     }
-                })
+                }).catch(err => console.log(err))
         }else{
             
             res.render('adminLogin',{
@@ -58,6 +58,14 @@ module.exports = {
     },
     guardarProducto:(req,res)=>{
         const {nombre,descripcion,precio,discount,categorias} = req.body
+        let imagenesProd = []
+        if (req.files.length > 0) {
+            req.files.forEach(imagen =>{
+                imagenesProd.push(imagen.filename)
+            })
+        }else{
+            imagenesProd.push("default-image.png")
+        }
         db.Products.create({
             name:nombre,
             description:descripcion,
@@ -66,7 +74,16 @@ module.exports = {
             price:precio,
             categoryId:categorias
         })
-            .then(()=> res.redirect("/admin/index"))
+            .then((producto)=> {
+                let images = imagenesProd.map(imagen => {
+                    return {
+                        imgName:imagen,
+                        productId:producto.id
+                    }
+                })
+                db.ProductImages.bulkCreate(images)
+                res.redirect("/admin/index")
+            })
             .catch(err => console.log(err))
             },
     modificarProducto:(req,res)=>{
