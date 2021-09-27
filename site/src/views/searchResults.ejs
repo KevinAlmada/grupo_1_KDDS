@@ -26,7 +26,7 @@
         <section class="card-container">
             <% db.forEach(producto => { %>
                 <article class="cardsearch">
-                    <img class="card-img" src="/images/product/<%- producto.img[0] %> " alt="LenteSolNegro">
+                    <img class="card-img" src="/images/product/<%- producto.productImages[0].imgName %> " alt="LenteSolNegro">
                     <div class="product_info_card">
                         <h2 class="product-name"><%- producto.name %> </h2>
                         <div class="pricesCards">
