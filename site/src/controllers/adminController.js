@@ -111,14 +111,12 @@ module.exports = {
         let { nombre,precio,descripcion,discount,categorias } = req.body;
         let imgProd = []
         if (req.files) {
-
             req.files.forEach(img =>{imgProd.push(img.filename)})
         }
 
         db.Products.update({
             name:nombre,
             description:descripcion,
-            images:`['default-image.png']`,
             discount:discount,
             price:precio,
             categoryId:categorias
@@ -128,15 +126,22 @@ module.exports = {
         })
             .then((producto)=> {
                 if(req.files){
-                    db.ProductImages.update({imgName:imgProd[0]})
+                    if (imgProd.length = 1) {
+                        db.ProductImages.update({imgName:imgProd[0]},{where:{productId:+req.params.id}})
+                    }else if (imgProd.length > 2){
+                        db.ProductImages.destroy({where:{productId:+req.params.id}})
+                            .then(()=>{
+                                 let images = imgProd.map(imagen => {
+                                    return {
+                                        imgName:imagen,
+                                        productId:+req.params.id
+                                        }})
+                        db.ProductImages.bulkCreate(images)
+                            })
+                    }
+            
                     
-                    /* let images = imagenesProd.map(imagen => {
-                        return {
-                            imgName:imagen,
-                            productId:producto.id
-                        }
-                        db.ProductImages.bulkCreate(images) 
-                    })*/
+                    
                     
                 }
 
