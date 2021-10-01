@@ -37,7 +37,7 @@ module.exports = {
     },
     category:(req,res)=>{
         db.Products.findAll({include:[{association:"category"},{association:"productImages"}],where:{categoryId:req.params.category}})
-            .then(db => {
+        .then(db => {
                 if (db) {
                     res.render('searchResults',
                     {db,

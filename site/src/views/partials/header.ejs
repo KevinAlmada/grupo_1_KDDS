@@ -28,9 +28,14 @@
                         <a href="/products"><li>Accesorios</li></a>
                     </ul>
                 </li>
-                <% if (usuario != "") { %>
+                <% if (usuario != "" && usuario.rol == 1) { %>
+                    <a href="/admin/index"><li>ADMIN</li></a>
                     <a href="/users/profile"><li>Mi perfil</li></a>
-                    <a href="/users/logout"><li>Cerrar sesion</li></a>
+                    <a href="/users/logout"><li>Cerrar sesion</li></a>  
+                <% }else if(usuario != ""){ %>
+                    <a href="/admin/index"><li>ADMIN</li></a>
+                    <a href="/users/profile"><li>Mi perfil</li></a>
+                    <a href="/users/logout"><li>Cerrar sesion</li></a>   
                 <% }else{ %>
                     <a href="/users/login"><li>Iniciar sesion</li></a>
                     <a href="/users/register"><li>Registrate</li></a>
@@ -51,11 +56,14 @@
             </button>
         </form>
         <div class="header-cart-bag">
-            <% if (usuario != "") { %>
+            <% if (usuario != "" && usuario.rol == 1) { %>
+                <a class="header_user" href="/admin/index">
+                    <i class="fas fa-user-shield"></i>
+                </a>
+            <% }else if(usuario != "" ){ %>
                 <a class="header_user" href="/users/profile">
                     <i class="far fa-user"></i>
                 </a>
-                
             <% }else{ %>
                 <a class="header_user" href="/users/login">
                     <i class="far fa-user"></i>
@@ -64,6 +72,7 @@
                 <a class="header_cart" href="/users/cart">
                     <i class="fas fa-shopping-bag"></i>
                 </a>
+               
         </div>
     </div>
     <div class="nav-bar">

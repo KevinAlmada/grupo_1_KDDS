@@ -123,9 +123,26 @@ module.exports = {
             price:precio,
             categoryId:categorias
         },{
-            where:{id:+req.params.id}
+            where:{id:+req.params.id},
+            include:[{association:"category"},{association:"productImages"}]
         })
-            .then(()=> res.redirect("/admin/index"))
+            .then((producto)=> {
+                if(req.files){
+                    db.ProductImages.update({imgName:imgProd[0]})
+                    
+                    /* let images = imagenesProd.map(imagen => {
+                        return {
+                            imgName:imagen,
+                            productId:producto.id
+                        }
+                        db.ProductImages.bulkCreate(images) 
+                    })*/
+                    
+                }
+
+
+                res.redirect("/admin/index")
+            })
             .catch(err => console.log(err))
         
     },
