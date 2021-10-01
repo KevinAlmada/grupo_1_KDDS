@@ -22,14 +22,14 @@
             </div>
             <div class="userProfile_box">
                 <h3 class="userProfile_title">Datos de contacto</h3>
-                <p class="userProfile_item">Dirección:<%= userData.direccion?userData.direccion:"No hay ninguna direccion registrada" %>  </p>
-                <p class="userProfile_item">Código postal:<%= userData.cp?userData.cp:"No hay ningun codigo postal registrado" %>  </p> </p>
-                <p class="userProfile_item">Provincia:<%= userData.province?userData.province:"No hay ninguna provincia registadra" %>  </p> </p>
-                <p class="userProfile_item">Localidad:<%= userData.location?userData.location:"No hay ninguna localidad registrada" %>  </p> </p>
+                <p class="userProfile_item">Dirección:<%= userData.direccion?userData.direccion:"---" %>  </p>
+                <p class="userProfile_item">Código postal:<%= userData.cp?userData.cp:"---" %>  </p> </p>
+                <p class="userProfile_item">Provincia:<%= userData.province?userData.province:"---" %>  </p> </p>
+                <p class="userProfile_item">Localidad:<%= userData.location?userData.location:"---" %>  </p> </p>
             </div>
-            <div>
-            <a  href="/users/useredit" class="editprof">EDITAR DATOS</a>
-            <a href="/users/logout" class="editprof">CERRAR SESION</a>
+            <div >
+            <a  href="/users/useredit" class="editprof editdata">EDITAR DATOS</a>
+            <a href="/users/logout" class="editprof logout"><i class="fas fa-sign-out-alt"></i></a>
         </div>
         </div>
         
