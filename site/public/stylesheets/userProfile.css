@@ -67,3 +67,31 @@
 .userProfile_box input{
     padding: 7px;
 }
+
+.editprof{
+    border: 1px solid black;
+    width: 100px;
+    height: 45px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+    border-radius: 5px;
+    padding: 5px;
+    margin: 50px;
+    color: black;
+    transition: all 1.5s;
+}
+.editdata:hover{
+    background-color: orange;
+    color: white;
+    border: none;
+}
+.logout:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
