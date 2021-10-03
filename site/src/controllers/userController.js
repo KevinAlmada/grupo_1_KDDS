@@ -96,24 +96,26 @@ module.exports = {
             })
     },
     editProfile:(req,res)=>{
-        db.Users.findOne({where:{email:req.session.user.email}})
+        db.Users.findOne({where:{id:req.params.id}})
             .then((usuario) => {
                 res.render('userProfileEdit',{
                     title : "Edita tu perfil - KDDS",
-                    usuario:usuario
+                    usuario:usuario,
+                    useronline:req.session.user
                 })  
             })      
     },
     updateProfile:(req,res)=> {
-        const {first_name,last_name,direction,cp,province,location} = req.body
+        const {first_name,last_name,direction,cp,province,location,rol} = req.body
         db.Users.update({
            first_name:first_name,
            last_name:last_name,
            direction:direction,
            cp:cp,
            province:province,
-           location:location
-        },{where:{email:req.session.user.email}})
+           location:location,
+           rol : rol 
+        },{where:{id:req.params.id}})
             .then((user) => {
                 /* req.session.user = {
                     id: user.id,
@@ -122,7 +124,12 @@ module.exports = {
                     email: user.email,
                     rol:user.rol
                 } *///los cambios se ven reflejados al loguearse , como actualizar session
-                res.redirect("/users/profile")})
+                if (req.session.user.rol == 1) {
+                    res.redirect("/admin/index")
+                } else {
+                    res.redirect("/users/profile")
+                }
+                })
             .catch(err => console.log(err))
     },
     cart:(req,res)=>{
@@ -137,5 +144,20 @@ module.exports = {
             res.cookie('cookieKDDS','',{maxAge : -1})
         }
         res.redirect('/')
+    },
+    deleteProfile:(req,res) => {
+        db.Users.destroy({where:{id:req.params.id}})
+            .then(() => {
+                if (req.session.user && req.session.user.rol == 0) {
+                    req.session.destroy()
+                    if (req.cookies.cookieKDDS) {
+                        res.cookie('cookieKDDS','',{maxAge : -1})
+                    }
+                    res.redirect('/')
+                }
+                if (req.session.user && req.session.user.rol == 1) {
+                    res.redirect('/admin/index')
+                }
+            })
     }
 }

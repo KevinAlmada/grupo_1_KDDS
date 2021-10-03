@@ -16,7 +16,7 @@
         </div>
         <div class="userProfile-container">
             <div class="userProfile_box">
-                <form action="/users/useredit/?_method=PUT" method="POST">
+                <form action="/users/useredit/<%= usuario.id %> ?_method=PUT" method="POST">
                     <label for="name">Nombre</label>
                     <input type="text" value="<%= usuario.first_name %>" name="first_name">
                     <label for="apellido">Apellido</label>
@@ -31,10 +31,17 @@
                     <input type="text" name="provincia" value="<%= usuario.province %>">
                     <label for="localidad">Localidad</label>
                     <input type="text" name="localidad" value="<%= usuario.location%>">
+                    <% if (useronline.rol == 1) { %>
+                        <label for="rol">rol</label>
+                        <select name="rol" id="rolEditForm">
+                            <option value="0" <%= usuario.rol == 0? "selected": "" %> >USER</option>
+                            <option value="1" <%= usuario.rol == 1? "selected": "" %>>ADMIN</option>
+                        </select>
+                    <% } %>
                     <button type="submit">EDITAR</button>
                 </form>
                 <div>
-                    <a  href="/users/useredit" class="editprof">EDITAR DATOS</a>
+                    <a  href="/users/useredit/<%= usuario.id %> " class="editprof">EDITAR DATOS</a>
                     <a href="/users/logout" class="editprof">CERRAR SESION</a>
                 </div>
             </div>

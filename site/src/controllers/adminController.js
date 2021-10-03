@@ -38,13 +38,16 @@ module.exports = {
         }
     },
     adminIndex:(req,res)=>{
-        db.Products.findAll({
+        let productPromise = db.Products.findAll({
             include:[{association:"category"}]
         })
-            .then(productdb => {
+        let userPromise = db.Users.findAll()
+        Promise.all([productPromise,userPromise])
+            .then(([productdb,usersdb]) => {
                 res.render('adminIndex',{
                     title:"Admin Index",
-                    productdb 
+                    productdb ,
+                    usersdb
                 })
             })
         

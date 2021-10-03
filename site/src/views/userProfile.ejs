@@ -28,7 +28,7 @@
                 <p class="userProfile_item">Localidad:<%= userData.location?userData.location:"No hay ninguna localidad registrada" %>  </p> </p>
             </div>
             <div>
-            <a  href="/users/useredit" class="editprof">EDITAR DATOS</a>
+            <a  href="/users/useredit/<%= userData.id %> " class="editprof">EDITAR DATOS</a>
             <a href="/users/logout" class="editprof">CERRAR SESION</a>
         </div>
         </div>
