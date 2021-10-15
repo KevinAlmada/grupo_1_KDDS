@@ -142,10 +142,6 @@ module.exports = {
                         db.ProductImages.bulkCreate(images)
                             })
                     }
-            
-                    
-                    
-                    
                 }
 
 
