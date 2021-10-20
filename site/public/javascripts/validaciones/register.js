@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
     $errorsEmail = document.querySelector("#errorsEmail"),
     $errorsPass = document.querySelector("#errorsPass"),
     $errorsPass2 = document.querySelector("#errorsPass2"),
-    $submirButton = document.querySelector(".enviar"),
+    $submitButton = document.querySelector(".enviar"),
     $form = document.querySelector("form");
     
     let exclamacionHTML = "<i class='fas fa-exclamation-circle'></i>"
@@ -98,6 +98,24 @@ window.addEventListener("load", () => {
                 break;
         }
     })
+    $form.addEventListener("submit", (e) => {
+        let error = false;
+        e.preventDefault();
+        let elementosForm = $form.elements;
+        for (let index = 0; index < elementosForm.length - 1; index++) {
+            if (elementosForm[index] == "" ) {
+                elementosForm[index].style.borderColor = "#87ed6f"
+                //llenar un span con errores
+                error = true
+            }
+            
+        }
+        if (!error) {
+            console.log("todo ok");
+            $form.submit() 
+        }
+    } )
+
 })
 /* 
 eliminar user 
