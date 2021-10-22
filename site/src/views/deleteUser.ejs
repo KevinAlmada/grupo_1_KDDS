@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %> 
+<body class="body-login">
+    <!-- HEADER -->
+   <!--  <%- include('partials/header.ejs') %>  -->
+    
+    <!-- FIN DE HEADER -->
+    <!-- video fondo -->
+    <video src="/images/login/Comercial de JL LENTES.mp4" loop autoplay muted></video>
+    <!-- video fondo -->
+    <!-- loader -->
+    <div class="lds-dual-ring loader" id="loader"></div>
+    <!-- fin loader -->
+    <main class="login-main">
+        <div class="container-form">
+            <h2 class="form-title">gracias vuelva prontos</h2>
+
+            <form action="/users/login" method="POST">
+                
+                <p class="element">
+                    <label for="email" >E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="usuario@email.com" value="<%= locals.old && old.email%>" >
+                    
+                </p>
+                <small class="text-danger" id="emailError"></small>
+                <% if (locals.errors && errors.email) { %>
+                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.email.msg %> </small>
+                   <% } %>
+                <p class="element">
+                    <label for="password" >Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="ingresa al menos 8 caracteres" value="<%= locals.old && old.password%>">
+                    
+                </p>
+                <small class="text-danger" id="passwordError"></small>
+                <% if (locals.errors && errors.password) { %>
+                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.password.msg %> </small>
+                   <% } %>
+                
+                <div class="boton-enviar">
+                    <button type="submit" class="enviar">
+                        ingresa
+                    </button>
+                    
+                </div>
+            </form>
+            <% if (locals.errorMsg ) { %>
+                <small class="text-danger"><%= errorMsg %> </small>
+            <% } %>
+            
+            <div class="register">
+                <p>Si no quieres irte  <a href="/users/register">Vuelve al inicio</a></p>
+                
+            </div>
+            <div class="firma">
+                <h6>Hecho con    <i class="fas fa-heart"></i>    por <span class="firma-marca">KDDS</span></h6>
+            </div>
+            <!-- imagen de prueba de loader : ingresar en el src el link de una imagen para que cargue el loader-->
+            <img src="https://www.freepik.es/foto-gratis/libros-e-imaginacion-bodegon_17805233.htm" alt="">
+            <!-- <img class="lentes-registro" src="/images/login/lentes_registro.jpg" alt="Bienvenido"> -->
+        </div>
+
+    </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    
+    <!-- FIN DE FOOTER -->  
+    <script src="/javascripts/validaciones/login.js"></script>
+</body>
+</html>

@@ -73,7 +73,7 @@ window.addEventListener("load", () => {
                 $inputPass.style.borderColor = "red"
                 break;
             case !regExPass.test($inputPass.value):
-                $errorsPass.innerHTML = `${exclamacionHTML} La contraseña debe tener minimo 8 caracteres `
+                $errorsPass.innerHTML = `${exclamacionHTML} La contraseña debe ser alfanumerica y debe tener 8 caracteres`
                 $inputPass.style.borderColor = "red"
                 break;
             default:
