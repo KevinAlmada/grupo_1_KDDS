@@ -139,19 +139,53 @@ module.exports = {
         }
         res.redirect('/')
     },
-    deleteProfile:(req,res) => {
-        db.Users.destroy({where:{id:req.params.id}})
-            .then(() => {
-                if (req.session.user && req.session.user.rol == 0) {
-                    req.session.destroy()
-                    if (req.cookies.cookieKDDS) {
-                        res.cookie('cookieKDDS','',{maxAge : -1})
+    deleteProfile:(req,res)=>{
+        res.render('deleteUser',{
+            title : "Eliminar usuario",
+            usuario:req.session.user?req.session.user:""
+        })
+    },
+    processDeleteProfile:(req,res) => {
+        let errors = validationResult(req)
+        if(errors.isEmpty() && req.body.email == req.session.user.email){
+            db.Users.findOne({where:{email:req.body.email}})
+                .then(user => {
+                    if(user && bcrypt.compareSync(req.body.password, user.password)){
+                        db.Users.destroy({where:{email:req.body.email}})
+                            .then(() => {
+                                if (req.session.user && req.session.user.rol == 0) {
+                                    req.session.destroy()
+                                    if (req.cookies.cookieKDDS) {
+                                        res.cookie('cookieKDDS','',{maxAge : -1})
+                                    }
+                                    res.redirect('/')
+                                }
+                                if (req.session.user && req.session.user.rol == 1) {
+                                    req.session.destroy()
+                                    if (req.cookies.cookieKDDS) {
+                                        res.cookie('cookieKDDS','',{maxAge : -1})
+                                    }
+                                    res.redirect('/admin/index')
+                                }
+                            }) 
+                        res.redirect("/")
+                    }else{
+                        res.render('login', {
+                            title : "Login - KDDS",
+                            errors: errors.mapped(),
+                            errorMsg: "Credenciales inválidas",
+                            usuario:req.session.user?req.session.user:""
+                        })
                     }
-                    res.redirect('/')
-                }
-                if (req.session.user && req.session.user.rol == 1) {
-                    res.redirect('/admin/index')
-                }
+                })        
+        }else{
+            res.render('deleteUser', {
+                /* categories, */
+                title : "Eliminar usuario",
+                errors: errors.mapped(),
+                usuario:req.session.user?req.session.user:""
             })
+        }       
+        
     }
 }
