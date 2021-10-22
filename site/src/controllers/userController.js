@@ -106,24 +106,18 @@ module.exports = {
             })      
     },
     updateProfile:(req,res)=> {
-        const {first_name,last_name,direction,cp,province,location,rol} = req.body
+        const {first_name,last_name,direccion,codigo,provincia,localidad,rol} = req.body
         db.Users.update({
            first_name:first_name,
            last_name:last_name,
-           direction:direction,
-           cp:cp,
-           province:province,
-           location:location,
+           direction:direccion,
+           cp:codigo,
+           province:provincia,
+           location:localidad,
            rol : rol 
         },{where:{id:req.params.id}})
             .then((user) => {
-                /* req.session.user = {
-                    id: user.id,
-                    first_name: user.first_name,
-                    last_name: user.last_name,
-                    email: user.email,
-                    rol:user.rol
-                } *///los cambios se ven reflejados al loguearse , como actualizar session
+                
                 if (req.session.user.rol == 1) {
                     res.redirect("/admin/index")
                 } else {
