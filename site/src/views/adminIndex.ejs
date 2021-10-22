@@ -7,11 +7,13 @@
         <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
         
         <ul>
-            <li><a class="btn-newp" href="#">Productos</a></li>
+            <li><a class="btn-newp" href="#tituloProd">Productos</a></li>
             <li><a class="btn-newp" href="#tituloUsers">Usuarios</a></li>
-            <li><a class="btn-newp" href="/admin/addProduct">Agregar Producto</a></li>
+            <li><a class="btn-newp" href="/admin/addProduct">Agregar</a></li>
+            <li><a class="btn-newp" href="/">Home</a></li>
         </ul>
     </nav>
+    <h2 id="tituloProd" >Productos</h2>
     <section class="admin-section">
         <table class="adminP-table">
             <thead>
@@ -31,7 +33,7 @@
                   <tr class="tablerow-admin">
                       <td><%= product.id %> </td>
                       <td><%= product.name %></td>
-                      <td><%= product.category.name %></td>
+                      <td><%= product.category %></td>
                       <td><%= product.price %></td>
                       <td><%= product.discount %></td>
                       <td><a href="/admin/changeProduct/<%=product.id %> "><i class="fas fa-user-edit"></i></a></td>
@@ -43,7 +45,9 @@
             </tbody>
           </table>
     </section>
-    
+   <!--  <div class="btn-new-container">
+        <a class="btn-newp" href="/admin/addProduct">Agregar Producto</a>
+    </div> -->
     <h2 id="tituloUsers">Usuarios</h2>
     <section class="admin-section">
         <table class="adminP-table">
@@ -57,6 +61,14 @@
               </tr>
             </thead>
             <tbody>
+                <% productdb.forEach(product => { %>
+                  <tr class="tablerow-admin">
+                      <td><%= product.id %> </td>
+                      <td><%= product.name %></td>
+                      <td><%= product.category %></td>
+                      
+                      <td><a href="/admin/changeProduct/<%=product.id %> "><i class="fas fa-user-edit"></i></a></td>
+                      <td><form action="/admin/deleteProduct/<%= product.id %>?_method=DELETE" method="POST">
                 <% usersdb.forEach(user => { %>
                   <tr class="tablerow-admin">
                       <td><%= user.id %> </td>

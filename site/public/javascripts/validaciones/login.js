@@ -41,6 +41,7 @@ window.addEventListener("load",()=>{
             if (elementosForm[index].value.trim() == "" ) {
                 elementosForm[index].style.borderColor = "red"
                 //llenar un span con errores
+                
                 error = true
             }
             

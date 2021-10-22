@@ -69,11 +69,11 @@
 }
 
 .editprof{
-    border: 1px solid black;
-    width: 100px;
+    border: 1px solid rgb(165, 164, 164);
+    width: 90px;
     height: 45px;
-    letter-spacing: 2px;
-    text-transform: capitalize;
+    /* letter-spacing: 2px; */
+    
     cursor: pointer;
     color: white;
     text-align: center;
@@ -81,17 +81,26 @@
     align-items: center; */
     border-radius: 5px;
     padding: 5px;
-    margin: 50px;
+    margin: 40px;
     color: black;
-    transition: all 1.5s;
+    transition: all .5s ease;
 }
 .editdata:hover{
-    background-color: orange;
+    background-color: rgb(151, 236, 130);
     color: white;
     border: none;
+    padding: 10px;
 }
 .logout:hover{
     background-color: red;
     color: white;
     border: none;
+    padding: 10px;
+}
+
+.validacionMal{
+    margin-top: 15px;
+    color: red
+
+
 }
