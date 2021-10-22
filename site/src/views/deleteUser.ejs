@@ -6,9 +6,6 @@
    <!--  <%- include('partials/header.ejs') %>  -->
     
     <!-- FIN DE HEADER -->
-    <!-- video fondo -->
-    <video src="/images/login/Comercial de JL LENTES.mp4" loop autoplay muted></video>
-    <!-- video fondo -->
     <!-- loader -->
     <div class="lds-dual-ring loader" id="loader"></div>
     <!-- fin loader -->
@@ -16,7 +13,7 @@
         <div class="container-form">
             <h2 class="form-title">gracias vuelva prontos</h2>
 
-            <form action="/users/login" method="POST">
+            <form action="/users/userdelete?_method=DELETE" method="POST">
                 
                 <p class="element">
                     <label for="email" >E-mail</label>
@@ -39,7 +36,7 @@
                 
                 <div class="boton-enviar">
                     <button type="submit" class="enviar">
-                        ingresa
+                        Elimina mi Cuenta
                     </button>
                     
                 </div>
@@ -49,7 +46,7 @@
             <% } %>
             
             <div class="register">
-                <p>Si no quieres irte  <a href="/users/register">Vuelve al inicio</a></p>
+                <p>Si no quieres irte  <a href="/">Vuelve al inicio</a></p>
                 
             </div>
             <div class="firma">

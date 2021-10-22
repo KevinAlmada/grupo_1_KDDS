@@ -140,14 +140,14 @@ module.exports = {
         res.redirect('/')
     },
     deleteProfile:(req,res)=>{
-        res.render('login',{
-            title : "Login - KDDS",
+        res.render('deleteUser',{
+            title : "Eliminar usuario",
             usuario:req.session.user?req.session.user:""
         })
     },
     processDeleteProfile:(req,res) => {
         let errors = validationResult(req)
-        if(errors.isEmpty()){
+        if(errors.isEmpty() && req.body.email == req.session.user.email){
             db.Users.findOne({where:{email:req.body.email}})
                 .then(user => {
                     if(user && bcrypt.compareSync(req.body.password, user.password)){
@@ -179,9 +179,9 @@ module.exports = {
                     }
                 })        
         }else{
-            res.render('login', {
+            res.render('deleteUser', {
                 /* categories, */
-                title : "Login - KDDS",
+                title : "Eliminar usuario",
                 errors: errors.mapped(),
                 usuario:req.session.user?req.session.user:""
             })
