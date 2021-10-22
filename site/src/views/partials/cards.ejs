@@ -2,7 +2,7 @@
     <% for(let product of cardUp) { %>
         <div class="slider">
             <article class="product-box-top fade">
-                <img src="/images/product/<%- product.img[0] %>">
+                <img src="/images/product/<%- product.productImages[0].imgName %>">
                 <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
                 <span class="next" onclick="plusSlides(1)">&#10095;</span>
                 <div class="text-box">
@@ -23,7 +23,7 @@
     <% for(let productDown of cardDown) {%>
         <div class="slider-bottom">
             <article class="product-box-botton fade">
-                <img src="/images/product/<%- productDown.img[0] %>">
+                <img src="/images/product/<%- productDown.productImages[0].imgName %>">
                 <span class="prev" >&#10094;</span>
                 <span class="next" >&#10095;</span>
                 <div class="text-box">

@@ -95,3 +95,9 @@
     color: white;
     border: none;
 }
+
+.validacionMal{
+    margin-top: 15px;
+    color: red
+
+}

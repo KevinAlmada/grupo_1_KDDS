@@ -24,9 +24,9 @@
 /* MAIN */
 
 .main {
-    border: solid 1px var(--colorAzul);
+    /* border: solid 1px var(--colorAzul); */
     width: 90%;
-    margin: 0 auto;
+    margin: 90px auto 0 auto;
 
 }
 .container-product{
@@ -38,7 +38,7 @@
 }
 .container-product img{
     width: 100%;
-    box-shadow: #0E1626 0px 10px 10px;
+    box-shadow: #6b6f75 0px 10px 10px;
     margin-bottom: 25px;
     padding: 15px;
 }
@@ -289,7 +289,7 @@
 
 @media (min-width:576px){
     .body-product{
-        background: linear-gradient(var(--colorCeleste) , var(--colorAzul));
+        background: linear-gradient(var(--colorCeleste) , var(--colorAzul) 80%);
     }
     main{
         background-color: white;

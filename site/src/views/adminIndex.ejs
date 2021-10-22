@@ -69,6 +69,13 @@
                       
                       <td><a href="/admin/changeProduct/<%=product.id %> "><i class="fas fa-user-edit"></i></a></td>
                       <td><form action="/admin/deleteProduct/<%= product.id %>?_method=DELETE" method="POST">
+                <% usersdb.forEach(user => { %>
+                  <tr class="tablerow-admin">
+                      <td><%= user.id %> </td>
+                      <td><%= user.first_name + " " + user.last_name  %></td>
+                      <td><%= user.rol == 1 ? "ADMIN" : "USER" %></td>
+                      <td><a href="/users/useredit/<%=user.id %>"><i class="fas fa-user-edit"></i></a></td>
+                      <td><form action="/users/userdelete/<%= user.id %>?_method=DELETE" method="POST">
                         <button class="delete-product" type="submit"><i class="fas fa-trash"></i></button>
                     </form></td>
                     </tr>

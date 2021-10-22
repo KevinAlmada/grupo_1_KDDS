@@ -27,9 +27,9 @@
                 <p class="userProfile_item">Provincia:<%= userData.province?userData.province:"---" %>  </p> </p>
                 <p class="userProfile_item">Localidad:<%= userData.location?userData.location:"---" %>  </p> </p>
             </div>
-            <div >
-            <a  href="/users/useredit" class="editprof editdata">EDITAR DATOS</a>
-            <a href="/users/logout" class="editprof logout"><i class="fas fa-sign-out-alt"></i></a>
+            <div>
+            <a  href="/users/useredit/<%= userData.id %> " class="editprof">EDITAR DATOS</a>
+            <a href="/users/logout" class="editprof">CERRAR SESION</a>
         </div>
         </div>
         

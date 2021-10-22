@@ -16,28 +16,39 @@
         </div>
         <div class="userProfile-container">
             <div class="userProfile_box">
-                <form action="/users/useredit/?_method=PUT" method="POST">
-                    <label for="name">Nombre</label>
-                    <input type="text" value="<%= usuario.first_name %>" name="first_name">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" value="<%= usuario.last_name %>" name="last_name">
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" name="telefono" >
-                    <label for="direccion">Direccion</label>
-                    <input type="text" name="direccion" value="<%= usuario.direction %>">
+                <form id="formUserEdit" action="/users/useredit/<%= usuario.id %> ?_method=PUT" method="POST">
+                    <label for="name">Nombre*</label>
+                    <input type="text" id="name" value="<%= usuario.first_name %>" name="first_name">
+                    <small class="validacionMal" id="nameError"></small>
+                    <label for="apellido">Apellido*</label>
+                    
+                    <input type="text" id="apellido" value="<%= usuario.last_name %>" name="last_name">
+                    <small class="validacionMal" id="apellidoError"></small>
+                    <label for="direccion"  >Direccion</label>
+                    <input type="text" id="direccion" name="direccion" value="<%= usuario.direction %>">
                     <label for="codigo">Codigo Postal</label>
-                    <input type="text" name="codigo" value="<%= usuario.cp %>">
+                    <input type="text" id="codigo" name="codigo" value="<%= usuario.cp %>">
                     <label for="provincia">Provincia</label>
-                    <input type="text" name="provincia" value="<%= usuario.province %>">
+                    <input type="text" id="provincia" name="provincia" value="<%= usuario.province %>">
                     <label for="localidad">Localidad</label>
-                    <input type="text" name="localidad" value="<%= usuario.location%>">
+                    <input type="text"  id="localidad" name="localidad" value="<%= usuario.location%>">
+                    <% if (useronline.rol == 1) { %>
+                        <label for="rol">rol</label>
+                        <select name="rol" id="rolEditForm">
+                            <option value="0" <%= usuario.rol == 0? "selected": "" %> >USER</option>
+                            <option value="1" <%= usuario.rol == 1? "selected": "" %>>ADMIN</option>
+                        </select>
+                    <% } %>
                     <button type="submit">EDITAR</button>
                     
                 </form>
+
+                <small class="validacionMal" id="totalError"></small>
                 
             </div>
             
         </div>
     </main>
+    <script src="/javascripts/validaciones/userprofile.js"></script>
 </body>
 </html>
