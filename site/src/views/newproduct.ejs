@@ -13,25 +13,35 @@
                 <form action="/admin/addProduct" method="POST" enctype="multipart/form-data">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre">
+                    <span class="error" id="nombreErrors"></span>
+
                     <label  for="descripcion">Desripción</label>
                     <textarea name="descripcion" id="descripcion" cols="35" rows="10"></textarea>
-                    
+                    <span class="error" id="descripcionErrors"></span>
+
                     <label for="imagen">Imagen</label>
                     <input type="file" name="imagenProducto" id="imagen" multiple>
+                    <span class="error" id="imagenErrors"></span>
+
                     <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio">
+                    <span class="error" id="precioErrors"></span>
+
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount">
+                    <span class="error" id="descuentoErrors"></span>
+
                     <label for="categorias">Categorias</label>
                     <select name="categorias" id="categorias" >
                         <option value="1">Sol</option>
                         <option value="2">Lectura</option>
-
                     </select>
+                    <span class="error" id="categoriasErrors"></span>
                     <button class="btn-newp" type="submit">Crear Producto</button>
                 </form>
             </div>
         </section>
     </main>
+    <script src="/javascripts/validacionProducto.js"></script>
 </body>
 </html>

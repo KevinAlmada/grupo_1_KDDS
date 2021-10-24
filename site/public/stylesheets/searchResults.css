@@ -31,6 +31,11 @@
     font-size: 1.2rem;
 }
 
+.navbar-search a{
+    text-decoration: none;
+    color: black;
+}
+
 .navbar-filter {
     cursor: pointer;
 }
@@ -41,6 +46,47 @@
     width: 10rem;
 }
 
+
+.filter-container {
+    border: solid 1px var(--colorNaranjaOscuro);
+    width: 300px;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 50% auto;
+    position: relative;
+}
+
+.filter-menu {
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+}
+
+#ifilter-menu:target{
+    opacity:1;
+    pointer-events:auto;
+}
+
+#ifilter-sort:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.container-aside-menu{
+    display: none;
+    float: left;
+    width: 20%;
+}
+
+
+/* FIN NAVBAR */
 
 .card-container{
     display: flex;
@@ -132,6 +178,8 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: stretch;
+        float: right;
+        width: 100%;
     }
 
     .cardsearch{
@@ -146,7 +194,7 @@
 }
 
 
-@media (min-width:576px){
+@media (min-width:699px){
     .banner-searchResults{
         display: flex;
         justify-content: center;
@@ -161,10 +209,17 @@
     .searchResultsMain{
         MAX-WIDTH: 1333PX;
         DISPLAY: FLEX;
-        FLEX-DIRECTION: column;
-        JUSTIFY-CONTENT: center;
-        ALIGN-ITEMS: center;
+        /* FLEX-DIRECTION: column; */
+        /* JUSTIFY-CONTENT: center; */
+        /* ALIGN-ITEMS: center; */
         MARGIN: 0 AUTO;
-
+    }
+    
+    .container-aside-menu {
+        display: block;
+    }
+    
+    .navbar-search {
+        display: none;
     }
 }

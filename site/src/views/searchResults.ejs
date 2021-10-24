@@ -11,18 +11,93 @@
     <h1 class="seachTitle" >Resultados de su busqueda</h1>
     <!-- NAVBAR -->
     <div class="navbar-search">
+        <a href="#ifilter-menu">
         <div class="navbar-filter">
             <i class="fas fa-sliders-h">
             <span>Filtros</span>
         </i></div>
+        </a>
         <div class="navbar-sort">
-            <span>Ordenar por</span>
+            <a href="#ifilter-sort">
+                <span>Ordenar por</span>
+            </a>
             <div class="sort-dsc"><i class="fas fa-sort-amount-down"></i></div>
             <div class="sort-asc"><i class="fas fa-sort-amount-up"></i></div>
         </div>
     </div>
+
+    <div class="filter-menu" id="ifilter-menu">
+        <div class="filter-container">
+            <a href="#">
+                <i class="fas fa-times"></i>
+            </a>
+            <form action="/search-filter" method="post">
+                <h2>Categorias:</h2>
+                <hr>
+                <br>
+                <label for="filter1">
+                    <input type="checkbox" name="filter1" id="filter1">
+                    Sol
+                </label>
+                <hr>
+                <label for="filter2">
+                    <input type="checkbox" name="filter2" id="filter2">
+                    Lectura
+                </label>
+                <hr>
+                <label for="filter3">
+                    <input type="checkbox" name="filter3" id="filter3">
+                    Color
+                </label>
+                <hr>
+                <label for="filter4">
+                    <input type="checkbox" name="filter4" id="filter4">
+                    Material
+                </label>
+                <hr>
+                <label for="filter5">
+                    <input type="checkbox" name="filter5" id="filter5">
+                    Forma
+                </label>
+                <hr>
+                <input type="submit" value="Filtrar">
+                <button type="reset">Resetear</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="filter-menu" id="ifilter-sort">
+        <div class="filter-container">
+            <a href="#">
+                <i class="fas fa-times"></i>
+            </a>
+            <form action="/search-filter" method="post">
+                <h2>Ordenar por: </h2>
+                <hr>
+                <br>
+                <label for=""></label>
+                <label for=""></label>
+            </form>
+        </div>
+    </div>
+
     <!-- CARD -->
     <main class="searchResultsMain">
+        <aside class="container-aside-menu">
+            <div class="title-aside">
+                <h1>Filtrar por: </h1>
+            </div>
+            <div>
+                <h4>Catgoria: </h4>
+                <ul>
+                    <li>Sol</li>
+                    <li>Lentes</li>
+                    <li>Color</li>
+                    <li>Material</li>
+                    <li>Forma</li>
+                </ul>
+            </div>
+        </aside>
         <section class="card-container">
             <% db.forEach(producto => { %>
                 <article class="cardsearch">
@@ -40,7 +115,7 @@
             <% }) %>
         </section>
     <!-- NEWSLETTER -->
-    <%- include('partials/newsletter.ejs') %> 
+    <!-- <%- include('partials/newsletter.ejs') %>  -->
     </main>
     <!-- SCRIPT -->
     <%- include('partials/script.ejs') %> 
