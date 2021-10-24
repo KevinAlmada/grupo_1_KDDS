@@ -9,23 +9,35 @@
         </div>
         <section class="newp-container">
             <div class="form-container-np">
-                <form action="/admin/changeProduct/<%= productoAModificar.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/admin/changeProduct/<%= productoAModificar.id %>?_method=PUT" id="form" method="POST" enctype="multipart/form-data">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" value="<%= productoAModificar.name %> ">
+                    <input type="text" name="nombre" id="nombre" value="<%= productoAModificar.name %> ">
+                    <span class="error" id="nombreErrors"></span>
+
                     <label  for="descripcion">Desripción</label>
                     <textarea name="descripcion" id="descripcion" cols="35" rows="10" ><%= productoAModificar.description %></textarea>
+                    <span class="error" id="descripcionErrors"></span>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" id="" multiple value="<%= productoAModificar.imagenProducto%>">
+                    <input type="file" name="imagenProducto" id="imagen" multiple value="<%= productoAModificar.imagenProducto%>">
+                    <span class="error" id="imagenErrors"></span>
+                    
                     <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio" value=<%= `${productoAModificar.price}` %> >
+                    <span class="error" id="precioErrors"></span>
+                    
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> >
+                    <span class="error" id="descuentoErrors"></span>
+                    
                     <label for="categorias">Categorias</label>
                     <select name="categorias" id="categorias" >
                         <option value="1">Sol</option>
                         <option value="2">Lectura</option>
                     </select>
+                    <span class="error" id="categoriasErrors"></span>
+                    <br>
+                    <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Editar Producto<i class="fas fa-user-edit"></i></button>   
                 </form>
                 <form action="/admin/deleteProduct/<%= productoAModificar.id %>?_method=DELETE" method="POST">
@@ -35,5 +47,6 @@
             
         </section>
     </main>
+    <script src="/javascripts/validaciones/producto.js"></script>
 </body>
 </html>

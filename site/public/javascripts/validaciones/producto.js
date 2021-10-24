@@ -16,9 +16,11 @@ window.addEventListener('load', function(){
         $descuentoErrors = qs('#descuentoErrors'),
         $selectCategorias = qs('#categorias'),
         $categoriasErrors = qs('#categoriasErrors'),
+        $form = qs('#form'),
+        $submitError = qs('#submitError'),
 
-        regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
-        regExPrecio = /($[0-9,]+(.[0-9]{2})?)/,
+        regExAlpha = /^[a-zA-Z0-9\sñáéíóúü ]*$/,
+        regExPrecio = /^[0-9]\d*(\.\d+)?$/,
         regExDescuento = /^\d+$/,
         regExImg = /^.*\.(jpg|gif|png|jpeg)$/;
 
@@ -81,7 +83,7 @@ window.addEventListener('load', function(){
             default:
                 $inputPrecio.classList.remove('is-invalid');
                 $inputPrecio.classList.add('is-valid');
-                $precioErrors.innerHTML = "";
+                $precioErrors.innerHTML = '';
                 break;
         }
     })
@@ -108,6 +110,24 @@ window.addEventListener('load', function(){
             $selectCategorias.classList.remove('is-invalid');
             $selectCategorias.classList.add('is-valid');
             $categoriasErrors.innerHTML = "";
+        }
+    })
+
+    $form.addEventListener('submit', function(e){
+        let error = false;
+        e.preventDefault();
+        let elementsForm = this.elements;
+
+        for (let index = 0; index < elementsForm.length-1; index++){
+            if(elementsForm[index].value == ""){
+                elementsForm[index].classList.add('is-invalid');
+                $submitError.innerHTML = 'Los campos señalados son obligatorios';
+                error = true;
+            }
+        }
+        if(!error){
+            console.log('Todo bien');
+            $form.submit();
         }
     })
 })

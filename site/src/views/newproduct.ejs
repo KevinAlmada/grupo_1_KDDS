@@ -10,7 +10,7 @@
         </div>
         <section class="newp-container">
             <div class="form-container-np">
-                <form action="/admin/addProduct" method="POST" enctype="multipart/form-data">
+                <form action="/admin/addProduct" method="POST" id="form" enctype="multipart/form-data">
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre">
                     <span class="error" id="nombreErrors"></span>
@@ -37,11 +37,13 @@
                         <option value="2">Lectura</option>
                     </select>
                     <span class="error" id="categoriasErrors"></span>
+                    <br>
+                    <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Crear Producto</button>
                 </form>
             </div>
         </section>
     </main>
-    <script src="/javascripts/validacionProducto.js"></script>
+    <script src="/javascripts/validaciones/producto.js"></script>
 </body>
 </html>
