@@ -1,7 +1,7 @@
 <header>
     <div class="menu-lateral" id="menuLateral"> 
         <div class="left-panel" id="panelMenuLateral">
-            <div class="cruzBurger"onclick="closeBurger()"><i class="fas fa-times" id="cruz" ></i></div>
+            <div class="cruzBurger"><i class="fas fa-times" id="cruz" ></i></div>
             <ul>
                 <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
                 <li>
@@ -18,19 +18,24 @@
                     <a href="/users/cart"><i class="fas fa-shopping-bag"></i>Tu Carrito</a>
                 </li>  
                 <li>
-                    <div class="header-mobile-drop-title" id="header-mobile-drop-title" onclick="headerDropDown()">
+                    <div class="header-mobile-drop-title" id="header-mobile-drop-title" >
                         <h4>Productos</h4>
                         <i class="product fas fa-chevron-down" id="chevron"></i>
                     </div>
                     <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
-                        <a href="/products/sol"><li>Anteojos de sol</li></a>
-                        <a href="/products/lectura"><li>Anteojos de lectura</li></a>
+                        <a href="/products/1"><li>Anteojos de sol</li></a>
+                        <a href="/products/2"><li>Anteojos de lectura</li></a>
                         <a href="/products"><li>Accesorios</li></a>
                     </ul>
                 </li>
-                <% if (usuario != "") { %>
+                <% if (usuario != "" && usuario.rol == 1) { %>
+                    <a href="/admin/index"><li>ADMIN</li></a>
                     <a href="/users/profile"><li>Mi perfil</li></a>
-                    <a href="/users/logout"><li>Cerrar sesion</li></a>
+                    <a href="/users/logout"><li>Cerrar sesion</li></a>  
+                <% }else if(usuario != ""){ %>
+                    <a href="/admin/index"><li>ADMIN</li></a>
+                    <a href="/users/profile"><li>Mi perfil</li></a>
+                    <a href="/users/logout"><li>Cerrar sesion</li></a>   
                 <% }else{ %>
                     <a href="/users/login"><li>Iniciar sesion</li></a>
                     <a href="/users/register"><li>Registrate</li></a>
@@ -40,7 +45,7 @@
         </div>
     </div>
     <div class="container-header">
-        <div id="burger" onclick="burger()"><i class="fas fa-bars" id="hamburguesa"></i></div>
+        <div id="burger" ><i class="fas fa-bars" id="hamburguesa"></i></div>
         <div class="container-header-logo">
             <a href="/"><h1>KDDS</h1></a>
         </div>
@@ -51,11 +56,14 @@
             </button>
         </form>
         <div class="header-cart-bag">
-            <% if (usuario != "") { %>
+            <% if (usuario != "" && usuario.rol == 1) { %>
+                <a class="header_user" href="/admin/index">
+                    <i class="fas fa-user-shield"></i>
+                </a>
+            <% }else if(usuario != "" ){ %>
                 <a class="header_user" href="/users/profile">
                     <i class="far fa-user"></i>
                 </a>
-                
             <% }else{ %>
                 <a class="header_user" href="/users/login">
                     <i class="far fa-user"></i>
@@ -64,13 +72,14 @@
                 <a class="header_cart" href="/users/cart">
                     <i class="fas fa-shopping-bag"></i>
                 </a>
+               
         </div>
     </div>
     <div class="nav-bar">
         <nav>
             <ul>
-                <a href="/products/sol"><li>Lentes de sol</li></a>
-                <a href="/products/lectura"><li>Lentes de vista</li></a>
+                <a href="/products/1"><li>Lentes de sol</li></a>
+                <a href="/products/2"><li>Lentes de vista</li></a>
                 <a href="/products/ofertas"><li>Ofertas</li></a>
                 <a href="/about"><li>Nosotros</li></a>
             </ul>

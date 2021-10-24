@@ -15,11 +15,12 @@
 }
 #cruz{
     position: absolute;
-    display: none;
+    display: block;
     right: 10%;
     top: 3%;
     font-size: 1.7rem;
     cursor: pointer;
+    color: white;
 }
 .menu-lateral{
     left: -70%;
@@ -113,6 +114,14 @@
 .side-bar-logo h1{
     font-family: "Bauhaus 93";
 }
+/* CLASES PARA JAVASCRIPT */
+.menu-deploy{
+    opacity: 1;
+    left: 0%;
+}
+
+
+/* FIN DE CLASES PARA JAVASCRIPT */
 /* FIN MENU LATERAL */
 
 /* header */

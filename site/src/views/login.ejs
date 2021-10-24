@@ -23,6 +23,7 @@
                     <input type="email" id="email" name="email" placeholder="usuario@email.com" value="<%= locals.old && old.email%>" >
                     
                 </p>
+                <small class="text-danger" id="emailError"></small>
                 <% if (locals.errors && errors.email) { %>
                     <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.email.msg %> </small>
                    <% } %>
@@ -31,6 +32,7 @@
                     <input type="password" id="password" name="password" placeholder="ingresa al menos 8 caracteres" value="<%= locals.old && old.password%>">
                     
                 </p>
+                <small class="text-danger" id="passwordError"></small>
                 <% if (locals.errors && errors.password) { %>
                     <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.password.msg %> </small>
                    <% } %>
@@ -72,6 +74,6 @@
     <%- include('partials/footer.ejs') %> 
     
     <!-- FIN DE FOOTER -->  
-    <script></script>
+    <script src="/javascripts/validaciones/login.js"></script>
 </body>
 </html>

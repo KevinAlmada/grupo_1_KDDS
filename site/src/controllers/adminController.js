@@ -28,7 +28,7 @@ module.exports = {
                         }
                         res.redirect("/admin/index")
                     }
-                })
+                }).catch(err => console.log(err))
         }else{
             
             res.render('adminLogin',{
@@ -38,16 +38,19 @@ module.exports = {
         }
     },
     adminIndex:(req,res)=>{
-        db.Products.findAll({
+        let productPromise = db.Products.findAll({
             include:[{association:"category"}]
         })
-            .then(productdb => {
+        let userPromise = db.Users.findAll()
+        Promise.all([productPromise,userPromise])
+            .then(([productdb,usersdb]) => {
                 res.render('adminIndex',{
                     title:"Admin Index",
-                    productdb 
+                    productdb ,
+                    usersdb
                 })
             })
-        
+       
     }, 
 
 
@@ -58,6 +61,14 @@ module.exports = {
     },
     guardarProducto:(req,res)=>{
         const {nombre,descripcion,precio,discount,categorias} = req.body
+        let imagenesProd = []
+        if (req.files.length > 0) {
+            req.files.forEach(imagen =>{
+                imagenesProd.push(imagen.filename)
+            })
+        }else{
+            imagenesProd.push("default-image.png")
+        }
         db.Products.create({
             name:nombre,
             description:descripcion,
@@ -66,7 +77,16 @@ module.exports = {
             price:precio,
             categoryId:categorias
         })
-            .then(()=> res.redirect("/admin/index"))
+            .then((producto)=> {
+                let images = imagenesProd.map(imagen => {
+                    return {
+                        imgName:imagen,
+                        productId:producto.id
+                    }
+                })
+                db.ProductImages.bulkCreate(images)
+                res.redirect("/admin/index")
+            })
             .catch(err => console.log(err))
             },
     modificarProducto:(req,res)=>{
@@ -94,21 +114,39 @@ module.exports = {
         let { nombre,precio,descripcion,discount,categorias } = req.body;
         let imgProd = []
         if (req.files) {
-
             req.files.forEach(img =>{imgProd.push(img.filename)})
         }
 
         db.Products.update({
             name:nombre,
             description:descripcion,
-            images:`['default-image.png']`,
             discount:discount,
             price:precio,
             categoryId:categorias
         },{
-            where:{id:+req.params.id}
+            where:{id:+req.params.id},
+            include:[{association:"category"},{association:"productImages"}]
         })
-            .then(()=> res.redirect("/admin/index"))
+            .then((producto)=> {
+                if(req.files){
+                    if (imgProd.length = 1) {
+                        db.ProductImages.update({imgName:imgProd[0]},{where:{productId:+req.params.id}})
+                    }else if (imgProd.length > 2){
+                        db.ProductImages.destroy({where:{productId:+req.params.id}})
+                            .then(()=>{
+                                 let images = imgProd.map(imagen => {
+                                    return {
+                                        imgName:imagen,
+                                        productId:+req.params.id
+                                        }})
+                        db.ProductImages.bulkCreate(images)
+                            })
+                    }
+                }
+
+
+                res.redirect("/admin/index")
+            })
             .catch(err => console.log(err))
         
     },

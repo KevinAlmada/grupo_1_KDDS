@@ -96,33 +96,34 @@ module.exports = {
             })
     },
     editProfile:(req,res)=>{
-        db.Users.findOne({where:{email:req.session.user.email}})
+        db.Users.findOne({where:{id:req.params.id}})
             .then((usuario) => {
                 res.render('userProfileEdit',{
                     title : "Edita tu perfil - KDDS",
-                    usuario:usuario
+                    usuario:usuario,
+                    useronline:req.session.user
                 })  
             })      
     },
     updateProfile:(req,res)=> {
-        const {first_name,last_name,direction,cp,province,location} = req.body
+        const {first_name,last_name,direccion,codigo,provincia,localidad,rol} = req.body
         db.Users.update({
            first_name:first_name,
            last_name:last_name,
-           direction:direction,
-           cp:cp,
-           province:province,
-           location:location
-        },{where:{email:req.session.user.email}})
+           direction:direccion,
+           cp:codigo,
+           province:provincia,
+           location:localidad,
+           rol : rol 
+        },{where:{id:req.params.id}})
             .then((user) => {
-                /* req.session.user = {
-                    id: user.id,
-                    first_name: user.first_name,
-                    last_name: user.last_name,
-                    email: user.email,
-                    rol:user.rol
-                } *///los cambios se ven reflejados al loguearse , como actualizar session
-                res.redirect("/users/profile")})
+                
+                if (req.session.user.rol == 1) {
+                    res.redirect("/admin/index")
+                } else {
+                    res.redirect("/users/profile")
+                }
+                })
             .catch(err => console.log(err))
     },
     cart:(req,res)=>{
@@ -137,5 +138,54 @@ module.exports = {
             res.cookie('cookieKDDS','',{maxAge : -1})
         }
         res.redirect('/')
+    },
+    deleteProfile:(req,res)=>{
+        res.render('deleteUser',{
+            title : "Eliminar usuario",
+            usuario:req.session.user?req.session.user:""
+        })
+    },
+    processDeleteProfile:(req,res) => {
+        let errors = validationResult(req)
+        if(errors.isEmpty() && req.body.email == req.session.user.email){
+            db.Users.findOne({where:{email:req.body.email}})
+                .then(user => {
+                    if(user && bcrypt.compareSync(req.body.password, user.password)){
+                        db.Users.destroy({where:{email:req.body.email}})
+                            .then(() => {
+                                if (req.session.user && req.session.user.rol == 0) {
+                                    req.session.destroy()
+                                    if (req.cookies.cookieKDDS) {
+                                        res.cookie('cookieKDDS','',{maxAge : -1})
+                                    }
+                                    res.redirect('/')
+                                }
+                                if (req.session.user && req.session.user.rol == 1) {
+                                    req.session.destroy()
+                                    if (req.cookies.cookieKDDS) {
+                                        res.cookie('cookieKDDS','',{maxAge : -1})
+                                    }
+                                    res.redirect('/admin/index')
+                                }
+                            }) 
+                        res.redirect("/")
+                    }else{
+                        res.render('login', {
+                            title : "Login - KDDS",
+                            errors: errors.mapped(),
+                            errorMsg: "Credenciales inválidas",
+                            usuario:req.session.user?req.session.user:""
+                        })
+                    }
+                })        
+        }else{
+            res.render('deleteUser', {
+                /* categories, */
+                title : "Eliminar usuario",
+                errors: errors.mapped(),
+                usuario:req.session.user?req.session.user:""
+            })
+        }       
+        
     }
 }
