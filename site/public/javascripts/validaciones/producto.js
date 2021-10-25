@@ -90,10 +90,16 @@ window.addEventListener('load', function(){
 
     $inputDescuento.addEventListener('blur', function(){
         switch(true){
-            case !regExDescuento.test($inputDescuento.value):
-                $descuentoErrors.innerHTML = 'Ingrese un descuento valido';
-                $inputDescuento.classList.add('is-invalid');
+            case $inputDescuento.value:
+                if (!regExDescuento.test($inputDescuento.value)) {
+                    $descuentoErrors.innerHTML = 'Ingrese un descuento valido';
+                    $inputDescuento.classList.add('is-invalid');
                 break;
+                }else{
+                    $inputDescuento.classList.add('is-valid');
+                    $descuentoErrors.innerHTML = "";
+                }
+                
             default:
                 $inputDescuento.classList.remove('is-invalid');
                 $inputDescuento.classList.add('is-valid');
@@ -118,7 +124,7 @@ window.addEventListener('load', function(){
         e.preventDefault();
         let elementsForm = this.elements;
 
-        for (let index = 0; index < elementsForm.length-1; index++){
+        for (let index = 0; index < elementsForm.length-2; index++){
             if(elementsForm[index].value == ""){
                 elementsForm[index].classList.add('is-invalid');
                 $submitError.innerHTML = 'Los campos señalados son obligatorios';
