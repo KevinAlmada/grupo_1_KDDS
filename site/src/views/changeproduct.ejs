@@ -26,9 +26,6 @@
                     <input type="number" name="precio" id="precio" value=<%= `${productoAModificar.price}` %> >
                     <span class="error" id="precioErrors"></span>
                     
-                    <label for="discount">Descuento</label>
-                    <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> >
-                    <span class="error" id="descuentoErrors"></span>
                     
                     <label for="categorias">Categorias</label>
                     <select name="categorias" id="categorias" >
@@ -38,6 +35,9 @@
                     <span class="error" id="categoriasErrors"></span>
                     <br>
                     <span class="error" id="submitError"></span>
+                    <label for="discount">Descuento</label>
+                    <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> >
+                    <span class="error" id="descuentoErrors"></span>
                     <button class="btn-newp" type="submit">Editar Producto<i class="fas fa-user-edit"></i></button>   
                 </form>
                 <form action="/admin/deleteProduct/<%= productoAModificar.id %>?_method=DELETE" method="POST">

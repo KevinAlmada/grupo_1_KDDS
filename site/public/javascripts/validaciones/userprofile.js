@@ -43,7 +43,7 @@ window.addEventListener('load',function(){
         let error = false;
         e.preventDefault();
         let elementosForm = $form.elements;
-        for (let index = 0; index < elementosForm.length - 1; index++) {
+        for (let index = 0; index < elementosForm.length - 5; index++) {
             if (elementosForm[index].value.trim() == "" ) {
                 elementosForm[index].style.borderColor = "red"
                 $totalError.innerHTML= "Los Campos marcados con * son obligatorios"

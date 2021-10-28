@@ -1,8 +1,8 @@
-# Retrospectiva Grupo 1 KDDS 5°Sprint
+# Retrospectiva Grupo 1 KDDS 6°Sprint
 
 ## Análisis general
-Implementamos middlewares 
-## Retrospectiva Sprint 5
+LLego el temido sprint de sequelize , y la verdad es que fue un desafio que costo pero lo pudimos llevar a cabo , es interesante ver como nuestro humildes json se transformaron en bases de datos como corresponde y las manipulamos para darle funcionalidad a nuestra pagina.
+## Retrospectiva Sprint 6
 
 ### Seguir haciendo:
 - Reuniones al comienzo y durante el sprint.

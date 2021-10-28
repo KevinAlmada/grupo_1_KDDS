@@ -10,14 +10,15 @@ window.addEventListener("load", () => {
     $errorsPass = document.querySelector("#errorsPass"),
     $errorsPass2 = document.querySelector("#errorsPass2"),
     $submitButton = document.querySelector(".enviar"),
-    $form = document.querySelector("form");
+    $form = document.querySelector("form"),
+    $generalErrors = document.querySelector("#generalErrors");
     
     let exclamacionHTML = "<i class='fas fa-exclamation-circle'></i>"
 
     let regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass = /^(?=.*\d)(?=.*[a-z]).{8,12}$/;
-
+let errores =[$errorsLastName,$errorsName,$errorsEmail,$errorsPass,$errorsPass2]
     $inputName.addEventListener("blur",() => {
         switch (true) { // compara los casos que den true
             case !$inputName.value.trim():
@@ -103,17 +104,29 @@ window.addEventListener("load", () => {
         e.preventDefault();
         let elementosForm = $form.elements;
         for (let index = 0; index < elementosForm.length - 1; index++) {
-            if (elementosForm[index] == "" ) {
-                elementosForm[index].style.borderColor = "#87ed6f"
-                //llenar un span con errores
+            if (elementosForm[index].value == "" ) {
+                elementosForm[index].style.borderColor = "red"
+                
                 error = true
             }
-            
         }
-        if (!error) {
-            console.log("todo ok");
-            $form.submit() 
+        let erroresConfirm = 0
+        for (const error of errores) {
+            if (error.innerHTML !== "" ) {
+                erroresConfirm = 1
+            }
         }
+        if (erroresConfirm == 1) {
+            $generalErrors.innerHTML = `${exclamacionHTML} Hay campos con errores`
+        }else{
+            $generalErrors.innerHTML = ""
+            if (error == false) {
+                   $form.submit()  
+            }else{
+                $generalErrors.innerHTML = `${exclamacionHTML} Hay campos vacios`
+            }  
+        }
+          
     } )
 
 })
