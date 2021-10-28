@@ -63,8 +63,8 @@ window.addEventListener("load",()=>{
         }else{
             $generalErrors.innerHTML = ""
             if (error == false) {
-                alert("enviado")
-                   /* $form.submit() */  
+                
+                    $form.submit()  
             }else{
                 $generalErrors.innerHTML = `${exclamacionHTML} Hay campos vacios`
             }  
