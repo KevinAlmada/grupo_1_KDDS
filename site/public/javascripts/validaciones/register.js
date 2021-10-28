@@ -117,7 +117,7 @@ let errores =[$errorsLastName,$errorsName,$errorsEmail,$errorsPass,$errorsPass2]
             }
         }
         if (erroresConfirm == 1) {
-            $generalErrors.innerHTML = "Hay campos con errores"
+            $generalErrors.innerHTML = `${exclamacionHTML} Hay campos con errores`
         }else{
             $generalErrors.innerHTML = ""
             if (error == false) {
