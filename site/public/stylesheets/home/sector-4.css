@@ -86,7 +86,8 @@
     max-width: 1400px;
     text-align: center;
     justify-self: center;
-    width: 22rem;
+    width: 100%;
+    max-width: 22rem;
     /* height: 110px; */
     grid-row: 3;
     grid-column: 1/11;
@@ -138,11 +139,11 @@
     }
 
     .section-4-container .container-bottom .box-pagos {
-        width: 99%;
         /* height: 10rem; */
         grid-row: 3;
         grid-column: 1/11;
         padding: 30px;
+        max-width: 100%;
     }
 }
 
