@@ -1,49 +1,5 @@
 
-    <div class="menu-lateral" id="menuLateral"> 
-        <div class="left-panel" id="panelMenuLateral">
-            <div class="cruzBurger"><i class="fas fa-times" id="cruz" ></i></div>
-            <ul>
-                <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
-                <li>
-                    <div class="search-bar">
-                        <form action="/products/search" method="GET">
-                            <input type="search" name="buscador" id="buscador">
-                            <button class="search-ico" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                    </form>
-                    </div>
-                </li> 
-                <li>
-                    <a href="/users/cart"><i class="fas fa-shopping-bag"></i>Tu Carrito</a>
-                </li>  
-                <li>
-                    <div class="header-mobile-drop-title" id="header-mobile-drop-title" >
-                        <h4>Productos</h4>
-                        <i class="product fas fa-chevron-down" id="chevron"></i>
-                    </div>
-                    <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
-                        <a href="/products/1"><li>Anteojos de sol</li></a>
-                        <a href="/products/2"><li>Anteojos de lectura</li></a>
-                        <a href="/products"><li>Accesorios</li></a>
-                    </ul>
-                </li>
-                <% if (usuario != "" && usuario.rol == 1) { %>
-                    <a href="/admin/index"><li>ADMIN</li></a>
-                    <a href="/users/profile"><li>Mi perfil</li></a>
-                    <a href="/users/logout"><li>Cerrar sesion</li></a>  
-                <% }else if(usuario != ""){ %>
-                    <a href="/admin/index"><li>ADMIN</li></a>
-                    <a href="/users/profile"><li>Mi perfil</li></a>
-                    <a href="/users/logout"><li>Cerrar sesion</li></a>   
-                <% }else{ %>
-                    <a href="/users/login"><li>Iniciar sesion</li></a>
-                    <a href="/users/register"><li>Registrate</li></a>
-                <% } %>
-                
-            </ul>
-        </div>
-    </div>
+    
     <!-- <div class="container-header">
         <div id="burger" ><i class="fas fa-bars" id="hamburguesa"></i></div>
         <div class="container-header-logo">
@@ -77,6 +33,50 @@
     </div> -->
     <!-- Header nuevo -->
     <header class="headerContainerDesktop">
+        <div class="menu-lateral" id="menuLateral"> 
+            <div class="left-panel" id="panelMenuLateral">
+                <ul>
+                    <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
+                    <li>
+                        <div class="search-bar">
+                            <form action="/products/search" method="GET">
+                                <input type="search" name="buscador" id="buscador">
+                                <button class="search-ico" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                        </form>
+                        </div>
+                    </li> 
+                    <li>
+                        <a href="/users/cart"><i class="fas fa-shopping-bag"></i>Tu Carrito</a>
+                    </li>  
+                    <li>
+                        <div class="header-mobile-drop-title" id="header-mobile-drop-title" >
+                            <h4>Productos</h4>
+                            <i class="product fas fa-chevron-down" id="chevron"></i>
+                        </div>
+                        <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
+                            <a href="/products/1"><li>Anteojos de sol</li></a>
+                            <a href="/products/2"><li>Anteojos de lectura</li></a>
+                            <a href="/products"><li>Accesorios</li></a>
+                        </ul>
+                    </li>
+                    <% if (usuario != "" && usuario.rol == 1) { %>
+                        <a href="/admin/index"><li>ADMIN</li></a>
+                        <a href="/users/profile"><li>Mi perfil</li></a>
+                        <a href="/users/logout"><li>Cerrar sesion</li></a>  
+                    <% }else if(usuario != ""){ %>
+                        <a href="/admin/index"><li>ADMIN</li></a>
+                        <a href="/users/profile"><li>Mi perfil</li></a>
+                        <a href="/users/logout"><li>Cerrar sesion</li></a>   
+                    <% }else{ %>
+                        <a href="/users/login"><li>Iniciar sesion</li></a>
+                        <a href="/users/register"><li>Registrate</li></a>
+                    <% } %>
+                    
+                </ul>
+            </div>
+        </div>
         <!-- <nav class="headerNav"> -->
             <main class="mainHeaderContainer">
                 <section class="logoHeader">
@@ -121,6 +121,11 @@
                         </a>
                        
                 </div>
+                <div class="hamburger hamburger--spring">
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div>
             </main>
        <!--  </nav> -->
     </header>

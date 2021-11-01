@@ -174,14 +174,6 @@
 }
 
 @media (min-width:576px){
-    .card-container{
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: stretch;
-        float: right;
-        width: 100%;
-    }
-
     .cardsearch{
         display: flex;
         flex-direction: column;
@@ -195,6 +187,13 @@
 
 
 @media (min-width:699px){
+    .card-container{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        float: right;
+        width: 100%;
+    }
     .banner-searchResults{
         display: flex;
         justify-content: center;
