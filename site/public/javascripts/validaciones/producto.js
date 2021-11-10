@@ -22,7 +22,8 @@ window.addEventListener('load', function(){
         regExAlpha = /^[a-zA-Z0-9\sñáéíóúü ]*$/,
         regExPrecio = /^[0-9]\d*(\.\d+)?$/,
         regExDescuento = /^\d+$/,
-        regExImg = /^.*\.(jpg|gif|png|jpeg)$/;
+        // regExImg = /^.*\.(jpg|gif|png|jpeg)$/;
+        regExImg = /(.jpg|.jpeg|.png|.gif)$/i;
 
     $inputNombre.addEventListener('blur', function(){
         switch(true){
