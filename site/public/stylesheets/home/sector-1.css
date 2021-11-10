@@ -2,6 +2,7 @@
 
 .home{
     width: 100%;
+    padding-top: 75px;
     /* padding-top: 65px; */
 }
 
@@ -73,7 +74,7 @@ width: 100%;
 /* fin videobanner */
 /* MEDIA QUERIES */
 
-@media (min-width:576px){
+@media (min-width:900px){
 
     .home {
         padding-top: 0px;
