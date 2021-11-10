@@ -3,15 +3,17 @@
     <%- include('partials/head.ejs') %>
     <link rel="stylesheet" href="/stylesheets/adminIndex.css"> 
 <body>
-    <nav class="navAdmin">
-        <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
+  <nav class="navAdmin">
+    <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
+    
+    <ul>
+        <li><a class="btn-newp" href="#tituloProd">Productos</a></li>
+        <li><a class="btn-newp" href="#tituloUsers">Usuarios</a></li>
         
-        <ul>
-            <li><a class="btn-newp" href="#">Productos</a></li>
-            <li><a class="btn-newp" href="#tituloUsers">Usuarios</a></li>
-            <li><a class="btn-newp" href="/admin/addProduct">Agregar Producto</a></li>
-        </ul>
-    </nav>
+        <li><a href="/users/logout" class="editprof logout">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
+        <li><a class="btn-newp" href="/">Home</a></li>
+    </ul>
+</nav>
     <section class="admin-section">
         <table class="adminP-table">
             <thead>
@@ -27,6 +29,7 @@
               </tr>
             </thead>
             <tbody>
+      <h2 id="tituloProd">Productos</h2>
                 <% productdb.forEach(product => { %>
                   <tr class="tablerow-admin">
                       <td><%= product.id %> </td>
