@@ -1,11 +1,11 @@
-let menuLateral = document.getElementById("menuLateral")
-let hamburger = document.querySelector(".hamburger");
 window.addEventListener("load", () => {
+    let sidebar = document.getElementById("menuLateral")
+    let hamburger = document.querySelector(".hamburger");
     
     hamburger.onclick = () => {
         hamburger.classList.toggle("is-active");
-        menuLateral.classList.toggle("menu-deploy")
-        menuLateral.style.transition = "all 0.8s"
+        sidebar.classList.toggle("menu-deploy")
+        sidebar.style.transition = "all 0.8s"
 }     
 
 
