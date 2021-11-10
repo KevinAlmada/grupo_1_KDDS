@@ -85,16 +85,132 @@
     <main class="searchResultsMain">
         <aside class="container-aside-menu">
             <div class="title-aside">
-                <h1>Filtrar por: </h1>
+                <h1>Filtros </h1>
+            </div>
+            <div >
+                <h2>Categoria </h4>
+                <hr>
+                <ul>
+                    <li class="cat-item">
+                        <a href="/products/?categoria=sol"> 
+                        <i class="far fa-square" id="cat-square"></i>
+                        <span>  Sol </span>
+                        </a>
+                    </li>
+                    <li class="cat-item">
+                        <a href="/products/?categoria=lectura"> 
+                        <i class="far fa-square" id="cat-square"></i>
+                        <span>  Lectura </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div>
-                <h4>Catgoria: </h4>
+                <h2> Forma </h4>
+                <hr>
                 <ul>
-                    <li>Sol</li>
-                    <li>Lentes</li>
-                    <li>Color</li>
-                    <li>Material</li>
-                    <li>Forma</li>
+                    <li class="forma-item">
+                        <a href="/products/?forma=aviador"> 
+                        <i class="far fa-square" id="forma-square"></i>
+                        <span>  Aviador </span>
+                        </a>
+                    </li>
+                    <li class="forma-item">
+                        <a href="/products/?forma=cuadrada"> 
+                        <i class="far fa-square" id="forma-square"></i>
+                        <span>  Cuadrada </span>
+                        </a>
+                    </li>
+                    <li class="forma-item">
+                        <a href="/products/?forma=deportivo"> 
+                        <i class="far fa-square" id="forma-square"></i>
+                        <span>  Deportivo </span>
+                        </a>
+                    </li>
+                    <li class="forma-item">
+                        <a href="/products/?forma=redonda"> 
+                        <i class="far fa-square" id="forma-square"></i>
+                        <span>  Redonda </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2> Material </h4>
+                <hr>
+                <ul>
+                    <li class="material-item">
+                        <a href="/product/?material=acetato"> 
+                        <i class="far fa-square" id="material-square"></i>
+                        <span>  Acetato </span>
+                        </a>
+                    </li>
+                    <li class="material-item">
+                        <a href="/product/?material=ecologico"> 
+                        <i class="far fa-square" id="material-square"></i>
+                        <span>  Ecologico </span>
+                        </a>
+                    </li>
+                    <li class="material-item">
+                        <a href="/product/?material=maderametal"> 
+                        <i class="far fa-square" id="material-square"></i>
+                        <span>  Madera y metal </span>
+                        </a>
+                    </li>
+                    <li class="material-item">
+                        <a href="/product/?material=metal"> 
+                        <i class="far fa-square" id="material-square"></i>
+                        <span>  Metal </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div >
+                <h2> Lentes </h4>
+                <hr>
+                <ul>
+                    <li class="lentes-item">
+                        <a href="/products/?lente=degrade"> 
+                        <i class="far fa-square" id="lente-square"></i>
+                        <span>  Degrade </span>
+                        </a>
+                    </li>
+                    <li class="lentes-item">
+                        <a href="/products/?lente=espejado"> 
+                        <i class="far fa-square" id="lente-square"></i>
+                        <span>  Espejado </span>
+                        </a>
+                    </li>
+                    <li class="lentes-item">
+                        <a href="/products/?lente=polarizado"> 
+                        <i class="far fa-square" id="lente-square"></i>
+                        <span>  Polarizado </span>
+                        </a>
+                    </li>
+                    <li class="lentes-item">
+                        <a href="/products/?lente=uniforme"> 
+                        <i class="far fa-square" id="lente-square"></i>
+                        <span>  Uniforme </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div >
+                <h2>Ofertas </h4>
+                <hr>
+                <ul>
+                    <li class="oferta-item">
+                        <a href="/products/?oferta=liquidacion"> 
+                        <i class="far fa-square" id="oferta-square"></i>
+                        <span>  Liquidacion </span>
+                        </a>
+                    </li>
+                    <li class="oferta-item">
+                        <a href="/products/?oferta=express"> 
+                        <i class="far fa-square" id="oferta-square"></i>
+                        <span>  Oferta express </span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </aside>
@@ -127,4 +243,5 @@
 </body>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="/javascripts/home/resultados.js"></script>
+<script src="/javascripts/filtros.js"></script>
 </html>

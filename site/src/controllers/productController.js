@@ -1,5 +1,6 @@
 const db = require('../database/models')
 const { Op } = require("sequelize");
+const { query } = require('express');
 
 module.exports = {
     productDetail:(req,res)=>{
@@ -80,4 +81,52 @@ module.exports = {
                 usuario:req.session.user?req.session.user:""} )
             } 
         }) 
-}}
+    },
+    filter: (req, res) => {
+        let {
+            categoria ,
+            forma,
+            material,
+            lente,
+            oferta
+        } = req.query;
+
+        let queryObject = {};
+        queryObject.where = {};
+        queryObject.include = [{association:"category"},{association:"productImages"}];
+
+        if(categoria != null){
+            categoria = categoria == "sol" ? 1 : 2;
+            queryObject.where.categoryId = categoria;
+        }
+        
+        // queryObject.where.price = {[Op.gt]: 8750}
+        // if(forma != null){
+        //     queryObject.where.shape = forma
+        // }
+        
+        // if(material != null){
+        //     queryObject.where.material = material
+        // }
+
+        // if(lente != null){
+        //     queryObject.where.lente = lente
+        // }
+
+        if(oferta != null){
+            queryObject.where.discount = {[Op.gt]: 0}
+        }
+
+        db.Products.findAll(
+            queryObject
+        )
+        .then(db => {
+            res.render('searchResults',{
+                title : "Productos", 
+                db,
+                usuario:req.session.user?req.session.user:""
+            })
+        })
+        
+    }
+}

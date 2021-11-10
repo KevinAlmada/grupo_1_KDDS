@@ -8,6 +8,7 @@ router.get('/productDetail/:id', controller.productDetail);
 router.get('/search', controller.busqueda);
 router.get('/', controller.products);
 router.get('/ofertas', controller.ofertas);
+router.get('/filter', controller.filter);
 router.get('/:category', controller.category);
 
 

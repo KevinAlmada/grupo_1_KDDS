@@ -66,6 +66,7 @@
     opacity:0;
     pointer-events:none;
     transition: all 1s;
+    z-index: 44;
 }
 
 #ifilter-menu:target{
@@ -85,7 +86,22 @@
     width: 20%;
 }
 
+.container-aside-menu .title-aside {
+    font-size: large;
+    margin: 2rem;
+    color: var(--colorNaranjaOscuro)
+}
 
+.container-aside-menu ul{
+    list-style: none;
+    margin: 15px 0 15px 0;
+}
+
+.container-aside-menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
 /* FIN NAVBAR */
 
 .card-container{
@@ -203,6 +219,7 @@
         width: 100%;
         
         max-width: 1303PX;
+        display: none;
     }
 
     .searchResultsMain{
