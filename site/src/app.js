@@ -1,18 +1,19 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var methodOverride = require('method-override')
-var session = require('express-session')
-
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let methodOverride = require('method-override')
+let session = require('express-session')
+let cookieCheck = require('./middlewares/userCookieCheck')
 /* ENROUTADORES */
-var homeRouter = require('./routes/homeRouter');
-var usersRouter = require('./routes/usersRouter');
-var productRouter = require('./routes/productRouter');
-var adminRouter = require('./routes/adminRouter');
+let homeRouter = require('./routes/homeRouter');
+let usersRouter = require('./routes/usersRouter');
+let productRouter = require('./routes/productRouter');
+let adminRouter = require('./routes/adminRouter');
+let apiRouter = require('./routes/apiRouter');
 
-var app = express();
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,14 +28,20 @@ app.use(methodOverride('_method'))
 app.use(session({ 
   secret: "KDDS TOP SECRET", 
   resave: true, 
-  saveUninitialized: true ,
-  cookie: { maxAge: 60000*5 }
+  saveUninitialized: true /* ,
+  cookie: { maxAge: 60000*5 } */
 }));
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 /* RUTAS PRINCIPALES */
-app.use('/', homeRouter);
-app.use('/users', usersRouter);
-app.use('/products', productRouter)
-app.use('/admin', adminRouter)
+app.use('/',cookieCheck, homeRouter);
+app.use('/users',cookieCheck, usersRouter);
+app.use('/products',cookieCheck, productRouter)
+app.use('/admin',cookieCheck, adminRouter)
+app.use('/api',cookieCheck, apiRouter )
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
