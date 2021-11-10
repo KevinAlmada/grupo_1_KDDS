@@ -18,7 +18,8 @@
   border-radius: 5px;
   transition: border 0.5s;
   outline: none;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 .nuevoNewsletter .news-input input:hover {
@@ -63,7 +64,7 @@
   justify-content: center;
   align-items: center;
   gap: 5%;
-  height: 17vh;
+  height: 35vh;
   width: 100%;
   margin: 0 auto;
   background: linear-gradient(to bottom right, rgba(6,15,131,1) 0%, rgba(132,210,228,1) 39%, rgba(154,255,251,1) 76%, rgb(245, 133, 5) 100%);

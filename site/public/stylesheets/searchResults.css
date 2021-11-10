@@ -201,14 +201,14 @@
     }
     .banner-searchResults img{
         width: 100%;
-        margin-top: 80px;
+        
         max-width: 1303PX;
     }
 
     .searchResultsMain{
         MAX-WIDTH: 1333PX;
         DISPLAY: FLEX;
-        /* FLEX-DIRECTION: column; */
+        FLEX-DIRECTION: column;
         /* JUSTIFY-CONTENT: center; */
         /* ALIGN-ITEMS: center; */
         MARGIN: 0 AUTO;
