@@ -1,4 +1,10 @@
-let slideIndex = 1;
+
+
+
+
+/* loader darioM */
+window.addEventListener("load",function(){
+    let slideIndex = 1;
 
 if(screen.width < 768){
     startSlides(slideIndex);
@@ -41,12 +47,7 @@ if(slideBotIndex > slides.length) slideBotIndex = 1;
 slides[slideBotIndex - 1].style.display = "block";
 setTimeout(startSlidesBottom, 3000);
 }
-
-
-
-/* loader darioM */
-window.addEventListener("load",function(){
-    document.getElementById("loader").classList.toggle("loader2")
+    /* document.getElementById("loader").classList.toggle("loader2") */
 })
 
 

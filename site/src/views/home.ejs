@@ -13,12 +13,17 @@
     <section class="section-1-container">
 
         <div class="fondo-container">
-            <img class="banner-home" src="/images/productos/homebanner2021.jpg" >
-            <div class="logo">
+            <section class="videoBanner" id="videoContainer">
+                <video id="videoBanner" class="videoBannerModif" src="/images/home/section-1/videoBanner.mp4" loop muted autoplay></video>
+            </section>
+            <!-- <div class="logo">
                 <img src="/images/home/section-1/KDDS.svg" >
-            </div>
+            </div> -->
         </div>
     </section>
+    <aside class="flechaTop">
+        <a href="#logoHeader"><i id="flechaTop" class="far fa-arrow-alt-circle-up"></i></a>
+    </aside>
     
     <!------------------------------------------------------------------------------->
     <!-------------- Sector 2 ------------------------------------------------------->
@@ -95,5 +100,6 @@
     <%- include('partials/footer.ejs') %> 
     <!-- FIN DE FOOTER -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/javascripts/home/eventoScroll.js"></script>
 </body>
 </html>

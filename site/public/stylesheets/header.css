@@ -13,15 +13,7 @@
     z-index: 2;
     margin-left: 15px;
 }
-#cruz{
-    position: absolute;
-    display: block;
-    right: 10%;
-    top: 3%;
-    font-size: 1.7rem;
-    cursor: pointer;
-    color: white;
-}
+
 .menu-lateral{
     left: -70%;
     position: relative;
@@ -34,12 +26,12 @@
     width: 70%;
     height: 100vh;
     background-color: var(--colorAzul);
-    position: absolute;
+    position: fixed;
     top: 0vh;
     display: flex;
     align-items: center;
     justify-content: center; 
-    z-index: 2;
+    z-index: 3;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px ;
 }
@@ -125,14 +117,14 @@
 /* FIN MENU LATERAL */
 
 /* header */
-header{
+ header{
     top: 0;
     left: 0;
     width: 100%;
     position: fixed;
     height: fit-content;
-    z-index: 1;
-}
+    z-index: 2;
+} 
 .container-header{
     background-color: white;
     display: flex;
@@ -182,7 +174,7 @@ header{
 }
 .header-cart-bag{
     display: none;
-    width: 50px;
+    width: 10%;
     justify-content: space-around;
 }
 .header-cart-bag a i{
@@ -222,6 +214,130 @@ header a :hover{
 main{
     padding-top: 65px ;
 }
+
+
+
+/* nuevo header */
+.headerContainerDesktop{
+    display: flex;
+    flex-direction: row;
+    /* position: fixed; */
+    background: linear-gradient(90deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 35%, rgba(213,244,250,.5) 100%);
+    
+    color: rgb(0, 0, 0);
+    /*     box-shadow: 0px 16px 19px -11px rgba(66,66,66,0.61);
+ */    z-index: 100000;
+ 
+}
+#logoHeader{
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+.mainHeaderContainer{
+    display: flex;
+    /*     position: fixed; 
+    */    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    background: linear-gradient(90deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 35%, rgba(213,244,250,.5) 100%);
+    padding-top: 0px ;
+
+    /*     box-shadow: 0px 16px 19px -11px rgba(66,66,66,0.61);
+ */}
+ 
+.logoHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .5em;
+}
+
+.menuHeaderList{
+    display: flex;
+    
+}
+.menuHeaderItem{
+    
+    list-style:none;
+    margin: 15px;
+    
+    padding: 1.2vh;
+    border-radius: 15px;
+    margin: 15px;
+    
+    padding: 5px;
+    transition: all ease-in 1s;
+    
+}
+.menuHeaderItem:hover{
+    background-color: white;
+    border: solid 1.5px solid grey;
+}
+a{
+    text-decoration: none;
+}
+.BusquedaContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.busquedaBarra{
+    width: 400px;
+    padding: 10px;
+    border-radius: 25px;
+}
+.iconoBusqueda{
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    margin: 5px;
+}
+.miniHeaderFijo{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    background-color: aliceblue;
+    margin-top:1px;
+    
+}
+
+#logoHeaderMini{
+    width: 5em;
+    /* display: none; */
+    opacity: 0;
+    transition: all ease-in .5s;
+    margin-left: 50px;
+}
+.scroll{
+    top :-1%;
+    position: fixed;
+    z-index: 1000;
+    
+}
+
+
+/* flecha ir al top */
+
+.fa-arrow-alt-circle-up{
+    font-size: 4em;
+    color: rgb(241, 144, 53);
+    z-index: 1000;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all ease-in .5s;
+    
+}
+
+
+/* fin nuevo header */
 @media (min-width:576px) {
     .header-cart-bag a i{
         font-size: 25px
@@ -237,6 +353,10 @@ main{
     }
 }
 @media (min-width:768px) {
+    .miniHeaderFijo{
+        display: flex;
+        
+    }
     .side-bar-logo h1 {
         font-size: 46px;
     }
@@ -255,6 +375,9 @@ main{
 
 }
 @media (min-width:900px){
+    header{
+        position:static
+    } 
     #menuLateral{
         display: none;
     }
@@ -275,5 +398,8 @@ main{
     }
     .nav-bar{
         display: block;
+    }
+    .miniHeaderFijo{
+        display: flex; 
     }
 }

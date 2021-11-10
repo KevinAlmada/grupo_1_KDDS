@@ -2,7 +2,8 @@
 
 .home{
     width: 100%;
-    padding-top: 65px;
+    padding-top: 75px;
+    /* padding-top: 65px; */
 }
 
 .banner-home img{
@@ -41,11 +42,41 @@ width: 100%;
     /* border: 1px solid var(--colorAzul); */
 }
 
+
+/* videobanner */
+.videoBanner{
+    height: 80vh;
+    overflow: hidden;
+    margin: 0 auto;
+    top: 0;
+}
+
+.videoBannerModif{
+    width: 100%;
+    
+} 
+
+
+
+.scrollBanner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in .5s;
+}
+.scrollVideo{
+    width: 80%;
+    filter: grayscale();
+    /* z-index: -1; */
+    transition: all ease-in .5s;
+}
+
+/* fin videobanner */
 /* MEDIA QUERIES */
 
-@media (min-width:576px){
+@media (min-width:900px){
 
     .home {
-        padding-top: 69px;
+        padding-top: 0px;
     }
 }

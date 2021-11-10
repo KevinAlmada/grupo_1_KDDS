@@ -1,50 +1,6 @@
-<header>
-    <div class="menu-lateral" id="menuLateral"> 
-        <div class="left-panel" id="panelMenuLateral">
-            <div class="cruzBurger"><i class="fas fa-times" id="cruz" ></i></div>
-            <ul>
-                <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
-                <li>
-                    <div class="search-bar">
-                        <form action="/products/search" method="GET">
-                            <input type="search" name="buscador" id="buscador">
-                            <button class="search-ico" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                    </form>
-                    </div>
-                </li> 
-                <li>
-                    <a href="/users/cart"><i class="fas fa-shopping-bag"></i>Tu Carrito</a>
-                </li>  
-                <li>
-                    <div class="header-mobile-drop-title" id="header-mobile-drop-title" >
-                        <h4>Productos</h4>
-                        <i class="product fas fa-chevron-down" id="chevron"></i>
-                    </div>
-                    <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
-                        <a href="/products/1"><li>Anteojos de sol</li></a>
-                        <a href="/products/2"><li>Anteojos de lectura</li></a>
-                        <a href="/products"><li>Accesorios</li></a>
-                    </ul>
-                </li>
-                <% if (usuario != "" && usuario.rol == 1) { %>
-                    <a href="/admin/index"><li>ADMIN</li></a>
-                    <a href="/users/profile"><li>Mi perfil</li></a>
-                    <a href="/users/logout"><li>Cerrar sesion</li></a>  
-                <% }else if(usuario != ""){ %>
-                    <a href="/admin/index"><li>ADMIN</li></a>
-                    <a href="/users/profile"><li>Mi perfil</li></a>
-                    <a href="/users/logout"><li>Cerrar sesion</li></a>   
-                <% }else{ %>
-                    <a href="/users/login"><li>Iniciar sesion</li></a>
-                    <a href="/users/register"><li>Registrate</li></a>
-                <% } %>
-                
-            </ul>
-        </div>
-    </div>
-    <div class="container-header">
+
+    
+    <!-- <div class="container-header">
         <div id="burger" ><i class="fas fa-bars" id="hamburguesa"></i></div>
         <div class="container-header-logo">
             <a href="/"><h1>KDDS</h1></a>
@@ -74,15 +30,119 @@
                 </a>
                
         </div>
-    </div>
-    <div class="nav-bar">
-        <nav>
-            <ul>
-                <a href="/products/1"><li>Lentes de sol</li></a>
-                <a href="/products/2"><li>Lentes de vista</li></a>
-                <a href="/products/ofertas"><li>Ofertas</li></a>
-                <a href="/about"><li>Nosotros</li></a>
+    </div> -->
+    <!-- Header nuevo -->
+    <header class="headerContainerDesktop">
+        <div class="menu-lateral" id="menuLateral"> 
+            <div class="left-panel" id="panelMenuLateral">
+                <ul>
+                    <li class="side-bar-logo"><a href="/"><h1>KDDS</h1></a></li>
+                    <li>
+                        <div class="search-bar">
+                            <form action="/products/search" method="GET">
+                                <input type="search" name="buscador" id="buscador">
+                                <button class="search-ico" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                        </form>
+                        </div>
+                    </li> 
+                    <li>
+                        <a href="/users/cart"><i class="fas fa-shopping-bag"></i>Tu Carrito</a>
+                    </li>  
+                    <li>
+                        <div class="header-mobile-drop-title" id="header-mobile-drop-title" >
+                            <h4>Productos</h4>
+                            <i class="product fas fa-chevron-down" id="chevron"></i>
+                        </div>
+                        <ul class="header-mobile-products-drop" id="header-mobile-products-drop">
+                            <a href="/products/1"><li>Anteojos de sol</li></a>
+                            <a href="/products/2"><li>Anteojos de lectura</li></a>
+                            <a href="/products"><li>Accesorios</li></a>
+                        </ul>
+                    </li>
+                    <% if (usuario != "" && usuario.rol == 1) { %>
+                        <a href="/admin/index"><li>ADMIN</li></a>
+                        <a href="/users/profile"><li>Mi perfil</li></a>
+                        <a href="/users/logout"><li>Cerrar sesion</li></a>  
+                    <% }else if(usuario != ""){ %>
+                        <a href="/admin/index"><li>ADMIN</li></a>
+                        <a href="/users/profile"><li>Mi perfil</li></a>
+                        <a href="/users/logout"><li>Cerrar sesion</li></a>   
+                    <% }else{ %>
+                        <a href="/users/login"><li>Iniciar sesion</li></a>
+                        <a href="/users/register"><li>Registrate</li></a>
+                    <% } %>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- <nav class="headerNav"> -->
+            <main class="mainHeaderContainer">
+                <section class="logoHeader">
+                    <a href="/"><img id="logoHeader" src="/images/home/LOGO.png" alt="logo"></a>
+                    <h2 class="marcaHeader">KDDS Lentes</h2>
+                </section>
+                
+                <section class="HeaderBusqueda">
+                    <!-- <div class="BusquedaContainer">
+                        <input class="busquedaBarra" type="text" placeholder="Buscar">
+                        <p class="iconoBusqueda"><i class="fas fa-search"></i></p>
+                    
+                    </div> -->
+                    <form class="search-bar-desktop" action="/products/search" method="GET">
+                        <input type="search" name="buscador" id="search">
+                        <button class="search-ico" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </section>
+                <!-- <section class="logHeader">
+                    <p><i class="fas fa-shopping-bag"></i></p>
+                    <p><i class="far fa-user"></i></p>
+                </section> -->
+                <div class="header-cart-bag">
+                    <% if (usuario != "" && usuario.rol == 1) { %>
+                        <a class="header_user" href="/admin/index">
+                            <i class="fas fa-user-shield"></i>
+                        </a>
+                    <% }else if(usuario != "" ){ %>
+                        <a class="header_user" href="/users/profile">
+                            <i class="far fa-user"></i>
+                            <span>Mi perfil</span>
+                        </a>
+                    <% }else{ %>
+                        <a class="header_user" href="/users/login">
+                            <i class="far fa-user"></i>
+                        </a>
+                    <% } %>
+                        <a class="header_cart" href="/users/cart">
+                            <i class="fas fa-shopping-bag"></i>
+                        </a>
+                       
+                </div>
+                <div class="hamburger hamburger--spring">
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div>
+            </main>
+       <!--  </nav> -->
+    </header>
+    <!-- fin hn -->
+    <header class="miniHeaderFijo">
+        <section class="logoHeaderMini">
+            <a href="/"><img id="logoHeaderMini" src="/images/home/LOGO.png" alt="logo"></a>
+            
+        </section>
+        <section>
+            <ul class="menuHeaderList">
+                <li class="menuHeaderItem"><a href="/products/1">Anteojos de sol</a></li>
+                <li class="menuHeaderItem"><a href="/products/2">Anteojos de lectura</a></li>
+                <li class="menuHeaderItem"><a href="/products">Lentes Gamer</a></li>
+                <li class="menuHeaderItem"><a href="/contacto">Contacto</a></li>
+              
             </ul>
-        </nav>
-    </div>
-</header>
+        </section>
+    </header>
+    <!-- fin mini heade fijo -->
