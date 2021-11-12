@@ -50,7 +50,7 @@
 
         </section>
         <h2 class="reco">Productos Recomendados</h2>
-        <section class="card-container">
+        <!-- <section class="card-container">
             <% productsSim.forEach(product => { %>
                 <article class="card1">
                     <img src="/images/product/<%- product.productImages[0].imgName %> " alt="Lentes de <%- product.category %> ">
@@ -58,6 +58,26 @@
                         <h2 class="product-name"><%- product.name %></h2>
                         <h3 class="precio">Precio. $<%- product.price %></h3>
                         <p class="btn-comprar">Ver más</p>
+                    </div>
+                </article>
+            <% }) %>
+             
+        </section> -->
+        <section class="card-container1">
+            <% productsSim.forEach(product => { %>
+                <article class="cardFlexContainer">
+                    <img src="/images/product/<%- product.productImages[0].imgName %> " alt="Lentes de <%- product.category %> " alt="lente elegido">
+                    <div class="cardFlexInfo">
+                        <p class="cardFlPrec">Precio. $<%- product.price %></p>
+                        <h2><%- product.name %></h2>
+                        
+                        <p class="cardFlexDes"><%- product.description %></p>
+                    </div>
+        
+                    <div class= "cardFlexAcctions">
+                        <a href="">Comprar</a>
+                        <a href="">Ver</a>
+                        
                     </div>
                 </article>
             <% }) %>
