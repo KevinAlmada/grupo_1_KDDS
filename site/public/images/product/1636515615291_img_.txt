@@ -1,0 +1,23 @@
+PRENSENTACIÓN KDDS
+
+---------------------------------
+Presentación: 
+
+_KEVIN_
+	Se presenta, da una breve introducción al proyecto, de que trata y que tecnologías se usaron.
+
+---------------------------------
+1ra Parte
+
+_DARIOQ_
+	Se prensenta e inicia mostrando el home de la página y continúa dando una pasada rápida como buscar y filtrar productos. Finalmente da el pie para la 2da parte.
+---------------------------------
+2ra Parte
+
+_DARIOM_
+	Se presenta y da un recorrido de usuario para registrarse y loguearse, mostrando el perfil de usuario con su respectiva edición y finaliza eliminando el usuario creado anteriormente.
+---------------------------------
+3ra y ultima parte
+
+_KEVIN_
+	Inicia sesión como admin y da un recorrido completo,agregando,editando y eliminando productos, listando tanto usuarios como productos, cierra sesión de admin y va a la vista about us para finalizar el recorrido y responder preguntas.

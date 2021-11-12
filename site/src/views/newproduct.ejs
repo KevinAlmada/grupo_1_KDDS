@@ -20,7 +20,7 @@
                     <span class="error" id="descripcionErrors"></span>
 
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" id="imagen" multiple>
+                    <input type="file" name="imagenProducto" accept=".JPG,.JPEG,.PNG,.GIF" id="imagen" multiple>
                     <span class="error" id="imagenErrors"></span>
 
                     <label for="precio">Precio</label>
@@ -38,6 +38,16 @@
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount">
                     <span class="error" id="descuentoErrors"></span>
+
+                    <label for="forma">Forma</label>
+                    <select name="forma" id="forma">
+                        <option value="aviador">Aviador</option>
+                        <option value="cuadrada">Cuadrada</option>
+                        <option value="deportivo">Deportivo</option>
+                        <option value="redonda">Redonda</option>
+                    </select>
+
+                    <br>
                     <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Crear Producto</button>
                 </form>

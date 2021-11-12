@@ -16,13 +16,16 @@ window.addEventListener('load', function(){
         $descuentoErrors = qs('#descuentoErrors'),
         $selectCategorias = qs('#categorias'),
         $categoriasErrors = qs('#categoriasErrors'),
+        
+        $selectForma = qs('#forma'),
+        $formaErrors = qs('#formaErrors'),
+
         $form = qs('#form'),
         $submitError = qs('#submitError'),
 
         regExAlpha = /^[a-zA-Z0-9\sñáéíóúü ]*$/,
         regExPrecio = /^[0-9]\d*(\.\d+)?$/,
         regExDescuento = /^\d+$/,
-        // regExImg = /^.*\.(jpg|gif|png|jpeg)$/;
         regExImg = /(.jpg|.jpeg|.png|.gif)$/i;
 
     $inputNombre.addEventListener('blur', function(){
@@ -118,6 +121,18 @@ window.addEventListener('load', function(){
             $selectCategorias.classList.add('is-valid');
             $categoriasErrors.innerHTML = "";
         }
+    })
+
+    $selectForma.addEventListener('blur', function(){
+        if(!$selectForma.value.trim()){
+            $formaErrors.innerHTML = 'Campo requerido';
+            $selectForma.classList.add('is-invalid');
+        } else {
+            $selectForma.classList.remove('is-invalid');
+            $selectForma.classList.add('is-valid');
+            $formaErrors.innerHTML = "";
+        }
+        
     })
 
     $form.addEventListener('submit', function(e){

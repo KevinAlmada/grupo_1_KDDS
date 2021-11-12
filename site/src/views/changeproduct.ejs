@@ -19,7 +19,7 @@
                     <span class="error" id="descripcionErrors"></span>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" id="imagen" multiple value="<%= productoAModificar.imagenProducto%>">
+                    <input type="file" name="imagenProducto" accept=".JPG,.JPEG,.PNG,.GIF" id="imagen" multiple value="<%= productoAModificar.imagenProducto%>">
                     <span class="error" id="imagenErrors"></span>
                     
                     <label for="precio">Precio</label>
@@ -34,10 +34,21 @@
                     </select>
                     <span class="error" id="categoriasErrors"></span>
                     <br>
-                    <span class="error" id="submitError"></span>
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> >
                     <span class="error" id="descuentoErrors"></span>
+                    <br>
+                    
+                    <label for="forma">Forma</label>
+                    <select name="forma" id="forma">
+                        <option value="aviador">Aviador</option>
+                        <option value="cuadrada">Cuadrada</option>
+                        <option value="deportivo">Deportivo</option>
+                        <option value="redonda">Redonda</option>
+                    </select>
+                    <span class="error" id="formaErrors"></span>
+
+                    <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Editar Producto<i class="fas fa-user-edit"></i></button>   
                 </form>
                 <form action="/admin/deleteProduct/<%= productoAModificar.id %>?_method=DELETE" method="POST">
