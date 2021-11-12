@@ -47,7 +47,7 @@ if(slideBotIndex > slides.length) slideBotIndex = 1;
 slides[slideBotIndex - 1].style.display = "block";
 setTimeout(startSlidesBottom, 3000);
 }
-    /* document.getElementById("loader").classList.toggle("loader2") */
+    document.getElementById("loader").classList.toggle("loader2")
 })
 
 

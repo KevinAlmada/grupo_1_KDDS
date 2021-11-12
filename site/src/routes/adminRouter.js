@@ -11,6 +11,10 @@ router.post('/',loginAdminValidator, controller.adminLoginProcess);
 
 
 router.get('/index', userAdminCheck, controller.adminIndex);
+router.get('/users', userAdminCheck, controller.adminUser);
+/* BUSQUEDAS DE ADMIN */
+router.get('/index/search', userAdminCheck, controller.adminIndexSearch);
+router.get('/users/search', userAdminCheck, controller.adminUserSearch);
 /* Agregar producto */
 router.get('/addProduct', userAdminCheck, controller.agregarProducto);
 router.post('/addProduct',uploadFile.array('imagenProducto'), controller.guardarProducto);
