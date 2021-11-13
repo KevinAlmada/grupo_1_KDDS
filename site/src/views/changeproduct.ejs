@@ -37,7 +37,6 @@
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> >
                     <span class="error" id="descuentoErrors"></span>
-                    <br>
                     
                     <label for="forma">Forma</label>
                     <select name="forma" id="forma">
@@ -48,6 +47,25 @@
                     </select>
                     <span class="error" id="formaErrors"></span>
 
+                    <label for="material">Material</label>
+                    <select name="material" id="material">
+                        <option value="acetato">Acetato</option>
+                        <option value="Ecologico">Ecologico</option>
+                        <option value="maderametal">Madera y metal</option>
+                        <option value="metal">Metal</option>
+                    </select>
+                    <span class="error" id="materialErrors"></span>
+
+                    <label for="lente">Lente</label>
+                    <select name="lente" id="lente">
+                        <option value="degrade">Degrade</option>
+                        <option value="espejado">Espejado</option>
+                        <option value="polarizado">Polarizado</option>
+                        <option value="uniforme">Uniforme</option>
+                    </select>
+                    <span class="error" id="lenteErrors"></span>
+
+                    <br />
                     <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Editar Producto<i class="fas fa-user-edit"></i></button>   
                 </form>

@@ -37,6 +37,14 @@ module.exports = (sequelize,dataTypes) => {
         shape:{
             type:dataTypes.STRING(45),
             allowNull:false
+        },
+        material:{
+            type:dataTypes.STRING(45),
+            allowNull:false
+        },
+        lente:{
+            type:dataTypes.STRING(45),
+            allowNull:false
         }
     }
     let config={

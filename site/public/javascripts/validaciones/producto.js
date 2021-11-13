@@ -19,6 +19,10 @@ window.addEventListener('load', function(){
         
         $selectForma = qs('#forma'),
         $formaErrors = qs('#formaErrors'),
+        $selectMaterial = qs('#material'),
+        $materialErrors = qs('#materialErrors'),
+        $selectLente = qs('#lente'),
+        $lenteErrors = qs('#lenteErrors')
 
         $form = qs('#form'),
         $submitError = qs('#submitError'),
@@ -131,6 +135,30 @@ window.addEventListener('load', function(){
             $selectForma.classList.remove('is-invalid');
             $selectForma.classList.add('is-valid');
             $formaErrors.innerHTML = "";
+        }
+        
+    })
+
+    $selectMaterial.addEventListener('blur', function(){
+        if(!$selectMaterial.value.trim()){
+            $materialErrors.innerHTML = 'Campo requerido';
+            $selectMaterial.classList.add('is-invalid');
+        } else {
+            $selectMaterial.classList.remove('is-invalid');
+            $selectMaterial.classList.add('is-valid');
+            $materialErrors.innerHTML = "";
+        }
+        
+    })
+
+    $selectLente.addEventListener('blur', function(){
+        if(!$selectLente.value.trim()){
+            $lenteErrors.innerHTML = 'Campo requerido';
+            $selectLente.classList.add('is-invalid');
+        } else {
+            $selectLente.classList.remove('is-invalid');
+            $selectLente.classList.add('is-valid');
+            $lenteErrors.innerHTML = "";
         }
         
     })

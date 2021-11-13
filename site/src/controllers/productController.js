@@ -49,13 +49,13 @@ module.exports = {
             queryObject.where.shape = forma
         }
         
-        // if(material != null){
-        //     queryObject.where.material = material
-        // }
+        if(material != null){
+            queryObject.where.material = material
+        }
 
-        // if(lente != null){
-        //     queryObject.where.lente = lente
-        // }
+        if(lente != null){
+            queryObject.where.lente = lente
+        }
 
         if(oferta != null){
             queryObject.where.discount = {[Op.gt]: 0}

@@ -60,7 +60,7 @@ module.exports = {
         })
     },
     guardarProducto:(req,res)=>{
-        const {nombre,descripcion,precio,discount,categorias,forma} = req.body
+        const {nombre,descripcion,precio,discount,categorias,forma,material,lente} = req.body
         let imagenesProd = []
         if (req.files.length > 0) {
             req.files.forEach(imagen =>{
@@ -76,7 +76,9 @@ module.exports = {
             discount:discount,
             price:precio,
             categoryId:categorias,
-            shape:forma
+            shape:forma,
+            material:material,
+            lente:lente
         })
             .then((producto)=> {
                 let images = imagenesProd.map(imagen => {
@@ -112,7 +114,7 @@ module.exports = {
     },
 
     editarProducto:(req,res)=>{
-        let { nombre,precio,descripcion,discount,categorias,forma } = req.body;
+        let { nombre,precio,descripcion,discount,categorias,forma,material,lente} = req.body;
         let imgProd = []
         if (req.files) {
             req.files.forEach(img =>{imgProd.push(img.filename)})
@@ -124,7 +126,9 @@ module.exports = {
             discount:discount,
             price:precio,
             categoryId:categorias,
-            shape:forma
+            shape:forma,
+            material:material,
+            lente:lente
         },{
             where:{id:+req.params.id},
             include:[{association:"category"},{association:"productImages"}]
