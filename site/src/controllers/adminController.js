@@ -3,6 +3,7 @@ const path = require('path');
 const db = require('../database/models')
 const {validationResult}=require('express-validator')
 const bcrypt = require('bcryptjs')
+const { Op } = require("sequelize");
 
 module.exports = {
     adminLogin:(req,res)=>{
@@ -41,19 +42,64 @@ module.exports = {
         let productPromise = db.Products.findAll({
             include:[{association:"category"}]
         })
-        let userPromise = db.Users.findAll()
-        Promise.all([productPromise,userPromise])
-            .then(([productdb,usersdb]) => {
+            .then(productdb => {
                 res.render('adminIndex',{
                     title:"Admin Index",
-                    productdb ,
+                    productdb
+                })
+            })
+       
+    },
+    adminIndexSearch:(req,res)=>{
+        
+        let busqueda = req.query.buscador.trim().toLowerCase();
+
+        db.Products.findAll({
+            include:[{association:"category"}],
+            where: {
+                [Op.or]: [
+                    {name: {[Op.like]:`%${busqueda}%`}},
+                    {description: {[Op.like]:`%${busqueda}%`}},
+                    {price: {[Op.like]:`%${busqueda}%`}},
+                ]
+                }
+        })
+        .then(productdb => {
+            res.render('adminIndex',{
+                title:"Resultados de tu busqueda",
+                productdb
+            })
+            })
+    },
+    adminUser:(req,res)=>{
+        db.Users.findAll()
+            .then((usersdb) => {
+                res.render('adminUser',{
+                    title:"Usuarios",
                     usersdb
                 })
             })
        
-    }, 
+    },
+    adminUserSearch:(req,res)=>{
+        let busqueda = req.query.buscador.trim().toLowerCase();
 
-
+        db.Users.findAll({
+            where: {
+                [Op.or]: [
+                    {first_name: {[Op.like]:`%${busqueda}%`}},
+                    {last_name: {[Op.like]:`%${busqueda}%`}},
+                    {email: {[Op.like]:`%${busqueda}%`}},
+                ]
+              }
+        })
+            .then(usersdb => {
+                res.render('adminUser',{
+                    title:"Usuarios",
+                    usersdb
+                })
+            })
+    },
     agregarProducto:(req,res)=>{
         res.render('newproduct',{
             title : "KDDS"
@@ -164,3 +210,8 @@ module.exports = {
     }
 
 }
+
+
+/* 
+res.redirect(`/admin/products#${product.id}`))
+ */

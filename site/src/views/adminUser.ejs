@@ -7,42 +7,37 @@
     <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
     
     <ul>
-        <li><a class="btn-newp" href="/admin/index">Productos</a></li>
-        <li><a class="btn-newp" href="/admin/users">Usuarios</a></li>
+        <li><a class="btn-newp" href="#tituloProd">Productos</a></li>
+        <li><a class="btn-newp" href="#tituloUsers">Usuarios</a></li>
         <li><a class="btn-newp" href="/">Home</a></li>
         <li><a class="btn-newp" href="/admin/addProduct">Nuevo</a></li>
         <li><a href="/users/logout" class="logoutAdmin">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
     </ul>
-    <form action="/admin/index/search">
-        <input type="search" name="buscador">
+    <form action="/admin/users/search">
+        <input type="search" name="buscador" id="buscador">
         <button type="submit"></button>
     </form>
 </nav>
+    <h2 id="tituloUsers">Usuarios</h2>
     <section class="admin-section">
         <table class="adminP-table">
             <thead>
               <tr>
                 <th>id</th>
                 <th>Nombre</th>
-                <th>Categoría</th>
-                
-                <th>Precio</th>
-                <th>Descuento</th>
+                <th>rol</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
               </tr>
             </thead>
             <tbody>
-      <h2 id="tituloProd">Productos</h2>
-                <% productdb.forEach(product => { %>
+                <% usersdb.forEach(user => { %>
                   <tr class="tablerow-admin">
-                      <td><%= product.id %> </td>
-                      <td><%= product.name %></td>
-                      <td><%= product.category.name %></td>
-                      <td><%= product.price %></td>
-                      <td><%= product.discount %></td>
-                      <td><a href="/admin/changeProduct/<%=product.id %> "><i class="fas fa-user-edit"></i></a></td>
-                      <td><form action="/admin/deleteProduct/<%= product.id %>?_method=DELETE" method="POST">
+                      <td><%= user.id %> </td>
+                      <td><%= user.first_name + " " + user.last_name  %></td>
+                      <td><%= user.rol == 1 ? "ADMIN" : "USER" %></td>
+                      <td><a href="/users/useredit/<%=user.id %>"><i class="fas fa-user-edit"></i></a></td>
+                      <td><form action="/users/userdelete/<%= user.id %>?_method=DELETE" method="POST">
                         <button onclick="if (!confirm('Desea eliminar el producto: <%= product.name %> ?')) { return false }" type="submit"  class="delete-product"><i class="fas fa-trash"></i></button>
                     </form></td>
                     </tr>
