@@ -365,7 +365,7 @@
 
 @media (min-width:576px){
     .body-product{
-        background: linear-gradient(var(--colorCeleste) , var(--colorAzul) 80%);
+        background-color: #eee
     }
     main{
         background-color: white;
@@ -408,7 +408,7 @@
         
     }
     .cardFlexContainer{
-        width: 25vh;
+        width: 25%;
     }
     .container-product .product-name{
         margin-top: 50px;
