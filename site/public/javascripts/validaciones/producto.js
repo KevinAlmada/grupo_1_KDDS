@@ -2,6 +2,9 @@ function qs(element){
     return document.querySelector(element);
 }
 
+
+
+
 window.addEventListener('load', function(){
 
     let $inputNombre = qs('#nombre'),
@@ -68,19 +71,42 @@ window.addEventListener('load', function(){
         }
     });
 
-    $inputImagen.addEventListener('blur', function(){
-        switch(true){
-            case !regExImg.test($inputImagen.value.toLowerCase()):
-                $imagenErrors.innerHTML = 'Ingrese la imagen con una extension valida (EJ: PG, JPEG, PNG, GIF)';
-                $inputImagen.classList.add('is-invalid');
-                break;
-            default:
-                $inputImagen.classList.remove('is-invalid');
-                $inputImagen.classList.add('is-valid');
-                $imagenErrors.innerHTML = "";
-                break;
+    // $inputImagen.addEventListener('blur', function(){
+    //     switch(true){
+    //         case !regExImg.test($inputImagen.value.toLowerCase()):
+    //             $imagenErrors.innerHTML = 'Ingrese la imagen con una extension valida (EJ: PG, JPEG, PNG, GIF)';
+    //             $inputImagen.classList.add('is-invalid');
+    //             break;
+    //         default:
+    //             $inputImagen.classList.remove('is-invalid');
+    //             $inputImagen.classList.add('is-valid');
+    //             $imagenErrors.innerHTML = "";
+    //             break;
+    //     }
+    // })
+    $inputImagen.addEventListener('blur', function fileValidation(){
+        var errorImage = document.getElementById('imagenErrors');
+        var filePath = inputImage.value; //Capturo el valor del input
+        var allowefExtensions = /(.jpg|.jpeg|.png|.gif)$/i; //Extensiones permitidas
+        if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+            let error = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)'
+            errorImage.innerHTML = error;
+            inputImage.value = '';
+            document.getElementById('#preview').innerHTML = '';
+            return false;
+        }else{
+            // Image preview
+            if(inputImage.files && inputImage.files[0]){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    document.getElementById('preview').innerHTML = '<img src="' + e.target.result +'"/>';
+                };
+                reader.readAsDataURL(inputImage.files[0]);
+                errorImage.innerHTML = '';
+            }
         }
     })
+
 
     $inputPrecio.addEventListener('blur', function(){
         switch(true){
@@ -169,7 +195,7 @@ window.addEventListener('load', function(){
         let elementsForm = this.elements;
 
         for (let index = 0; index < elementsForm.length-2; index++){
-            if(elementsForm[index].value == ""){
+            if(elementsForm[index].value == "" && elementsForm[index].name != "imagenProducto" || elementsForm[index].classList.contains("is-invalid")){
                 elementsForm[index].classList.add('is-invalid');
                 $submitError.innerHTML = 'Los campos señalados son obligatorios';
                 error = true;

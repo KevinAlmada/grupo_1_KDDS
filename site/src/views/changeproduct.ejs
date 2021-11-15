@@ -19,8 +19,14 @@
                     <span class="error" id="descripcionErrors"></span>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" accept=".JPG,.JPEG,.PNG,.GIF" id="imagen" multiple value="<%= productoAModificar.imagenProducto%>">
+                    <input type="file" name="imagenProducto" accept=".JPG,.JPEG,.PNG,.GIF" id="imagen" multiple >
+                    <div id="preview">
+                        <% imagenes.forEach(imagen => { %>
+                            <img src="/images/product/<%= imagen.imgName %> " width="200px"> 
+                        <% }) %>
+                    </div>
                     <span class="error" id="imagenErrors"></span>
+
                     
                     <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio" value=<%= `${productoAModificar.price}` %> >

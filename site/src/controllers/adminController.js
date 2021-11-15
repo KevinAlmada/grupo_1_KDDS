@@ -139,11 +139,13 @@ module.exports = {
             .catch(err => console.log(err))
             },
     modificarProducto:(req,res)=>{
-        db.Products.findByPk(+req.params.id)
+        db.Products.findByPk(+req.params.id, {include: {association:"productImages"}, where:{id:req.params.id}})
             .then(productoAModificar => {
+                let imagenes = productoAModificar.productImages;
                 res.render('changeproduct',{
                     title : "KDDS",
-                    productoAModificar
+                    productoAModificar,
+                    imagenes
                 })
             })
             .catch(err => console.log(err))

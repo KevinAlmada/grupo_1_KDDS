@@ -104,21 +104,6 @@ module.exports = {
     },
     busqueda:(req,res)=>{
         let busqueda = req.query.buscador.trim().toLowerCase();
-    
-        db.Products.findAll({include:[{association:"category"},{association:"productImages"}],where:{description:{[Op.like]:`%${busqueda}%`}}})
-        .then(db => {
-            if (db.length > 0) {
-                res.render('searchResults',
-                {db ,
-                title : `resultado de busqueda de ${busqueda}`,
-                usuario:req.session.user?req.session.user:""})
-            }else{
-                res.render('error', {title : `No hay resultados para la busqueda de ${busqueda} `,
-                usuario:req.session.user?req.session.user:""} )
-            } 
-        }) 
-    },
-    filter: (req, res) => {
         let {
             categoria ,
             forma,
@@ -126,10 +111,12 @@ module.exports = {
             lente,
             oferta
         } = req.query;
-
+    
         let queryObject = {};
         queryObject.where = {};
         queryObject.include = [{association:"category"},{association:"productImages"}];
+
+        queryObject.where.name = {[Op.like]: `%${busqueda}%`};
 
         if(categoria != null){
             categoria = categoria == "sol" ? 1 : 2;
@@ -137,17 +124,17 @@ module.exports = {
         }
         
         // queryObject.where.price = {[Op.gt]: 8750}
-        // if(forma != null){
-        //     queryObject.where.shape = forma
-        // }
+        if(forma != null){
+            queryObject.where.shape = forma
+        }
         
-        // if(material != null){
-        //     queryObject.where.material = material
-        // }
+        if(material != null){
+            queryObject.where.material = material
+        }
 
-        // if(lente != null){
-        //     queryObject.where.lente = lente
-        // }
+        if(lente != null){
+            queryObject.where.lente = lente
+        }
 
         if(oferta != null){
             queryObject.where.discount = {[Op.gt]: 0}
@@ -156,13 +143,21 @@ module.exports = {
         db.Products.findAll(
             queryObject
         )
+        // db.Products.findAll({include:[{association:"category"},{association:"productImages"}],where:{description:{[Op.like]:`%${busqueda}%`}}})
         .then(db => {
-            res.render('searchResults',{
-                title : "Productos", 
-                db,
-                usuario:req.session.user?req.session.user:""
-            })
-        })
-        
+            // if (db.length > 0) {
+            //     res.render('searchResults',
+            //     {db ,
+            //     title : `resultado de busqueda de ${busqueda}`,
+            //     usuario:req.session.user?req.session.user:""})
+            // } else {
+            //     res.render('error', {title : `No hay resultados para la busqueda de ${busqueda} `,
+            //     usuario:req.session.user?req.session.user:""} )
+            // } 
+            res.render('searchResults',
+                {db ,
+                title : `resultado de busqueda de ${busqueda}`,
+                usuario:req.session.user?req.session.user:""})
+        }) 
     }
 }
