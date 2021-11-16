@@ -106,7 +106,7 @@ module.exports = {
         })
     },
     guardarProducto:(req,res)=>{
-        const {nombre,descripcion,precio,discount,categorias} = req.body
+        const {nombre,descripcion,precio,discount,categorias,forma,material,lente} = req.body
         let imagenesProd = []
         if (req.files.length > 0) {
             req.files.forEach(imagen =>{
@@ -121,7 +121,10 @@ module.exports = {
             images:`['default-image.png']`,
             discount:discount,
             price:precio,
-            categoryId:categorias
+            categoryId:categorias,
+            shape:forma,
+            material:material,
+            lente:lente
         })
             .then((producto)=> {
                 let images = imagenesProd.map(imagen => {
@@ -136,11 +139,13 @@ module.exports = {
             .catch(err => console.log(err))
             },
     modificarProducto:(req,res)=>{
-        db.Products.findByPk(+req.params.id)
+        db.Products.findByPk(+req.params.id, {include: {association:"productImages"}, where:{id:req.params.id}})
             .then(productoAModificar => {
+                let imagenes = productoAModificar.productImages;
                 res.render('changeproduct',{
                     title : "KDDS",
-                    productoAModificar
+                    productoAModificar,
+                    imagenes
                 })
             })
             .catch(err => console.log(err))
@@ -157,7 +162,7 @@ module.exports = {
     },
 
     editarProducto:(req,res)=>{
-        let { nombre,precio,descripcion,discount,categorias } = req.body;
+        let { nombre,precio,descripcion,discount,categorias,forma,material,lente} = req.body;
         let imgProd = []
         if (req.files) {
             req.files.forEach(img =>{imgProd.push(img.filename)})
@@ -168,7 +173,10 @@ module.exports = {
             description:descripcion,
             discount:discount,
             price:precio,
-            categoryId:categorias
+            categoryId:categorias,
+            shape:forma,
+            material:material,
+            lente:lente
         },{
             where:{id:+req.params.id},
             include:[{association:"category"},{association:"productImages"}]

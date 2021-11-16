@@ -20,7 +20,7 @@
                     <span class="error" id="descripcionErrors"></span>
 
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" id="imagen" multiple>
+                    <input type="file" name="imagenProducto" accept=".JPG,.JPEG,.PNG,.GIF" id="imagen" multiple>
                     <span class="error" id="imagenErrors"></span>
 
                     <label for="precio">Precio</label>
@@ -38,6 +38,35 @@
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount">
                     <span class="error" id="descuentoErrors"></span>
+
+                    <label for="forma">Forma</label>
+                    <select name="forma" id="forma">
+                        <option value="aviador">Aviador</option>
+                        <option value="cuadrada">Cuadrada</option>
+                        <option value="deportivo">Deportivo</option>
+                        <option value="redonda">Redonda</option>
+                    </select>
+                    <span class="error" id="formaErrors"></span>
+
+                    <label for="material">Material</label>
+                    <select name="material" id="material">
+                        <option value="acetato">Acetato</option>
+                        <option value="Ecologico">Ecologico</option>
+                        <option value="maderametal">Madera y metal</option>
+                        <option value="metal">Metal</option>
+                    </select>
+                    <span class="error" id="materialErrors"></span>
+
+                    <label for="lente">Lente</label>
+                    <select name="lente" id="lente">
+                        <option value="degrade">Degrade</option>
+                        <option value="espejado">Espejado</option>
+                        <option value="polarizado">Polarizado</option>
+                        <option value="uniforme">Uniforme</option>
+                    </select>
+                    <span class="error" id="lenteErrors"></span>
+
+                    <br>
                     <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Crear Producto</button>
                 </form>

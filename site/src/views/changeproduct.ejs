@@ -19,8 +19,14 @@
                     <span class="error" id="descripcionErrors"></span>
                     
                     <label for="imagen">Imagen</label>
-                    <input type="file" name="imagenProducto" id="imagen" multiple value="<%= productoAModificar.imagenProducto%>">
+                    <input type="file" name="imagenProducto" accept=".JPG,.JPEG,.PNG,.GIF" id="imagen" multiple >
+                    <div id="preview">
+                        <% imagenes.forEach(imagen => { %>
+                            <img src="/images/product/<%= imagen.imgName %> " width="200px"> 
+                        <% }) %>
+                    </div>
                     <span class="error" id="imagenErrors"></span>
+
                     
                     <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio" value=<%= `${productoAModificar.price}` %> >
@@ -34,10 +40,39 @@
                     </select>
                     <span class="error" id="categoriasErrors"></span>
                     <br>
-                    <span class="error" id="submitError"></span>
                     <label for="discount">Descuento</label>
                     <input type="number" name="discount" id="discount" value=<%= `${productoAModificar.discount}` %> >
                     <span class="error" id="descuentoErrors"></span>
+                    
+                    <label for="forma">Forma</label>
+                    <select name="forma" id="forma">
+                        <option value="aviador">Aviador</option>
+                        <option value="cuadrada">Cuadrada</option>
+                        <option value="deportivo">Deportivo</option>
+                        <option value="redonda">Redonda</option>
+                    </select>
+                    <span class="error" id="formaErrors"></span>
+
+                    <label for="material">Material</label>
+                    <select name="material" id="material">
+                        <option value="acetato">Acetato</option>
+                        <option value="Ecologico">Ecologico</option>
+                        <option value="maderametal">Madera y metal</option>
+                        <option value="metal">Metal</option>
+                    </select>
+                    <span class="error" id="materialErrors"></span>
+
+                    <label for="lente">Lente</label>
+                    <select name="lente" id="lente">
+                        <option value="degrade">Degrade</option>
+                        <option value="espejado">Espejado</option>
+                        <option value="polarizado">Polarizado</option>
+                        <option value="uniforme">Uniforme</option>
+                    </select>
+                    <span class="error" id="lenteErrors"></span>
+
+                    <br />
+                    <span class="error" id="submitError"></span>
                     <button class="btn-newp" type="submit">Editar Producto<i class="fas fa-user-edit"></i></button>   
                 </form>
                 <form action="/admin/deleteProduct/<%= productoAModificar.id %>?_method=DELETE" method="POST">

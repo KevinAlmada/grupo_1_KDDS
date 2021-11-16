@@ -2,6 +2,9 @@ function qs(element){
     return document.querySelector(element);
 }
 
+
+
+
 window.addEventListener('load', function(){
 
     let $inputNombre = qs('#nombre'),
@@ -16,13 +19,20 @@ window.addEventListener('load', function(){
         $descuentoErrors = qs('#descuentoErrors'),
         $selectCategorias = qs('#categorias'),
         $categoriasErrors = qs('#categoriasErrors'),
+        
+        $selectForma = qs('#forma'),
+        $formaErrors = qs('#formaErrors'),
+        $selectMaterial = qs('#material'),
+        $materialErrors = qs('#materialErrors'),
+        $selectLente = qs('#lente'),
+        $lenteErrors = qs('#lenteErrors')
+
         $form = qs('#form'),
         $submitError = qs('#submitError'),
 
         regExAlpha = /^[a-zA-Z0-9\sñáéíóúü ]*$/,
         regExPrecio = /^[0-9]\d*(\.\d+)?$/,
         regExDescuento = /^\d+$/,
-        // regExImg = /^.*\.(jpg|gif|png|jpeg)$/;
         regExImg = /(.jpg|.jpeg|.png|.gif)$/i;
 
     $inputNombre.addEventListener('blur', function(){
@@ -61,19 +71,42 @@ window.addEventListener('load', function(){
         }
     });
 
-    $inputImagen.addEventListener('blur', function(){
-        switch(true){
-            case !regExImg.test($inputImagen.value.toLowerCase()):
-                $imagenErrors.innerHTML = 'Ingrese la imagen con una extension valida (EJ: PG, JPEG, PNG, GIF)';
-                $inputImagen.classList.add('is-invalid');
-                break;
-            default:
-                $inputImagen.classList.remove('is-invalid');
-                $inputImagen.classList.add('is-valid');
-                $imagenErrors.innerHTML = "";
-                break;
+    // $inputImagen.addEventListener('blur', function(){
+    //     switch(true){
+    //         case !regExImg.test($inputImagen.value.toLowerCase()):
+    //             $imagenErrors.innerHTML = 'Ingrese la imagen con una extension valida (EJ: PG, JPEG, PNG, GIF)';
+    //             $inputImagen.classList.add('is-invalid');
+    //             break;
+    //         default:
+    //             $inputImagen.classList.remove('is-invalid');
+    //             $inputImagen.classList.add('is-valid');
+    //             $imagenErrors.innerHTML = "";
+    //             break;
+    //     }
+    // })
+    $inputImagen.addEventListener('blur', function fileValidation(){
+        var errorImage = document.getElementById('imagenErrors');
+        var filePath = inputImage.value; //Capturo el valor del input
+        var allowefExtensions = /(.jpg|.jpeg|.png|.gif)$/i; //Extensiones permitidas
+        if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+            let error = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)'
+            errorImage.innerHTML = error;
+            inputImage.value = '';
+            document.getElementById('#preview').innerHTML = '';
+            return false;
+        }else{
+            // Image preview
+            if(inputImage.files && inputImage.files[0]){
+                var reader = new FileReader();
+                reader.onload = function(e){
+                    document.getElementById('preview').innerHTML = '<img src="' + e.target.result +'"/>';
+                };
+                reader.readAsDataURL(inputImage.files[0]);
+                errorImage.innerHTML = '';
+            }
         }
     })
+
 
     $inputPrecio.addEventListener('blur', function(){
         switch(true){
@@ -120,13 +153,49 @@ window.addEventListener('load', function(){
         }
     })
 
+    $selectForma.addEventListener('blur', function(){
+        if(!$selectForma.value.trim()){
+            $formaErrors.innerHTML = 'Campo requerido';
+            $selectForma.classList.add('is-invalid');
+        } else {
+            $selectForma.classList.remove('is-invalid');
+            $selectForma.classList.add('is-valid');
+            $formaErrors.innerHTML = "";
+        }
+        
+    })
+
+    $selectMaterial.addEventListener('blur', function(){
+        if(!$selectMaterial.value.trim()){
+            $materialErrors.innerHTML = 'Campo requerido';
+            $selectMaterial.classList.add('is-invalid');
+        } else {
+            $selectMaterial.classList.remove('is-invalid');
+            $selectMaterial.classList.add('is-valid');
+            $materialErrors.innerHTML = "";
+        }
+        
+    })
+
+    $selectLente.addEventListener('blur', function(){
+        if(!$selectLente.value.trim()){
+            $lenteErrors.innerHTML = 'Campo requerido';
+            $selectLente.classList.add('is-invalid');
+        } else {
+            $selectLente.classList.remove('is-invalid');
+            $selectLente.classList.add('is-valid');
+            $lenteErrors.innerHTML = "";
+        }
+        
+    })
+
     $form.addEventListener('submit', function(e){
         let error = false;
         e.preventDefault();
         let elementsForm = this.elements;
 
         for (let index = 0; index < elementsForm.length-2; index++){
-            if(elementsForm[index].value == ""){
+            if(elementsForm[index].value == "" && elementsForm[index].name != "imagenProducto" || elementsForm[index].classList.contains("is-invalid")){
                 elementsForm[index].classList.add('is-invalid');
                 $submitError.innerHTML = 'Los campos señalados son obligatorios';
                 error = true;

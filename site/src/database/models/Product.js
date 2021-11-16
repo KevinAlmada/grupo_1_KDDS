@@ -33,6 +33,18 @@ module.exports = (sequelize,dataTypes) => {
         },
         updatedAt:{
             type:dataTypes.DATE
+        },
+        shape:{
+            type:dataTypes.STRING(45),
+            allowNull:false
+        },
+        material:{
+            type:dataTypes.STRING(45),
+            allowNull:false
+        },
+        lente:{
+            type:dataTypes.STRING(45),
+            allowNull:false
         }
     }
     let config={

@@ -13,9 +13,11 @@
 }
 
 .seachTitle{
-    margin-top: 150px;
+    /* margin-top: 150px; */
+    margin-top: 20px;
     font-size: 1.8rem;
     text-align: center;
+    margin-left: 13%;
 }
 
 /* navbar */
@@ -225,7 +227,7 @@
     .searchResultsMain{
         MAX-WIDTH: 1333PX;
         DISPLAY: FLEX;
-        FLEX-DIRECTION: column;
+        /* FLEX-DIRECTION: column; */
         /* JUSTIFY-CONTENT: center; */
         /* ALIGN-ITEMS: center; */
         MARGIN: 0 AUTO;
