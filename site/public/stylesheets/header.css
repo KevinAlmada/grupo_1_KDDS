@@ -362,10 +362,7 @@ a{
     }
 }
 @media (min-width:768px) {
-    .miniHeaderFijo{
-        display: flex;
-        
-    }
+    
     .side-bar-logo h1 {
         font-size: 46px;
     }
@@ -387,6 +384,10 @@ a{
     header{
         position:static
     } 
+    .miniHeaderFijo{
+        display: flex;
+        
+    }
     #menuLateral{
         display: none;
     }

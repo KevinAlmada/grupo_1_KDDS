@@ -45,7 +45,7 @@ width: 100%;
 
 /* videobanner */
 .videoBanner{
-    height: 80vh;
+    /* height: 80vh; */
     overflow: hidden;
     margin: 0 auto;
     top: 0;
