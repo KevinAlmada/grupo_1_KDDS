@@ -6,6 +6,13 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+/* webkit input search  */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
 /* MENU LATERAL */
 #burger {
     font-size: 1.3rem;  
@@ -143,27 +150,28 @@
 }
 .search-bar-desktop input{
     width: 100%;
-    height: 25px;
-    border-radius: 5px;
-    border : 1px solid #4285F4 ;
+    height: 30px;
+    border-radius: 3px; 
     outline-style: none;
+    border: none;
+    border-bottom: 1px solid var(--colorNaranjaOscuro);
     position: relative;
     bottom: 5px;
-    padding: 12px;
+    background-color: transparent;
+     padding: 12px; 
 }
 .search-bar-desktop input:focus{
-    transform: scale(1.5);
+    
 }
 .search-bar-desktop button{
     position: absolute;
     border: none;
-    right: 9px;
+    right: 2px;
     top: 0px;
     background-color: transparent;
     font-size: 1em;
     cursor: pointer;
-    color: #4285F4;
-
+    color: var(--colorNaranjaOscuro);
 }
 .search-bar-desktop button :hover{
     color: var(--colorNaranjaOscuro);

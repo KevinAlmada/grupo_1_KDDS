@@ -83,3 +83,6 @@
     color: white;
     padding: 3px;
 }
+.adminSearchForm{
+    display: flex;
+}
