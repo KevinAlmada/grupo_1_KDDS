@@ -13,16 +13,45 @@
 
 
     <main class="main">
+        
         <section class="container-product">
-            <article class="product-img"><img src="/images/product/<%= db.productImages[0].imgName %> " alt=`anteojos de <%= db.category %> ` ></article>
+            <article class="nuevoDisplay">
+                <!-- The expanding image container -->
+                <div class="container">
+                    <!-- Close the image -->
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                
+                    <!-- Expanded image -->
+                    <img id="expandedImg"  src="/images/product/<%= db.productImages[0].imgName %> " alt=`anteojos de <%= db.category %> `  onclick="myFunction(this);">
+                
+                    
+                </div>  
+                <!-- The grid: four columns -->
+            <div class="row">
+                <div class="column">
+                    <% db.productImages.forEach(img=>{ %>
+                        <img src="/images/product/<%= img.imgName %> " alt=`anteojos de <%= db.category %> `  onclick="myFunction(this);">
+                    <%  }) %> 
+                    </div>
+    
+            </div>
+            <div class="row">
+                
+                
+    
+            </div>
+  
+    
+            </article>
             
         
             <article class="product-info">
                 <h2 class="product-name"><%= db.name %></h2>
                 <h3 class="precio">Precio. $<%= db.price %></h3>
-                <p class="btn-comprar">Comprar</p>
+                
                 
                 <p class="description"><%= db.description %></p>
+                <p class="btn-comprar">Comprar</p>
             </article>
         </section>
         <section class="estilo-container">
@@ -50,19 +79,7 @@
 
         </section>
         <h2 class="reco">Productos Recomendados</h2>
-        <!-- <section class="card-container">
-            <% productsSim.forEach(product => { %>
-                <article class="card1">
-                    <img src="/images/product/<%- product.productImages[0].imgName %> " alt="Lentes de <%- product.category %> ">
-                    <div class="product_info_card">
-                        <h2 class="product-name"><%- product.name %></h2>
-                        <h3 class="precio">Precio. $<%- product.price %></h3>
-                        <p class="btn-comprar">Ver más</p>
-                    </div>
-                </article>
-            <% }) %>
-             
-        </section> -->
+        
         <section class="card-container1">
             <% productsSim.forEach(product => { %>
                 <article class="cardFlexContainer">
@@ -76,7 +93,7 @@
         
                     <div class= "cardFlexAcctions">
                         
-                        <a href="">Ver</a>
+                        <a href="<%- product.id %>">Ver</a>
                         
                     </div>
                 </article>
@@ -95,5 +112,14 @@
     <%- include('partials/footer.ejs') %> 
     
     <!-- FIN DE FOOTER -->
+    <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          
+          expandImg.src = imgs.src;
+          
+          expandImg.parentElement.style.display = "block";
+        }
+        </script>
 </body>
 </html>

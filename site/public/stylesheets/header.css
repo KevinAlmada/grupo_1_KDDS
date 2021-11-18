@@ -309,7 +309,7 @@ a{
     align-items: center;
     position: sticky;
     width: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 35%, rgba(213,244,250,.5) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 35%, rgba(213,244,250,1) 100%);
     margin-top:1px;
     
 }
