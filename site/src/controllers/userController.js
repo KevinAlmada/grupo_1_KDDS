@@ -24,7 +24,8 @@ module.exports = {
                             first_name: user.first_name,
                             last_name: user.last_name,
                             email: user.email,
-                            rol:user.rol
+                            rol:user.rol,
+                            test:0
                         }
                         if (req.body.remember) {
                             res.cookie('cookieKDDS',req.session.user,{maxAge : 1000*60*5})
@@ -142,7 +143,8 @@ module.exports = {
     deleteProfile:(req,res)=>{
         res.render('deleteUser',{
             title : "Eliminar usuario",
-            usuario:req.session.user?req.session.user:""
+            usuario:req.session.user?req.session.user:"",
+            update:false
         })
     },
     processDeleteProfile:(req,res) => {
@@ -170,12 +172,17 @@ module.exports = {
                             }) 
                         res.redirect("/")
                     }else{
-                        res.render('login', {
-                            title : "Login - KDDS",
-                            errors: errors.mapped(),
-                            errorMsg: "Credenciales inválidas",
-                            usuario:req.session.user?req.session.user:""
-                        })
+                        req.session.user.test = ++req.session.user.test 
+                        if (req.session.user.test >= 3) {
+                            res.redirect("/users/logout")
+                        } else {
+                            res.render('login', {
+                                title : "Login - KDDS",
+                                errors: errors.mapped(),
+                                errorMsg: "Credenciales inválidas",
+                                usuario:req.session.user?req.session.user:""
+                            })
+                        } 
                     }
                 })        
         }else{
@@ -187,5 +194,50 @@ module.exports = {
             })
         }       
         
+    },
+    updatePassword:(req,res)=>{
+        res.render('deleteUser',{
+            title : "updatePassword",
+            usuario:req.session.user?req.session.user:"",
+            update:true,
+            errPass:""
+        })
+    },
+    processUpdatePassword:(req,res) => {
+        let errors = validationResult(req)
+        if(errors.isEmpty()){
+              db.Users.findOne({where:{id:req.params.id}})
+                .then(user => {
+                   if(user && bcrypt.compareSync(req.body.password, user.password)){
+                    let pass = bcrypt.hashSync(req.body.pass1,10)
+                    db.Users.update({
+                        password:pass
+                     },{where:{id:req.params.id}})
+                     .then(() => {
+                         res.redirect("/users/profile")
+                     })
+                    }else{
+                        req.session.user.test = ++req.session.user.test 
+                        if (req.session.user.test >= 3) {
+                            res.redirect("/users/logout")
+                        } else {
+                            res.render('deleteUser', {
+                                title : "Editar pass",
+                                errors: "Credenciales invalidas",
+                                usuario:req.session.user?req.session.user:"",
+                                update:true,
+                                errPass:"Debes ingresar tu contraseña actual"
+                            })
+                        }
+                    } 
+                })      
+        }else{
+            res.render('deleteUser', {
+                title : "Editar pass",
+                errors: errors.mapped(),
+                usuario:req.session.user?req.session.user:"",
+                update:true
+            }) 
+        }  
     }
 }

@@ -11,32 +11,52 @@
     <!-- fin loader -->
     <main class="login-main" id="delete-main">
         <div class="container-form">
-            <h2 class="form-title">gracias vuelva prontos</h2>
+            <h2 class="form-title"><%= update ? "Cambia tu contraseña" : "gracias vuelva prontos" %></h2>
 
-            <form action="/users/userdelete?_method=DELETE" method="POST">
-                
-                <p class="element">
-                    <label for="email" >E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="usuario@email.com" value="<%= locals.old && old.email%>" >
-                    
-                </p>
-                <small class="text-danger" id="emailError"></small>
-                <% if (locals.errors && errors.email) { %>
-                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.email.msg %> </small>
+            <form action=<%= update != "" ? `/users/passUpdate/${usuario.id}?_method=PUT` : "/users/userdelete?_method=DELETE" %> method="POST">
+                <% if (!update) { %>
+                    <p class="element">
+                        <label for="email" >E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="usuario@email.com" value="<%= locals.old && old.email%>" >
+                        
+                    </p>
+                    <small class="text-danger" id="emailError"></small>
+                    <% if (locals.errors && errors.email) { %>
+                        <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.email.msg %> </small>
+                       <% } %>
                    <% } %>
                 <p class="element">
-                    <label for="password" >Contraseña</label>
+                    <label for="password" ><%= update ? "Contraseña actual" : "Contraseña" %></label>
                     <input type="password" id="password" name="password" placeholder="ingresa al menos 8 caracteres" value="<%= locals.old && old.password%>">
-                    
                 </p>
                 <small class="text-danger" id="passwordError"></small>
                 <% if (locals.errors && errors.password) { %>
                     <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.password.msg %> </small>
                    <% } %>
-                
+                <% if (errPass) { %>
+                    <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errPass %> </small>
+                   <% } %>
+                   <% if (update) { %>
+                    <p class="element">
+                        <label for="pass1" >Ingrese su nueva contraseña</label>
+                        <input type="password" id="password" name="pass1" placeholder="ingresa al menos 8 caracteres" value="<%= locals.old && old.pass1%>">   
+                    </p>
+                    <% if (locals.errors && errors.pass1) { %>
+                        <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.pass1.msg %> </small>
+                       <% } %>
+                    <p class="element">
+                        <label for="pass2" >Repita su nueva contraseña</label>
+                        <input type="password" id="password" name="pass2" placeholder="ingresa al menos 8 caracteres" value="<%= locals.old && old.pass2%>"> 
+                    </p>
+                    <% if (locals.errors && errors.pass2) { %>
+                        <small class="text-danger"><i class="fas fa-exclamation-circle"></i><%= errors.pass2.msg %> </small>
+                       <% } %>
+                    
+                    
+                   <% } %>
                 <div class="boton-enviar">
                     <button type="submit" class="enviar">
-                        Elimina mi Cuenta
+                        <%= update ? "Actualizar mi contraseña" : "Elimina mi cuenta" %>
                     </button>
                     
                 </div>
@@ -63,5 +83,8 @@
     
     <!-- FIN DE FOOTER -->  
     <script src="/javascripts/validaciones/login.js"></script>
+    <% if (update) { %>
+        <script src="javascripts/validaciones/changePassword.js"></script>
+    <% } %>
 </body>
 </html>

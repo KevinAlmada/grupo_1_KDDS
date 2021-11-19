@@ -109,9 +109,7 @@
                         </a>
                     <% }else if(usuario != "" ){ %>
                         <a class="header_user" href="/users/profile">
-                            <i class="far fa-user"></i>
-                            <span>Mi perfil</span>
-                        </a>
+                            <i class="far fa-user"><span><%- usuario.first_name %> </span></i>
                     <% }else{ %>
                         <a class="header_user" href="/users/login">
                             <i class="far fa-user"></i>
