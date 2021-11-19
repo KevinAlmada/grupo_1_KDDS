@@ -6,6 +6,8 @@
     display: none; 
 }
 
+
+
 .slider-container .card {
     border: 1px solid var(--colorNaranjaClaro);
     background-color: white;
@@ -19,6 +21,23 @@
     padding: 20px;
 }
 
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 100px solid var(--colorNaranjaClaro);
+    border-left: 100px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.descuento {
+    position: absolute;
+    right: 0;
+    font-size: 1.1rem;
+    color: whitesmoke;
+}
+
 .slider-container .card a {
     text-decoration: none;
     color: black;
@@ -27,6 +46,24 @@
 .slider-container .card a img {
     height: 200px;
     width: 100%;
+    
+}
+.imagen {
+    height: 300px;
+    /* border: salmon 1px solid; */
+    width: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.precioTachado {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.precioFinal {
+    color: var(--colorNaranjaOscuro);
 }
 
 @media (min-width:1024px){

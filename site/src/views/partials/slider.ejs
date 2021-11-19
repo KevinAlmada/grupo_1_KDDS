@@ -1,13 +1,19 @@
 <div class="slider-container ">
     <% db.forEach(product => { %>
         <article class="card carousel-cell">
+            <div class="triangle"></div>
+            <span class="descuento"><strong><%= product.discount %>%OFF</strong></span>
             <a href="/products/productDetail/<%- product.id %>">
-                <img src="/images/product/<%- product.productImages[0].imgName %>">
+                <div class="imagen" style="background-image:url('/images/product/<%- product.productImages[0].imgName %>')"> </div>
+                <h2><%= product.name %></h2>
+                <!-- <img src="/images/product/<%- product.productImages[0].imgName %>"> -->
                 <div class="text-box">
-                    <h3><%- product.name %></h3>
-                    <h3>$<%- product.price %></h3>
+                    <h3 class="precioTachado">$<%- product.price %></h3>
+                    <h3 class="precioFinal">Precio final: $<%- product.price - ( (product.discount * product.price)/100) %></h3>
+                    <br>
+                    <span>3 cuotas sin interés</span>
                 </div>
-            </a>    
+            </a> 
         </article>
     <%})%> 
 </div>
