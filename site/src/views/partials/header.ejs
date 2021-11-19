@@ -109,7 +109,10 @@
                         </a>
                     <% }else if(usuario != "" ){ %>
                         <a class="header_user" href="/users/profile">
-                            <i class="far fa-user"><span><%- usuario.first_name %> </span></i>
+                            
+                            <p></i>Bienvenido <%= usuario.first_name %>  </p>
+                            
+                        </a>
                     <% }else{ %>
                         <a class="header_user" href="/users/login">
                             <i class="far fa-user"></i>
@@ -138,8 +141,7 @@
             <ul class="menuHeaderList">
                 <li class="menuHeaderItem"><a href="/products?categoria=sol">Anteojos de sol</a></li>
                 <li class="menuHeaderItem"><a href="/products?categoria=lectura">Anteojos de lectura</a></li>
-                <li class="menuHeaderItem"><a href="/products">Lentes Gamer</a></li>
-                <li class="menuHeaderItem"><a href="/contacto">Contacto</a></li>
+                <li class="menuHeaderItem"><a href="/about">Contacto</a></li>
               
             </ul>
         </section>

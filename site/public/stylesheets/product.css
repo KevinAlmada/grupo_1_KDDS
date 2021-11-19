@@ -48,6 +48,7 @@
 .container-product .precio{
     text-align: center;
     margin-top: 10px;
+    color: var(--colorNaranjaOscuro);
 
 }
 .container-product .btn-comprar{
@@ -375,7 +376,7 @@
     }
     
     .main .container-product img{
-        width: 400px;
+        width: 100%;
     }
     .main .container-product .btn-comprar{
         width: 200px;
@@ -439,7 +440,7 @@
         width: 50vw;
     }
     .container-product .description {
-        margin-left: 0;
+        margin: 8vh;
     }
         
 }
@@ -454,6 +455,7 @@
     }
     .container-product{
         margin: 15% 10% 15% 10%;
+        gap: 5%;
     }
 }
 
@@ -463,4 +465,56 @@
     }
 }
 
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    display: flex;
+    width: 33%;
+    
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    
+  }
+  
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
 
+  .nuevoDisplay{
+      width: 50%;
+      
+  }
