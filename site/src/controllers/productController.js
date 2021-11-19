@@ -116,8 +116,16 @@ module.exports = {
         queryObject.where = {};
         queryObject.include = [{association:"category"},{association:"productImages"}];
 
-        queryObject.where.description = {[Op.like]: `%${busqueda}%`};
-
+        queryObject.where= {
+            [Op.or]: [
+                {name: {[Op.like]:`%${busqueda}%`}},
+                {description: {[Op.like]:`%${busqueda}%`}},
+                {shape: {[Op.like]:`%${busqueda}%`}},
+                {material: {[Op.like]:`%${busqueda}%`}},
+                {lente: {[Op.like]:`%${busqueda}%`}},
+            ]
+            }
+    
         if(categoria != null){
             categoria = categoria == "sol" ? 1 : 2;
             queryObject.where.categoryId = categoria;

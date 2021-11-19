@@ -1,8 +1,8 @@
 module.exports={
   "development": {
     "username": "root",
-    "password": "eldaroska4",
-    "database": "kdds_db",
+    "password": "",
+    "database": "kdds_db2",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
