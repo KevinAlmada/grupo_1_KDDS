@@ -61,7 +61,7 @@
                             <a href="/products"><li>Accesorios</li></a>
                         </ul>
                     </li>
-                    <% if (usuario != "" && usuario.rol == 1) { %>
+                    <% if (usuario != "" && (usuario.rol == 1 || usuario.rol == 2)) { %>
                         <a href="/admin/index"><li>ADMIN</li></a>
                         <a href="/users/profile"><li>Mi perfil</li></a>
                         <a href="/users/logout"><li>Cerrar sesion</li></a>  
@@ -103,7 +103,7 @@
                     <p><i class="far fa-user"></i></p>
                 </section> -->
                 <div class="header-cart-bag">
-                    <% if (usuario != "" && usuario.rol == 1) { %>
+                    <% if (usuario != "" && (usuario.rol == 1 || usuario.rol == 2)) { %>
                         <a class="header_user" href="/admin/index">
                             <i class="fas fa-user-shield"></i>
                         </a>

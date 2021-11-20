@@ -39,7 +39,7 @@
                       <td><%= product.id %> </td>
                       <td><%= product.name %></td>
                       <td><%= product.category.name %></td>
-                      <td><img class="adminImg" src="/images/product/<%=product.productImages[0].imgName  %> " alt="img defecto"></td>
+                      <td><a href="/products/productDetail/<%= product.id %>"><img class="adminImg" src="/images/product/<%=product.productImages[0].imgName  %> " alt="img defecto"></a></td>
                       <td><%= product.price %></td>
                       <td><%= product.discount %></td>
                       <td><a href="/admin/changeProduct/<%=product.id %> "><i class="fas fa-user-edit"></i></a></td>

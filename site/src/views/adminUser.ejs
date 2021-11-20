@@ -7,14 +7,14 @@
     <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
     
     <ul>
-        <li><a class="btn-newp" href="#tituloProd">Productos</a></li>
-        <li><a class="btn-newp" href="#tituloUsers">Usuarios</a></li>
+        <li><a class="btn-newp" href="/admin/index">Productos</a></li>
+        <li><a class="btn-newp" href="/admin/users">Usuarios</a></li>
         <li><a class="btn-newp" href="/">Home</a></li>
         <li><a class="btn-newp" href="/admin/addProduct">Nuevo</a></li>
         <li><a href="/users/logout" class="logoutAdmin">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
     </ul>
-    <form action="/admin/users/search">
-        <input type="search" name="buscador" id="buscador">
+    <form action="/admin/index/search" class="adminSearchForm">
+        <input type="search" name="buscador">
         <button type="submit"><i class="fas fa-search"></i></button>
     </form>
 </nav>
@@ -26,8 +26,10 @@
                 <th>id</th>
                 <th>Nombre</th>
                 <th>rol</th>
-                <th>Editar</th>
+                <%if (admin.rol == 2) {%>
+                  <th>Editar</th>
                 <th>Eliminar</th>
+                  <%}%>
               </tr>
             </thead>
             <tbody>
@@ -35,11 +37,13 @@
                   <tr class="tablerow-admin">
                       <td><%= user.id %> </td>
                       <td><%= user.first_name + " " + user.last_name  %></td>
-                      <td><%= user.rol == 1 ? "ADMIN" : "USER" %></td>
-                      <td><a href="/users/useredit/<%=user.id %>"><i class="fas fa-user-edit"></i></a></td>
-                      <td><form action="/users/userdelete/<%= user.id %>?_method=DELETE" method="POST">
-                        <button onclick="if (!confirm('Desea eliminar el usuario: <%= user.name %> ?')) { return false }" type="submit"  class="delete-product"><i class="fas fa-trash"></i></button>
-                    </form></td>
+                      <td><%= user.rol == 0 ? "USER" : user.rol == 1 ? "ADMIN" :"S.ADMIN"  %></td>
+                      <%if (admin.rol == 2) {%>
+                        <td><a href="/users/useredit/<%=user.id %>"><i class="fas fa-user-edit"></i></a></td>
+                        <td><form action="/users/userdelete/<%= user.id %>?_method=DELETE" method="POST">
+                          <button onclick="if (!confirm('Desea eliminar el usuario: <%= user.name %> ?')) { return false }" type="submit"  class="delete-product"><i class="fas fa-trash"></i></button>
+                      </form></td>
+                        <%}%>
                     </tr>
                 <% }) %> 
             </tbody>

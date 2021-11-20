@@ -119,7 +119,7 @@ module.exports = {
         },{where:{id:req.params.id}})
             .then((user) => {
                 
-                if (req.session.user.rol == 1) {
+                if (req.session.user.rol == 2) {
                     res.redirect("/admin/index")
                 } else {
                     res.redirect("/users/profile")

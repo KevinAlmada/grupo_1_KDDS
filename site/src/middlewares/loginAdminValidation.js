@@ -11,7 +11,7 @@ module.exports = [
     body('email').custom(value => {
         let user = db.Users.findOne({where:{email:value}})
         .then(()=>{
-            if (user && user.rol == 1) {
+            if (user && (user.rol == 1 || user.rol == 2)) {
                 return true
             }else{
                 return false

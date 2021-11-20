@@ -69,7 +69,8 @@ module.exports = {
         .then(productdb => {
             res.render('adminIndex',{
                 title:"Resultados de tu busqueda",
-                productdb
+                productdb,
+                admin:req.session.user
             })
             })
     },
@@ -78,7 +79,8 @@ module.exports = {
             .then((usersdb) => {
                 res.render('adminUser',{
                     title:"Usuarios",
-                    usersdb
+                    usersdb,
+                    admin:req.session.user
                 })
             })
        
@@ -98,7 +100,8 @@ module.exports = {
             .then(usersdb => {
                 res.render('adminUser',{
                     title:"Usuarios",
-                    usersdb
+                    usersdb,
+                    admin:req.session.user
                 })
             })
     },
@@ -147,7 +150,8 @@ module.exports = {
                 res.render('changeproduct',{
                     title : "KDDS",
                     productoAModificar,
-                    imagenes
+                    imagenes,
+                    admin:req.session.user
                 })
             })
             .catch(err => console.log(err))
