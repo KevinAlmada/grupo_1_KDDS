@@ -25,7 +25,7 @@
                 <th>id</th>
                 <th>Nombre</th>
                 <th>Categoría</th>
-                
+                <th>Imagen</th>
                 <th>Precio</th>
                 <th>Descuento</th>
                 <th>Editar</th>
@@ -39,6 +39,7 @@
                       <td><%= product.id %> </td>
                       <td><%= product.name %></td>
                       <td><%= product.category.name %></td>
+                      <td><img class="adminImg" src="/images/product/<%=product.productImages[0].imgName  %> " alt="img defecto"></td>
                       <td><%= product.price %></td>
                       <td><%= product.discount %></td>
                       <td><a href="/admin/changeProduct/<%=product.id %> "><i class="fas fa-user-edit"></i></a></td>

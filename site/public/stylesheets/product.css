@@ -51,6 +51,13 @@
     color: var(--colorNaranjaOscuro);
 
 }
+.container-product .precioTarjeta{
+    display: flex ;
+    justify-content: center;
+    color: #828383;
+    gap: 3%;
+    margin-top: 2%;
+}
 .container-product .btn-comprar{
     background-color: var(--colorAzul);
     text-align: center;
@@ -58,8 +65,9 @@
     padding: 20px;
     margin: 20px;
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all .8s;
+    
 }
 .container-product .btn-comprar:hover{
     background-color: #F24405;
@@ -249,6 +257,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    aspect-ratio: 4/3;
 }
 .cardFlPrec{
     margin: 10px;
@@ -296,6 +305,8 @@
     cursor: pointer;
     margin: 15px;
 }
+
+
 /* newsletter */
 .newsletter{
     background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
@@ -377,9 +388,11 @@
     
     .main .container-product img{
         width: 100%;
+        object-fit: contain;
+        aspect-ratio: 16/9;
     }
     .main .container-product .btn-comprar{
-        width: 200px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 10px;
         
@@ -413,6 +426,7 @@
     }
     .container-product .product-name{
         margin-top: 50px;
+        font-size: 4em;
     }    
     .container-product .btn-comprar{
         width: fit-content;

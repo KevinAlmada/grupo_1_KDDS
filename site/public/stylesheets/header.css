@@ -160,9 +160,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: transparent;
      padding: 12px; 
 }
-.search-bar-desktop input:focus{
-    
-}
+
 .search-bar-desktop button{
     position: absolute;
     border: none;

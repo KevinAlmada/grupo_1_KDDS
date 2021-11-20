@@ -4,6 +4,7 @@ const db = require('../database/models')
 const {validationResult}=require('express-validator')
 const bcrypt = require('bcryptjs')
 const { Op } = require("sequelize");
+const { productImages } = require('./api/apiProducts');
 
 module.exports = {
     adminLogin:(req,res)=>{
@@ -40,12 +41,13 @@ module.exports = {
     },
     adminIndex:(req,res)=>{
         let productPromise = db.Products.findAll({
-            include:[{association:"category"}]
+            include:[{association:"category"},{association:"productImages"}]
         })
             .then(productdb => {
                 res.render('adminIndex',{
                     title:"Admin Index",
-                    productdb
+                    productdb,
+                    productImages
                 })
             })
        

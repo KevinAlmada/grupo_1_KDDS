@@ -48,9 +48,10 @@
             <article class="product-info">
                 <h2 class="product-name"><%= db.name %></h2>
                 <h3 class="precio">Precio. $<%= db.price %></h3>
-                
+                <h4 class="precioTarjeta"><i class="far fa-credit-card"></i>  3 cuotas sin interés de $<%= (db.price/3).toFixed(2) %></h4>
                 
                 <p class="description"><%= db.description %></p>
+                
                 <p class="btn-comprar">Comprar</p>
             </article>
         </section>
