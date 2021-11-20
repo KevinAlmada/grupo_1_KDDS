@@ -81,7 +81,7 @@
     align-items: center; */
     border-radius: 5px;
     padding: 5px;
-    margin: 40px;
+    /* margin: 40px; */
     color: black;
     transition: all .5s ease;
 }

@@ -144,7 +144,8 @@ module.exports = {
         res.render('deleteUser',{
             title : "Eliminar usuario",
             usuario:req.session.user?req.session.user:"",
-            update:false
+            update:false,
+            errPass:""
         })
     },
     processDeleteProfile:(req,res) => {
@@ -236,7 +237,8 @@ module.exports = {
                 title : "Editar pass",
                 errors: errors.mapped(),
                 usuario:req.session.user?req.session.user:"",
-                update:true
+                update:true,
+                errPass:""
             }) 
         }  
     }
