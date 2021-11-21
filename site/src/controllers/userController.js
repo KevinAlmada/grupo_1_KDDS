@@ -73,8 +73,18 @@ module.exports = {
                 password:bcrypt.hashSync(pass1,10),
                 rol:0
             })
-                .then(() => {
-                    res.redirect('/users/login')
+                .then((user) => {
+                    req.session.user = {
+                        id: user.id,
+                        first_name: user.first_name,
+                        last_name: user.last_name,
+                        email: user.email,
+                        rol:user.rol,
+                        test:0,
+                        image:""
+                    }
+                    console.log(user);
+                    res.redirect('/users/login') 
                 })
         } else {
             res.render('register',{
@@ -108,24 +118,52 @@ module.exports = {
     },
     updateProfile:(req,res)=> {
         const {first_name,last_name,direccion,codigo,provincia,localidad,rol} = req.body
-        db.Users.update({
-           first_name:first_name,
-           last_name:last_name,
-           direction:direccion,
-           cp:codigo,
-           province:provincia,
-           location:localidad,
-           rol : rol 
-        },{where:{id:req.params.id}})
-            .then((user) => {
-                
-                if (req.session.user.rol == 2) {
-                    res.redirect("/admin/index")
-                } else {
-                    res.redirect("/users/profile")
-                }
-                })
-            .catch(err => console.log(err))
+        if (req.files[0]) {
+            db.Users.findByPk(req.params.id)
+            .then(user => {
+                 if (user.image) {
+                    fs.unlinkSync('public/images/usersProfilePictures/' + user.image)
+                } 
+                db.Users.update({
+                    first_name:first_name,
+                    last_name:last_name,
+                    direction:direccion,
+                    cp:codigo,
+                    province:provincia,
+                    location:localidad,
+                    rol : rol,
+                    image:req.files[0]? req.files[0].filename :""
+                 },{where:{id:req.params.id}})
+                     .then((user) => {
+                         console.log("por aca");
+                         if (req.session.user.rol == 2) {
+                             res.redirect("/admin/users")
+                         } else {
+                             res.redirect("/users/profile")
+                         }
+                         })
+                     .catch(err => console.log(err))
+            })
+        }else{
+            db.Users.update({
+                first_name:first_name,
+                last_name:last_name,
+                direction:direccion,
+                cp:codigo,
+                province:provincia,
+                location:localidad,
+                rol : rol
+             },{where:{id:req.params.id}})
+                 .then((user) => {
+                     if (req.session.user.rol == 2) {
+                         res.redirect("/admin/index")
+                     } else {
+                         res.redirect("/users/profile")
+                     }
+                     })
+                 .catch(err => console.log(err))
+        }
+        
     },
     cart:(req,res)=>{
         res.render('cart',{
@@ -241,5 +279,11 @@ module.exports = {
                 errPass:""
             }) 
         }  
+    },
+    cam : (req,res) => {
+        res.render('takeAPicture', {
+            title : "Editar pass",
+            usuario:req.session.user?req.session.user:"",
+        }) 
     }
 }

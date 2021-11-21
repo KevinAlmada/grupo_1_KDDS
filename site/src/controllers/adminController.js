@@ -212,9 +212,20 @@ module.exports = {
     },
     
     eliminarProducto:(req,res)=>{
-        db.Products.destroy({where:{id:+req.params.id}})
-            .then(()=> res.redirect("/admin/index"))
-            .catch(err => console.log(err))
+        db.ProductImages.findAll({where:{productId:+req.params.id}})
+            .then( imagenes => {
+                let productDestroy = db.Products.destroy({where:{id:+req.params.id}})
+                Promise.all([productDestroy])
+                .then(() => {
+                    imagenes.forEach(imagen => {
+                        if(imagen.imagen != 'default-image.png'){
+                            fs.unlinkSync('public/images/product/' + imagen.imgName)
+                        }
+                    })
+                    res.redirect("/admin/index")   
+                })
+            })
+        
     }
 
 }

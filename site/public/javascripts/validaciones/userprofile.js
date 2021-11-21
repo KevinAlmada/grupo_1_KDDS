@@ -44,7 +44,7 @@ window.addEventListener('load',function(){
         e.preventDefault();
         let elementosForm = $form.elements;
         for (let index = 0; index < elementosForm.length - 5; index++) {
-            if (elementosForm[index].value.trim() == "" && elementosForm[index].name != "direccion") {
+            if (elementosForm[index].value.trim() == "" && elementosForm[index].name != "direccion"&& elementosForm[index].name != "codigo" && elementosForm[index].name != "provincia" && elementosForm[index].name != "localidad" && elementosForm[index].name != "profilePicture") {
                 elementosForm[index].style.borderColor = "red"
                 $totalError.innerHTML= "Los Campos marcados con * son obligatorios"
                 

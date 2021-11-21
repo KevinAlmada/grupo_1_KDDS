@@ -12,7 +12,11 @@
     <!-- FIN DE HEADER -->
     <main class="userProfile">
         <div class="avatar">
-            <img src="/images/perfil/avatardefault.png" alt="">
+            <%if (userData.image != null && userData.image != "") {%>
+                <img class="card-img" src="/images/usersProfilePictures/<%= userData.image %>" >
+            <%} else {%>
+                <img src="/images/perfil/avatardefault.png" alt="">
+                <% } %>
         </div>
         <div class="userProfile-container">
             <div class="userProfile_box">

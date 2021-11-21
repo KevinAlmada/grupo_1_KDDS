@@ -46,6 +46,33 @@
 .userProfile_item {
     margin: 1rem 0;
 }
+.takeAPicture{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+}
+#webCam{
+    width:70vw;
+    max-width: 800px;
+    max-height: 600px;
+    border-radius: 50;
+}
+#pictureSnap{
+    margin-top: 15px;
+    font-size: 2rem;
+    color: black;
+    
+}
+#pictureSnap i{
+    border-radius: 50PX;
+    padding: 15px;
+    background-color: var(--colorNaranjaClaro);
+}
+#canvas{
+    display: none;
+}
 
 @media screen and (min-width: 768px) {
     .userProfile {
@@ -101,6 +128,5 @@
 .validacionMal{
     margin-top: 15px;
     color: red
-
-
 }
+

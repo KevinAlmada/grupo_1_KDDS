@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs') %> 
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"></script>
+</head>
+<body class="profile-body">
+    <!-- HEADER -->
+    
+    <%- include('partials/header.ejs') %> 
+    
+    <!-- FIN DE HEADER -->
+    <main class="takeAPicture">
+        <video id="webCam" autoplay playsinlne ></video>
+        <canvas id ="canvas"></canvas>
+        <a id="pictureSnap"  href="#" onclick="takeAPicture()" download="KDDsphoto"><i class="fas fa-camera-retro"></i></a>
+        <span>Pasados los 5 segundos de tomar la fotógrafía esta venta se cerrara automáticamente.</span>
+        <span>Al continuar con tu proceso de registro debes seleccionar la foto tomada. Buscala en descargas</span>
+    </main>
+    <%- include('partials/footer.ejs') %> 
+    <script>
+        const webCamElement = document.getElementById("webCam")
+        const canvasElement = document.getElementById("canvas")
+        const webcam = new Webcam(webCamElement,"user",canvasElement);
+        function closeOpenedWindow()
+                {
+                window.close();
+                }
+        webcam.start()
+            .then(result =>{
+                console.log("webcam started");
+            })
+            .catch(err => {
+                alert("error al detectar camara")
+                setTimeout(closeOpenedWindow,1000)
+            });
+
+        function takeAPicture(){
+            let picture = webcam.snap();
+            document.querySelector("#pictureSnap").href = picture 
+            
+            setTimeout(closeOpenedWindow,5000)
+        }
+    </script>
+</body>
+</html>
