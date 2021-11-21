@@ -11,6 +11,7 @@
     
     <!-- FIN DE HEADER -->
     <main class="userProfile">
+<<<<<<< HEAD
         <div class="avatar">
             <%if (userData.image != null && userData.image != "") {%>
                 <img class="card-img" src="/images/usersProfilePictures/<%= userData.image %>" >
@@ -23,14 +24,37 @@
                 <h3 class="userProfile_title">Datos personales</h3>
                 <p class="userProfile_item">Nombre: <%= userData.first_name + " " + userData.last_name %> </p>
                 <p class="userProfile_item">Email: <%= userData.email %> </p>
+=======
+        <div class="userData">
+            <div class="tituloprofile">
+                    <h2>Mi Cuenta</h2>
+                    <h3 class="mailCuenta"><%= userData.email %></h3>
             </div>
-            <div class="userProfile_box">
-                <h3 class="userProfile_title">Datos de contacto</h3>
-                <p class="userProfile_item">Dirección:<%= userData.direction?userData.direction:"---" %>  </p>
-                <p class="userProfile_item">Código postal:<%= userData.cp?userData.cp:"---" %>  </p> </p>
-                <p class="userProfile_item">Provincia:<%= userData.province?userData.province:"---" %>  </p> </p>
-                <p class="userProfile_item">Localidad:<%= userData.location?userData.location:"---" %>  </p> </p>
+            <div class="avatar">
+                <img src="/images/perfil/avatardefault.png" alt="">
+>>>>>>> 3ffef7644f884eaa9e4028462afa326821512532
             </div>
+            <div class="userProfile-container">
+                <div class="userProfile_box">
+                    <h3 class="userProfile_title">Datos personales</h3>
+                    <p class="userProfile_item">Nombre: <%= userData.first_name + " " + userData.last_name %> </p>
+                    <p class="userProfile_item">Email: <%= userData.email %> </p>
+                </div>
+                <div class="userProfile_box">
+                    <h3 class="userProfile_title">Datos de contacto</h3>
+                    <p class="userProfile_item">Dirección:<%= userData.direction?userData.direction:"---" %>  </p>
+                    <p class="userProfile_item">Código postal:<%= userData.cp?userData.cp:"---" %>  </p> </p>
+                    <p class="userProfile_item">Provincia:<%= userData.province?userData.province:"---" %>  </p> </p>
+                    <p class="userProfile_item">Localidad:<%= userData.location?userData.location:"---" %>  </p> </p>
+                </div>
+                <div>
+                <a  href="/users/useredit/<%= userData.id %>" class="editprof editdata">Editar Datos <i class="fas fa-user-edit"></i></a>
+                <a  href="/users/passUpdate/<%= userData.id %>" class="editprof editdata">Editar Password <i class="fas fa-user-edit"></i></a>
+                <a href="/users/logout" class="editprof logout">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a>
+                <a href="/users/deleteUser" class="editprof logout">Borrar Cuenta <i class="fas fa-trash-alt"></i></a>
+    
+            </div>
+<<<<<<< HEAD
             <div>
                 <section class="enlaces">
                     <a  href="/users/useredit/<%= userData.id %>" class="editprof editdata">Editar Datos <i class="fas fa-user-edit"></i></a>
@@ -38,9 +62,14 @@
                     <a href="/users/logout" class="editprof logout">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a>
                     <a href="/users/deleteUser" class="editprof logout borr">Borrar Cuenta <i class="fas fa-trash-alt"></i></a>
                 </section>
+=======
+>>>>>>> 3ffef7644f884eaa9e4028462afa326821512532
         </div>
         </div>
         
     </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    <!-- FIN DE FOOTER -->
 </body>
 </html>

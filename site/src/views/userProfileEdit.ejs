@@ -11,6 +11,11 @@
     
     <!-- FIN DE HEADER -->
     <main class="userProfile">
+       <div class="userData">
+        <div class="tituloprofile">
+            <h2>Editar Mi Cuenta</h2>
+            <h3><%= usuario.email %></h3>
+        </div>
         <div class="avatar">
             <%if (usuario.image != null && usuario.image != "") {%>
                 <img class="card-img" src="/images/usersProfilePictures/<%= usuario.image %>" >
@@ -48,7 +53,10 @@
                             <option value="1" <%= usuario.rol == 1? "selected": "" %>>ADMIN</option>
                         </select>
                     <% } %>
-                    <button type="submit">EDITAR</button>
+                    <div>
+                        <button type="submit" class="editprof editdata">EDITAR <i class="fas fa-user-edit"></i></button>
+                        <a class="editprof editdata" href="/users/profile">Volver <i class="fas fa-undo"></i></a> 
+                    </div>
                     
                 </form>
 
@@ -57,7 +65,11 @@
             </div>
             
         </div>
+       </div>
     </main>
+    <!-- FOOTER -->
+    <%- include('partials/footer.ejs') %> 
+    <!-- FIN DE FOOTER -->
     <script src="/javascripts/validaciones/userprofile.js"></script>
 </body>
 </html>
