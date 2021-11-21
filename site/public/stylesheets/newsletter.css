@@ -1,3 +1,4 @@
+
 .nuevoNewsletter p {
   text-align: center;
   margin: 10px;
@@ -6,6 +7,7 @@
 .nuevoNewsletter form {
   margin: 0 auto;
   width: 85%;
+  
 }
 .nuevoNewsletter .news-title {
   margin-top: 10px;
@@ -21,6 +23,7 @@
   width: 50%;
   margin: 0 auto;
   margin-bottom: 10px;
+  display: flex;
 }
 .nuevoNewsletter .news-input input:hover {
   border-color: #f24405;
@@ -29,7 +32,6 @@
   display: flex;
   background-color: #0e1626;
   border: none;
-  width: 120px;
   height: 30px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -48,17 +50,11 @@
   background-color: #f24405;
   transform: scale(1.1);
 }
-
-@media (min-width: 576px) {
-  .newsletter form {
-    margin: 0 auto;
-    width: 54%;
-  }
+.fa-paper-plane{
+  font-size: 5em;
 }
-
-/* newsletter */
 .nuevoNewsletter{
-     
+   text-align: center;  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,8 +66,54 @@
   background: linear-gradient(to bottom right, rgba(6,15,131,1) 0%, rgba(132,210,228,1) 39%, rgba(154,255,251,1) 76%, rgb(245, 133, 5) 100%);
   background-size: 200% 200%;
   animation: movingGradient 5s linear infinite alternate;
-padding: 8%;
+  padding: 8%;
 }
+
+.newstitle{
+  font-size: 1.5em;
+}
+@media (min-width: 576px) {
+  .newsletter form {
+    margin: 0 auto;
+    width: 54%;
+  }
+  .nuevoNewsletter form{
+    display: flex;
+  flex-direction: row;
+  }
+  .nuevoNewsletter{
+     
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    height: 35vh;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, rgba(6,15,131,1) 0%, rgba(132,210,228,1) 39%, rgba(154,255,251,1) 76%, rgb(245, 133, 5) 100%);
+    background-size: 200% 200%;
+    animation: movingGradient 5s linear infinite alternate;
+    padding: 8%;
+  }
+  .fa-paper-plane{
+    font-size: 5em;
+  }
+  .newsInfor{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .newstitle{
+    font-size: 3em;
+  }
+  
+  .news-input input{
+    display: flex;
+  }
+}
+
+/* newsletter */
 
 @keyframes movingGradient {
  from {background-position: 0 0 ;}

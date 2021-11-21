@@ -88,7 +88,7 @@
                     
                     </div> -->
                     <form class="search-bar-desktop" action="/products/search" method="GET">
-                        <input type="search" name="buscador" id="search" placeholder="Buscar">
+                        <input type="search" name="buscador" id="search" placeholder="Encontrá tú estilo">
                         <button class="search-ico" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
@@ -104,15 +104,19 @@
                 </section> -->
                 <div class="header-cart-bag">
                     <% if (usuario != "" && usuario.rol == 1) { %>
-                        <a class="header_user" href="/admin/index">
-                            <i class="fas fa-user-shield"></i>
-                        </a>
+                       
+                            <a class="header_user" href="/admin/index">
+                                <i class="fas fa-user-shield escudoadm"></i> 
+                            </a>
+                            <a href="/users/logout"> <i class="fas fa-sign-out-alt"><span class="out">salir</span></i></a>
+                        
                     <% }else if(usuario != "" ){ %>
                         <a class="header_user" href="/users/profile">
                             
-                            <p></i>Bienvenido <%= usuario.first_name %>  </p>
+                            <p></i>Bienvenido, <%= usuario.first_name %>  </p>
                             
                         </a>
+                        <a href="/users/logout"> <i class="fas fa-sign-out-alt"><span class="out">salir</span></i></a>
                     <% }else{ %>
                         <a class="header_user" href="/users/login">
                             <i class="far fa-user"></i>
@@ -142,7 +146,24 @@
                 <li class="menuHeaderItem"><a href="/products?categoria=sol">Anteojos de sol</a></li>
                 <li class="menuHeaderItem"><a href="/products?categoria=lectura">Anteojos de lectura</a></li>
                 <li class="menuHeaderItem"><a href="/about">Contacto</a></li>
-              
+                <li class="menuHeaderItem administrar" >
+                    <% if (usuario != "" && usuario.rol == 1) { %>
+                        
+                            <a href="/admin/index">
+                                <h4 >Administar Sitio</h4></i> 
+                            </a>
+                            
+                        
+                    <% }else if(usuario != "" ){ %>
+                                <a class="header_user" href="/users/profile">
+                                    
+                                    <p>Mi Cuenta</p>
+                                    
+                                </a>
+                    <% } %>
+                </li>
+                
+
             </ul>
         </section>
     </header>

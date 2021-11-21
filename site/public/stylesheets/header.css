@@ -187,6 +187,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .header-cart-bag a i{
     font-size: 1.3rem;
 }
+.escudoadm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.admHead{
+    font-size: .5em;
+}
 .nav-bar{
     display: none;
     position: relative;
@@ -348,8 +356,16 @@ a{
 /* fin nuevo header */
 @media (min-width:576px) {
     .header-cart-bag a i{
-        font-size: 25px
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
+    .out{
+       font-size: .5em;
+    }
+    
     .header-cart-bag a {
         margin-left: 20px;
     }
@@ -398,6 +414,8 @@ a{
     }
     .header-cart-bag{
         display: flex;
+        width: fit-content;
+        align-items: baseline;
     }
     .container-header{
        /*  justify-content: space-evenly; */
