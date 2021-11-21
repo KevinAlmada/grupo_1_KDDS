@@ -40,7 +40,7 @@
                       <td><%= user.rol == 0 ? "USER" : user.rol == 1 ? "ADMIN" :"S.ADMIN"  %></td>
                       <%if (admin.rol == 2) {%>
                         <td><a href="/users/useredit/<%=user.id %>"><i class="fas fa-user-edit"></i></a></td>
-                        <td><form action="/users/userdelete/<%= user.id %>?_method=DELETE" method="POST">
+                        <td><form action="/admin/deleteUser/<%= user.id %>?_method=DELETE" method="POST">
                           <button onclick="if (!confirm('Desea eliminar el usuario: <%= user.name %> ?')) { return false }" type="submit"  class="delete-product"><i class="fas fa-trash"></i></button>
                       </form></td>
                         <%}%>

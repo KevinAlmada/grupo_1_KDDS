@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require('../controllers/adminController')
 const uploadFile = require('../middlewares/uploadFiles')
 const userAdminCheck = require('../middlewares/userAdminCheck');
+const userSuperAdminCheck = require('../middlewares/userSuperAdminCheck');
 const loginAdminValidator = require('../middlewares/loginAdminValidation');
 
 /* GET home page. */
@@ -23,7 +24,9 @@ router.post('/addProduct',uploadFile.array('imagenProducto'), controller.guardar
 router.get('/changeProduct/:id', userAdminCheck, controller.modificarProducto);
 router.put('/changeProduct/:id',uploadFile.array('imagenProducto'), controller.editarProducto);
 /* Delete */
-router.delete('/deleteProduct/:id', controller.eliminarProducto);
+router.delete('/deleteProduct/:id', userAdminCheck, controller.eliminarProducto);
+
+router.delete('/deleteUser/:id', userSuperAdminCheck, controller.eliminarUser);
 
 
 

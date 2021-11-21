@@ -226,6 +226,19 @@ module.exports = {
                 })
             })
         
+    },
+    eliminarUser:(req,res) => {
+        db.Users.findByPk(req.params.id)
+            .then(user => {
+                if (user.image !== null) {
+                    fs.unlinkSync('public/images/usersProfilePictures/' + user.image)
+                }
+                db.Users.destroy({where:{id:user.id}})
+                .then(() => {
+                    res.redirect("/admin/users")
+                })
+                .catch(err => console.log(err))
+            })
     }
 
 }

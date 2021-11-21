@@ -102,7 +102,7 @@
                     <p><i class="far fa-user"></i></p>
                 </section> -->
                 <div class="header-cart-bag">
-                    <% if (usuario != "" && usuario.rol == 1) { %>
+                    <% if (usuario != "" && (usuario.rol == 1 || usuario.rol == 2) ) { %>
                        
                             <a class="header_user" href="/admin/index">
                                 <i class="fas fa-user-shield escudoadm"></i> 
@@ -146,7 +146,7 @@
                 <li class="menuHeaderItem"><a href="/products?categoria=lectura">Anteojos de lectura</a></li>
                 <li class="menuHeaderItem"><a href="/about">Contacto</a></li>
                 <li class="menuHeaderItem administrar" >
-                    <% if (usuario != "" && usuario.rol == 1) { %>
+                    <% if (usuario != "" && (usuario.rol == 1 || usuario.rol == 2)) { %>
                         
                             <a href="/admin/index">
                                 <h4 >Administar Sitio</h4></i> 
