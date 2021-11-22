@@ -16,8 +16,19 @@
     <form action="/admin/index/search" class="adminSearchForm">
         <input type="search" name="buscador">
         <button type="submit"><i class="fas fa-search"></i></button>
+
     </form>
 </nav>
+        <section class="totaldb">
+          <div>
+            <h2> <%= productdb.length %></h2>
+          <h3>Total de productos en la db</h3>
+          <h4 >Puedes crear uno nuevo desde <a class="nuevoPro" href="/admin/addProduct">Aqui</a></h4>
+          </div>
+          <div>
+            <i class="far fa-file-alt"></i>
+          </div>
+        </section>
     <section class="admin-section">
         <table class="adminP-table">
             <thead>
