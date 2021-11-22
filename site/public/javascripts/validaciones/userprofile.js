@@ -53,7 +53,14 @@ window.addEventListener('load',function(){
             
         }
         if (!error) {
-            alert('Se guardaron tus cambios');
+            /* alert('Se guardaron tus cambios'); */
+            Swal.fire({
+                
+                icon: 'success',
+                title: 'Datos guardados',
+                showConfirmButton: false,
+                timer: 1500
+              })
             $form.submit() 
         }
     } )
