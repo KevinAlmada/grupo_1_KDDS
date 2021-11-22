@@ -23,7 +23,7 @@
           <li><a class="btn-newp" href="/admin/index">Productos</a></li>
           <li><a class="btn-newp" href="/admin/users">Usuarios</a></li>
           <li><a class="btn-newp" href="/">Home</a></li>
-          <li><a class="btn-newp" href="/admin/addProduct">New prod</a></li>
+          <li><a class="btn-newp" href="/admin/addProduct">Agregar</a></li>
           <li><a href="/users/logout" class="logoutAdmin">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
       </ul> 
   </nav>
@@ -31,10 +31,18 @@
     <section class="admin-section" >
 </nav>
 <section class="admin-section">
-  <h2 id="tituloProd">Productos</h2>
+  
       <section class="totaldb">
-          <h3>Total de productos en la db : <%= productdb.length %></h3>
+          <div>
+            <p class="totaladm"><%= productdb.length %></p> 
+            <h3>Total de productos en la db. </h3>
+            <h2>Puedes crear uno nuevo desde <a class="nuevoPro" href="/admin/addProduct">Aqui</a> </h2>
+          </div>
+          <div>
+            <i class="fas fa-clipboard-list"></i>
+          </div>
       </section>
+      <h2 class="tituloUsers">Productos</h2>
         <table class="adminP-table">
             <thead>
               <tr>

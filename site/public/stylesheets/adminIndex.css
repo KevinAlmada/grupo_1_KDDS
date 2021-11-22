@@ -10,7 +10,16 @@
 }
 /*  admin*/
 
-/* .navAdmin{
+.tituloUsers{
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.totaladm{
+    font-size: 2em;
+}
+.navAdmin{
     display: flex; 
     background-color: #0E1626;
     color: white;
@@ -28,16 +37,16 @@
 }
 .totaldb{
     display: flex;
-    width: 23%;
+    width: 50%;
     margin: 0 auto;
     height: 12vh;
     align-items: center;
     justify-content: space-around;
     background-color: var(--colorCelesteFondo);
 
-} */
+}
 /*  */
-.fa-file-alt, .fa-users{
+.fa-clipboard-list, .fa-users{
     font-size: 3em;
 }
 .nuevoPro{
@@ -101,7 +110,7 @@
 .logoutAdmin{
     background-color: crimson;
     color: white;
-    padding: 3px;
+    padding: 10px;
     width: 80%;
 }
 .adminSearchForm{
