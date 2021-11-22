@@ -128,7 +128,6 @@ header.adminHeaderMobile{
 }
 .adminBody aside{
     margin-top: -50px;
-    width: 50vw;
     position: fixed;
     height: 100vh; 
     transition: all 0.5s ease-in;
@@ -141,7 +140,9 @@ header.adminHeaderMobile{
 }
 
 @media (min-width: 768px) {
-    
+    .admin-section{
+        width: 100vw;
+    }
     header.adminHeaderMobile{
     display:none;
     }
@@ -149,19 +150,13 @@ header.adminHeaderMobile{
         display: flex;
     }
     .adminBody aside{
-        flex-grow: 1;
-        width: 700px;
+        width: 30vw;
         position: sticky;
         top: 0;
         left: 0;
         display:block ;
     }
-    .adminBody aside nav{
-        flex-grow: 1;
-        
-    }
     .admin-section{
-        flex-grow: 4;
         margin-top: 0px;
         
     }
