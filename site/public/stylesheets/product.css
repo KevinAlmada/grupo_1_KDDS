@@ -29,6 +29,11 @@
     margin: 90px auto 0 auto;
 
 }
+.titleproduct{
+    font-size: 2em;
+    text-align: center;
+    color: #828383;
+}
 .container-product{
     display: flex;
     justify-content: center;
@@ -468,7 +473,7 @@
         width: auto;
     }
     .container-product{
-        margin: 15% 10% 15% 10%;
+        margin: 5% 0 5% 0;
         gap: 5%;
     }
 }
