@@ -20,8 +20,9 @@
             <%if (usuario.image != null && usuario.image != "") {%>
                 <img class="card-img" src="/images/usersProfilePictures/<%= usuario.image %>" >
             <%} else {%>
-                <img src="/images/perfil/avatardefault.png" alt="">
+                <img src="/images/perfil/avatardefault.png" alt="foto de perfil">
                 <% } %>
+                <a class="avatarCam" href="/users/cam" target="_blank"><i class="fas fa-camera-retro"></i></a></span>
         </div>
         <div class="userProfile-container">
             <div class="userProfile_box">
@@ -38,7 +39,7 @@
                     <% if (useronline.rol == 0) { %>
                         <label for="profilePicture"  >Foto de Perfil</label>
                         <input type="file" id="profilePicture" name="profilePicture"  accept="image/*">
-                        <span>Si no tienes una foto , tomate una <a href="/users/cam" target="_blank"><i class="fas fa-camera-retro"></i></a></span>
+                        <span class="camerap">Si no tienes una foto , tomate una <a href="/users/cam" target="_blank"><i class="fas fa-camera-retro"></i></a></span>
                     <% } %>
                     <label for="codigo">Codigo Postal</label>
                     <input type="text" id="codigo" name="codigo" value="<%= usuario.cp %>" <%= useronline.rol == 1 || useronline.rol == 2? "readonly": "" %>>

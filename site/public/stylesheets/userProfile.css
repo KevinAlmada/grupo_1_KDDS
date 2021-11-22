@@ -18,6 +18,7 @@
     margin:  0 auto;
     border-radius: 5px;
     padding: 5%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .userData .tituloprofile{
     display: flex;
@@ -29,11 +30,13 @@
     color: #5294e2;
 }
 .userProfile .avatar{
+    position: relative;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
     background-color: blanchedalmond;
     margin: 1rem auto;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .userProfile .avatar img {
@@ -41,8 +44,11 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    position: absolute;
 }
-
+.avatarCam{
+    position: relative;
+}
 .userProfile-container {
     display: flex;
     flex-direction: column;
@@ -61,6 +67,13 @@
 
 .userProfile_item {
     margin: 1rem 0;
+}
+.camerap{
+    margin: 25px 0 25px 0;
+}
+.fa-camera-retro{
+    font-size: 2em;
+    color: rgb(60, 134, 177);
 }
 .takeAPicture{
     margin: 0 auto;
@@ -115,6 +128,7 @@
     border: 1px solid rgb(165, 164, 164);
     width: 90px;
     height: 45px;
+    background-color: white;
     /* letter-spacing: 2px; */
     
     cursor: pointer;
@@ -123,10 +137,11 @@
     /* justify-content: center;
     align-items: center; */
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px 5px;
     /* margin: 40px; */
     color: black;
     transition: all .5s ease;
+    margin-top: 10px;
 }
 .editdata:hover{
     background-color: rgb(151, 236, 130);
