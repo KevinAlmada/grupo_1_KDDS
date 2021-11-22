@@ -57,7 +57,7 @@ module.exports = {
         let busqueda = req.query.buscador.trim().toLowerCase();
 
         db.Products.findAll({
-            include:[{association:"category"}],
+            include:[{association:"category"},{association:"productImages"}],
             where: {
                 [Op.or]: [
                     {name: {[Op.like]:`%${busqueda}%`}},

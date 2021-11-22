@@ -2,22 +2,31 @@
 <html lang="en">
     <%- include('partials/head.ejs') %>
     <link rel="stylesheet" href="/stylesheets/adminIndex.css"> 
-<body>
-  <nav class="navAdmin">
-    <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
-    
-    <ul>
-        <li><a class="btn-newp" href="/admin/index">Productos</a></li>
-        <li><a class="btn-newp" href="/admin/users">Usuarios</a></li>
-        <li><a class="btn-newp" href="/">Home</a></li>
-        <li><a class="btn-newp" href="/admin/addProduct">Nuevo</a></li>
-        <li><a href="/users/logout" class="logoutAdmin">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
-    </ul>
-    <form action="/admin/index/search" class="adminSearchForm">
+<body class="adminBody">
+  <header class="adminHeaderMobile">
+    <h1>ADMIN</h1>
+    <div id="menuAdminButton" class="hamburger hamburger--spring">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+  </header>
+  <aside id="menuLateralAdmin" class="adminMenuHide">
+    <nav class="navAdmin">
+      <a class="btnIngresar" href="/admin/index"><img class="logoAdmin" src="/images/admin/LOGO.png" alt="logo"></a>
+      <form action="/admin/index/search" class="adminSearchForm">
         <input type="search" name="buscador">
         <button type="submit"><i class="fas fa-search"></i></button>
     </form>
-</nav>
+      <ul>
+          <li><a class="btn-newp" href="/admin/index">Productos</a></li>
+          <li><a class="btn-newp" href="/admin/users">Usuarios</a></li>
+          <li><a class="btn-newp" href="/">Home</a></li>
+          <li><a class="btn-newp" href="/admin/addProduct">New prod</a></li>
+          <li><a href="/users/logout" class="logoutAdmin">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
+      </ul> 
+  </nav>
+  </aside>
     <section class="admin-section">
         <table class="adminP-table">
             <thead>
@@ -51,5 +60,6 @@
             </tbody>
           </table>
     </section>
+    <script src="/javascripts/menuAdmin.js"></script>
 </body>
 </html>
