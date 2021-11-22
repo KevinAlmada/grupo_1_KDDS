@@ -149,7 +149,7 @@ input[type="search"]::-webkit-search-results-decoration {
     /* padding: 10px; */
 }
 .search-bar-desktop input{
-    width: 100%;
+    width: 33vw;
     height: 30px;
     border-radius: 3px; 
     outline-style: none;
@@ -351,7 +351,11 @@ a{
     transition: all ease-in .5s;
     
 }
-
+#cuentaBarra{
+    opacity: 0;
+    position: absolute;
+    transition: all step-end ;
+}
 
 /* fin nuevo header */
 @media (min-width:576px) {

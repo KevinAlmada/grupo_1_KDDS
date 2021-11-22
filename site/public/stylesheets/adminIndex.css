@@ -8,8 +8,42 @@
 .logoAdmin{
     width: 100px;
 }
+/*  admin*/
 
+/* .navAdmin{
+    display: flex; 
+    background-color: #0E1626;
+    color: white;
+    
+    align-items: center;
+}
+.navAdmin ul{
+    display: table;
+    float: right;
+}
+.navAdmin ul li{
+    float: left;
+    display: inline;
+    margin: 25px ;
+}
+.totaldb{
+    display: flex;
+    width: 23%;
+    margin: 0 auto;
+    height: 12vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--colorCelesteFondo);
 
+} */
+/*  */
+.fa-file-alt, .fa-users{
+    font-size: 3em;
+}
+.nuevoPro{
+    color: var(--colorNaranjaClaro);
+
+}
 .adminP-table{
     max-width: 90%;
     margin: 0 auto;
@@ -140,9 +174,9 @@ header.adminHeaderMobile{
 }
 
 @media (min-width: 768px) {
-    .admin-section{
-        width: 100vw;
-    }
+     .admin-section{
+        width: 80vw;
+    } 
     header.adminHeaderMobile{
     display:none;
     }
@@ -150,7 +184,7 @@ header.adminHeaderMobile{
         display: flex;
     }
     .adminBody aside{
-        width: 30vw;
+        
         position: sticky;
         top: 0;
         left: 0;

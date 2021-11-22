@@ -17,6 +17,7 @@
       <form action="/admin/index/search" class="adminSearchForm">
         <input type="search" name="buscador">
         <button type="submit"><i class="fas fa-search"></i></button>
+
     </form>
       <ul>
           <li><a class="btn-newp" href="/admin/index">Productos</a></li>
@@ -28,6 +29,12 @@
   </nav>
   </aside>
     <section class="admin-section" >
+</nav>
+<section class="admin-section">
+  <h2 id="tituloProd">Productos</h2>
+      <section class="totaldb">
+          <h3>Total de productos en la db : <%= productdb.length %></h3>
+      </section>
         <table class="adminP-table">
             <thead>
               <tr>
@@ -42,7 +49,7 @@
               </tr>
             </thead>
             <tbody>
-      <h2 id="tituloProd">Productos</h2>
+      
                 <% productdb.forEach(product => { %>
                   <tr class="tablerow-admin">
                       <td><%= product.id %> </td>

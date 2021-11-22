@@ -78,7 +78,10 @@
         </div>
         <!-- <nav class="headerNav"> -->
             <main class="mainHeaderContainer">
-                
+                <section class="logoHeader">
+                    <a href="/"><img id="logoHeader" src="/images/home/LOGO.png" alt="logo"></a>
+                    
+                </section>
                 
                 <section class="HeaderBusqueda">
                     <!-- <div class="BusquedaContainer">
@@ -93,10 +96,7 @@
                         </button>
                     </form>
                 </section>
-                <section class="logoHeader">
-                    <a href="/"><img id="logoHeader" src="/images/home/LOGO.png" alt="logo"></a>
-                    <!-- <h2 class="marcaHeader">KDDS Lentes</h2> -->
-                </section>
+                
                 <!-- <section class="logHeader">
                     <p><i class="fas fa-shopping-bag"></i></p>
                     <p><i class="far fa-user"></i></p>
@@ -107,7 +107,7 @@
                             <a class="header_user" href="/admin/index">
                                 <i class="fas fa-user-shield escudoadm"></i> 
                             </a>
-                            <a href="/users/logout"> <i class="fas fa-sign-out-alt"><span class="out">salir</span></i></a>
+                            
                         
                     <% }else if(usuario != "" ){ %>
                         <a class="header_user" href="/users/profile">
@@ -115,7 +115,7 @@
                             <p></i>Bienvenido, <%= usuario.first_name %>  </p>
                             
                         </a>
-                        <a href="/users/logout"> <i class="fas fa-sign-out-alt"><span class="out">salir</span></i></a>
+                        
                     <% }else{ %>
                         <a class="header_user" href="/users/login">
                             <i class="far fa-user"></i>
@@ -124,6 +124,12 @@
                         <a class="header_cart" href="/users/cart">
                             <i class="fas fa-shopping-bag"></i>
                         </a>
+                    <% if (usuario != "" ) { %>
+                       
+                            
+                            <a href="/users/logout"> <i class="fas fa-sign-out-alt"><span class="out">salir</span></i></a>
+                        
+                    <% } %>
                        
                 </div>
                 <div class="hamburger hamburger--spring">
@@ -142,10 +148,10 @@
         </section>
         <section>
             <ul class="menuHeaderList">
-                <li class="menuHeaderItem"><a href="/products?categoria=sol">Anteojos de sol</a></li>
-                <li class="menuHeaderItem"><a href="/products?categoria=lectura">Anteojos de lectura</a></li>
-                <li class="menuHeaderItem"><a href="/about">Contacto</a></li>
-                <li class="menuHeaderItem administrar" >
+                <li class="menuHeaderItem"><a href="/products?categoria=sol">Lentes de Sol</a></li>
+                <li class="menuHeaderItem"><a href="/products?categoria=lectura">Lectura</a></li>
+                <li class="menuHeaderItem"><a href="/about">Sobre Nosotros</a></li>
+                <li id="cuentaBarra" class="menuHeaderItem administrar" >
                     <% if (usuario != "" && (usuario.rol == 1 || usuario.rol == 2)) { %>
                         
                             <a href="/admin/index">

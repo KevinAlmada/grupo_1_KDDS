@@ -10,7 +10,7 @@
     --colorCelesteFondo: #BFDDDF;    
 }
 .body-main-newProduct{
-    background: linear-gradient(to bottom, rgba(6,58,150,0.65) 0%,rgba(0,0,0,0) 100%) no-repeat;
+    background: url('/images/perfil/fondouserperfil.png')
 
 }
 .main-newProduct{
@@ -26,6 +26,8 @@
     padding: 25px;
     border-bottom: 1px solid black;
     text-align: center;
+    background-color: var(--colorCeleste);
+    color: white;
 }
 
 
@@ -44,7 +46,7 @@
     display: block;
     padding-top: 15px;
     margin-bottom: 10px;
-    
+    width: 30vw;
 }
 .form-container-np form select{
     display: block;
